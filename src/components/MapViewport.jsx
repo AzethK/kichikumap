@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import MapImage from "./MapImage";
+import MarkerLayer from "./MarkerLayer";
 
 const MAP_WIDTH = 4920;
 const MAP_HEIGHT = 2050;
@@ -7,6 +8,9 @@ const MAP_HEIGHT = 2050;
 const MAX_SCALE = 3;
 
 export default function MapViewport() {
+  const [editorMode, setEditorMode] = useState(true); // TEMP
+  const [tempMarker, setTempMarker] = useState(null);
+
   // Calculate the minimum scale to fit the map within the viewport
   const getMinScale = () => {
     const viewport = containerRef.current;
@@ -113,6 +117,22 @@ export default function MapViewport() {
     isDragging.current = false;
   };
 
+  const handleMapClick = (e) => {
+    if (!editorMode) return;
+
+    const rect = containerRef.current.getBoundingClientRect();
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+
+    const worldX = Math.round((mouseX - position.x) / scale);
+    const worldY = Math.round((mouseY - position.y) / scale);
+    setTempMarker({ x: worldX, y: worldY });
+
+    console.log(
+      `{ id: "new_area_id", name: "New Area", x: ${worldX}, y: ${worldY}, type: "city" },`
+    );
+  };
+
   /* -------------------- Zoom logic -------------------- */
 
   const handleWheel = (e) => {
@@ -152,6 +172,7 @@ export default function MapViewport() {
     >
       <div
         className="map-layer"
+        onClick={handleMapClick}
         style={{
           width: MAP_WIDTH,
           height: MAP_HEIGHT,
@@ -159,7 +180,24 @@ export default function MapViewport() {
           transformOrigin: "0 0",
         }}
       >
+        {tempMarker && (
+          <div
+            style={{
+              position: "absolute",
+              left: tempMarker.x,
+              top: tempMarker.y,
+              width: 8,
+              height: 8,
+              background: "red",
+              borderRadius: "50%",
+              transform: "translate(-50%, -50%)",
+              pointerEvents: "none",
+            }}
+          />
+        )}
+
         <MapImage />
+        <MarkerLayer />
 
         {/*
           Future layers go here:

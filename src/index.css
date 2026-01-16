@@ -20,3 +20,23 @@ body {
   padding: 0;
   overflow: hidden;
 }
+
+.map-marker {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  padding: 4px 8px;
+  font-size: 12px;
+  white-space: nowrap;
+  cursor: pointer;
+
+  background: rgba(20, 20, 20, 0.85);
+  color: white;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+
+  pointer-events: auto;
+}
+
+.map-marker:hover {
+  background: rgba(60, 60, 60, 0.95);
+}
