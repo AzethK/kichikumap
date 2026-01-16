@@ -42,8 +42,7 @@ body {
 }
 
 .map-marker-icon {
-
-  image-rendering: pixelated; /* optional, if pixel art */
+  image-rendering: pixelated;
   cursor: pointer;
 }
 
