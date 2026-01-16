@@ -145,7 +145,7 @@ export const areas = [
   },
   //#endregion JAPAN
 
-  //AL
+  //#region AL
   {
     id: "al_temple_al_hq",
     name: "Temple AL HQ",
@@ -153,6 +153,7 @@ export const areas = [
     y: 1722,
     type: "city",
   },
+  //#endregion AL
 
   //#region Helman
   { id: "helman_volgo_z", name: "Volgo Z", x: 3116, y: 928, type: "city" },
@@ -372,6 +373,138 @@ export const areas = [
   },
   //#endregion Zeth
 
-  //#region Monster Realm
-  //#endregion Monster Realm
+  //#region Kayblis
+  {
+    id: "kayblis_tearing_forest",
+    name: "Tearing Forest",
+    x: 1812,
+    y: 1931,
+    type: "city",
+  },
+  {
+    id: "kayblis_camillas_castle",
+    name: "Camilla's Castle",
+    x: 1515,
+    y: 1889,
+    type: "city",
+  },
+  {
+    id: "kayblis_blue_house",
+    name: "Blue House",
+    x: 875,
+    y: 1894,
+    type: "city",
+  },
+  {
+    id: "kayblis_kayblis_castle",
+    name: "Kayblis' Castle",
+    x: 623,
+    y: 1603,
+    type: "city",
+  },
+
+  {
+    id: "kayblis_kesselrings_castle",
+    name: "Kesselring's Castle",
+    x: 1403,
+    y: 1378,
+    type: "city",
+  },
+  {
+    id: "kayblis_bone_forest",
+    name: "Bone Forest",
+    x: 1577,
+    y: 1535,
+    type: "city",
+  },
+  { id: "kayblis_red_house", name: "Red House", x: 926, y: 1290, type: "city" },
+
+  {
+    id: "kayblis_maid_graveyard",
+    name: "Maid Graveyard",
+    x: 1082,
+    y: 1547,
+    type: "dungeon",
+  },
+  {
+    id: "kayblis_mos_dungeon",
+    name: "Mos' Dungeon",
+    x: 751,
+    y: 1210,
+    type: "dungeon",
+  },
+  {
+    id: "kayblis_rex_dungeon",
+    name: "Rex's Dungeon",
+    x: 465,
+    y: 1927,
+    type: "dungeon",
+  },
+  {
+    id: "kayblis_piar_ship",
+    name: "Piar's Ship",
+    x: 1827,
+    y: 1788,
+    type: "dungeon",
+  },
+  //#endregion Kayblis
+
+  //#region Hornet
+  {
+    id: "hornet_land_of_death",
+    name: "Land of Death",
+    x: 210,
+    y: 1335,
+    type: "city",
+  },
+  {
+    id: "hornet_silkys_castle",
+    name: "Silky's Castle",
+    x: 609,
+    y: 711,
+    type: "city",
+  },
+  {
+    id: "hornet_cascade_bau",
+    name: "Cascade Bau",
+    x: 1152,
+    y: 1058,
+    type: "city",
+  },
+  {
+    id: "hornet_sulfur_forest",
+    name: "Sulfur Forest",
+    x: 1280,
+    y: 785,
+    type: "city",
+  },
+  {
+    id: "hornet_demon_lords_castle",
+    name: "Demon Lord's Castle",
+    x: 1029,
+    y: 442,
+    type: "city",
+  },
+  {
+    id: "hornet_grief_valley",
+    name: "Grief Valley",
+    x: 1265,
+    y: 521,
+    type: "city",
+  },
+  {
+    id: "hornet_tower_of_evil",
+    name: "Tower of Evil",
+    x: 893,
+    y: 141,
+    type: "city",
+  },
+  {
+    id: "hornet_dungeon_of_lies",
+    name: "Dungeon of Lies",
+    x: 635,
+    y: 264,
+    type: "dungeon",
+  },
+  //#endregion Hornet
 ];

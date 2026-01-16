@@ -2,13 +2,14 @@ import { useRef, useState, useEffect } from "react";
 import MapImage from "./MapImage";
 import MarkerLayer from "./MarkerLayer";
 
+
 const MAP_WIDTH = 4920;
 const MAP_HEIGHT = 2050;
 
 const MAX_SCALE = 3;
 
 export default function MapViewport() {
-  const [editorMode, setEditorMode] = useState(true); // TEMP
+  const [editorMode, setEditorMode] = useState(false); // TEMP
   const [tempMarker, setTempMarker] = useState(null);
 
   // Calculate the minimum scale to fit the map within the viewport
