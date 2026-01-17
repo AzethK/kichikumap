@@ -1,3 +1,5 @@
+/* Viewport */
+
 .map-viewport {
   width: 100vw;
   height: 100vh;
@@ -20,6 +22,8 @@ body {
   padding: 0;
   overflow: hidden;
 }
+
+/* Marker styles */
 
 .map-marker {
   position: absolute;
@@ -60,4 +64,146 @@ body {
   color: white;
   border-radius: 3px;
   pointer-events: none;
+}
+
+/* Area Panel */
+
+.area-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100vh;
+  background: #111;
+  color: white;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.area-panel-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  background-color: #111;
+
+  border-left: 4px solid var(--region-color);
+
+  gap: 20px;
+}
+
+.area-panel-region-icon {
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+}
+
+.area-panel-title {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+
+.area-panel-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 3;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.area-panel-close:hover {
+  color: #ff5555;
+}
+
+/* Character Card */
+
+.character-name {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.2;
+
+  min-height: 2.4em;
+  max-height: 2.4em;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.character-card {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  align-items: flex-start;
+}
+
+.character-card img {
+  width: 192px;
+  height: 256px;
+  flex-shrink: 0;
+}
+
+.empty {
+  opacity: 0.6;
+  font-style: italic;
+}
+
+/* Recruitment Conditions */
+
+.condition-step {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.4;
+  min-height: 2.8em;
+}
+
+.condition-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.condition-nav button {
+  margin-top: auto;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.condition-nav button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.condition-none {
+  margin-top: 6px;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.condition-box {
+  min-height: 11.8em;
+  display: flex;
+  align-items: flex-start;
+}
+
+.condition-step {
+  font-size: 14px;
+  line-height: 1.4;
 }

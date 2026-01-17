@@ -1,7 +1,7 @@
-import { areas } from "./areas";
-import { regionIcons } from "./regionIcons";
+import { areas } from "../data/areas";
+import { regionIcons } from "../data/regionIcons";
 
-export default function MarkerLayer() {
+export default function MarkerLayer({ onAreaClick }) {
   return (
     <>
       {areas.map((area) => {
@@ -19,11 +19,11 @@ export default function MarkerLayer() {
             style={{
               position: "absolute",
               left: area.x,
-              top: area.y
+              top: area.y,
             }}
-
-            onClick={() => {
-              console.log("Clicked:", area.name);
+            onClick={(e) => {
+              e.stopPropagation();
+              onAreaClick(area.id);
             }}
           >
             <img
@@ -32,14 +32,10 @@ export default function MarkerLayer() {
               className="map-marker-icon"
               draggable={false}
             />
-            <div className="map-marker-label">
-              {area.name}
-            </div>
+            <div className="map-marker-label">{area.name}</div>
           </div>
         );
       })}
     </>
   );
 }
-
-

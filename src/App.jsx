@@ -1,5 +1,17 @@
+import { useState } from "react";
 import MapViewport from "./components/MapViewport";
+import AreaPanel from "./components/AreaPanel";
 
 export default function App() {
-  return <MapViewport />;
+  const [selectedAreaId, setSelectedAreaId] = useState(null);
+
+  return (
+    <>
+      <MapViewport onAreaClick={setSelectedAreaId} />
+      <AreaPanel
+        areaId={selectedAreaId}
+        onClose={() => setSelectedAreaId(null)}
+      />
+    </>
+  );
 }

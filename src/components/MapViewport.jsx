@@ -8,7 +8,7 @@ const MAP_HEIGHT = 2050;
 
 const MAX_SCALE = 3;
 
-export default function MapViewport() {
+export default function MapViewport({ onAreaClick }) {
   const [editorMode, setEditorMode] = useState(false); // TEMP
   const [tempMarker, setTempMarker] = useState(null);
 
@@ -198,7 +198,7 @@ export default function MapViewport() {
         )}
 
         <MapImage />
-        <MarkerLayer />
+        <MarkerLayer onAreaClick={onAreaClick} />
 
         {/*
           Future layers go here:

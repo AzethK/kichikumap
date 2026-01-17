@@ -1,0 +1,136 @@
+export const characters = {
+  rance: {
+    id: "rance",
+    name: "Rance",
+    portrait: "rance.png",
+    recruitCondition: [],
+  },
+  sill: {
+    id: "sill",
+    name: "Sill Plain",
+    portrait: "sill.png",
+    recruitCondition: [
+      "Recruited automatically but lost at end of prologue",
+      "Volgo Z must be conquered before LP 4/1/3",
+      "Must be called in the Harem once",
+    ],
+  },
+  bound: {
+    id: "bound",
+    name: "Bound Less",
+    portrait: "bound.png",
+    recruitCondition: [
+      "Recruited automatically but lost at end of prologue",
+      "Soul must be called in the Harem at least two times after being rescued",
+      "Talk to Soul to cause her to receive a letter from Bound",
+      "After completing the Library Ghost sidequest, visit it to trigger an event with Soul and Maria",
+      "Visit the Thieves' Hideout",
+    ],
+  },
+  soul: {
+    id: "soul",
+    name: "Soul Less",
+    portrait: "soul.png",
+    recruitCondition: [
+      "Recruited automatically but lost at end of prologue",
+      "Volgo Z must be conquered before LP 3/8/3",
+    ],
+  },
+  leila: {
+    id: "leila",
+    name: "Leila Grecni",
+    portrait: "leila.png",
+    recruitCondition: [],
+  },
+  barres: {
+    id: "barres",
+    name: "Barres Provence",
+    portrait: "barres.png",
+    recruitCondition: [],
+  },
+  rick: {
+    id: "rick",
+    name: "Rick Addison",
+    portrait: "rick.png",
+    recruitCondition: [],
+  },
+  cordoba: {
+    id: "cordoba",
+    name: "Cordoba Burn",
+    portrait: "cordoba.png",
+    recruitCondition: [],
+  },
+  kinkaid: {
+    id: "kinkaid",
+    name: "Kinkaid Brambla",
+    portrait: "kinkaid.png",
+    recruitCondition: [],
+  },
+  menad: {
+    id: "menad",
+    name: "Menad Shisei",
+    portrait: "menad.png",
+    recruitCondition: [],
+  },
+  asuka: {
+    id: "asuka",
+    name: "Asuka Cadmium",
+    portrait: "asuka.png",
+    recruitCondition: [],
+  },
+  haurein: {
+    id: "haurein",
+    name: "Haurein Provence",
+    portrait: "haurein.png",
+    recruitCondition: ["Defeat while fighting the Leazas Rebel Army"],
+  },
+  melfeis: {
+    id: "melfeis",
+    name: "Melfeis Promenade",
+    portrait: "melfeis.png",
+    recruitCondition: ["Defeat while fighting the Leazas Rebel Army"],
+  },
+  ex: {
+    id: "ex",
+    name: "Ex Banquet",
+    portrait: "ex.png",
+    recruitCondition: [
+      'Choose "Join me" after defeating the Rebel Army',
+      "Refuse to defend Leazas Castle anytime after LP 3/6/1",
+    ],
+  },
+  gengorou: {
+    id: "gengorou",
+    name: "Gengorou Shinoda",
+    portrait: "gengorou.png",
+    recruitCondition: [
+      "Hanna and M Land must be conquered through negotiation",
+      "Shinoda's House in Hannah must be visited twice",
+      "Give him Sayori",
+    ],
+  },
+  maria: {
+    id: "maria",
+    name: "Maria Custard",
+    portrait: "maria.png",
+    recruitCondition: ["Conquer Custom"],
+  },
+  shizuka: {
+    id: "shizuka",
+    name: "Shizuka Masou",
+    portrait: "shizuka.png",
+    recruitCondition: ["Conquer Custom"],
+  },
+  template: {
+    id: "template",
+    name: "Template Character",
+    portrait: "template.png",
+    recruitCondition: [],
+  },
+  template: {
+    id: "template",
+    name: "Template Character",
+    portrait: "template.png",
+    recruitCondition: [],
+  },
+};
