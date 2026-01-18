@@ -21,9 +21,6 @@ export default function CharacterCard({ character }) {
         <div className="character-name">
           {" "}
           <strong>{character.name}</strong>
-          <p>
-            <strong>Recruitment</strong>
-          </p>
         </div>
 
         {hasConditions ?

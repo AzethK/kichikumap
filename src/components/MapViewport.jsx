@@ -2,7 +2,6 @@ import { useRef, useState, useEffect } from "react";
 import MapImage from "./MapImage";
 import MarkerLayer from "./MarkerLayer";
 
-
 const MAP_WIDTH = 4920;
 const MAP_HEIGHT = 2050;
 
@@ -130,7 +129,7 @@ export default function MapViewport({ onAreaClick }) {
     setTempMarker({ x: worldX, y: worldY });
 
     console.log(
-      `{ id: "new_area_id", name: "New Area", x: ${worldX}, y: ${worldY}, type: "city" },`
+      `{ id: "new_area_id", name: "New Area", x: ${worldX}, y: ${worldY}, type: "city" },`,
     );
   };
 

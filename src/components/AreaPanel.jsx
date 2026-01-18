@@ -20,16 +20,15 @@ export default function AreaPanel({ areaId, onClose }) {
 
   return (
     <div className="area-panel">
-      <button className="area-panel-close" onClick={onClose}>
-        ✕
-      </button>
-
       <div
         className="area-panel-header"
         style={{
           "--region-color": regionStyle?.color ?? "red",
         }}
       >
+        <button className="area-panel-close" onClick={onClose}>
+          ✕
+        </button>
         <h2>{area.name}</h2>
         {regionIcon && (
           <img
