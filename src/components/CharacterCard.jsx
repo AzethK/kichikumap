@@ -2,6 +2,24 @@ import { useState } from "react";
 import { getCharacterPortrait } from "../data/characterPortraits";
 
 export default function CharacterCard({ character }) {
+  //Support multiple portraits per character
+  const portraits =
+    Array.isArray(character.portrait) ?
+      character.portrait
+    : [character.portrait];
+
+  const [portraitIndex, setPortraitIndex] = useState(0);
+
+  const hasMultiplePortraits = portraits.length > 1;
+
+  const prevPortrait = () => setPortraitIndex((i) => Math.max(0, i - 1));
+
+  const nextPortrait = () =>
+    setPortraitIndex((i) => Math.min(portraits.length - 1, i + 1));
+
+  const currentPortrait = getCharacterPortrait(portraits[portraitIndex]);
+  //
+
   const conditions = character.recruitCondition ?? [];
   const [step, setStep] = useState(0);
 
@@ -12,10 +30,28 @@ export default function CharacterCard({ character }) {
 
   return (
     <div className="character-card">
-      <img
-        src={getCharacterPortrait(character.portrait)}
-        alt={character.name}
-      />
+      <div className="character-portrait">
+        <img src={currentPortrait} alt={character.name} />
+
+        {hasMultiplePortraits && (
+          <div className="portrait-nav">
+            <button onClick={prevPortrait} disabled={portraitIndex === 0}>
+              ◀
+            </button>
+
+            <span>
+              {portraitIndex + 1} / {portraits.length}
+            </span>
+
+            <button
+              onClick={nextPortrait}
+              disabled={portraitIndex === portraits.length - 1}
+            >
+              ▶
+            </button>
+          </div>
+        )}
+      </div>
 
       <div className="character-info">
         <div className="character-name">

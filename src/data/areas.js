@@ -15,7 +15,6 @@ export const areas = [
       "menad",
       "asuka",
       "ex",
-      "lelyukov",
       "satella",
       "meglass",
       "kentarou",
@@ -23,6 +22,8 @@ export const areas = [
       "rafalia",
       "arlcoate",
       "aviator",
+      "louis",
+      "cecil",
     ],
   },
   { id: "leazas_wes", name: "Wes", x: 4323, y: 806, type: "city" },
@@ -168,6 +169,7 @@ export const areas = [
     x: 2817,
     y: 981,
     type: "city",
+    recruitableCharacters: ["kaijuprince"],
   },
   {
     id: "freecities_titi_lake",
@@ -175,6 +177,7 @@ export const areas = [
     x: 3583,
     y: 1384,
     type: "dungeon",
+    recruitableCharacters: ["hannyking"],
   },
   {
     id: "freecities_dangerous_hole",
@@ -189,6 +192,7 @@ export const areas = [
     x: 4409,
     y: 1548,
     type: "dungeon",
+    recruitableCharacters: ["cafe"],
   },
   {
     id: "freecities_peach_blossom_spring",
@@ -240,6 +244,7 @@ export const areas = [
     x: 3200,
     y: 1722,
     type: "city",
+    recruitableCharacters: ["gurwin"],
   },
   //#endregion AL
 
@@ -264,7 +269,14 @@ export const areas = [
   { id: "helman_golak", name: "Golak", x: 3327, y: 543, type: "city" },
   { id: "helman_siberia", name: "Siberia", x: 3052, y: 441, type: "city" },
   { id: "helman_rosesgrad", name: "Rosesgrad", x: 2939, y: 557, type: "city" },
-  { id: "helman_archgrad", name: "Archgrad", x: 3134, y: 650, type: "city" },
+  {
+    id: "helman_archgrad",
+    name: "Archgrad",
+    x: 3134,
+    y: 650,
+    type: "city",
+    recruitableCharacters: ["lelyukov"],
+  },
   {
     id: "helman_ancient_ruins",
     name: "Ancient Ruins",
@@ -272,7 +284,14 @@ export const areas = [
     y: 585,
     type: "city",
   },
-  { id: "helman_sudori_10", name: "Sudori 10", x: 2625, y: 479, type: "city" },
+  {
+    id: "helman_sudori_10",
+    name: "Sudori 10",
+    x: 2625,
+    y: 479,
+    type: "city",
+    recruitableCharacters: ["rolex"],
+  },
   { id: "helman_path", name: "Path", x: 2522, y: 373, type: "city" },
   { id: "helman_micrograd", name: "Micrograd", x: 2476, y: 558, type: "city" },
   {
@@ -339,7 +358,14 @@ export const areas = [
     y: 786,
     type: "city",
   },
-  { id: "helman_lang_bau", name: "Lang Bau", x: 2323, y: 569, type: "city" },
+  {
+    id: "helman_lang_bau",
+    name: "Lang Bau",
+    x: 2323,
+    y: 569,
+    type: "city",
+    recruitableCharacters: ["aristoles"],
+  },
   {
     id: "helman_giant_battleship",
     name: "Giant Battleship",
@@ -396,6 +422,7 @@ export const areas = [
     x: 3658,
     y: 752,
     type: "dungeon",
+    recruitableCharacters: ["saizel_hawzel"],
   },
   {
     id: "helman_kalar_forest",
@@ -403,6 +430,7 @@ export const areas = [
     x: 1873,
     y: 1060,
     type: "dungeon",
+    recruitableCharacters: ["somita"],
   },
 
   //#endregion Helman

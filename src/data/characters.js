@@ -4,6 +4,7 @@ export const characters = {
     name: "Rance",
     portrait: "rance.png",
     recruitCondition: [],
+    unitType: "leazasknights",
   },
   sill: {
     id: "sill",
@@ -14,6 +15,7 @@ export const characters = {
       "Volgo Z must be conquered before LP 4/1/3",
       "Must be called in the Harem once",
     ],
+    unitType: "leazasmages",
   },
   bound: {
     id: "bound",
@@ -26,6 +28,7 @@ export const characters = {
       "After completing the Library Ghost sidequest, visit it to trigger an event with Soul and Maria",
       "Visit the Thieves' Hideout",
     ],
+    unitType: "thieves",
   },
   soul: {
     id: "soul",
@@ -35,60 +38,70 @@ export const characters = {
       "Recruited automatically but lost at end of prologue",
       "Volgo Z must be conquered before LP 3/8/3",
     ],
+    unitType: "thieves",
   },
   leila: {
     id: "leila",
     name: "Leila Grecni",
     portrait: "leila.png",
     recruitCondition: [],
+    unitType: "royalguards",
   },
   barres: {
     id: "barres",
     name: "Barres Province",
     portrait: "barres.png",
     recruitCondition: [],
+    unitType: "leazasknights",
   },
   rick: {
     id: "rick",
     name: "Rick Addison",
     portrait: "rick.png",
     recruitCondition: [],
+    unitType: "leazasknights",
   },
   cordoba: {
     id: "cordoba",
     name: "Cordoba Burn",
     portrait: "cordoba.png",
     recruitCondition: [],
+    unitType: "leazasknights",
   },
   kinkaid: {
     id: "kinkaid",
     name: "Kinkaid Brambla",
     portrait: "kinkaid.png",
     recruitCondition: [],
+    unitType: "leazassoldiers",
   },
   menad: {
     id: "menad",
     name: "Menad Shisei",
     portrait: "menad.png",
     recruitCondition: [],
+    unitType: "leazassoldiers",
   },
   asuka: {
     id: "asuka",
     name: "Asuka Cadmium",
     portrait: "asuka.png",
     recruitCondition: [],
+    unitType: "leazasmages",
   },
   haurein: {
     id: "haurein",
     name: "Haurein Province",
     portrait: "haurein.png",
     recruitCondition: ["Defeat while fighting the Leazas Rebel Army"],
+    unitType: "leazassoldiers",
   },
   melfeis: {
     id: "melfeis",
     name: "Melfeis Promenade",
     portrait: "melfeis.png",
     recruitCondition: ["Defeat while fighting the Leazas Rebel Army"],
+    unitType: "leazasmages",
   },
   ex: {
     id: "ex",
@@ -98,6 +111,7 @@ export const characters = {
       'Choose "Join me" after defeating the Rebel Army',
       "Refuse to defend Leazas Castle anytime after LP 3/6/1",
     ],
+    unitType: "leazasknights",
   },
   gengorou: {
     id: "gengorou",
@@ -108,18 +122,21 @@ export const characters = {
       "Shinoda's House in Hannah must be visited twice",
       "Give him Sayori",
     ],
+    unitType: "leazassoldiers",
   },
   maria: {
     id: "maria",
     name: "Maria Custard",
     portrait: "maria.png",
     recruitCondition: ["Conquer Custom"],
+    unitType: "mariaspupils",
   },
   shizuka: {
     id: "shizuka",
     name: "Shizuka Masou",
     portrait: "shizuka.png",
     recruitCondition: ["Conquer Custom"],
+    unitType: "leazasmages",
   },
   patton: {
     id: "patton",
@@ -128,6 +145,7 @@ export const characters = {
     recruitCondition: [
       "Attack one of the Patton Faction territories while Rick is alive",
     ],
+    unitType: "brawlers",
   },
   hunty: {
     id: "hunty",
@@ -136,6 +154,7 @@ export const characters = {
     recruitCondition: [
       "Attack one of the Patton Faction territories while Rick is alive",
     ],
+    unitType: "freakrobots",
   },
   freak: {
     id: "freak",
@@ -144,6 +163,7 @@ export const characters = {
     recruitCondition: [
       "Attack one of the Patton Faction territories while Rick is alive",
     ],
+    unitType: "freakrobots",
   },
   hubert: {
     id: "hubert",
@@ -152,6 +172,7 @@ export const characters = {
     recruitCondition: [
       "Attack one of the Patton Faction territories while Rick is alive",
     ],
+    unitType: "helmanknights",
   },
   lelyukov: {
     id: "lelyukov",
@@ -163,30 +184,35 @@ export const characters = {
       "Levy in Archgrad",
       "Visit Lelyukov in the Dungeon of Leazas Castle",
     ],
+    unitType: "helmanknights",
   },
   elenoa: {
     id: "elenoa",
     name: "Elenoa Ran",
     portrait: "elenoa.png",
     recruitCondition: ["Conquer Custom"],
+    unitType: "magicwarriors",
   },
   milli: {
     id: "milli",
     name: "Milli Yorks",
     portrait: "milli.png",
     recruitCondition: ["Conquer Custom"],
+    unitType: "leazassoldiers",
   },
   mill: {
     id: "mill",
     name: "Mill Yorks",
-    portrait: "mill.png",
+    portrait: ["mill1.png", "mill2.png"],
     recruitCondition: ["Conquer Custom"],
+    unitType: "phantombeasts",
   },
   mars: {
     id: "mars",
     name: "Mars the Great",
     portrait: "mars.png",
     recruitCondition: ["Use negotiation to conquer Mars"],
+    unitType: "leazassoldiers",
   },
   isoroku: {
     id: "isoroku",
@@ -195,12 +221,14 @@ export const characters = {
     recruitCondition: [
       "Defeat her in battle, must be done before conquering Osaka",
     ],
+    unitType: "japanarchers",
   },
   cream: {
     id: "cream",
     name: "Cream Ganoblade",
     portrait: "cream.png",
     recruitCondition: ["Defeat her within 3 encounters or killing Nero Chapet"],
+    unitType: "leazassoldiers",
   },
   satella: {
     id: "satella",
@@ -209,6 +237,7 @@ export const characters = {
     recruitCondition: [
       'Select "Observe for now" when Miki and Kentarou come to Leazas Castle',
     ],
+    unitType: "guardians",
   },
   meglass: {
     id: "meglass",
@@ -217,6 +246,7 @@ export const characters = {
     recruitCondition: [
       'Select "Observe for now" when Miki and Kentarou come to Leazas Castle',
     ],
+    unitType: "horuses",
   },
   kentarou: {
     id: "kentarou",
@@ -226,6 +256,7 @@ export const characters = {
       'Select "Observe for now" when Miki and Kentarou come to Leazas Castle',
       "Obtain Chaos",
     ],
+    unitType: "leazassoldiers",
   },
   miki: {
     id: "miki",
@@ -235,6 +266,7 @@ export const characters = {
       'Select "Observe for now" when Miki and Kentarou come to Leazas Castle',
       "Obtain Chaos",
     ],
+    unitType: "leazasmages",
   },
   julia: {
     id: "julia",
@@ -243,6 +275,7 @@ export const characters = {
     recruitCondition: [
       "Beginning of turn event after Leila dies or leaves the army",
     ],
+    unitType: "royalguards",
   },
   rafalia: {
     id: "rafalia",
@@ -256,6 +289,7 @@ export const characters = {
       "If visited early you can order to have Rafalia graduate as soon as possible and she will join within a month",
       "Otherwise, visit again, wait 6 more weeks and then visit again",
     ],
+    unitType: "leazassoldiers",
   },
   arlcoate: {
     id: "arlcoate",
@@ -268,6 +302,7 @@ export const characters = {
       "Wait six weeks, then visit the Military Academy",
       "Wait six more weeks, then visit the Military Academy",
     ],
+    unitType: "leazassoldiers",
   },
   aviator: {
     id: "aviator",
@@ -276,6 +311,7 @@ export const characters = {
     recruitCondition: [
       "Leila and Julia have either died or left the army. Will join as a beginning of turn event",
     ],
+    unitType: "royalguards",
   },
   ragnarokarc: {
     id: "ragnarokarc",
@@ -285,6 +321,7 @@ export const characters = {
       "Collect a levy in The O, Red and then L Zile",
       "Wait for a rebellion to occur in Poor and suppress it",
     ],
+    unitType: "magicwarriors",
   },
   chizuko: {
     id: "chizuko",
@@ -293,6 +330,7 @@ export const characters = {
     recruitCondition: [
       "Conquer Chizuko's Tower with Ragnarokarc as one of your units",
     ],
+    unitType: "leazasmages",
   },
   magic: {
     id: "magic",
@@ -306,6 +344,7 @@ export const characters = {
       "Visit Ho Raga or Arcy to receive Absolute Foreclosure Charm",
       "Enter Magic's Room again and use the charm, Gandhi must have been recruited",
     ],
+    unitType: "leazasmages",
   },
   nagi: {
     id: "nagi",
@@ -316,17 +355,125 @@ export const characters = {
       "When Sill warns Rance don't bring him to dungeons or battles",
       "Attack Nagi's Tower with Shizuka as one of the units, choose Nagi",
     ],
+    unitType: "leazasmages",
   },
-  template: {
-    id: "template",
-    name: "Template",
-    portrait: "template.png",
-    recruitCondition: [],
+  galtia: {
+    id: "galtia",
+    name: "Galtia",
+    portrait: "galtia.png",
+    recruitCondition: [
+      "Have sex with Martina Curry",
+      "Allow Galtia to conquer two cities",
+      "Allow Galtia to conquer two poisoned cities",
+      "Allow Galtia to conquer one more city",
+    ],
   },
-  template: {
-    id: "template",
-    name: "Template",
-    portrait: "template.png",
-    recruitCondition: [],
+  saizel_hawzel: {
+    id: "saizel_hawzel",
+    name: "Saizel & Hawzel",
+    portrait: ["saizel.png", "hawzel.png"],
+    recruitCondition: [
+      "Conquer Kayblis Castle",
+      "Visit the dungeon in Kayblis Castle",
+      "Visit Summit's Mouth 30F with Rance",
+    ],
+    unitType: "falseangelknights",
+  },
+  aristoles: {
+    id: "aristoles",
+    name: "Aristoles Calm",
+    portrait: "aristoles.png",
+    recruitCondition: [
+      "Conquer Lang Bau without attacking a Patton Faction territory",
+      "Wait for an event where Convert comes to Leazas Castle and choose to hear him out",
+      "Aristoles will join after a few turns",
+    ],
+    unitType: "helmanknights",
+  },
+  gurwin: {
+    id: "gurwin",
+    name: "Gurwin Trough",
+    portrait: "gurwin.png",
+    recruitCondition: [
+      "Every time the AL Church is visited, if Elizabeth Des in in the harem there's a chance Gurwin will join",
+    ],
+    unitType: "templeknights",
+  },
+  cafe: {
+    id: "cafe",
+    name: "Cafe Artful",
+    portrait: "cafe.png",
+    recruitCondition: [
+      "Obtain Chaos, visit Ho-Raga with Rance/Kentarou and ask about the past",
+      "Visit British in the Thieves' Cave and obtain the Gourd Statue",
+      "Visit Lady's Caravan in Helman, talk to Lady, repeat this 3 times",
+      "Select the Uncurse Dungeon",
+    ],
+    unitType: "carfeknights",
+  },
+  manironeh: {
+    id: "manironeh",
+    name: "Manironeh Salad",
+    portrait: "manironeh.png",
+    recruitCondition: ["Attack Lady's Caravan in Helman"],
+    unitType: "carfeknights",
+  },
+  somita: {
+    id: "somita",
+    name: "Somita Kalar",
+    portrait: "somita.png",
+    recruitCondition: ["Visit the Kalar Forest"],
+    unitType: "kalars",
+  },
+  rolex: {
+    id: "rolex",
+    name: "Rolex Gadras",
+    portrait: "rolex.png",
+    recruitCondition: [
+      "Fight and capture Katyusha and Saulnia",
+      "Recruit Aristoles",
+      "Levy Sudori 10",
+    ],
+    unitType: "helmanknights",
+  },
+  hannyking: {
+    id: "hannyking",
+    name: "Hanny King",
+    portrait: "hannyking.png",
+    recruitCondition: [
+      "Collect a levy in L Zile",
+      "Visit Titi Lake with a unit equipped with Aluminum Axe, then choose Aluminum Axe",
+      "Visit Hanny King at Titi Lake 66F with Julia Lindum",
+      "Ask for Julia Special, then visit Titi Lake 66f again with Rance",
+      'Select "Join me" then "Give Julia"',
+      "Will join as a beginning of turn event",
+    ],
+    unitType: "hannies",
+  },
+  kaijuprince: {
+    id: "kaijuprince",
+    name: "Kaiju Prince",
+    portrait: "kaijuprince.png",
+    recruitCondition: [
+      "Conquer Shangri-La",
+      "Call Shariela in the Harem once",
+      "Visit Shangri-La and choose to free Housesnurse",
+      "Will join as a beginning of turn event",
+    ],
+    unitType: "kaijuwarriors",
+  },
+  louis: {
+    id: "louis",
+    name: "Louis Quitowack",
+    portrait: "louis.png",
+    recruitCondition: ["Hire Mercenary A from Pluepet"],
+    unitType: "mercenaries",
+  },
+  cecil: {
+    id: "cecil",
+    name: "Cecil Carna",
+    portrait: "cecil.png",
+    recruitCondition: ["Hire Mercenary B from Pluepet"],
+    unitType: "mercenaries",
   },
 };
