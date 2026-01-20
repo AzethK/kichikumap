@@ -1,17 +1,9 @@
-import { useState } from "react";
-
-export default function LeftSidebar({ onOpenSubordinates }) {
-  const [hovered, setHovered] = useState(false);
-
+export default function LeftSidebar({ onOpenSubordinates, open }) {
   return (
-    <div
-      className={`left-sidebar ${hovered ? "visible" : ""}`}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
+    <aside className={`left-sidebar ${open ? "open" : "closed"}`}>
       <button className="sidebar-button" onClick={onOpenSubordinates}>
         Subordinates
       </button>
-    </div>
+    </aside>
   );
 }

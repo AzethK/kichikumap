@@ -1,7 +1,10 @@
 import { characters } from "../data/characters.js";
 import { getCharacterPortrait } from "../data/characterPortraits.js";
 
-export default function SubordinatesOverlay({ onClose }) {
+export default function SubordinatesOverlay({
+  onClose,
+  setSelectedCharacterId,
+}) {
   return (
     <div className="overlay-backdrop" onClick={onClose}>
       <div
@@ -27,6 +30,7 @@ export default function SubordinatesOverlay({ onClose }) {
                 src={getCharacterPortrait(portraits[0])}
                 alt=""
                 className="subordinate-portrait"
+                onClick={() => setSelectedCharacterId(character.id)}
               />
             );
           })}
