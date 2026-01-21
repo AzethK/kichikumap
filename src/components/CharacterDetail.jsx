@@ -110,7 +110,7 @@ export default function CharacterDetail({ characterId, onClose }) {
           </h2>
           {hasConditions ?
             <>
-              <div className="condition-box">
+              <div className="character-detail-condition-box">
                 <div className="character-condition-step">
                   {conditions[step]}
                 </div>
