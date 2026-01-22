@@ -1,8 +1,17 @@
 const portraits = import.meta.glob(
-  "../assets/characters/*.{png,jpg,jpeg,webp}",
+  "../assets/characterPortraits/*.{png,jpg,jpeg,webp}",
+  { eager: true },
+);
+
+const sprites = import.meta.glob(
+  "../assets/characterSprites/*.{png,jpg,jpeg,webp}",
   { eager: true },
 );
 
 export function getCharacterPortrait(filename) {
-  return portraits[`../assets/characters/${filename}`]?.default;
+  return portraits[`../assets/characterPortraits/${filename}`]?.default;
+}
+
+export function getCharacterSprite(filename) {
+  return sprites[`../assets/characterSprites/${filename}`]?.default;
 }

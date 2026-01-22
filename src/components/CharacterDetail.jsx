@@ -1,5 +1,8 @@
 import { useState } from "react";
-import { getCharacterPortrait } from "../data/characterPortraits";
+import {
+  getCharacterPortrait,
+  getCharacterSprite,
+} from "../data/characterPortraits";
 import { characters } from "../data/characters";
 import { troops } from "../data/troops";
 
@@ -136,6 +139,7 @@ export default function CharacterDetail({ characterId, onClose }) {
               )}
             </>
           : <p className="condition-none">Recruited automatically</p>}
+          <img src={currentSprite}></img>
         </div>
       </div>
     </div>
