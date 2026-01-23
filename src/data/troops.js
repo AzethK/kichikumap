@@ -6,6 +6,13 @@ export const troops = {
     atk: 10,
     def: 6,
     upgrade: "11300K/25",
+    sprite: [
+      "leazasknights.png",
+      "leazasknights2.png",
+      "leazasknights3.png",
+      "leazasknights4.png",
+      "leazasknights5.png",
+    ],
   },
   leazasmages: {
     id: "leazasmages",
@@ -14,6 +21,7 @@ export const troops = {
     atk: 3,
     def: 3,
     upgrade: "10300K/25",
+    sprite: ["leazasmages.png", "leazasmages2.png"],
   },
   thieves: {
     id: "thieves",
@@ -22,6 +30,7 @@ export const troops = {
     atk: 6,
     def: 4,
     upgrade: "3300K/25",
+    sprite: "thieves.png",
   },
   royalguards: {
     id: "royalguards",
@@ -30,6 +39,7 @@ export const troops = {
     atk: 8,
     def: 4,
     upgrade: "5300K/25",
+    sprite: "royalguards.png",
   },
   leazassoldiers: {
     id: "leazassoldiers",
@@ -38,6 +48,13 @@ export const troops = {
     atk: 8,
     def: 4,
     upgrade: "5300K/25",
+    sprite: [
+      "leazassoldiers.png",
+      "leazassoldiers2.png",
+      "leazassoldiers3.png",
+      "leazassoldiers4.png",
+      "leazassoldiers5.png",
+    ],
   },
   mariaspupils: {
     id: "mariaspupils",
@@ -46,6 +63,7 @@ export const troops = {
     atk: 12,
     def: 3,
     upgrade: "12300K/25",
+    sprite: "mariaspupils.png",
   },
   brawlers: {
     id: "brawlers",
@@ -54,6 +72,7 @@ export const troops = {
     atk: 9,
     def: 5,
     upgrade: "20300K/25",
+    sprite: "brawlers.png",
   },
   freakrobots: {
     id: "freakrobots",
@@ -62,6 +81,7 @@ export const troops = {
     atk: 2,
     def: 4,
     upgrade: "32300K/10",
+    sprite: ["freakrobots.png", "freakrobots2.png"],
   },
   helmanknights: {
     id: "helmanknights",
@@ -70,6 +90,7 @@ export const troops = {
     atk: 11,
     def: 7,
     upgrade: "30300K/25",
+    sprite: ["helmanknights.png", "helmanknights2.png"],
   },
   magicwarriors: {
     id: "magicwarriors",
@@ -78,6 +99,7 @@ export const troops = {
     atk: 8,
     def: 4,
     upgrade: "15300K/25",
+    sprite: "magicwarriors.png",
   },
   phantombeasts: {
     id: "phantombeasts",
@@ -85,6 +107,7 @@ export const troops = {
     attackType: "Bow",
     atk: 10,
     def: 20,
+    sprite: "phantombeasts.png",
   },
   japanarchers: {
     id: "japanarchers",
@@ -93,6 +116,7 @@ export const troops = {
     atk: 7,
     def: 2,
     upgrade: "32300K/10",
+    sprite: "japanarchers.png",
   },
   guardians: {
     id: "guardians",
@@ -101,6 +125,7 @@ export const troops = {
     atk: 13,
     def: 8,
     upgrade: "32300K/10",
+    sprite: "guardians.png",
   },
   horuses: {
     id: "horuses",
@@ -109,6 +134,7 @@ export const troops = {
     atk: 9,
     def: 6,
     upgrade: "32300K/10",
+    sprite: "horuses.png",
   },
   falseangelknights: {
     id: "falseangelknights",
@@ -117,6 +143,7 @@ export const troops = {
     atk: 10,
     def: 4,
     upgrade: "32300K/10",
+    sprite: "falseangelknights.png",
   },
   templeknights: {
     id: "templeknights",
@@ -125,6 +152,7 @@ export const troops = {
     atk: 11,
     def: 7,
     upgrade: "30300K/25",
+    sprite: "templeknights.png",
   },
   carfeknights: {
     id: "carfeknights",
@@ -133,6 +161,7 @@ export const troops = {
     atk: 11,
     def: 7,
     upgrade: "30300K/25",
+    sprite: "carfeknights.png",
   },
   kalars: {
     id: "kalars",
@@ -141,6 +170,7 @@ export const troops = {
     atk: 7,
     def: 6,
     upgrade: "15300K/25",
+    sprite: "kalars.png",
   },
   hannies: {
     id: "hannies",
@@ -148,6 +178,7 @@ export const troops = {
     attackType: "Magic",
     atk: 10,
     def: 6,
+    sprite: "hannies.png",
   },
   kaijuwarriors: {
     id: "kaijuwarriors",
@@ -155,6 +186,7 @@ export const troops = {
     attackType: "Direct",
     atk: 11,
     def: 8,
+    sprite: "hannies.png",
   },
   mercenaries: {
     id: "mercenaries",
@@ -162,5 +194,6 @@ export const troops = {
     attackType: "Direct",
     atk: 8,
     def: 5,
+    sprite: "mercenaries.png",
   },
 };
