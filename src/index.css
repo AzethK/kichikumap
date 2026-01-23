@@ -158,9 +158,11 @@ body {
 /* Character Portrait */
 
 .portrait-nav {
+  position: absolute;
+  bottom: 4px;
   display: flex;
-  align-items: center;
   gap: 8px;
+  align-items: center;
 }
 
 .portrait-nav button {
@@ -397,12 +399,14 @@ body {
 }
 
 .character-portrait {
+  position: relative;
   padding: 8px;
-
+  width: 192px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
 }
 
 .character-portrait img {
@@ -438,4 +442,46 @@ body {
   line-height: 1.4;
   min-height: 2.8em;
   font-size: larger;
+}
+
+/* Character Sprite */
+
+.character-sprite {
+  position: relative;
+  width: 409px;
+  height: 300px;
+  padding: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.character-sprite img {
+  width: 409px;
+  height: 256px;
+  object-fit: contain;
+}
+
+/* Sprite Nav */
+
+.sprite-nav {
+  position: absolute;
+  bottom: 4px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.sprite-nav button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.sprite-nav button:disabled {
+  opacity: 0.3;
+  cursor: default;
 }

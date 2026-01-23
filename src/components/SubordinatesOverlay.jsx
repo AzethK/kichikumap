@@ -28,7 +28,7 @@ export default function SubordinatesOverlay({
               <img
                 key={character.id}
                 src={getCharacterPortrait(portraits[0])}
-                alt=""
+                alt={character.id}
                 className="subordinate-portrait"
                 onClick={() => setSelectedCharacterId(character.id)}
               />

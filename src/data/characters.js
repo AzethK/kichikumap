@@ -3,7 +3,7 @@ export const characters = {
     id: "rance",
     name: "Rance",
     portrait: "rance.png",
-    sprite: "rance.webp",
+    sprite: "rance.png",
     recruitCondition: [],
     unitType: "leazasknights",
     unitSize: 1000,
@@ -467,7 +467,7 @@ export const characters = {
   mill: {
     id: "mill",
     name: "Mill Yorks",
-    portrait: ["mill1.png", "mill2.png"],
+    portrait: ["mill.png", "mill2.png"],
     recruitCondition: ["Conquer Custom"],
     unitType: "phantombeasts",
     unitSize: 28,
@@ -825,7 +825,7 @@ export const characters = {
   saizel_hawzel: {
     id: "saizel_hawzel",
     name: "Saizel & Hawzel",
-    portrait: ["saizel.png", "hawzel.png"],
+    portrait: ["saizel_hawzel.png", "saizel_hawzel2.png"],
     recruitCondition: [
       "Conquer Kayblis Castle",
       "Visit the dungeon in Kayblis Castle",

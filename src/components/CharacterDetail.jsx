@@ -17,16 +17,26 @@ export default function CharacterDetail({ characterId, onClose }) {
       character.portrait
     : [character.portrait];
 
+  const sprites =
+    Array.isArray(character.portrait) ?
+      character.portrait
+    : [character.portrait];
+
   const [portraitIndex, setPortraitIndex] = useState(0);
+  const [spriteIndex, setSpriteIndex] = useState(0);
 
   const hasMultiplePortraits = portraits.length > 1;
 
   const prevPortrait = () => setPortraitIndex((i) => Math.max(0, i - 1));
+  const prevSprite = () => setSpriteIndex((i) => Math.max(0, i - 1));
 
   const nextPortrait = () =>
     setPortraitIndex((i) => Math.min(portraits.length - 1, i + 1));
+  const nextSprite = () =>
+    setSpriteIndex((i) => Math.min(sprites.length - 1, i + 1));
 
   const currentPortrait = getCharacterPortrait(portraits[portraitIndex]);
+  const currentSprite = getCharacterSprite(sprites[spriteIndex]);
 
   const conditions = character.recruitCondition ?? [];
   const [step, setStep] = useState(0);
@@ -78,7 +88,27 @@ export default function CharacterDetail({ characterId, onClose }) {
               )}
             </div>
 
-            <div className="character-stats">{/* EMPTY FOR NOW */}</div>
+            <div className="character-sprite">
+              <img src={currentSprite}></img>
+              {character.id === "mill" && (
+                <div className="sprite-nav">
+                  <button onClick={prevSprite} disabled={spriteIndex === 0}>
+                    ◀
+                  </button>
+
+                  <span>
+                    {spriteIndex + 1} / {sprites.length}
+                  </span>
+
+                  <button
+                    onClick={nextSprite}
+                    disabled={spriteIndex === sprites.length - 1}
+                  >
+                    ▶
+                  </button>
+                </div>
+              )}
+            </div>
 
             <div className="character-troop-image">{/* EMPTY FOR NOW */}</div>
 
@@ -111,6 +141,7 @@ export default function CharacterDetail({ characterId, onClose }) {
           <h2>
             <strong>Recruitment Conditions</strong>
           </h2>
+
           {hasConditions ?
             <>
               <div className="character-detail-condition-box">
@@ -139,7 +170,6 @@ export default function CharacterDetail({ characterId, onClose }) {
               )}
             </>
           : <p className="condition-none">Recruited automatically</p>}
-          <img src={currentSprite}></img>
         </div>
       </div>
     </div>
