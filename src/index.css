@@ -393,9 +393,16 @@ body {
 
 .character-main {
   display: grid;
-  grid-template-columns: 192px 1fr 192px 1fr;
+  grid-template-columns: 192px 1fr 260px 260px;
   gap: 16px;
-  align-items: stretch;
+}
+
+.character-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+  flex: 1;
 }
 
 .character-portrait {
@@ -421,6 +428,22 @@ body {
   padding: 8px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 5%;
+}
+
+.character-troop-sprites {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.character-troop-sprites img {
+  width: 100%;
+  max-height: 256px;
+  object-fit: contain;
 }
 
 .character-recruitment {

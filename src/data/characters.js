@@ -24,6 +24,7 @@ export const characters = {
     id: "sill",
     name: "Sill Plain",
     portrait: "sill.png",
+    sprite: "sill.png",
     recruitCondition: [
       "Recruited automatically but lost at end of prologue",
       "Volgo Z must be conquered before LP 4/1/3",
@@ -46,6 +47,7 @@ export const characters = {
     id: "bound",
     name: "Bound Less",
     portrait: "bound.png",
+    sprite: "bound.png",
     recruitCondition: [
       "Recruited automatically but lost at end of prologue",
       "Soul must be called in the Harem at least two times after being rescued",
@@ -70,6 +72,7 @@ export const characters = {
     id: "soul",
     name: "Soul Less",
     portrait: "soul.png",
+    sprite: "soul.png",
     recruitCondition: [
       "Recruited automatically but lost at end of prologue",
       "Volgo Z must be conquered before LP 3/8/3",
@@ -91,6 +94,7 @@ export const characters = {
     id: "leila",
     name: "Leila Grecni",
     portrait: "leila.png",
+    sprite: "leila.png",
     recruitCondition: [],
     unitType: "royalguards",
     unitSize: 800,
@@ -109,6 +113,7 @@ export const characters = {
     id: "barres",
     name: "Barres Province",
     portrait: "barres.png",
+    sprite: "barres.png",
     recruitCondition: [],
     unitType: "leazasknights",
     unitSize: 1000,
@@ -127,6 +132,7 @@ export const characters = {
     id: "rick",
     name: "Rick Addison",
     portrait: "rick.png",
+    sprite: "rick.png",
     recruitCondition: [],
     unitType: "leazasknights",
     unitSize: 800,
@@ -146,6 +152,7 @@ export const characters = {
     id: "cordoba",
     name: "Cordoba Burn",
     portrait: "cordoba.png",
+    sprite: "cordoba.png",
     recruitCondition: [],
     unitType: "leazasknights",
     unitSize: 1000,
@@ -163,6 +170,7 @@ export const characters = {
     id: "kinkaid",
     name: "Kinkaid Brambla",
     portrait: "kinkaid.png",
+    sprite: "kinkaid.png",
     recruitCondition: [],
     unitType: "leazassoldiers",
     unitSize: 1500,
@@ -180,6 +188,7 @@ export const characters = {
     id: "menad",
     name: "Menad Shisei",
     portrait: "menad.png",
+    sprite: "menad.png",
     recruitCondition: [],
     unitType: "leazassoldiers",
     unitSize: 1250,
@@ -197,6 +206,7 @@ export const characters = {
     id: "asuka",
     name: "Asuka Cadmium",
     portrait: "asuka.png",
+    sprite: "asuka.png",
     recruitCondition: [],
     unitType: "leazasmages",
     unitSize: 100,
@@ -216,6 +226,7 @@ export const characters = {
     id: "haurein",
     name: "Haurein Province",
     portrait: "haurein.png",
+    sprite: "haurein.png",
     recruitCondition: ["Defeat while fighting the Leazas Rebel Army"],
     unitType: "leazassoldiers",
     unitSize: 1400,
@@ -233,6 +244,7 @@ export const characters = {
     id: "melfeis",
     name: "Melfeis Promenade",
     portrait: "melfeis.png",
+    sprite: "melfeis.png",
     recruitCondition: ["Defeat while fighting the Leazas Rebel Army"],
     unitType: "leazasmages",
     unitSize: 300,
@@ -251,6 +263,7 @@ export const characters = {
     id: "ex",
     name: "Ex Banquet",
     portrait: "ex.png",
+    sprite: "ex.png",
     recruitCondition: [
       'Choose "Join me" after defeating the Rebel Army',
       "Refuse to defend Leazas Castle anytime after LP 3/6/1",
@@ -271,6 +284,7 @@ export const characters = {
     id: "gengorou",
     name: "Gengorou Shinoda",
     portrait: "gengorou.png",
+    sprite: "gengorou.png",
     recruitCondition: [
       "Hanna and M Land must be conquered through negotiation",
       "Shinoda's House in Hannah must be visited twice",
@@ -292,6 +306,7 @@ export const characters = {
     id: "maria",
     name: "Maria Custard",
     portrait: "maria.png",
+    sprite: "maria.png",
     recruitCondition: ["Conquer Custom"],
     unitType: "mariaspupils",
     unitSize: 220,
@@ -310,6 +325,7 @@ export const characters = {
     id: "shizuka",
     name: "Shizuka Masou",
     portrait: "shizuka.png",
+    sprite: "shizuka.png",
     recruitCondition: ["Conquer Custom"],
     unitType: "leazasmages",
     unitSize: 320,
@@ -329,6 +345,7 @@ export const characters = {
     id: "patton",
     name: "Patton Misnarge",
     portrait: "patton.png",
+    sprite: "patton.png",
     recruitCondition: [
       "Attack one of the Patton Faction territories while Rick is alive",
     ],
@@ -351,6 +368,7 @@ export const characters = {
     id: "hunty",
     name: "Hunty Kalar",
     portrait: "hunty.png",
+    sprite: "hunty.png",
     recruitCondition: [
       "Attack one of the Patton Faction territories while Rick is alive",
     ],
@@ -371,6 +389,7 @@ export const characters = {
     id: "freak",
     name: "Freak Paraffin",
     portrait: "freak.png",
+    sprite: "freak.png",
     recruitCondition: [
       "Attack one of the Patton Faction territories while Rick is alive",
     ],
@@ -391,6 +410,7 @@ export const characters = {
     id: "hubert",
     name: "Hubert Lipton",
     portrait: "hubert.png",
+    sprite: "hubert.png",
     recruitCondition: [
       "Attack one of the Patton Faction territories while Rick is alive",
     ],
@@ -411,6 +431,7 @@ export const characters = {
     id: "lelyukov",
     name: "Lelyukov Berkov",
     portrait: "lelyukov.png",
+    sprite: "lelyukov.png",
     recruitCondition: [
       "Do not attack Archgrad after conquering Log B",
       "Conquer Archgrad after the event and imprison Lelyukov",
@@ -433,6 +454,7 @@ export const characters = {
     id: "elenoa",
     name: "Elenoa Ran",
     portrait: "elenoa.png",
+    sprite: "elenoa.png",
     recruitCondition: ["Conquer Custom"],
     unitType: "magicwarriors",
     unitSize: 500,
@@ -468,6 +490,7 @@ export const characters = {
     id: "mill",
     name: "Mill Yorks",
     portrait: ["mill.png", "mill2.png"],
+    sprite: ["mill.png", "mill2.png"],
     recruitCondition: ["Conquer Custom"],
     unitType: "phantombeasts",
     unitSize: 28,
@@ -486,6 +509,7 @@ export const characters = {
     id: "mars",
     name: "Mars the Great",
     portrait: "mars.png",
+    sprite: "mars.png",
     recruitCondition: ["Use negotiation to conquer Mars"],
     unitType: "leazassoldiers",
     unitSize: 1000,
@@ -503,6 +527,7 @@ export const characters = {
     id: "isoroku",
     name: "Isoroku Yamamoto",
     portrait: "isoroku.png",
+    sprite: "isoroku.png",
     recruitCondition: [
       "Defeat her in battle, must be done before conquering Osaka",
     ],
@@ -524,6 +549,7 @@ export const characters = {
     id: "cream",
     name: "Cream Ganoblade",
     portrait: "cream.png",
+    sprite: "cream.png",
     recruitCondition: ["Defeat her within 3 encounters or killing Nero Chapet"],
     unitType: "leazassoldiers",
     unitSize: 1000,
@@ -541,6 +567,7 @@ export const characters = {
     id: "satella",
     name: "Satella",
     portrait: "satella.png",
+    sprite: "satella.png",
     recruitCondition: [
       'Select "Observe for now" when Miki and Kentarou come to Leazas Castle',
     ],
@@ -560,6 +587,7 @@ export const characters = {
     id: "meglass",
     name: "Meglass",
     portrait: "meglass.png",
+    sprite: "meglass.png",
     recruitCondition: [
       'Select "Observe for now" when Miki and Kentarou come to Leazas Castle',
     ],
@@ -627,6 +655,7 @@ export const characters = {
     id: "julia",
     name: "Julia Lindum",
     portrait: "julia.png",
+    sprite: "julia.png",
     recruitCondition: [
       "Beginning of turn event after Leila dies or leaves the army",
     ],
@@ -646,6 +675,7 @@ export const characters = {
     id: "rafalia",
     name: "Rafalia Musca",
     portrait: "rafalia.png",
+    sprite: "rafalia.png",
     recruitCondition: [
       "Build Military Academy",
       "Visit it once, then wait three weeks",
@@ -670,6 +700,7 @@ export const characters = {
     id: "arlcoate",
     name: "Arlcoate Marius",
     portrait: "arlcoate.png",
+    sprite: "arlcoate.png",
     recruitCondition: [
       "Build Military Academy",
       "Visit it once, then wait three weeks",
@@ -694,6 +725,7 @@ export const characters = {
     id: "aviator",
     name: "Aviator Sukatto",
     portrait: "aviator.png",
+    sprite: "aviator.png",
     recruitCondition: [
       "Leila and Julia have either died or left the army. Will join as a beginning of turn event",
     ],
@@ -713,6 +745,7 @@ export const characters = {
     id: "ragnarokarc",
     name: "Ragnarokarc",
     portrait: "ragnarokarc.png",
+    sprite: "ragnarokarc.png",
     recruitCondition: [
       "Collect a levy in The O, Red and then L Zile",
       "Wait for a rebellion to occur in Poor and suppress it",
@@ -735,6 +768,7 @@ export const characters = {
     id: "chizuko",
     name: "Chizuko Yamada",
     portrait: "chizuko.png",
+    sprite: "chizuko.png",
     recruitCondition: [
       "Conquer Chizuko's Tower with Ragnarokarc as one of your units",
     ],
@@ -757,6 +791,7 @@ export const characters = {
     id: "magic",
     name: "Magic the Gandhi",
     portrait: "magic.png",
+    sprite: "magic.png",
     recruitCondition: [
       "Defeat Alex in Old Zeth",
       "Attack Magic's Tower and fail once",
@@ -783,6 +818,7 @@ export const characters = {
     id: "nagi",
     name: "Nagi su Ragarl",
     portrait: "nagi.png",
+    sprite: "nagi.png",
     recruitCondition: [
       "Must have Sill and Shizuka",
       "When Sill warns Rance don't bring him to dungeons or battles",
@@ -806,6 +842,7 @@ export const characters = {
     id: "galtia",
     name: "Galtia",
     portrait: "galtia.png",
+    sprite: "galtia.png",
     recruitCondition: [
       "Have sex with Martina Curry",
       "Allow Galtia to conquer two cities",
@@ -826,6 +863,7 @@ export const characters = {
     id: "saizel_hawzel",
     name: "Saizel & Hawzel",
     portrait: ["saizel_hawzel.png", "saizel_hawzel2.png"],
+    sprite: ["saizel_hawzel.png", "saizel_hawzel2.png"],
     recruitCondition: [
       "Conquer Kayblis Castle",
       "Visit the dungeon in Kayblis Castle",
@@ -847,6 +885,7 @@ export const characters = {
     id: "aristoles",
     name: "Aristoles Calm",
     portrait: "aristoles.png",
+    sprite: "aristoles.png",
     recruitCondition: [
       "Conquer Lang Bau without attacking a Patton Faction territory",
       "Wait for an event where Convert comes to Leazas Castle and choose to hear him out",
@@ -868,6 +907,7 @@ export const characters = {
     id: "gurwin",
     name: "Gurwin Trough",
     portrait: "gurwin.png",
+    sprite: "gurwin.png",
     recruitCondition: [
       "Every time the AL Church is visited, if Elizabeth Des in in the harem there's a chance Gurwin will join",
     ],
@@ -887,6 +927,7 @@ export const characters = {
     id: "cafe",
     name: "Cafe Artful",
     portrait: "cafe.png",
+    sprite: "cafe.png",
     recruitCondition: [
       "Obtain Chaos, visit Ho-Raga with Rance/Kentarou and ask about the past",
       "Visit British in the Thieves' Cave and obtain the Gourd Statue",
@@ -909,6 +950,7 @@ export const characters = {
     id: "manironeh",
     name: "Manironeh Salad",
     portrait: "manironeh.png",
+    sprite: "manironeh.png",
     recruitCondition: ["Attack Lady's Caravan in Helman"],
     unitType: "carfeknights",
     unitSize: 500,
@@ -926,6 +968,7 @@ export const characters = {
     id: "somita",
     name: "Somita Kalar",
     portrait: "somita.png",
+    sprite: "somita.png",
     recruitCondition: ["Visit the Kalar Forest"],
     unitType: "kalars",
     unitSize: 500,
@@ -943,6 +986,7 @@ export const characters = {
     id: "rolex",
     name: "Rolex Gadras",
     portrait: "rolex.png",
+    sprite: "rolex.png",
     recruitCondition: [
       "Fight and capture Katyusha and Saulnia",
       "Recruit Aristoles",
@@ -966,6 +1010,7 @@ export const characters = {
     id: "hannyking",
     name: "Hanny King",
     portrait: "hannyking.png",
+    sprite: "hannyking.png",
     recruitCondition: [
       "Collect a levy in L Zile",
       "Visit Titi Lake with a unit equipped with Aluminum Axe, then choose Aluminum Axe",
@@ -990,6 +1035,7 @@ export const characters = {
     id: "kaijuprince",
     name: "Kaiju Prince",
     portrait: "kaijuprince.png",
+    sprite: "kaijuprince.png",
     recruitCondition: [
       "Conquer Shangri-La",
       "Call Shariela in the Harem once",
@@ -1012,6 +1058,7 @@ export const characters = {
     id: "louis",
     name: "Louis Quitowack",
     portrait: "louis.png",
+    sprite: "louis.png",
     recruitCondition: ["Hire Mercenary A from Pluepet"],
     unitType: "mercenaries",
     unitSize: 200,
@@ -1029,6 +1076,7 @@ export const characters = {
     id: "cecil",
     name: "Cecil Carna",
     portrait: "cecil.png",
+    sprite: "cecil.png",
     recruitCondition: ["Hire Mercenary B from Pluepet"],
     unitType: "mercenaries",
     unitSize: 1000,
