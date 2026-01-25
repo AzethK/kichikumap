@@ -5,7 +5,7 @@ import { regionStyles } from "../data/regionStyles";
 
 import CharacterCard from "./CharacterCard";
 
-export default function AreaPanel({ areaId, onClose }) {
+export default function AreaPanel({ areaId, onClose, setSelectedCharacterId }) {
   if (!areaId) return null;
 
   const area = areas.find((a) => a.id === areaId);
@@ -47,7 +47,11 @@ export default function AreaPanel({ areaId, onClose }) {
         )}
 
         {recruits.map((character) => (
-          <CharacterCard key={character.id} character={character} />
+          <CharacterCard
+            key={character.id}
+            character={character}
+            setChar={() => setSelectedCharacterId(character.id)}
+          />
         ))}
       </section>
     </div>

@@ -6,8 +6,13 @@ import {
 } from "../data/characterPortraits";
 import { characters } from "../data/characters";
 import { troops } from "../data/troops";
+import { characterNameMap } from "../util/characterNameMap";
 
-export default function CharacterDetail({ characterId, onClose }) {
+export default function CharacterDetail({
+  characterId,
+  onClose,
+  setSelectedCharacterId,
+}) {
   const character = characters[characterId];
   if (!character) return null;
 
@@ -44,6 +49,28 @@ export default function CharacterDetail({ characterId, onClose }) {
   /* ---------------- Recruitment Conditions ---------------- */
 
   const conditions = character.recruitCondition ?? [];
+
+  function renderConditionText(text, setSelectedCharacterId) {
+    const parts = text.split(/(\b[A-Z][a-zA-Z]+\b)/g);
+
+    return parts.map((part, i) => {
+      const characterId = characterNameMap[part];
+
+      if (characterId) {
+        return (
+          <span
+            key={i}
+            className="character-link"
+            onClick={() => setSelectedCharacterId(characterId)}
+          >
+            {part}
+          </span>
+        );
+      }
+
+      return <span key={i}>{part}</span>;
+    });
+  }
 
   /* ---------------- Helpers ---------------- */
 
@@ -172,7 +199,15 @@ export default function CharacterDetail({ characterId, onClose }) {
 
               {character.surge && (
                 <div>
-                  <strong>Surge:</strong> {characters[character.surge].name}
+                  <strong>Surge:</strong>{" "}
+                  <span
+                    className="character-link"
+                    onClick={() =>
+                      setSelectedCharacterId(characters[character.surge].id)
+                    }
+                  >
+                    {characters[character.surge].name}
+                  </span>
                 </div>
               )}
               {character.variants && (
@@ -214,11 +249,16 @@ export default function CharacterDetail({ characterId, onClose }) {
                 <div className="character-detail-condition-box">
                   <div className="character-condition-step">
                     {conditions.map((c, i) => (
-                      <div key={i}>• {c}</div>
+                      <div key={i}>
+                        • {renderConditionText(c, setSelectedCharacterId)}
+                      </div>
                     ))}
                   </div>
                 </div>
-              : <em>Recruited Automatically </em>}
+              : <div className="character-condition-step">
+                  • Recruited automatically
+                </div>
+              }
             </div>
 
             {/* Troop Sprites */}

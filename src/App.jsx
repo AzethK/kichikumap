@@ -32,6 +32,7 @@ export default function App() {
       <AreaPanel
         areaId={selectedAreaId}
         onClose={() => setSelectedAreaId(null)}
+        setSelectedCharacterId={setSelectedCharacterId}
       />
 
       {activeOverlay === "subordinates" && (
@@ -45,6 +46,7 @@ export default function App() {
         <CharacterDetail
           characterId={selectedCharacterId}
           onClose={() => setSelectedCharacterId(null)}
+          setSelectedCharacterId={setSelectedCharacterId}
         />
       )}
     </>

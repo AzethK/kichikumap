@@ -1023,7 +1023,7 @@ export const characters = {
     recruitCondition: [
       "Collect a levy in L Zile",
       "Visit Titi Lake with a unit equipped with Aluminum Axe, then choose Aluminum Axe",
-      "Visit Hanny King at Titi Lake 66F with Julia Lindum",
+      "Visit Hanny King at Titi Lake 66F with Julia",
       "Ask for Julia Special, then visit Titi Lake 66f again with Rance",
       'Select "Join me" then "Give Julia"',
       "Will join as a beginning of turn event",

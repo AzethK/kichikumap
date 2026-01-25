@@ -1,23 +1,15 @@
 import { useState } from "react";
 import { getCharacterPortrait } from "../data/characterPortraits";
+import { characterNameMap } from "../util/characterNameMap";
 
-export default function CharacterCard({ character }) {
+export default function CharacterCard({ character, setChar }) {
   //Support multiple portraits per character
   const portraits =
     Array.isArray(character.portrait) ?
       character.portrait
     : [character.portrait];
 
-  const [portraitIndex, setPortraitIndex] = useState(0);
-
-  const hasMultiplePortraits = portraits.length > 1;
-
-  const prevPortrait = () => setPortraitIndex((i) => Math.max(0, i - 1));
-
-  const nextPortrait = () =>
-    setPortraitIndex((i) => Math.min(portraits.length - 1, i + 1));
-
-  const currentPortrait = getCharacterPortrait(portraits[portraitIndex]);
+  const currentPortrait = getCharacterPortrait(portraits[0]);
   //
 
   const conditions = character.recruitCondition ?? [];
@@ -30,27 +22,8 @@ export default function CharacterCard({ character }) {
 
   return (
     <div className="character-card">
-      <div className="character-portrait">
-        <img src={currentPortrait} alt={character.name} />
-
-        {hasMultiplePortraits && (
-          <div className="portrait-nav">
-            <button onClick={prevPortrait} disabled={portraitIndex === 0}>
-              ◀
-            </button>
-
-            <span>
-              {portraitIndex + 1} / {portraits.length}
-            </span>
-
-            <button
-              onClick={nextPortrait}
-              disabled={portraitIndex === portraits.length - 1}
-            >
-              ▶
-            </button>
-          </div>
-        )}
+      <div className="subordinate-portrait">
+        <img src={currentPortrait} alt={character.name} onClick={setChar} />
       </div>
 
       <div className="character-info">
@@ -59,32 +32,29 @@ export default function CharacterCard({ character }) {
           <strong>{character.name}</strong>
         </div>
 
-        {hasConditions ?
-          <>
-            <div className="condition-box">
+        <>
+          <div className="condition-box">
+            {hasConditions ?
               <div className="condition-step">{conditions[step]}</div>
+            : <p className="condition-step">Recruited automatically</p>}
+          </div>
+
+          {conditions.length > 1 && (
+            <div className="condition-nav">
+              <button onClick={prev} disabled={step === 0}>
+                ◀
+              </button>
+
+              <span>
+                {step + 1} / {conditions.length}
+              </span>
+
+              <button onClick={next} disabled={step === conditions.length - 1}>
+                ▶
+              </button>
             </div>
-
-            {conditions.length > 1 && (
-              <div className="condition-nav">
-                <button onClick={prev} disabled={step === 0}>
-                  ◀
-                </button>
-
-                <span>
-                  {step + 1} / {conditions.length}
-                </span>
-
-                <button
-                  onClick={next}
-                  disabled={step === conditions.length - 1}
-                >
-                  ▶
-                </button>
-              </div>
-            )}
-          </>
-        : <p className="condition-none">Recruited automatically</p>}
+          )}
+        </>
       </div>
     </div>
   );
