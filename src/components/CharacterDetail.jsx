@@ -44,7 +44,6 @@ export default function CharacterDetail({ characterId, onClose }) {
   /* ---------------- Recruitment Conditions ---------------- */
 
   const conditions = character.recruitCondition ?? [];
-  const [conditionStep, setConditionStep] = useState(0);
 
   /* ---------------- Helpers ---------------- */
 
@@ -69,6 +68,9 @@ export default function CharacterDetail({ characterId, onClose }) {
           <div className="character-header">
             <div className="character-detail-name">
               <h2>{character.name}</h2>
+            </div>
+            <div className="character-troop-name">
+              <h2>Commander Stats</h2>
             </div>
             <div className="character-troop-name">
               <h2>Troops: {troop ? troop.name : "None"}</h2>
@@ -139,22 +141,28 @@ export default function CharacterDetail({ characterId, onClose }) {
               <Stat label="Deploy Cost" value={character.deployCost} />
               <Stat label="HP" value={character.hp} />
               <Stat label="Strikes" value={character.strikes} />
-              <Stat label="ATK" value={character.atk} />
+              <Stat
+                label="ATK"
+                value={
+                  character.variants ?
+                    character.variants.atk ?
+                      `${character.atk}→${character.variants.atk}`
+                    : character.atk
+                  : character.atk
+                }
+              />
               <Stat label="DEF" value={character.def} />
               <Stat label="MAG" value={character.magic} />
 
               {character.specialName && (
-                <div>
+                <div className="wide">
                   <strong>Special:</strong> {character.specialName}
                   {character.specialType && ` (${character.specialType})`}
                 </div>
               )}
 
-              <Stat label="Replenish Rate" value={character.replenishRate} />
-              <Stat label="Strategy" value={character.strategy} />
-
               {Array.isArray(character.sca) && (
-                <div>
+                <div className="wide">
                   <strong>SCA:</strong>
                   <div>Offense: {character.sca[0]}</div>
                   <div>Defense: {character.sca[1]}</div>
@@ -164,7 +172,12 @@ export default function CharacterDetail({ characterId, onClose }) {
 
               {character.surge && (
                 <div>
-                  <strong>Surge:</strong> {character.surge}
+                  <strong>Surge:</strong> {characters[character.surge].name}
+                </div>
+              )}
+              {character.variants && (
+                <div className="wide">
+                  Stats change: {character.variants.label}
                 </div>
               )}
             </div>
@@ -174,7 +187,16 @@ export default function CharacterDetail({ characterId, onClose }) {
               {troop ?
                 <>
                   <Stat label="Attack Type" value={troop.attackType} />
-                  <Stat label="ATK" value={troop.atk} />
+                  <Stat
+                    label="ATK"
+                    value={
+                      character.variants ?
+                        character.variants.troopAtk ?
+                          `${troop.atk}→${character.variants.troopAtk}`
+                        : character.troopAtk
+                      : character.troopAtk
+                    }
+                  />
                   <Stat label="DEF" value={troop.def} />
                   <Stat label="Upgrade" value={troop.upgrade || "N/A"} />
                 </>
@@ -186,43 +208,17 @@ export default function CharacterDetail({ characterId, onClose }) {
           <div className="character-bottom">
             {/* Recruitment */}
             <div className="character-recruitment">
-              <h3>Recruitment Conditions</h3>
+              <h2>Recruitment Conditions</h2>
 
               {conditions.length > 0 ?
-                <>
-                  <div className="character-detail-condition-box">
-                    <div className="character-condition-step">
-                      {conditions[conditionStep]}
-                    </div>
+                <div className="character-detail-condition-box">
+                  <div className="character-condition-step">
+                    {conditions.map((c, i) => (
+                      <div key={i}>• {c}</div>
+                    ))}
                   </div>
-
-                  {conditions.length > 1 && (
-                    <div className="condition-nav">
-                      <button
-                        onClick={() =>
-                          setConditionStep((s) => Math.max(0, s - 1))
-                        }
-                        disabled={conditionStep === 0}
-                      >
-                        ◀
-                      </button>
-                      <span>
-                        {conditionStep + 1} / {conditions.length}
-                      </span>
-                      <button
-                        onClick={() =>
-                          setConditionStep((s) =>
-                            Math.min(conditions.length - 1, s + 1),
-                          )
-                        }
-                        disabled={conditionStep === conditions.length - 1}
-                      >
-                        ▶
-                      </button>
-                    </div>
-                  )}
-                </>
-              : <p className="condition-none">Recruited automatically</p>}
+                </div>
+              : <em>Recruited Automatically </em>}
             </div>
 
             {/* Troop Sprites */}

@@ -320,6 +320,12 @@ export const characters = {
     strategy: 15,
     sca: ["0/0", "0/0", "0/0"],
     surge: "rance",
+
+    variants: {
+      label: 'Select "See Maria" 5 times at the Tulip Research Institute',
+      atk: 14,
+      troopAtk: 14,
+    },
   },
   shizuka: {
     id: "shizuka",
@@ -472,6 +478,7 @@ export const characters = {
     id: "milli",
     name: "Milli Yorks",
     portrait: "milli.png",
+    sprite: "milli.png",
     recruitCondition: ["Conquer Custom"],
     unitType: "leazassoldiers",
     unitSize: 1000,
@@ -609,6 +616,7 @@ export const characters = {
     id: "kentarou",
     name: "Kentarou Ogawa",
     portrait: "kentarou.png",
+    sprite: "kentarou.png",
     recruitCondition: [
       'Select "Observe for now" when Miki and Kentarou come to Leazas Castle',
       "Obtain Chaos",
@@ -632,6 +640,7 @@ export const characters = {
     id: "miki",
     name: "Miki Kurusu",
     portrait: "miki.png",
+    sprite: "miki.png",
     recruitCondition: [
       'Select "Observe for now" when Miki and Kentarou come to Leazas Castle',
       "Obtain Chaos",

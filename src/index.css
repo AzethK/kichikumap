@@ -325,8 +325,10 @@ body {
 
 .subordinates-overlay {
   position: relative;
-  width: 80vw;
-  height: 80vh;
+  width: 1300px;
+  height: 800px;
+  max-width: 95vw;
+  max-height: 95vh;
 
   background: #111;
   padding: 24px;
@@ -377,11 +379,12 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  height: 100%;
 }
 
 .character-header {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 0.5fr 0.5fr;
   gap: 16px;
   padding-top: 30px;
 }
@@ -393,8 +396,14 @@ body {
 
 .character-main {
   display: grid;
-  grid-template-columns: 192px 1fr 260px 260px;
+  grid-template-columns:
+    192px
+    minmax(0, 1fr)
+    24%
+    24%;
   gap: 16px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .character-bottom {
@@ -422,7 +431,22 @@ body {
   object-fit: contain;
 }
 
-.character-stats,
+.character-stats {
+  min-height: 256px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 6px;
+}
+
+.character-stats .wide {
+  grid-column: span 2;
+}
+
 .character-troop-stats {
   min-height: 256px;
   padding: 8px;
@@ -441,22 +465,27 @@ body {
 }
 
 .character-troop-sprites img {
-  width: 100%;
-  max-height: 256px;
+  width: 50%;
   object-fit: contain;
 }
 
 .character-recruitment {
+  background: rgba(255, 255, 255, 0.05);
   padding: 12px;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.character-recruitment h2 {
+  margin: 0 0 8px 0;
 }
 
 .character-detail-condition-box {
   min-height: 11.8em;
-  width: 50%;
-  background: rgba(255, 255, 255, 0.05);
   border-radius: 5%;
   display: flex;
-  align-items: flex-start;
 }
 
 .character-condition-step {
@@ -465,6 +494,11 @@ body {
   line-height: 1.4;
   min-height: 2.8em;
   font-size: larger;
+}
+
+.character-condition-step div {
+  margin-bottom: 6px;
+  line-height: 1.4;
 }
 
 /* Character Sprite */
@@ -484,6 +518,11 @@ body {
   width: 409px;
   height: 256px;
   object-fit: contain;
+}
+
+.character-troop-sprites img,
+.character-portrait img {
+  image-rendering: pixelated;
 }
 
 /* Sprite Nav */
