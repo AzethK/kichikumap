@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { getCharacterPortrait } from "../data/characterPortraits";
-import { characterNameMap } from "../util/characterNameMap";
 
 export default function CharacterCard({ character, setChar }) {
   //Support multiple portraits per character

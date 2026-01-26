@@ -551,7 +551,7 @@ export const areas = [
     type: "city",
   },
   {
-    id: "kayblis_kayblis_castle",
+    id: "kayblis_castle",
     name: "Kayblis' Castle",
     x: 623,
     y: 1603,

@@ -6,7 +6,7 @@ import {
 } from "../data/characterPortraits";
 import { characters } from "../data/characters";
 import { troops } from "../data/troops";
-import { characterNameMap } from "../util/characterNameMap";
+import { renderConditionText } from "../util/recruitParser";
 
 export default function CharacterDetail({
   characterId,
@@ -49,28 +49,6 @@ export default function CharacterDetail({
   /* ---------------- Recruitment Conditions ---------------- */
 
   const conditions = character.recruitCondition ?? [];
-
-  function renderConditionText(text, setSelectedCharacterId) {
-    const parts = text.split(/(\b[A-Z][a-zA-Z]+\b)/g);
-
-    return parts.map((part, i) => {
-      const characterId = characterNameMap[part];
-
-      if (characterId) {
-        return (
-          <span
-            key={i}
-            className="character-link"
-            onClick={() => setSelectedCharacterId(characterId)}
-          >
-            {part}
-          </span>
-        );
-      }
-
-      return <span key={i}>{part}</span>;
-    });
-  }
 
   /* ---------------- Helpers ---------------- */
 
