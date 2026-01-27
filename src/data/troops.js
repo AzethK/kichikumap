@@ -186,7 +186,7 @@ export const troops = {
     attackType: "Direct",
     atk: 11,
     def: 8,
-    sprite: "hannies.png",
+    sprite: "kaijuwarriors.png",
   },
   mercenaries: {
     id: "mercenaries",

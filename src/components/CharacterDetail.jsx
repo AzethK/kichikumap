@@ -5,6 +5,7 @@ import {
   getTroopSprite,
 } from "../data/characterPortraits";
 import { characters } from "../data/characters";
+import { charactersSubordinate } from "../data/charactersSubordinate";
 import { troops } from "../data/troops";
 import { renderConditionText } from "../util/recruitParser";
 
@@ -14,9 +15,11 @@ export default function CharacterDetail({
   setSelectedCharacterId,
 }) {
   const character = characters[characterId];
+  const characterSubordinate = charactersSubordinate[characterId];
+
   if (!character) return null;
 
-  const troop = troops[character.unitType];
+  const troop = troops[characterSubordinate.unitType];
 
   /* ---------------- Portraits & Sprites ---------------- */
 
@@ -142,55 +145,61 @@ export default function CharacterDetail({
 
             {/* Commander Stats */}
             <div className="character-stats">
-              <Stat label="Unit Size" value={character.unitSize} />
-              <Stat label="Deploy Cost" value={character.deployCost} />
-              <Stat label="HP" value={character.hp} />
-              <Stat label="Strikes" value={character.strikes} />
+              <Stat label="Unit Size" value={characterSubordinate.unitSize} />
+              <Stat
+                label="Deploy Cost"
+                value={characterSubordinate.deployCost}
+              />
+              <Stat label="HP" value={characterSubordinate.hp} />
+              <Stat label="Strikes" value={characterSubordinate.strikes} />
               <Stat
                 label="ATK"
                 value={
-                  character.variants ?
-                    character.variants.atk ?
-                      `${character.atk}→${character.variants.atk}`
-                    : character.atk
-                  : character.atk
+                  characterSubordinate.variants ?
+                    characterSubordinate.variants.atk ?
+                      `${characterSubordinate.atk}→${characterSubordinate.variants.atk}`
+                    : characterSubordinate.atk
+                  : characterSubordinate.atk
                 }
               />
-              <Stat label="DEF" value={character.def} />
-              <Stat label="MAG" value={character.magic} />
+              <Stat label="DEF" value={characterSubordinate.def} />
+              <Stat label="MAG" value={characterSubordinate.magic} />
 
-              {character.specialName && (
+              {characterSubordinate.specialName && (
                 <div className="wide">
-                  <strong>Special:</strong> {character.specialName}
-                  {character.specialType && ` (${character.specialType})`}
+                  <strong>Special:</strong> {characterSubordinate.specialName}
+                  {characterSubordinate.specialType &&
+                    ` (${characterSubordinate.specialType})`}
                 </div>
               )}
 
-              {Array.isArray(character.sca) && (
+              {Array.isArray(characterSubordinate.sca) && (
                 <div className="wide">
                   <strong>SCA:</strong>
-                  <div>Offense: {character.sca[0]}</div>
-                  <div>Defense: {character.sca[1]}</div>
-                  <div>Dungeons: {character.sca[2]}</div>
+                  <div>Offense: {characterSubordinate.sca[0]}</div>
+                  <div>Defense: {characterSubordinate.sca[1]}</div>
+                  <div>Dungeons: {characterSubordinate.sca[2]}</div>
                 </div>
               )}
 
-              {character.surge && (
+              {characterSubordinate.surge && (
                 <div>
                   <strong>Surge:</strong>{" "}
                   <span
                     className="character-link"
                     onClick={() =>
-                      setSelectedCharacterId(characters[character.surge].id)
+                      setSelectedCharacterId(
+                        characters[characterSubordinate.surge].id,
+                      )
                     }
                   >
-                    {characters[character.surge].name}
+                    {characters[characterSubordinate.surge].name}
                   </span>
                 </div>
               )}
-              {character.variants && (
+              {characterSubordinate.variants && (
                 <div className="wide">
-                  Stats change: {character.variants.label}
+                  Stats change: {characterSubordinate.variants.label}
                 </div>
               )}
             </div>
@@ -203,11 +212,11 @@ export default function CharacterDetail({
                   <Stat
                     label="ATK"
                     value={
-                      character.variants ?
-                        character.variants.troopAtk ?
-                          `${troop.atk}→${character.variants.troopAtk}`
-                        : character.troopAtk
-                      : character.troopAtk
+                      characterSubordinate.variants ?
+                        characterSubordinate.variants.troopAtk ?
+                          `${troop.atk}→${characterSubordinate.variants.troopAtk}`
+                        : characterSubordinate.troopAtk
+                      : characterSubordinate.troopAtk
                     }
                   />
                   <Stat label="DEF" value={troop.def} />
