@@ -10,6 +10,7 @@ export default function App() {
   const [activeOverlay, setActiveOverlay] = useState(null);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [selectedCharacterId, setSelectedCharacterId] = useState(null);
+  const [haremToggle, setHaremToggle] = useState(false);
 
   return (
     <>
@@ -39,6 +40,8 @@ export default function App() {
         <SubordinatesOverlay
           onClose={() => setActiveOverlay(null)}
           setSelectedCharacterId={setSelectedCharacterId}
+          haremToggle={haremToggle}
+          setHaremToggle={setHaremToggle}
         />
       )}
 

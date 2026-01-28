@@ -1,10 +1,18 @@
 import { characters } from "../data/characters.js";
+import { harem } from "../data/charactersHarem.js";
 import { getCharacterPortrait } from "../data/characterPortraits.js";
 
 export default function SubordinatesOverlay({
   onClose,
   setSelectedCharacterId,
+  haremToggle,
+  setHaremToggle,
 }) {
+  const activeCharacters =
+    haremToggle ?
+      Object.keys(harem).map((id) => characters[id])
+    : Object.values(characters);
+
   return (
     <div className="overlay-backdrop" onClick={onClose}>
       <div
@@ -17,8 +25,17 @@ export default function SubordinatesOverlay({
 
         <h2>Subordinates</h2>
 
+        <button
+          onClick={() => {
+            setHaremToggle(!haremToggle);
+          }}
+        >
+          Harem
+        </button>
+
         <div className="subordinates-grid">
-          {Object.values(characters).map((character) => {
+          {activeCharacters.map((character) => {
+            console.log(character);
             const portraits =
               Array.isArray(character.portrait) ?
                 character.portrait

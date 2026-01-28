@@ -484,6 +484,13 @@ export const characters = {
     sprite: "lia.png",
     recruitCondition: [],
   },
+  maris: {
+    id: "maris",
+    name: "Maris Amaryllis",
+    portrait: "maris.png",
+    sprite: "maris.png",
+    recruitCondition: [],
+  },
   suzume: {
     id: "suzume",
     name: "Suzume Katou",
@@ -539,7 +546,7 @@ export const characters = {
     sprite: "aoi.png",
   },
   shariela: {
-    id: "aoi",
+    id: "shariela",
     name: "Shariela Aries",
     portrait: ["shariela.png", "shariela2.png"],
     sprite: "shariela.png",

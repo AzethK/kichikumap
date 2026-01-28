@@ -13,6 +13,10 @@ const troopSprites = import.meta.glob(
   { eager: true },
 );
 
+const haremSprites = import.meta.glob("../assets/harem/*.{png,jpg,jpeg,webp}", {
+  eager: true,
+});
+
 export function getCharacterPortrait(filename) {
   return portraits[`../assets/characterPortraits/${filename}`]?.default;
 }
@@ -23,4 +27,8 @@ export function getCharacterSprite(filename) {
 
 export function getTroopSprite(filename) {
   return troopSprites[`../assets/troops/${filename}`]?.default;
+}
+
+export function getHaremSprite(filename) {
+  return haremSprites[`../assets/harem/${filename}`]?.default;
 }
