@@ -1,16 +1,25 @@
 import { characters } from "../data/characters.js";
 import { harem } from "../data/charactersHarem.js";
+import { charactersSubordinate } from "../data/charactersSubordinate.js";
 import { getCharacterPortrait } from "../data/characterPortraits.js";
 
 export default function SubordinatesOverlay({
   onClose,
   setSelectedCharacterId,
   haremToggle,
+  subordinateToggle,
   setHaremToggle,
+  setSubordinateToggle,
 }) {
   const activeCharacters =
     haremToggle ?
-      Object.keys(harem).map((id) => characters[id])
+      Object.keys(harem)
+        .map((id) => characters[id])
+        .filter(Boolean)
+    : subordinateToggle ?
+      Object.keys(charactersSubordinate)
+        .map((id) => characters[id])
+        .filter(Boolean)
     : Object.values(characters);
 
   return (
@@ -27,15 +36,27 @@ export default function SubordinatesOverlay({
 
         <button
           onClick={() => {
+            if (subordinateToggle) {
+              setSubordinateToggle(!subordinateToggle);
+            }
             setHaremToggle(!haremToggle);
           }}
         >
           Harem
         </button>
+        <button
+          onClick={() => {
+            if (haremToggle) {
+              setHaremToggle(!haremToggle);
+            }
+            setSubordinateToggle(!subordinateToggle);
+          }}
+        >
+          Subordinate
+        </button>
 
         <div className="subordinates-grid">
           {activeCharacters.map((character) => {
-            console.log(character);
             const portraits =
               Array.isArray(character.portrait) ?
                 character.portrait

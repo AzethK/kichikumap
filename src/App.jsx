@@ -11,6 +11,7 @@ export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [selectedCharacterId, setSelectedCharacterId] = useState(null);
   const [haremToggle, setHaremToggle] = useState(false);
+  const [subordinateToggle, setSubordinateToggle] = useState(false);
 
   return (
     <>
@@ -41,7 +42,9 @@ export default function App() {
           onClose={() => setActiveOverlay(null)}
           setSelectedCharacterId={setSelectedCharacterId}
           haremToggle={haremToggle}
+          subordinateToggle={subordinateToggle}
           setHaremToggle={setHaremToggle}
+          setSubordinateToggle={setSubordinateToggle}
         />
       )}
 
