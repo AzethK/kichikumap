@@ -53,6 +53,8 @@ export default function App() {
           characterId={selectedCharacterId}
           onClose={() => setSelectedCharacterId(null)}
           setSelectedCharacterId={setSelectedCharacterId}
+          haremToggle={haremToggle}
+          setHaremToggle={setHaremToggle}
         />
       )}
     </>

@@ -44,6 +44,7 @@ export default function SubordinatesOverlay({
         >
           Harem
         </button>
+
         <button
           onClick={() => {
             if (haremToggle) {
