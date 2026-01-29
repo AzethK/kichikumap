@@ -9,7 +9,7 @@ export const characters = {
   sill: {
     id: "sill",
     name: "Sill Plain",
-    portrait: "sill.png",
+    portrait: ["sill.png", "sill2.png"],
     sprite: "sill.png",
     recruitCondition: [
       "Recruited automatically but lost at end of prologue",
@@ -261,7 +261,7 @@ export const characters = {
   miki: {
     id: "miki",
     name: "Miki Kurusu",
-    portrait: "miki.png",
+    portrait: ["miki.png", "miki2.png"],
     sprite: "miki.png",
     recruitCondition: [
       'Select "Observe for now" when Miki and character_kentarou come to area_leazas_castle',
@@ -422,7 +422,7 @@ export const characters = {
   somita: {
     id: "somita",
     name: "Somita Kalar",
-    portrait: "somita.png",
+    portrait: ["somita.png", "somita2.png", "somita3.png"],
     sprite: "somita.png",
     recruitCondition: ["Visit the area_helman_kalar_forest"],
   },
@@ -554,6 +554,7 @@ export const characters = {
   pinkcow: {
     id: "pinkcow",
     name: "Pink Cow",
+    portrait: "pinkcow.png",
     sprite: "pinkcow.png",
   },
   amiran: {
@@ -649,6 +650,7 @@ export const characters = {
   mika: {
     id: "mika",
     name: "Mika Saitou",
+    portrait: "mika.png",
     sprite: "mika.png",
   },
 };
