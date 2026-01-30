@@ -22,6 +22,17 @@ export default function SubordinatesOverlay({
         .filter(Boolean)
     : Object.values(characters);
 
+  const getCharacterRole = (characterId) => {
+    const inHarem = Boolean(harem[characterId]);
+    const inSubordinate = Boolean(charactersSubordinate[characterId]);
+
+    if (inHarem && inSubordinate) return "Both";
+    if (inHarem) return "Harem";
+    if (inSubordinate) return "Subordinate";
+
+    return null;
+  };
+
   return (
     <div className="overlay-backdrop" onClick={onClose}>
       <div
@@ -69,7 +80,11 @@ export default function SubordinatesOverlay({
                 src={getCharacterPortrait(portraits[0])}
                 alt={character.id}
                 className="subordinate-portrait"
-                onClick={() => setSelectedCharacterId(character.id)}
+                onClick={() =>
+                  getCharacterRole(character.id) === "Harem" ?
+                    (setHaremToggle(true), setSelectedCharacterId(character.id))
+                  : setSelectedCharacterId(character.id)
+                }
               />
             );
           })}
