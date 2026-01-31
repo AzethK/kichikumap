@@ -340,7 +340,7 @@ export const characters = {
     recruitCondition: [
       "Defeat Alex in area_zeth_old",
       "Attack area_zeth_magics_tower and fail once",
-      "Conquer area_zeth_magics_tower",
+      "Conquer area_zeth_magics_tower after character_xacalite is summoned",
       "Visit Magic's Room in the tower once then leave",
       "Visit Ho Raga or Arcy to receive Absolute Foreclosure Charm",
       "Enter Magic's Room again and use the charm, character_ragnarokarc must have been recruited",
@@ -406,8 +406,7 @@ export const characters = {
     portrait: "cafe.png",
     sprite: "cafe.png",
     recruitCondition: [
-      "Obtain Chaos, visit Ho-Raga with character_rance/character_kentarou and ask about the past",
-      "Visit British in the area_leazas_thieves_dungeon and obtain the Gourd Statue",
+      "Obtain item_gourd_statue",
       "Visit Lady's Caravan in Helman, talk to Lady, repeat this 3 times",
       "Select the area_freecities_uncurse_dungeon",
     ],
