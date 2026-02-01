@@ -416,14 +416,14 @@ export const items = {
     acquisition: ["Levy area_helman_path"],
     sprite: "battleship_key.png",
   },
-  Aluminum: {
-    id: "Aluminum",
+  Aluminum_axe: {
+    id: "aluminum_axe",
     name: "Aluminum Axe",
     consumable: false,
     effect:
       "Commander Attack +0, used to either obtain item_golden_axe or access to Haniwa Temple (area_freecities_titi_lake)",
     acquisition: ["Levy area_freecities_l_zile"],
-    sprite: "Aluminum.png",
+    sprite: "aluminum_axe.png",
   },
   golden_axe: {
     id: "golden_axe",

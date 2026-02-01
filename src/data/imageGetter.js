@@ -3,7 +3,7 @@ const portraits = import.meta.glob(
   { eager: true },
 );
 
-const sprites = import.meta.glob(
+const characterSprites = import.meta.glob(
   "../assets/characterSprites/*.{png,jpg,jpeg,webp}",
   { eager: true },
 );
@@ -17,12 +17,16 @@ const haremSprites = import.meta.glob("../assets/harem/*.{png,jpg,jpeg,webp}", {
   eager: true,
 });
 
+const itemSprites = import.meta.glob("../assets/items/*.{png,jpg,jpeg,webp}", {
+  eager: true,
+});
+
 export function getCharacterPortrait(filename) {
   return portraits[`../assets/characterPortraits/${filename}`]?.default;
 }
 
 export function getCharacterSprite(filename) {
-  return sprites[`../assets/characterSprites/${filename}`]?.default;
+  return characterSprites[`../assets/characterSprites/${filename}`]?.default;
 }
 
 export function getTroopSprite(filename) {
@@ -31,4 +35,8 @@ export function getTroopSprite(filename) {
 
 export function getHaremSprite(filename) {
   return haremSprites[`../assets/harem/${filename}`]?.default;
+}
+
+export function getItemSprite(filename) {
+  return itemSprites[`../assets/items/${filename}`]?.default;
 }

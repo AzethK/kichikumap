@@ -1,7 +1,7 @@
 import { characters } from "../data/characters.js";
 import { harem } from "../data/charactersHarem.js";
 import { charactersSubordinate } from "../data/charactersSubordinate.js";
-import { getCharacterPortrait } from "../data/characterPortraits.js";
+import { getCharacterPortrait } from "../data/imageGetter.js";
 
 export default function SubordinatesOverlay({
   onClose,
@@ -43,7 +43,13 @@ export default function SubordinatesOverlay({
           ✕
         </button>
 
-        <h2>Subordinates</h2>
+        <h2>
+          {haremToggle ?
+            "Harem"
+          : subordinateToggle ?
+            "Subordinates"
+          : "Characters"}
+        </h2>
 
         <button
           onClick={() => {

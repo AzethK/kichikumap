@@ -4,7 +4,7 @@ import {
   getCharacterSprite,
   getTroopSprite,
   getHaremSprite,
-} from "../data/characterPortraits";
+} from "../data/imageGetter";
 import { characters } from "../data/characters";
 import { harem } from "../data/charactersHarem";
 import { charactersSubordinate } from "../data/charactersSubordinate";

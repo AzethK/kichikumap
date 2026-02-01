@@ -550,3 +550,24 @@ body {
 .character-link:hover {
   color: #9cc0ff;
 }
+
+/* Item sprite */
+
+.item-sprite {
+  width: 409px;
+  height: 256px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.item-grid {
+  margin-top: 16px;
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 409px);
+  gap: 16px;
+
+  overflow-y: auto;
+  justify-content: center;
+}

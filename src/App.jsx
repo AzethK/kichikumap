@@ -3,12 +3,14 @@ import SubordinatesOverlay from "./components/SubordinatesOverlay.jsx";
 import AreaPanel from "./components/AreaPanel.jsx";
 import LeftSidebar from "./components/LeftSidebar.jsx";
 import MapViewport from "./components/MapViewport.jsx";
+import ItemsOverlay from "./components/ItemsOverlay.jsx";
 import CharacterDetail from "./components/CharacterDetail.jsx";
 
 export default function App() {
   const [selectedAreaId, setSelectedAreaId] = useState(null);
   const [activeOverlay, setActiveOverlay] = useState(null);
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [selectedItemId, setSelectedItemId] = useState(null);
   const [selectedCharacterId, setSelectedCharacterId] = useState(null);
   const [haremToggle, setHaremToggle] = useState(false);
   const [subordinateToggle, setSubordinateToggle] = useState(false);
@@ -26,6 +28,7 @@ export default function App() {
 
       <LeftSidebar
         onOpenSubordinates={() => setActiveOverlay("subordinates")}
+        onOpenItems={() => setActiveOverlay("items")}
         open={sidebarOpen}
       />
 
@@ -45,6 +48,13 @@ export default function App() {
           subordinateToggle={subordinateToggle}
           setHaremToggle={setHaremToggle}
           setSubordinateToggle={setSubordinateToggle}
+        />
+      )}
+
+      {activeOverlay === "items" && (
+        <ItemsOverlay
+          onClose={() => setActiveOverlay(null)}
+          setSelectedItemId={setSelectedItemId}
         />
       )}
 
