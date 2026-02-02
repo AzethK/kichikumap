@@ -89,6 +89,7 @@ export default function CharacterDetail({
     value !== undefined && value !== null ?
       <div>
         <strong>{label}:</strong> {value}
+        {label === "Strategy" ? "%" : ""}
       </div>
     : null;
 
@@ -213,7 +214,7 @@ export default function CharacterDetail({
                 />
                 <Stat label="DEF" value={characterSubordinate.def} />
                 <Stat label="MAG" value={characterSubordinate.magic} />
-
+                <Stat label="Strategy" value={characterSubordinate.strategy} />
                 {characterSubordinate.specialName && (
                   <div className="wide">
                     <strong>Special:</strong> {characterSubordinate.specialName}
@@ -221,7 +222,6 @@ export default function CharacterDetail({
                       ` (${characterSubordinate.specialType})`}
                   </div>
                 )}
-
                 {Array.isArray(characterSubordinate.sca) && (
                   <div className="wide">
                     <strong>SCA:</strong>
@@ -230,7 +230,6 @@ export default function CharacterDetail({
                     <div>Dungeons: {characterSubordinate.sca[2]}</div>
                   </div>
                 )}
-
                 {characterSubordinate.surge && (
                   <div>
                     <strong>Surge:</strong>{" "}
@@ -266,8 +265,8 @@ export default function CharacterDetail({
                         characterSubordinate.variants ?
                           characterSubordinate.variants.troopAtk ?
                             `${troop.atk}→${characterSubordinate.variants.troopAtk}`
-                          : characterSubordinate.troopAtk
-                        : characterSubordinate.troopAtk
+                          : troop.atk
+                        : troop.atk
                       }
                     />
                     <Stat label="DEF" value={troop.def} />
