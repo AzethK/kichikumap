@@ -6,17 +6,15 @@ import { getCharacterPortrait } from "../data/imageGetter.js";
 export default function SubordinatesOverlay({
   onClose,
   setSelectedCharacterId,
-  haremToggle,
-  subordinateToggle,
-  setHaremToggle,
-  setSubordinateToggle,
+  mode,
+  setMode,
 }) {
   const activeCharacters =
-    haremToggle ?
+    mode === "Harem" ?
       Object.keys(harem)
         .map((id) => characters[id])
         .filter(Boolean)
-    : subordinateToggle ?
+    : mode === "Subordinates" ?
       Object.keys(charactersSubordinate)
         .map((id) => characters[id])
         .filter(Boolean)
@@ -44,34 +42,33 @@ export default function SubordinatesOverlay({
         </button>
 
         <h2>
-          {haremToggle ?
+          {mode === "Harem" ?
             "Harem"
-          : subordinateToggle ?
+          : mode === "Subordinates" ?
             "Subordinates"
           : "Characters"}
         </h2>
 
-        <button
-          onClick={() => {
-            if (subordinateToggle) {
-              setSubordinateToggle(!subordinateToggle);
-            }
-            setHaremToggle(!haremToggle);
-          }}
-        >
-          Harem
-        </button>
-
-        <button
-          onClick={() => {
-            if (haremToggle) {
-              setHaremToggle(!haremToggle);
-            }
-            setSubordinateToggle(!subordinateToggle);
-          }}
-        >
-          Subordinate
-        </button>
+        <div className="character-tabs">
+          <button
+            className={`tab-btn ${mode === "Subordinates" ? "active" : ""}`}
+            onClick={() => {
+              mode === "Subordinates" ?
+                setMode("Characters")
+              : setMode("Subordinates");
+            }}
+          >
+            Subordinate
+          </button>
+          <button
+            className={`tab-btn ${mode === "Harem" ? "active" : ""}`}
+            onClick={() => {
+              mode === "Harem" ? setMode("Characters") : setMode("Harem");
+            }}
+          >
+            Harem
+          </button>
+        </div>
 
         <div className="subordinates-grid">
           {activeCharacters.map((character) => {
@@ -88,7 +85,7 @@ export default function SubordinatesOverlay({
                 className="subordinate-portrait"
                 onClick={() =>
                   getCharacterRole(character.id) === "Harem" ?
-                    (setHaremToggle(true), setSelectedCharacterId(character.id))
+                    (setMode("Harem"), setSelectedCharacterId(character.id))
                   : setSelectedCharacterId(character.id)
                 }
               />

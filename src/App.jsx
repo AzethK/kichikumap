@@ -12,8 +12,7 @@ export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [selectedItemId, setSelectedItemId] = useState(null);
   const [selectedCharacterId, setSelectedCharacterId] = useState(null);
-  const [haremToggle, setHaremToggle] = useState(false);
-  const [subordinateToggle, setSubordinateToggle] = useState(false);
+  const [mode, setMode] = useState("characters");
 
   return (
     <>
@@ -44,10 +43,8 @@ export default function App() {
         <SubordinatesOverlay
           onClose={() => setActiveOverlay(null)}
           setSelectedCharacterId={setSelectedCharacterId}
-          haremToggle={haremToggle}
-          subordinateToggle={subordinateToggle}
-          setHaremToggle={setHaremToggle}
-          setSubordinateToggle={setSubordinateToggle}
+          mode={mode}
+          setMode={setMode}
         />
       )}
 
@@ -61,10 +58,15 @@ export default function App() {
       {selectedCharacterId && (
         <CharacterDetail
           characterId={selectedCharacterId}
-          onClose={() => setSelectedCharacterId(null)}
+          onClose={() => {
+            if (activeOverlay != "subordinates") {
+              setMode("Characters");
+            }
+            setSelectedCharacterId(null);
+          }}
           setSelectedCharacterId={setSelectedCharacterId}
-          haremToggle={haremToggle}
-          setHaremToggle={setHaremToggle}
+          mode={mode}
+          setMode={setMode}
         />
       )}
     </>

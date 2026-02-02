@@ -15,8 +15,8 @@ export default function CharacterDetail({
   characterId,
   onClose,
   setSelectedCharacterId,
-  haremToggle,
-  setHaremToggle,
+  mode,
+  setMode,
 }) {
   const getCharacterRole = (characterId) => {
     const inHarem = Boolean(harem[characterId]);
@@ -32,7 +32,7 @@ export default function CharacterDetail({
   const role = getCharacterRole(characterId);
 
   const [troopSpriteIndex, setTroopSpriteIndex] = useState(0);
-  const haremCharacter = haremToggle ? harem[characterId] : null;
+  const haremCharacter = mode === "Harem" ? harem[characterId] : null;
   const character = characters[characterId];
   const characterSubordinate = charactersSubordinate[characterId];
   var troop = null;
@@ -41,7 +41,7 @@ export default function CharacterDetail({
 
   if (!character) return null;
 
-  if (!haremToggle) {
+  if (mode != "Harem") {
     troop = troops[characterSubordinate.unitType];
 
     troopSprites =
@@ -72,14 +72,14 @@ export default function CharacterDetail({
 
   const currentPortrait = getCharacterPortrait(portraits[portraitIndex]);
   const currentSprite =
-    haremToggle ?
+    mode === "Harem" ?
       getHaremSprite(sprites[spriteIndex])
     : getCharacterSprite(sprites[spriteIndex]);
 
   /* ---------------- Recruitment Conditions ---------------- */
 
   const conditions =
-    haremToggle && haremCharacter.recruitmentOverride ?
+    mode === "Harem" && haremCharacter.recruitmentOverride ?
       (haremCharacter.recruitmentOverride ?? [])
     : (character.recruitCondition ?? []);
 
@@ -108,27 +108,29 @@ export default function CharacterDetail({
               <h2>{character.name}</h2>
             </div>
 
-            {!haremToggle && (
+            {mode != "Harem" && (
               <div className="character-troop-name">
                 <h2>Commander Stats</h2>
               </div>
             )}
 
-            {!haremToggle && (
+            {mode != "Harem" && (
               <div className="character-troop-name">
                 <h2>Troops: {troop ? troop.name : "None"}</h2>
               </div>
             )}
           </div>
-
           {role === "Both" && (
-            <button
-              onClick={() => {
-                setHaremToggle(!haremToggle);
-              }}
-            >
-              {haremToggle ? "Subordinate" : "Harem"}
-            </button>
+            <div className="character-tabs">
+              <button
+                className={`tab-btn`}
+                onClick={() => {
+                  mode === "Harem" ? setMode("Subordinates") : setMode("Harem");
+                }}
+              >
+                {mode === "Harem" ? "Subordinate" : "Harem"}
+              </button>
+            </div>
           )}
 
           {/* ================= TOP GRID ================= */}
@@ -190,7 +192,7 @@ export default function CharacterDetail({
             </div>
 
             {/* Commander Stats */}
-            {!haremToggle && (
+            {mode != "Harem" && (
               <div className="character-stats">
                 <Stat label="Unit Size" value={characterSubordinate.unitSize} />
                 <Stat
@@ -253,7 +255,7 @@ export default function CharacterDetail({
             )}
 
             {/* Troop Stats */}
-            {!haremToggle && (
+            {mode != "Harem" && (
               <div className="character-troop-stats">
                 {troop ?
                   <>
@@ -299,7 +301,7 @@ export default function CharacterDetail({
             </div>
 
             {/* Troop Sprites */}
-            {!haremToggle && (
+            {mode != "Harem" && (
               <div className="character-troop-sprites">
                 {currentTroopSprite ?
                   <>

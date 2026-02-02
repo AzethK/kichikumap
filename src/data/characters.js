@@ -363,7 +363,7 @@ export const characters = {
     portrait: "galtia.png",
     sprite: "galtia.png",
     recruitCondition: [
-      "Have sex with Martina Curry",
+      "Have sex with character_martina",
       "Allow Galtia to conquer two cities",
       "Allow Galtia to conquer two poisoned cities",
       "Allow Galtia to conquer one more city",
