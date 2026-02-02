@@ -41,7 +41,7 @@ export default function App() {
 
       {activeOverlay === "subordinates" && (
         <SubordinatesOverlay
-          onClose={() => setActiveOverlay(null)}
+          onClose={() => (setMode("Characters"), setActiveOverlay(null))}
           setSelectedCharacterId={setSelectedCharacterId}
           mode={mode}
           setMode={setMode}
