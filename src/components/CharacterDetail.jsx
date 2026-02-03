@@ -9,15 +9,12 @@ import { characters } from "../data/characters";
 import { harem } from "../data/charactersHarem";
 import { charactersSubordinate } from "../data/charactersSubordinate";
 import { troops } from "../data/troops";
-import { renderConditionText } from "../util/recruitParser";
+import ConditionText from "../util/ConditionText";
+import { useAppContext } from "../App";
 
-export default function CharacterDetail({
-  characterId,
-  onClose,
-  setSelectedCharacterId,
-  mode,
-  setMode,
-}) {
+export default function CharacterDetail({ characterId, onClose }) {
+  const { setSelectedCharacterId, mode, setMode } = useAppContext();
+
   const getCharacterRole = (characterId) => {
     const inHarem = Boolean(harem[characterId]);
     const inSubordinate = Boolean(charactersSubordinate[characterId]);
@@ -288,7 +285,7 @@ export default function CharacterDetail({
                   <div className="character-condition-step">
                     {conditions.map((c, i) => (
                       <div key={i}>
-                        • {renderConditionText(c, setSelectedCharacterId)}
+                        • <ConditionText text={c} />
                       </div>
                     ))}
                   </div>

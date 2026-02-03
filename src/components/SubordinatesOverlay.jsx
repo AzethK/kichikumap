@@ -1,14 +1,11 @@
 import { characters } from "../data/characters.js";
+import { useAppContext } from "../App.jsx";
 import { harem } from "../data/charactersHarem.js";
 import { charactersSubordinate } from "../data/charactersSubordinate.js";
 import { getCharacterPortrait } from "../data/imageGetter.js";
 
-export default function SubordinatesOverlay({
-  onClose,
-  setSelectedCharacterId,
-  mode,
-  setMode,
-}) {
+export default function SubordinatesOverlay({ onClose }) {
+  const { setSelectedCharacterId, mode, setMode } = useAppContext();
   const activeCharacters =
     mode === "Harem" ?
       Object.keys(harem)

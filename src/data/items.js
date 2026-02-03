@@ -50,7 +50,7 @@ export const items = {
   },
   leazas_sword: {
     id: "leazas_sword",
-    name: "leazas Holy Sword",
+    name: "Leazas Holy Sword",
     consumable: false,
     effect: "Commander Attack +2",
     acquisition: [],

@@ -121,7 +121,7 @@ export const characters = {
     recruitCondition: [
       "area_freecities_hanna and area_freecities_m_land must be conquered through negotiation",
       "Shinoda's House in area_freecities_hanna must be visited twice",
-      "Give him harem_sayori",
+      "Give him character_sayori",
     ],
   },
   maria: {
@@ -397,7 +397,7 @@ export const characters = {
     portrait: "gurwin.png",
     sprite: "gurwin.png",
     recruitCondition: [
-      "Every time the area_al_temple_al_hq is visited, if harem_elizabeth in in the harem there's a chance Gurwin will join",
+      "Every time the area_al_temple_al_hq is visited, if character_elizabeth in in the harem there's a chance Gurwin will join",
     ],
   },
   cafe: {
@@ -431,7 +431,7 @@ export const characters = {
     portrait: "rolex.png",
     sprite: "rolex.png",
     recruitCondition: [
-      "Fight and capture harem_katyusha and harem_saulnia",
+      "Fight and capture character_katyusha and character_saulnia",
       "Recruit character_aristoles",
       "Levy area_helman_sudori_10",
     ],
@@ -457,7 +457,7 @@ export const characters = {
     sprite: "kaijuprince.png",
     recruitCondition: [
       "Conquer area_freecities_shangrila",
-      "Call harem_shariela in the Harem once",
+      "Call character_shariela in the Harem once",
       "Visit area_freecities_shangrila and choose to free Housesnurse",
       "Will join as a beginning of turn event",
     ],
@@ -716,7 +716,7 @@ export const characters = {
     sprite: "mika.png",
     recruitCondition: [
       `Obtain one of the following endings: "Fortune", "King of the World", "To the Sky" or "Unification"`,
-      "Every time the main menu is opened there'll be the chance of the spy button appearing, seect the button and start a new game",
+      "Every time the main menu is opened there'll be the chance of the spy button appearing, select the button and start a new game",
       "Conquer area_leazas_baranchi",
     ],
   },

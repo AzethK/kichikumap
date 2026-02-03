@@ -481,8 +481,6 @@ body {
 
 .character-condition-step {
   margin-top: 6px;
-  font-size: 14px;
-  line-height: 1.4;
   min-height: 2.8em;
   font-size: larger;
 }
@@ -610,4 +608,39 @@ body {
   border-bottom: 2px solid #c4bbbb;
   font-weight: bold;
   box-shadow: inset 0 -2px 0 #000;
+}
+
+/* Item Detail */
+
+.item-overlay {
+  position: relative;
+  width: 850px;
+  height: 800px;
+  max-width: 95vw;
+  max-height: 95vh;
+
+  background: #111;
+  padding: 24px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.item-main {
+  display: grid;
+  grid-template-columns:
+    409px
+    420px;
+  gap: 16px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.item-effect {
+  font-size: larger;
+  min-height: 256px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
 }

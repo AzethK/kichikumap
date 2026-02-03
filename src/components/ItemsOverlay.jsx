@@ -1,8 +1,10 @@
 import { items } from "../data/items";
+import { useAppContext } from "../App.jsx";
 import { getItemSprite } from "../data/imageGetter.js";
 
-export default function ItemsOverlay({ onClose, setSelectedItemId }) {
+export default function ItemsOverlay({ onClose }) {
   const activeItems = Object.values(items);
+  const { setSelectedItemId } = useAppContext();
 
   return (
     <div className="overlay-backdrop" onClick={onClose}>
