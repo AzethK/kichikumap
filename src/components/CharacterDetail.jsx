@@ -212,6 +212,10 @@ export default function CharacterDetail({ characterId, onClose }) {
                 <Stat label="DEF" value={characterSubordinate.def} />
                 <Stat label="MAG" value={characterSubordinate.magic} />
                 <Stat label="Strategy" value={characterSubordinate.strategy} />
+                <Stat
+                  label="Replenish Rate"
+                  value={characterSubordinate.replenishRate}
+                />
                 {characterSubordinate.specialName && (
                   <div className="wide">
                     <strong>Special:</strong> {characterSubordinate.specialName}
