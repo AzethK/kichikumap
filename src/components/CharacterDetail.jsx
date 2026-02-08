@@ -301,6 +301,7 @@ export default function CharacterDetail({ characterId, onClose }) {
             </div>
 
             {/* Troop Sprites */}
+            {/* CHANGE THIS TO THE THREE SPRITES EACH UNIT HAS */}
             {mode != "Harem" && (
               <div className="character-troop-sprites">
                 {currentTroopSprite ?
