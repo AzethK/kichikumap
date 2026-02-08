@@ -570,7 +570,6 @@ export const charactersSubordinate = {
     sca: ["0/0", "+1/+1", "0/0"],
   },
   galtia: {
-    unitSize: 0,
     deployCost: 0,
     hp: 12,
     strikes: 30,
