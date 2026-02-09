@@ -14,6 +14,14 @@ export const charactersSubordinate = {
     strategy: 0,
     sca: ["0/0", "0/0", "+1/0"],
     surge: "sill",
+    battleSprite: [
+      "ranceTroops1.png",
+      "ranceFull1.png",
+      "ranceSolo.png",
+      "ranceTroops2.png",
+      "ranceFull2.png",
+      "ranceSpecial.png",
+    ],
   },
   sill: {
     unitType: "leazasmages",
@@ -28,6 +36,7 @@ export const charactersSubordinate = {
     strategy: 5,
     sca: ["0/+1", "0/+1", "0/+1"],
     surge: "rance",
+    battleSprite: ["sillTroops.png", "sillFull.png", "sillSolo.png"],
   },
   bound: {
     unitType: "thieves",
@@ -42,6 +51,7 @@ export const charactersSubordinate = {
     strategy: 0,
     sca: ["0/0", "0/0", "0/0"],
     surge: "soul",
+    battleSprite: ["boundTroops.png", "boundFull.png", "boundSolo.png"],
   },
   soul: {
     unitType: "thieves",
@@ -56,6 +66,7 @@ export const charactersSubordinate = {
     strategy: 0,
     sca: ["0/0", "0/0", "+1/+1"],
     surge: "bound",
+    battleSprite: ["soulTroops.png", "soulFull.png", "soulSolo.png"],
   },
   leila: {
     unitType: "royalguards",
@@ -70,6 +81,7 @@ export const charactersSubordinate = {
     strategy: 8,
     sca: ["+1/+1", "+1/+1", "+1/+1"],
     surge: "rick",
+    battleSprite: ["leilaTroops.png", "leilaFull.png", "leilaSolo.png"],
   },
   barres: {
     unitType: "leazasknights",
@@ -84,6 +96,7 @@ export const charactersSubordinate = {
     strategy: 15,
     sca: ["+2/+1", "+2/+1", "-1/0"],
     surge: "haurein",
+    battleSprite: ["barresTroops.png", "barresFull.png", "barresSolo.png"],
   },
   rick: {
     unitType: "leazasknights",
@@ -99,6 +112,12 @@ export const charactersSubordinate = {
     replenishRate: 35,
     strategy: 0,
     sca: ["+3/0", "0/-2", "-2/-2"],
+    battleSprite: [
+      "rickTroops.png",
+      "rickFull.png",
+      "rickSolo.png",
+      "rickSpecial.png",
+    ],
   },
   cordoba: {
     unitType: "leazasknights",
@@ -112,6 +131,7 @@ export const charactersSubordinate = {
     replenishRate: 40,
     strategy: 0,
     sca: ["-1/-1", "0/+2", "-2/-2"],
+    battleSprite: ["cordobaTroops.png", "cordobaFull.png", "cordobaSolo.png"],
   },
   kinkaid: {
     unitType: "leazassoldiers",
@@ -125,6 +145,7 @@ export const charactersSubordinate = {
     replenishRate: 55,
     strategy: 2,
     sca: ["0/0", "0/0", "0/-2"],
+    battleSprite: ["kinkaidTroops.png", "kinkaidFull.png", "kinkaidSolo.png"],
   },
   menad: {
     unitType: "leazassoldiers",
@@ -138,6 +159,7 @@ export const charactersSubordinate = {
     replenishRate: 55,
     strategy: 8,
     sca: ["0/0", "0/0", "-2/0"],
+    battleSprite: ["menadTroops.png", "menadFull.png", "menadSolo.png"],
   },
   asuka: {
     unitType: "leazasmages",
@@ -153,6 +175,12 @@ export const charactersSubordinate = {
     replenishRate: 15,
     strategy: 0,
     sca: ["0/0", "0/0", "0/0"],
+    battleSprite: [
+      "asukaTroops.png",
+      "asukaFull.png",
+      "asukaSolo.png",
+      "asukaSpecial.png",
+    ],
   },
   haurein: {
     unitType: "leazassoldiers",
@@ -166,6 +194,7 @@ export const charactersSubordinate = {
     replenishRate: 55,
     strategy: 5,
     sca: ["0/0", "+1/0", "0/0"],
+    battleSprite: ["haureinTroops.png", "haureinFull.png", "haureinSolo.png"],
   },
   melfeis: {
     unitType: "leazasmages",
