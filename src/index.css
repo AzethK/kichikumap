@@ -456,7 +456,6 @@ body {
 }
 
 .character-troop-sprites img {
-  width: 50%;
   object-fit: contain;
 }
 

@@ -42,10 +42,10 @@ export default function CharacterDetail({ characterId, onClose }) {
     troop = troops[characterSubordinate.unitType];
 
     troopSprites =
-      troop && troop.sprite ?
-        Array.isArray(troop.sprite) ?
-          troop.sprite
-        : [troop.sprite]
+      characterSubordinate.battleSprite ?
+        Array.isArray(characterSubordinate.battleSprite) ?
+          characterSubordinate.battleSprite
+        : [characterSubordinate.battleSprite]
       : [];
 
     currentTroopSprite =

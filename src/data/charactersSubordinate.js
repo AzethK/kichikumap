@@ -1,6 +1,6 @@
 export const charactersSubordinate = {
   rance: {
-    unitType: "leazasknights",
+    unitType: "leazas_knights",
     unitSize: 1000,
     deployCost: "0",
     hp: 8,
@@ -15,8 +15,8 @@ export const charactersSubordinate = {
     sca: ["0/0", "0/0", "+1/0"],
     surge: "sill",
     battleSprite: [
-      "ranceTroops1.png",
-      "ranceFull1.png",
+      "ranceTroops.png",
+      "ranceFull.png",
       "ranceSolo.png",
       "ranceTroops2.png",
       "ranceFull2.png",
@@ -24,7 +24,7 @@ export const charactersSubordinate = {
     ],
   },
   sill: {
-    unitType: "leazasmages",
+    unitType: "leazas_mages",
     unitSize: 100,
     deployCost: "0",
     hp: 3,
@@ -69,7 +69,7 @@ export const charactersSubordinate = {
     battleSprite: ["soulTroops.png", "soulFull.png", "soulSolo.png"],
   },
   leila: {
-    unitType: "royalguards",
+    unitType: "royal_guards",
     unitSize: 800,
     deployCost: 1000,
     hp: 9,
@@ -84,7 +84,7 @@ export const charactersSubordinate = {
     battleSprite: ["leilaTroops.png", "leilaFull.png", "leilaSolo.png"],
   },
   barres: {
-    unitType: "leazasknights",
+    unitType: "leazas_knights",
     unitSize: 1000,
     deployCost: 800,
     hp: 5,
@@ -99,7 +99,7 @@ export const charactersSubordinate = {
     battleSprite: ["barresTroops.png", "barresFull.png", "barresSolo.png"],
   },
   rick: {
-    unitType: "leazasknights",
+    unitType: "leazas_knights",
     unitSize: 800,
     deployCost: 800,
     hp: 8,
@@ -120,7 +120,7 @@ export const charactersSubordinate = {
     ],
   },
   cordoba: {
-    unitType: "leazasknights",
+    unitType: "leazas_knights",
     unitSize: 1000,
     deployCost: 800,
     hp: 9,
@@ -134,7 +134,7 @@ export const charactersSubordinate = {
     battleSprite: ["cordobaTroops.png", "cordobaFull.png", "cordobaSolo.png"],
   },
   kinkaid: {
-    unitType: "leazassoldiers",
+    unitType: "leazas_soldiers",
     unitSize: 1500,
     deployCost: 600,
     hp: 7,
@@ -148,7 +148,7 @@ export const charactersSubordinate = {
     battleSprite: ["kinkaidTroops.png", "kinkaidFull.png", "kinkaidSolo.png"],
   },
   menad: {
-    unitType: "leazassoldiers",
+    unitType: "leazas_soldiers",
     unitSize: 1250,
     deployCost: 600,
     hp: 4,
@@ -162,7 +162,7 @@ export const charactersSubordinate = {
     battleSprite: ["menadTroops.png", "menadFull.png", "menadSolo.png"],
   },
   asuka: {
-    unitType: "leazasmages",
+    unitType: "leazas_mages",
     unitSize: 100,
     deployCost: 100,
     hp: 1,
@@ -183,7 +183,7 @@ export const charactersSubordinate = {
     ],
   },
   haurein: {
-    unitType: "leazassoldiers",
+    unitType: "leazas_soldiers",
     unitSize: 1400,
     deployCost: 600,
     hp: 5,
@@ -197,7 +197,7 @@ export const charactersSubordinate = {
     battleSprite: ["haureinTroops.png", "haureinFull.png", "haureinSolo.png"],
   },
   melfeis: {
-    unitType: "leazasmages",
+    unitType: "leazas_mages",
     unitSize: 300,
     deployCost: 600,
     hp: 4,
@@ -211,7 +211,7 @@ export const charactersSubordinate = {
     surge: "ex",
   },
   ex: {
-    unitType: "leazasknights",
+    unitType: "leazas_knights",
     unitSize: 1000,
     deployCost: 600,
     hp: 4,
@@ -224,7 +224,7 @@ export const charactersSubordinate = {
     sca: ["+1/+1", "0/0", "-3/-3"],
   },
   gengorou: {
-    unitType: "leazassoldiers",
+    unitType: "leazas_soldiers",
     unitSize: 400,
     deployCost: 800,
     hp: 3,
@@ -237,7 +237,7 @@ export const charactersSubordinate = {
     sca: ["0/0", "0/0", "0/0"],
   },
   maria: {
-    unitType: "mariaspupils",
+    unitType: "marias_pupils",
     unitSize: 220,
     deployCost: 500,
     hp: 4,
@@ -257,7 +257,7 @@ export const charactersSubordinate = {
     },
   },
   shizuka: {
-    unitType: "leazasmages",
+    unitType: "leazas_mages",
     unitSize: 320,
     deployCost: 500,
     hp: 4,
@@ -288,7 +288,7 @@ export const charactersSubordinate = {
     surge: "hunty",
   },
   hunty: {
-    unitType: "freakrobots",
+    unitType: "freak_robots",
     unitSize: 300,
     deployCost: 500,
     hp: 8,
@@ -302,7 +302,7 @@ export const charactersSubordinate = {
     surge: "patton",
   },
   freak: {
-    unitType: "freakrobots",
+    unitType: "freak_robots",
     unitSize: 300,
     deployCost: 500,
     hp: 8,
@@ -316,7 +316,7 @@ export const charactersSubordinate = {
     surge: "patton",
   },
   hubert: {
-    unitType: "helmanknights",
+    unitType: "helman_knights",
     unitSize: 650,
     deployCost: 500,
     hp: 8,
@@ -330,7 +330,7 @@ export const charactersSubordinate = {
     surge: "patton",
   },
   lelyukov: {
-    unitType: "helmanknights",
+    unitType: "helman_knights",
     unitSize: 500,
     deployCost: 500,
     hp: 8,
@@ -343,7 +343,7 @@ export const charactersSubordinate = {
     sca: ["+1/+1", "+1/+2", "-2/-2"],
   },
   elenoa: {
-    unitType: "magicwarriors",
+    unitType: "magic_warriors",
     unitSize: 500,
     deployCost: 500,
     hp: 5,
@@ -356,7 +356,7 @@ export const charactersSubordinate = {
     sca: ["0/0", "0/0", "0/0"],
   },
   milli: {
-    unitType: "leazassoldiers",
+    unitType: "leazas_soldiers",
     unitSize: 1000,
     deployCost: 500,
     hp: 5,
@@ -370,7 +370,7 @@ export const charactersSubordinate = {
     surge: "mill",
   },
   mill: {
-    unitType: "phantombeasts",
+    unitType: "phantom_beasts",
     unitSize: 28,
     deployCost: 200,
     hp: 2,
@@ -384,7 +384,7 @@ export const charactersSubordinate = {
     surge: "milli",
   },
   mars: {
-    unitType: "leazassoldiers",
+    unitType: "leazas_soldiers",
     unitSize: 1000,
     deployCost: 500,
     hp: 6,
@@ -397,7 +397,7 @@ export const charactersSubordinate = {
     sca: ["0/0", "0/0", "+1/+2"],
   },
   isoroku: {
-    unitType: "japanarchers",
+    unitType: "japan_archers",
     unitSize: 1200,
     deployCost: 500,
     hp: 6,
@@ -412,7 +412,7 @@ export const charactersSubordinate = {
     sca: ["+1/+1", "+1/0", "0/+1"],
   },
   cream: {
-    unitType: "leazassoldiers",
+    unitType: "leazas_soldiers",
     unitSize: 1000,
     deployCost: 500,
     hp: 5,
@@ -453,7 +453,7 @@ export const charactersSubordinate = {
     sca: ["0/0", "-1/0", "0/0"],
   },
   kentarou: {
-    unitType: "leazassoldiers",
+    unitType: "leazas_soldiers",
     unitSize: 450,
     deployCost: 500,
     hp: 7,
@@ -469,7 +469,7 @@ export const charactersSubordinate = {
     surge: "miki",
   },
   miki: {
-    unitType: "leazasmages",
+    unitType: "leazas_mages",
     unitSize: 8,
     deployCost: 0,
     hp: 30000,
@@ -485,7 +485,7 @@ export const charactersSubordinate = {
     surge: "kentarou",
   },
   julia: {
-    unitType: "royalguards",
+    unitType: "royal_guards",
     unitSize: 200,
     deployCost: 1200,
     hp: 3,
@@ -498,7 +498,7 @@ export const charactersSubordinate = {
     sca: ["-1/-1", "-1/-2", "-2/-2"],
   },
   rafalia: {
-    unitType: "leazassoldiers",
+    unitType: "leazas_soldiers",
     unitSize: 500,
     deployCost: 1000,
     hp: 4,
@@ -511,7 +511,7 @@ export const charactersSubordinate = {
     sca: ["+2/0", "+1/0", "+1/0"],
   },
   arlcoate: {
-    unitType: "leazassoldiers",
+    unitType: "leazas_soldiers",
     unitSize: 500,
     deployCost: 1000,
     hp: 3,
@@ -525,7 +525,7 @@ export const charactersSubordinate = {
     surge: "rance",
   },
   aviator: {
-    unitType: "royalguards",
+    unitType: "royal_guards",
     unitSize: 400,
     deployCost: 1000,
     hp: 6,
@@ -538,7 +538,7 @@ export const charactersSubordinate = {
     sca: ["+1/0", "0/+1", "+1/+2"],
   },
   ragnarokarc: {
-    unitType: "magicwarriors",
+    unitType: "magic_warriors",
     unitSize: 500,
     deployCost: 1000,
     hp: 12,
@@ -553,7 +553,7 @@ export const charactersSubordinate = {
     sca: ["+2/0", "+2/0", "0/0"],
   },
   chizuko: {
-    unitType: "leazasmages",
+    unitType: "leazas_mages",
     unitSize: 320,
     deployCost: 500,
     hp: 4,
@@ -569,7 +569,7 @@ export const charactersSubordinate = {
     surge: "ragnarokarc",
   },
   magic: {
-    unitType: "leazasmages",
+    unitType: "leazas_mages",
     unitSize: 220,
     deployCost: 500,
     hp: 4,
@@ -584,7 +584,7 @@ export const charactersSubordinate = {
     sca: ["0/0", "0/+1", "0/+1"],
   },
   nagi: {
-    unitType: "leazasmages",
+    unitType: "leazas_mages",
     unitSize: 400,
     deployCost: 500,
     hp: 5,
@@ -609,7 +609,7 @@ export const charactersSubordinate = {
     strategy: 0,
   },
   saizel_hawzel: {
-    unitType: "falseangelknights",
+    unitType: "false_angels",
     unitSize: 500,
     deployCost: 500,
     hp: 35,
@@ -622,7 +622,7 @@ export const charactersSubordinate = {
     sca: ["0/0", "0/0", "0/0"],
   },
   aristoles: {
-    unitType: "helmanknights",
+    unitType: "helman_knights",
     unitSize: 800,
     deployCost: 1000,
     hp: 7,
@@ -635,7 +635,7 @@ export const charactersSubordinate = {
     sca: ["0/0", "+1/+1", "-2/-2"],
   },
   gurwin: {
-    unitType: "templeknights",
+    unitType: "temple_knights",
     unitSize: 300,
     deployCost: 500,
     hp: 10,
@@ -687,7 +687,7 @@ export const charactersSubordinate = {
     sca: ["-1/0", "-1/0", "0/0"],
   },
   rolex: {
-    unitType: "helmanknights",
+    unitType: "helman_knights",
     unitSize: 500,
     deployCost: 500,
     hp: 10,
@@ -715,7 +715,7 @@ export const charactersSubordinate = {
     sca: ["0/0", "0/0", "0/0"],
   },
   kaijuprince: {
-    unitType: "kaijuwarriors",
+    unitType: "kaiju_warriors",
     unitSize: 500,
     deployCost: 5000,
     hp: 100,
