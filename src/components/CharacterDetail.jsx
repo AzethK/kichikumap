@@ -8,6 +8,7 @@ import {
 import { characters } from "../data/characters";
 import { harem } from "../data/charactersHarem";
 import { charactersSubordinate } from "../data/charactersSubordinate";
+import { enemies } from "../data/charactersEnemy";
 import { troops } from "../data/troops";
 import ConditionText from "../util/ConditionText";
 import { useAppContext } from "../App";
@@ -18,10 +19,12 @@ export default function CharacterDetail({ characterId, onClose }) {
   const getCharacterRole = (characterId) => {
     const inHarem = Boolean(harem[characterId]);
     const inSubordinate = Boolean(charactersSubordinate[characterId]);
+    const inEnemy = Boolean(enemies[characterId]);
 
     if (inHarem && inSubordinate) return "Both";
-    if (inHarem) return "Harem";
     if (inSubordinate) return "Subordinate";
+    if (inEnemy) return "Enemy";
+    if (inHarem) return "Harem";
 
     return null;
   };
@@ -39,7 +42,12 @@ export default function CharacterDetail({ characterId, onClose }) {
   if (!character) return null;
 
   if (mode != "Harem") {
-    troop = troops[characterSubordinate.unitType];
+    troop =
+      troops[
+        mode === "Subordinates" ?
+          characterSubordinate.unitType
+        : enemies[characterId].unitType
+      ];
 
     troopSprites =
       characterSubordinate.battleSprite ?

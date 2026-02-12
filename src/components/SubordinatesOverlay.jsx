@@ -2,6 +2,7 @@ import { characters } from "../data/characters.js";
 import { useAppContext } from "../App.jsx";
 import { harem } from "../data/charactersHarem.js";
 import { charactersSubordinate } from "../data/charactersSubordinate.js";
+import { enemies } from "../data/charactersEnemy.js";
 import { getCharacterPortrait } from "../data/imageGetter.js";
 
 export default function SubordinatesOverlay({ onClose }) {
@@ -15,15 +16,21 @@ export default function SubordinatesOverlay({ onClose }) {
       Object.keys(charactersSubordinate)
         .map((id) => characters[id])
         .filter(Boolean)
+    : mode === "Enemies" ?
+      Object.keys(enemies)
+        .map((id) => characters[id])
+        .filter(Boolean)
     : Object.values(characters);
 
   const getCharacterRole = (characterId) => {
     const inHarem = Boolean(harem[characterId]);
     const inSubordinate = Boolean(charactersSubordinate[characterId]);
+    const inEnemy = Boolean(enemies[characterId]);
 
     if (inHarem && inSubordinate) return "Both";
-    if (inHarem) return "Harem";
     if (inSubordinate) return "Subordinate";
+    if (inEnemy) return "Enemy";
+    if (inHarem) return "Harem";
 
     return null;
   };
@@ -43,6 +50,8 @@ export default function SubordinatesOverlay({ onClose }) {
             "Harem"
           : mode === "Subordinates" ?
             "Subordinates"
+          : mode === "Enemies" ?
+            "Enemies"
           : "Characters"}
         </h2>
 
@@ -65,6 +74,14 @@ export default function SubordinatesOverlay({ onClose }) {
           >
             Harem
           </button>
+          <button
+            className={`tab-btn ${mode === "Enemies" ? "active" : ""}`}
+            onClick={() => {
+              mode === "Enemies" ? setMode("Characters") : setMode("Enemies");
+            }}
+          >
+            Enemies
+          </button>
         </div>
 
         <div className="subordinates-grid">
@@ -83,7 +100,9 @@ export default function SubordinatesOverlay({ onClose }) {
                 onClick={() =>
                   getCharacterRole(character.id) === "Harem" ?
                     (setMode("Harem"), setSelectedCharacterId(character.id))
-                  : setSelectedCharacterId(character.id)
+                  : mode === "Enemies" ? setSelectedCharacterId(character.id)
+                  : (setMode("Subordinates"),
+                    setSelectedCharacterId(character.id))
                 }
               />
             );
