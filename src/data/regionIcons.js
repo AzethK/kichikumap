@@ -6,6 +6,7 @@ import alIcon from "../assets/flags/alIcon.png";
 import japanIcon from "../assets/flags/japanIcon.png";
 import kayblisIcon from "../assets/flags/kayblisIcon.png";
 import hornetIcon from "../assets/flags/hornetIcon.png";
+import dungeonIcon from "../assets/flags/dungeonIcon.png";
 
 export const regionIcons = {
   leazas: leazasIcon,
@@ -16,4 +17,5 @@ export const regionIcons = {
   japan: japanIcon,
   kayblis: kayblisIcon,
   hornet: hornetIcon,
+  dungeon: dungeonIcon,
 };

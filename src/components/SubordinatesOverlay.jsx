@@ -64,7 +64,7 @@ export default function SubordinatesOverlay({ onClose }) {
               : setMode("Subordinates");
             }}
           >
-            Subordinate
+            Subordinates
           </button>
           <button
             className={`tab-btn ${mode === "Harem" ? "active" : ""}`}
