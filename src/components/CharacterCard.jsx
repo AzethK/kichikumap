@@ -25,7 +25,7 @@ export default function CharacterCard({ character, setChar }) {
         <img src={currentPortrait} alt={character.name} onClick={setChar} />
       </div>
 
-      <div className="character-info">
+      <div>
         <div className="character-name">
           {" "}
           <strong>{character.name}</strong>

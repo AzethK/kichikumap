@@ -72,7 +72,7 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  width: 320px;
+  width: 350px;
   height: 100vh;
   background: #111;
   color: white;
@@ -96,12 +96,6 @@ body {
   border-left: 4px solid var(--region-color);
 
   gap: 20px;
-}
-
-.area-panel-region-icon {
-  width: 32px;
-  height: 32px;
-  image-rendering: pixelated;
 }
 
 .area-panel-title {
@@ -190,6 +184,7 @@ body {
 .condition-nav {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   margin-top: 6px;
 }
@@ -214,6 +209,7 @@ body {
   border-radius: 5%;
   display: flex;
   align-items: flex-start;
+  width: 110px;
 }
 
 /* Left Sidebar */
