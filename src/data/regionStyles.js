@@ -23,4 +23,7 @@ export const regionStyles = {
   hornet: {
     color: "#79babe",
   },
+  dungeon: {
+    color: "#7f8c8d",
+  },
 };

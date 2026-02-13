@@ -210,6 +210,13 @@ export const charactersSubordinate = {
     sca: ["0/0", "0/0", "0/0"],
     surge: "ex",
     battleSprite: ["lmages.png", "melfeisFull.png", "melfeisSolo.png"],
+
+    variants: {
+      label:
+        "Remove her curse by sending her to area_dungeon_uncurse_dungeon 28F",
+      strikes: 1,
+      magic: 6,
+    },
   },
   ex: {
     unitType: "leazas_knights",
@@ -419,6 +426,14 @@ export const charactersSubordinate = {
       "millSolo2.png",
     ],
     surge: "milli",
+
+    variants: {
+      label:
+        "Bring character_merim to area_dungeon_uncurse_dungeon 27F, then bring character_mill and character_merim there",
+      hp: 4,
+      unitSize: 258,
+      strikes: 11,
+    },
   },
   mars: {
     unitType: "leazas_soldiers",
@@ -594,6 +609,13 @@ export const charactersSubordinate = {
       "arlcoateSolo.png",
     ],
     surge: "rance",
+
+    variants: {
+      label:
+        "Talking to her raises her Strategy, up to 80%. If raped her Strategy will become 0% and her SCA will be reduced",
+      strategy: 80,
+      sca: ["-1/-1", "-1/-2", "-1/-1"],
+    },
   },
   aviator: {
     unitType: "royal_guards",

@@ -11,10 +11,11 @@ export const enemies = {
     hp: 4,
     strategy: 60,
     magic: 0,
+    battleSprite: ["e_lwhiteknights.png", "e_exFull.png", "e_exSolo.png"],
   },
   haurein: {
     unitType: "leazas_soldiers",
-    unitsize: 1400,
+    unitSize: 1400,
     replenishRate: 80,
     omniAtk: 0,
     omniDef: 0,
@@ -24,10 +25,15 @@ export const enemies = {
     hp: 5,
     strategy: 5,
     magic: 0,
+    battleSprite: [
+      "e_lwhitesoldiers.png",
+      "e_haureinFull.png",
+      "e_haureinSolo.png",
+    ],
   },
   pegasus: {
     unitType: "leazas_soldiers",
-    unitsize: 700,
+    unitSize: 700,
     replenishRate: 60,
     omniAtk: 0,
     omniDef: 0,
@@ -37,10 +43,15 @@ export const enemies = {
     hp: 4,
     strategy: 0,
     magic: 0,
+    battleSprite: [
+      "e_lwhitesoldiers.png",
+      "e_pegasusFull.png",
+      "e_pegasusSolo.png",
+    ],
   },
   melfeis: {
     unitType: "leazas_mages",
-    unitsize: 300,
+    unitSize: 300,
     replenishRate: 8,
     omniAtk: 0,
     omniDef: 0,
@@ -50,10 +61,15 @@ export const enemies = {
     hp: 4,
     strategy: 10,
     magic: 7,
+    battleSprite: [
+      "e_template.png",
+      "e_templateFull.png",
+      "e_templateSolo.png",
+    ],
   },
   dodge: {
     unitType: "leazas_soldiers",
-    unitsize: 1000,
+    unitSize: 1000,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 0,
@@ -63,10 +79,11 @@ export const enemies = {
     hp: 6,
     strategy: 0,
     magic: 0,
+    battleSprite: ["e_template.png", "e_template.png", "e_template.png"],
   },
   sakanaku: {
     unitType: "leazas_soldiers",
-    unitsize: 1000,
+    unitSize: 1000,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 0,
@@ -76,10 +93,15 @@ export const enemies = {
     hp: 6,
     strategy: 4,
     magic: 0,
+    battleSprite: [
+      "e_template.png",
+      "e_templateFull.png",
+      "e_templateSolo.png",
+    ],
   },
   jibul: {
     unitType: "leazas_soldiers",
-    unitsize: 400,
+    unitSize: 400,
     replenishRate: 50,
     omniAtk: 1,
     omniDef: 0,
@@ -89,10 +111,15 @@ export const enemies = {
     hp: 7,
     strategy: 0,
     magic: 0,
+    battleSprite: [
+      "e_template.png",
+      "e_templateFull.png",
+      "e_templateSolo.png",
+    ],
   },
   gengorou: {
     unitType: "civilians",
-    unitsize: 800,
+    unitSize: 800,
     replenishRate: 100,
     omniAtk: 0,
     omniDef: 0,
@@ -102,10 +129,15 @@ export const enemies = {
     hp: 3,
     strategy: 100,
     magic: 0,
+    battleSprite: [
+      "e_template.png",
+      "e_templateFull.png",
+      "e_templateSolo.png",
+    ],
   },
   hannah_hero: {
     unitType: "civilians",
-    unitsize: 1500,
+    unitSize: 1500,
     replenishRate: 100,
     omniAtk: 0,
     omniDef: 0,
@@ -115,10 +147,15 @@ export const enemies = {
     hp: 3,
     strategy: 0,
     magic: 0,
+    battleSprite: [
+      "e_template.png",
+      "e_templateFull.png",
+      "e_templateSolo.png",
+    ],
   },
   sayori: {
     unitType: "civilians",
-    unitsize: 500,
+    unitSize: 500,
     replenishRate: 10,
     omniAtk: 0,
     omniDef: 0,
@@ -128,10 +165,15 @@ export const enemies = {
     hp: 1,
     strategy: 0,
     magic: 0,
+    battleSprite: [
+      "e_template.png",
+      "e_templateFull.png",
+      "e_templateSolo.png",
+    ],
   },
   m_land_hero: {
     unitType: "civilians",
-    unitsize: 1100,
+    unitSize: 1100,
     replenishRate: 100,
     omniAtk: 0,
     omniDef: 0,
@@ -141,10 +183,15 @@ export const enemies = {
     hp: 3,
     strategy: 0,
     magic: 0,
+    battleSprite: [
+      "e_template.png",
+      "e_templateFull.png",
+      "e_templateSolo.png",
+    ],
   },
   the_o_hero: {
     unitType: "civilians",
-    unitsize: 2000,
+    unitSize: 2000,
     replenishRate: 100,
     omniAtk: 0,
     omniDef: 0,
@@ -157,7 +204,7 @@ export const enemies = {
   },
   portugal_hero: {
     unitType: "civilians",
-    unitsize: 1200,
+    unitSize: 1200,
     replenishRate: 100,
     omniAtk: 0,
     omniDef: 0,
@@ -170,7 +217,7 @@ export const enemies = {
   },
   desert_guide: {
     unitType: "sand_guards",
-    unitsize: 175,
+    unitSize: 175,
     replenishRate: 0,
     omniAtk: 0,
     omniDef: 0,
@@ -193,7 +240,7 @@ export const enemies = {
   },
   lelyukov: {
     unitType: "helman_knights",
-    unitsize: 1600,
+    unitSize: 1600,
     replenishRate: 38,
     omniAtk: 2,
     omniDef: 2,
@@ -206,7 +253,7 @@ export const enemies = {
   },
   gadman: {
     unitType: "helman_knights",
-    unitsize: 980,
+    unitSize: 980,
     replenishRate: 32,
     omniAtk: 0,
     omniDef: 0,
@@ -219,7 +266,7 @@ export const enemies = {
   },
   jackal: {
     unitType: "helman_soldiers",
-    unitsize: 2000,
+    unitSize: 2000,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 0,
@@ -232,7 +279,7 @@ export const enemies = {
   },
   samisukan: {
     unitType: "helman_soldiers",
-    unitsize: 2000,
+    unitSize: 2000,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 0,
@@ -245,7 +292,7 @@ export const enemies = {
   },
   tainyar: {
     unitType: "oddses",
-    unitsize: 3000,
+    unitSize: 3000,
     replenishRate: 10,
     omniAtk: 0,
     omniDef: 0,
@@ -258,7 +305,7 @@ export const enemies = {
   },
   laumiere: {
     unitType: "helman_soldiers",
-    unitsize: 1000,
+    unitSize: 1000,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 0,
@@ -271,7 +318,7 @@ export const enemies = {
   },
   luc: {
     unitType: "helman_soldiers",
-    unitsize: 2000,
+    unitSize: 2000,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 0,
@@ -284,7 +331,7 @@ export const enemies = {
   },
   luke: {
     unitType: "helman_archers",
-    unitsize: 1000,
+    unitSize: 1000,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 0,
@@ -297,7 +344,7 @@ export const enemies = {
   },
   yorkdelta: {
     unitType: "helman_archers",
-    unitsize: 1000,
+    unitSize: 1000,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 0,
@@ -310,7 +357,7 @@ export const enemies = {
   },
   ruberan: {
     unitType: "guards",
-    unitsize: 900,
+    unitSize: 900,
     replenishRate: 20,
     omniAtk: 0,
     omniDef: 0,
@@ -323,7 +370,7 @@ export const enemies = {
   },
   aristoles: {
     unitType: "helman_knights",
-    unitsize: 980,
+    unitSize: 980,
     replenishRate: 60,
     omniAtk: 0,
     omniDef: 1,
@@ -336,7 +383,7 @@ export const enemies = {
   },
   convert: {
     unitType: "helman_soldiers",
-    unitsize: 1000,
+    unitSize: 1000,
     replenishRate: 100,
     omniAtk: 0,
     omniDef: 0,
@@ -349,7 +396,7 @@ export const enemies = {
   },
   ivan: {
     unitType: "helman_knights",
-    unitsize: 980,
+    unitSize: 980,
     replenishRate: 32,
     omniAtk: 0,
     omniDef: 0,
@@ -362,7 +409,7 @@ export const enemies = {
   },
   samon: {
     unitType: "helman_soldiers",
-    unitsize: 2000,
+    unitSize: 2000,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 0,
@@ -375,7 +422,7 @@ export const enemies = {
   },
   yasutoeh: {
     unitType: "helman_soldiers",
-    unitsize: 2000,
+    unitSize: 2000,
     replenishRate: 80,
     omniAtk: 0,
     omniDef: 0,
@@ -388,7 +435,7 @@ export const enemies = {
   },
   yutos: {
     unitType: "oddses",
-    unitsize: 3000,
+    unitSize: 3000,
     replenishRate: 10,
     omniAtk: 0,
     omniDef: 0,
@@ -401,7 +448,7 @@ export const enemies = {
   },
   keigo: {
     unitType: "dekants",
-    unitsize: 800,
+    unitSize: 800,
     replenishRate: 10,
     omniAtk: 0,
     omniDef: 0,
@@ -414,7 +461,7 @@ export const enemies = {
   },
   mineva: {
     unitType: "helman_knights",
-    unitsize: 500,
+    unitSize: 500,
     replenishRate: 30,
     omniAtk: 0,
     omniDef: 0,
@@ -427,7 +474,7 @@ export const enemies = {
   },
   tami: {
     unitType: "helman_soldiers",
-    unitsize: 3000,
+    unitSize: 3000,
     replenishRate: 50,
     omniAtk: 1,
     omniDef: 1,
@@ -440,7 +487,7 @@ export const enemies = {
   },
   maha: {
     unitType: "helman_soldiers",
-    unitsize: 2000,
+    unitSize: 2000,
     replenishRate: 50,
     omniAtk: 1,
     omniDef: 1,
@@ -453,7 +500,7 @@ export const enemies = {
   },
   serges: {
     unitType: "helman_soldiers",
-    unitsize: 3000,
+    unitSize: 3000,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 0,
@@ -466,7 +513,7 @@ export const enemies = {
   },
   booch: {
     unitType: "helman_soldiers",
-    unitsize: 3000,
+    unitSize: 3000,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 0,
@@ -479,7 +526,7 @@ export const enemies = {
   },
   nero: {
     unitType: "helman_knights",
-    unitsize: 600,
+    unitSize: 600,
     replenishRate: 30,
     omniAtk: 1,
     omniDef: 0,
@@ -492,7 +539,7 @@ export const enemies = {
   },
   cream: {
     unitType: "helman_soldiers",
-    unitsize: 1000,
+    unitSize: 1000,
     replenishRate: 50,
     omniAtk: 1,
     omniDef: 1,
@@ -505,7 +552,7 @@ export const enemies = {
   },
   marquez: {
     unitType: "helman_soldiers",
-    unitsize: 2000,
+    unitSize: 2000,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 0,
@@ -518,7 +565,7 @@ export const enemies = {
   },
   hyam: {
     unitType: "helman_soldiers",
-    unitsize: 2000,
+    unitSize: 2000,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 0,
@@ -531,7 +578,7 @@ export const enemies = {
   },
   yang: {
     unitType: "helman_archers",
-    unitsize: 400,
+    unitSize: 400,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 0,
@@ -544,7 +591,7 @@ export const enemies = {
   },
   sukakumi: {
     unitType: "oddses",
-    unitsize: 3000,
+    unitSize: 3000,
     replenishRate: 10,
     omniAtk: 0,
     omniDef: 0,
@@ -557,7 +604,7 @@ export const enemies = {
   },
   rolex: {
     unitType: "helman_knights",
-    unitsize: 1000,
+    unitSize: 1000,
     replenishRate: 40,
     omniAtk: 0,
     omniDef: 0,
@@ -570,7 +617,7 @@ export const enemies = {
   },
   katyusha: {
     unitType: "helman_soldiers",
-    unitsize: 2000,
+    unitSize: 2000,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 0,
@@ -583,7 +630,7 @@ export const enemies = {
   },
   saulnia: {
     unitType: "helman_soldiers",
-    unitsize: 2000,
+    unitSize: 2000,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 0,
@@ -596,7 +643,7 @@ export const enemies = {
   },
   alexei: {
     unitType: "helman_soldiers",
-    unitsize: 2000,
+    unitSize: 2000,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 0,
@@ -609,7 +656,7 @@ export const enemies = {
   },
   patton: {
     unitType: "brawlers",
-    unitsize: 175,
+    unitSize: 175,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 0,
@@ -622,7 +669,7 @@ export const enemies = {
   },
   hubert: {
     unitType: "helman_knights",
-    unitsize: 240,
+    unitSize: 240,
     replenishRate: 13,
     omniAtk: 0,
     omniDef: 0,
@@ -635,7 +682,7 @@ export const enemies = {
   },
   freak: {
     unitType: "freak_robots",
-    unitsize: 50,
+    unitSize: 50,
     replenishRate: 5,
     omniAtk: 0,
     omniDef: 0,
@@ -648,7 +695,7 @@ export const enemies = {
   },
   hunty: {
     unitType: "freak_robots",
-    unitsize: 30,
+    unitSize: 30,
     replenishRate: 5,
     omniAtk: 0,
     omniDef: 0,
@@ -661,7 +708,7 @@ export const enemies = {
   },
   civilian_general: {
     unitType: "civilians",
-    unitsize: 500,
+    unitSize: 500,
     replenishRate: 500,
     omniAtk: 0,
     omniDef: 0,
@@ -674,7 +721,7 @@ export const enemies = {
   },
   olhound: {
     unitType: "berserkers",
-    unitsize: 500,
+    unitSize: 500,
     replenishRate: 500,
     omniAtk: 0,
     omniDef: 0,
@@ -687,7 +734,7 @@ export const enemies = {
   },
   sanakia: {
     unitType: "civilians",
-    unitsize: 130,
+    unitSize: 130,
     replenishRate: 0,
     omniAtk: 0,
     omniDef: 0,
@@ -700,7 +747,7 @@ export const enemies = {
   },
   red_hero: {
     unitType: "civilians",
-    unitsize: 1200,
+    unitSize: 1200,
     replenishRate: 100,
     omniAtk: 0,
     omniDef: 0,
@@ -713,7 +760,7 @@ export const enemies = {
   },
   mars: {
     unitType: "civilians",
-    unitsize: 600,
+    unitSize: 600,
     replenishRate: 100,
     omniAtk: 0,
     omniDef: 0,
@@ -726,7 +773,7 @@ export const enemies = {
   },
   nobunaga: {
     unitType: "warriors",
-    unitsize: 1500,
+    unitSize: 1500,
     replenishRate: 100,
     omniAtk: 1,
     omniDef: 0,
@@ -739,7 +786,7 @@ export const enemies = {
   },
   kenichi: {
     unitType: "foot_soldiers",
-    unitsize: 1200,
+    unitSize: 1200,
     replenishRate: 86,
     omniAtk: 0,
     omniDef: 0,
@@ -752,7 +799,7 @@ export const enemies = {
   },
   yamato: {
     unitType: "foot_soldiers",
-    unitsize: 1120,
+    unitSize: 1120,
     replenishRate: 86,
     omniAtk: 0,
     omniDef: 0,
@@ -765,7 +812,7 @@ export const enemies = {
   },
   katsuie: {
     unitType: "warriors",
-    unitsize: 800,
+    unitSize: 800,
     replenishRate: 56,
     omniAtk: 0,
     omniDef: 0,
@@ -778,7 +825,7 @@ export const enemies = {
   },
   harumi: {
     unitType: "foot_soldiers",
-    unitsize: 700,
+    unitSize: 700,
     replenishRate: 40,
     omniAtk: 0,
     omniDef: 0,
@@ -791,7 +838,7 @@ export const enemies = {
   },
   mori: {
     unitType: "archers",
-    unitsize: 900,
+    unitSize: 900,
     replenishRate: 40,
     omniAtk: 0,
     omniDef: 0,
@@ -804,7 +851,7 @@ export const enemies = {
   },
   denden: {
     unitType: "archers",
-    unitsize: 900,
+    unitSize: 900,
     replenishRate: 45,
     omniAtk: 0,
     omniDef: 0,
@@ -817,7 +864,7 @@ export const enemies = {
   },
   one_shot_tarou: {
     unitType: "foot_soldiers",
-    unitsize: 2000,
+    unitSize: 2000,
     replenishRate: 46,
     omniAtk: 0,
     omniDef: 0,
@@ -830,7 +877,7 @@ export const enemies = {
   },
   noberu: {
     unitType: "foot_soldiers",
-    unitsize: 1500,
+    unitSize: 1500,
     replenishRate: 80,
     omniAtk: 0,
     omniDef: 0,
@@ -843,7 +890,7 @@ export const enemies = {
   },
   washi: {
     unitType: "archers",
-    unitsize: 950,
+    unitSize: 950,
     replenishRate: 60,
     omniAtk: 0,
     omniDef: 0,
@@ -856,7 +903,7 @@ export const enemies = {
   },
   isoroku: {
     unitType: "japan_archers",
-    unitsize: 1200,
+    unitSize: 1200,
     replenishRate: 50,
     omniAtk: 0,
     omniDef: 1,
@@ -869,7 +916,7 @@ export const enemies = {
   },
   sgt_hanny: {
     unitType: "monsters",
-    unitsize: 1200,
+    unitSize: 1200,
     replenishRate: 0,
     omniAtk: 0,
     omniDef: 0,
@@ -882,7 +929,7 @@ export const enemies = {
   },
   lt_hanny: {
     unitType: "monsters",
-    unitsize: 1200,
+    unitSize: 1200,
     replenishRate: 0,
     omniAtk: 0,
     omniDef: 0,
@@ -895,7 +942,7 @@ export const enemies = {
   },
   col_hanny: {
     unitType: "monsters",
-    unitsize: 1200,
+    unitSize: 1200,
     replenishRate: 0,
     omniAtk: 0,
     omniDef: 0,
@@ -908,7 +955,7 @@ export const enemies = {
   },
   monster_general: {
     unitType: "monsters",
-    unitsize: 1200,
+    unitSize: 1200,
     replenishRate: 0,
     omniAtk: 0,
     omniDef: 0,
@@ -921,7 +968,7 @@ export const enemies = {
   },
   monster_general_mage: {
     unitType: "monsters",
-    unitsize: 1200,
+    unitSize: 1200,
     replenishRate: 0,
     omniAtk: 0,
     omniDef: 0,
@@ -934,7 +981,7 @@ export const enemies = {
   },
   la_seizel: {
     unitType: "false_angels",
-    unitsize: 600,
+    unitSize: 600,
     replenishRate: 30,
     omniAtk: 0,
     omniDef: 0,
@@ -947,7 +994,7 @@ export const enemies = {
   },
   camilla: {
     unitType: "dragon_girls",
-    unitsize: 200,
+    unitSize: 200,
     replenishRate: 10,
     omniAtk: 0,
     omniDef: 0,
@@ -970,7 +1017,7 @@ export const enemies = {
   },
   sieg: {
     unitType: "maneshitas",
-    unitsize: 400,
+    unitSize: 400,
     replenishRate: 100,
     omniAtk: 0,
     omniDef: 0,
@@ -983,7 +1030,7 @@ export const enemies = {
   },
   wall: {
     unitType: "walls",
-    unitsize: 400,
+    unitSize: 400,
     replenishRate: 10,
     omniAtk: 0,
     omniDef: 0,
@@ -996,7 +1043,7 @@ export const enemies = {
   },
   mage_leader: {
     unitType: "zeth_mages",
-    unitsize: 80,
+    unitSize: 80,
     replenishRate: 10,
     omniAtk: 0,
     omniDef: 0,
@@ -1029,7 +1076,7 @@ export const enemies = {
   },
   chizuko: {
     unitType: "zeth_mages",
-    unitsize: 500,
+    unitSize: 500,
     replenishRate: 30,
     omniAtk: 0,
     omniDef: 2,
@@ -1042,7 +1089,7 @@ export const enemies = {
   },
   papaya: {
     unitType: "zeth_mages",
-    unitsize: 500,
+    unitSize: 500,
     replenishRate: 30,
     omniAtk: 0,
     omniDef: 0,
@@ -1066,7 +1113,7 @@ export const enemies = {
   // haseras,
   // shitareriha: {
   //   unitType: "Male Slaves",
-  //   unitsize: 2500,
+  //   unitSize: 2500,
   //   replenishRate: 100,
   //   omniAtk: 0,
   //   omniDef: 0,
@@ -1079,7 +1126,7 @@ export const enemies = {
   // },
   nagi: {
     unitType: "zeth_mages",
-    unitsize: 500,
+    unitSize: 500,
     replenishRate: 30,
     omniAtk: 0,
     omniDef: 2,
@@ -1092,7 +1139,7 @@ export const enemies = {
   },
   ragarl: {
     unitType: "zeth_mages",
-    unitsize: 180,
+    unitSize: 180,
     replenishRate: 10,
     omniAtk: 0,
     omniDef: 1,
@@ -1105,7 +1152,7 @@ export const enemies = {
   },
   magic: {
     unitType: "zeth_mages",
-    unitsize: 500,
+    unitSize: 500,
     replenishRate: 30,
     omniAtk: 0,
     omniDef: 2,
@@ -1118,7 +1165,7 @@ export const enemies = {
   },
   saias: {
     unitType: "zeth_mages",
-    unitsize: 1000,
+    unitSize: 1000,
     replenishRate: 30,
     omniAtk: 0,
     omniDef: 2,
@@ -1137,7 +1184,7 @@ export const enemies = {
   // kyouko,
   // sanneri: {
   //   unitType: "zeth_mages",
-  //   unitsize: 180,
+  //   unitSize: 180,
   //   replenishRate: 10,
   //   omniAtk: 0,
   //   omniDef: 0,
@@ -1150,7 +1197,7 @@ export const enemies = {
   // },
   uspira: {
     unitType: "zeth_mages",
-    unitsize: 1000,
+    unitSize: 1000,
     replenishRate: 30,
     omniAtk: 0,
     omniDef: 2,
@@ -1163,7 +1210,7 @@ export const enemies = {
   },
   kabachahn: {
     unitType: "zeth_mages",
-    unitsize: 900,
+    unitSize: 900,
     replenishRate: 30,
     omniAtk: 0,
     omniDef: 2,
@@ -1176,7 +1223,7 @@ export const enemies = {
   },
   alex: {
     unitType: "zeth_mages",
-    unitsize: 800,
+    unitSize: 800,
     replenishRate: 30,
     omniAtk: 0,
     omniDef: 2,
@@ -1199,7 +1246,7 @@ export const enemies = {
   },
   redeye: {
     unitType: "monsters",
-    unitsize: 2000,
+    unitSize: 2000,
     replenishRate: 8,
     omniAtk: 0,
     omniDef: 0,
@@ -1212,7 +1259,7 @@ export const enemies = {
   },
   galtia: {
     unitType: "food",
-    unitsize: 2000,
+    unitSize: 2000,
     replenishRate: 5,
     omniAtk: 0,
     omniDef: 1,
@@ -1225,7 +1272,7 @@ export const enemies = {
   },
   kaito: {
     unitType: "kaito_clones",
-    unitsize: 1000,
+    unitSize: 1000,
     replenishRate: 5,
     omniAtk: 2,
     omniDef: 0,
@@ -1238,7 +1285,7 @@ export const enemies = {
   },
   kesselring: {
     unitType: "lovers",
-    unitsize: 500,
+    unitSize: 500,
     replenishRate: 48,
     omniAtk: 0,
     omniDef: 0,
@@ -1251,7 +1298,7 @@ export const enemies = {
   },
   medusa: {
     unitType: "snake_sans",
-    unitsize: 4500,
+    unitSize: 4500,
     replenishRate: 150,
     omniAtk: 0,
     omniDef: 0,
@@ -1274,7 +1321,7 @@ export const enemies = {
   },
   pg_7: {
     unitType: "pg_x",
-    unitsize: 800,
+    unitSize: 800,
     replenishRate: 70,
     omniAtk: 1,
     omniDef: 1,
@@ -1287,7 +1334,7 @@ export const enemies = {
   },
   pg_9: {
     unitType: "pg_x",
-    unitsize: 1000,
+    unitSize: 1000,
     replenishRate: 70,
     omniAtk: 1,
     omniDef: 1,
@@ -1300,7 +1347,7 @@ export const enemies = {
   },
   pg_x2: {
     unitType: "pg_x",
-    unitsize: 500,
+    unitSize: 500,
     replenishRate: 100,
     omniAtk: 0,
     omniDef: 0,
@@ -1313,7 +1360,7 @@ export const enemies = {
   },
   temple_knight: {
     unitType: "temple_knights",
-    unitsize: 500,
+    unitSize: 500,
     replenishRate: 57,
     omniAtk: 0,
     omniDef: 0,
@@ -1326,7 +1373,7 @@ export const enemies = {
   },
   carfeknight: {
     unitType: "carfeknights",
-    unitsize: 500,
+    unitSize: 500,
     replenishRate: 57,
     omniAtk: 0,
     omniDef: 0,
@@ -1339,7 +1386,7 @@ export const enemies = {
   },
   angel_knight: {
     unitType: "angel_knights",
-    unitsize: 3500,
+    unitSize: 3500,
     replenishRate: 57,
     omniAtk: 0,
     omniDef: 0,
@@ -1352,7 +1399,7 @@ export const enemies = {
   },
   truffle_77: {
     unitType: "monsters",
-    unitsize: 5000,
+    unitSize: 5000,
     replenishRate: 5,
     omniAtk: 0,
     omniDef: 0,
@@ -1365,7 +1412,7 @@ export const enemies = {
   },
   moreinyan: {
     unitType: "monsters",
-    unitsize: 4250,
+    unitSize: 4250,
     replenishRate: 8,
     omniAtk: 0,
     omniDef: 0,
@@ -1378,7 +1425,7 @@ export const enemies = {
   },
   ouzawa: {
     unitType: "monsters",
-    unitsize: 3700,
+    unitSize: 3700,
     replenishRate: 2,
     omniAtk: 0,
     omniDef: 0,
@@ -1391,7 +1438,7 @@ export const enemies = {
   },
   tobroiv: {
     unitType: "monsters",
-    unitsize: 6100,
+    unitSize: 6100,
     replenishRate: 1,
     omniAtk: 0,
     omniDef: 0,
@@ -1404,7 +1451,7 @@ export const enemies = {
   },
   deckmaster: {
     unitType: "monsters",
-    unitsize: 4720,
+    unitSize: 4720,
     replenishRate: 4,
     omniAtk: 0,
     omniDef: 0,
@@ -1417,7 +1464,7 @@ export const enemies = {
   },
   strength: {
     unitType: "monsters",
-    unitsize: 2000,
+    unitSize: 2000,
     replenishRate: 5,
     omniAtk: 0,
     omniDef: 0,
@@ -1430,7 +1477,7 @@ export const enemies = {
   },
   derandron: {
     unitType: "monsters",
-    unitsize: 3000,
+    unitSize: 3000,
     replenishRate: 5,
     omniAtk: 0,
     omniDef: 0,
@@ -1443,7 +1490,7 @@ export const enemies = {
   },
   nasport: {
     unitType: "monsters",
-    unitsize: 3500,
+    unitSize: 3500,
     replenishRate: 5,
     omniAtk: 0,
     omniDef: 0,
@@ -1456,7 +1503,7 @@ export const enemies = {
   },
   silky: {
     unitType: "chimeras",
-    unitsize: 0,
+    unitSize: 0,
     replenishRate: 0,
     omniAtk: 0,
     omniDef: 0,
@@ -1469,7 +1516,7 @@ export const enemies = {
   },
   satella: {
     unitType: "guardians",
-    unitsize: 200,
+    unitSize: 200,
     replenishRate: 20,
     omniAtk: 0,
     omniDef: 0,
@@ -1482,7 +1529,7 @@ export const enemies = {
   },
   meglass: {
     unitType: "horuses",
-    unitsize: 600,
+    unitSize: 600,
     replenishRate: 60,
     omniAtk: 0,
     omniDef: 0,
@@ -1495,7 +1542,7 @@ export const enemies = {
   },
   kaybwan: {
     unitType: "doggies",
-    unitsize: 1001,
+    unitSize: 1001,
     replenishRate: 100,
     omniAtk: 0,
     omniDef: 0,
@@ -1509,7 +1556,7 @@ export const enemies = {
   // hikaru,
   // rika: {
   //   unitType: "doggies",
-  //   unitsize: 500,
+  //   unitSize: 500,
   //   replenishRate: 70,
   //   omniAtk: 0,
   //   omniDef: 0,
@@ -1522,7 +1569,7 @@ export const enemies = {
   // },
   kaybnyan: {
     unitType: "kitties",
-    unitsize: 1001,
+    unitSize: 1001,
     replenishRate: 100,
     omniAtk: 0,
     omniDef: 0,
@@ -1535,7 +1582,7 @@ export const enemies = {
   },
   wao: {
     unitType: "kitties",
-    unitsize: 500,
+    unitSize: 500,
     replenishRate: 70,
     omniAtk: 0,
     omniDef: 0,
@@ -1555,7 +1602,7 @@ export const enemies = {
   // kenichi,
   // takeege: {
   //   unitType: "male_slaves",
-  //   unitsize: 2000,
+  //   unitSize: 2000,
   //   replenishRate: 100,
   //   omniAtk: 0,
   //   omniDef: 0,
@@ -1574,7 +1621,7 @@ export const enemies = {
   // suppli,
   // rue: {
   //   unitType: "zeth_mages",
-  //   unitsize: 300,
+  //   unitSize: 300,
   //   replenishRate: 30,
   //   omniAtk: 0,
   //   omniDef: 0,
@@ -1587,7 +1634,7 @@ export const enemies = {
   // },
   annis: {
     unitType: "zeth_mages",
-    unitsize: 300,
+    unitSize: 300,
     replenishRate: 30,
     omniAtk: 0,
     omniDef: 0,
@@ -1601,7 +1648,7 @@ export const enemies = {
   // monster_general2,
   // lis_guard: {
   //   unitType: "monsters",
-  //   unitsize: 5200,
+  //   unitSize: 5200,
   //   replenishRate: 0,
   //   omniAtk: 0,
   //   omniDef: 0,
@@ -1614,7 +1661,7 @@ export const enemies = {
   // },
   monster_general3: {
     unitType: "monsters",
-    unitsize: 8200,
+    unitSize: 8200,
     replenishRate: 0,
     omniAtk: 0,
     omniDef: 0,
@@ -1627,7 +1674,7 @@ export const enemies = {
   },
   capricorn: {
     unitType: "dekants",
-    unitsize: 800,
+    unitSize: 800,
     replenishRate: 0,
     omniAtk: 0,
     omniDef: 0,
@@ -1640,7 +1687,7 @@ export const enemies = {
   },
   ortega: {
     unitType: "dekants",
-    unitsize: 700,
+    unitSize: 700,
     replenishRate: 0,
     omniAtk: 0,
     omniDef: 0,
@@ -1653,7 +1700,7 @@ export const enemies = {
   },
   kaiju_gaga: {
     unitType: "dragonflies",
-    unitsize: 900,
+    unitSize: 900,
     replenishRate: 0,
     omniAtk: 0,
     omniDef: 0,
@@ -1666,7 +1713,7 @@ export const enemies = {
   },
   kaiju_zeze: {
     unitType: "dragonflies",
-    unitsize: 800,
+    unitSize: 800,
     replenishRate: 0,
     omniAtk: 0,
     omniDef: 0,
@@ -1679,7 +1726,7 @@ export const enemies = {
   },
   kaiju_dada: {
     unitType: "dragonflies",
-    unitsize: 960,
+    unitSize: 960,
     replenishRate: 0,
     omniAtk: 0,
     omniDef: 0,
@@ -1692,7 +1739,7 @@ export const enemies = {
   },
   kaiju_bobo: {
     unitType: "dragonflies",
-    unitsize: 800,
+    unitSize: 800,
     replenishRate: 0,
     omniAtk: 0,
     omniDef: 0,
@@ -1711,7 +1758,7 @@ export const enemies = {
   // eigth_assault_leader,
   // ninth_assault_leader: {
   //   unitType: "monsters",
-  //   unitsize: 10000,
+  //   unitSize: 10000,
   //   replenishRate: 200,
   //   omniAtk: 0,
   //   omniDef: 0,
@@ -1724,7 +1771,7 @@ export const enemies = {
   // },
   second_assault_leader: {
     unitType: "monsters",
-    unitsize: 10000,
+    unitSize: 10000,
     replenishRate: 200,
     omniAtk: 0,
     omniDef: 0,
@@ -1737,7 +1784,7 @@ export const enemies = {
   },
   fifth_assault_leader: {
     unitType: "monsters",
-    unitsize: 10000,
+    unitSize: 10000,
     replenishRate: 200,
     omniAtk: 0,
     omniDef: 0,

@@ -42,7 +42,7 @@ export const characters = {
   },
   leila: {
     id: "leila",
-    name: "Leila Grecni",
+    name: "Leila Greckney",
     portrait: "leila.png",
     sprite: "leila.png",
     recruitCondition: [],

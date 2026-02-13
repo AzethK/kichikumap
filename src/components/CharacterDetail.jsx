@@ -35,6 +35,7 @@ export default function CharacterDetail({ characterId, onClose }) {
   const haremCharacter = mode === "Harem" ? harem[characterId] : null;
   const character = characters[characterId];
   const characterSubordinate = charactersSubordinate[characterId];
+  const enemy = enemies[characterId];
   var troop = null;
   var troopSprites = null;
   var currentTroopSprite = null;
@@ -44,17 +45,16 @@ export default function CharacterDetail({ characterId, onClose }) {
   if (mode != "Harem") {
     troop =
       troops[
-        mode === "Subordinates" ?
-          characterSubordinate.unitType
-        : enemies[characterId].unitType
+        mode === "Subordinates" ? characterSubordinate.unitType : enemy.unitType
       ];
 
     troopSprites =
-      characterSubordinate.battleSprite ?
+      mode === "Subordinates" ?
         Array.isArray(characterSubordinate.battleSprite) ?
           characterSubordinate.battleSprite
         : [characterSubordinate.battleSprite]
-      : [];
+      : Array.isArray(enemy.battleSprite) ? enemy.battleSprite
+      : [enemy.battleSprite];
 
     currentTroopSprite =
       troopSprites.length > 0 ?
@@ -77,11 +77,92 @@ export default function CharacterDetail({ characterId, onClose }) {
 
   const currentPortrait = getCharacterPortrait(portraits[portraitIndex]);
   const currentSprite =
-    mode === "Harem" ?
-      getHaremSprite(sprites[spriteIndex])
-    : getCharacterSprite(sprites[spriteIndex]);
+    mode === "Harem" ? getHaremSprite(sprites[spriteIndex])
+    : mode === "Subordinates" ? getCharacterSprite(sprites[spriteIndex])
+    : getTroopSprite(troopSprites[2]);
+
+  const stats = {
+    unitSize:
+      mode === "Subordinates" ? characterSubordinate.unitSize : enemy.unitSize,
+    deployCost:
+      mode === "Subordinates" ?
+        characterSubordinate.deployCost
+      : enemy.deployCost,
+    replenishRate:
+      mode === "Subordinates" ?
+        characterSubordinate.replenishRate
+      : enemy.replenishRate,
+    omniAtk:
+      mode === "Subordinates" ? characterSubordinate.omniAtk : enemy.omniAtk,
+    omniDef:
+      mode === "Subordinates" ? characterSubordinate.omniDef : enemy.omniDef,
+    atk: mode === "Subordinates" ? characterSubordinate.atk : enemy.atk,
+    def: mode === "Subordinates" ? characterSubordinate.def : enemy.def,
+    strikes:
+      mode === "Subordinates" ? characterSubordinate.strikes : enemy.strikes,
+    hp: mode === "Subordinates" ? characterSubordinate.hp : enemy.hp,
+    strategy:
+      mode === "Subordinates" ? characterSubordinate.strategy : enemy.strategy,
+    magic: mode === "Subordinates" ? characterSubordinate.magic : enemy.magic,
+    sca: mode === "Subordinates" ? characterSubordinate.sca : enemy.sca,
+
+    variants: {
+      unitSize:
+        mode === "Subordinates" && characterSubordinate.variants ?
+          characterSubordinate.variants.unitSize ?
+            characterSubordinate.variants.unitSize
+          : null
+        : null,
+      hp:
+        mode === "Subordinates" && characterSubordinate.variants ?
+          characterSubordinate.variants.hp ?
+            characterSubordinate.variants.hp
+          : null
+        : null,
+      atk:
+        mode === "Subordinates" && characterSubordinate.variants ?
+          characterSubordinate.variants.atk ?
+            characterSubordinate.variants.atk
+          : null
+        : null,
+      troopAtk:
+        mode === "Subordinates" && characterSubordinate.variants ?
+          characterSubordinate.variants.troopAtk ?
+            characterSubordinate.variants.troopAtk
+          : null
+        : null,
+      strikes:
+        mode === "Subordinates" && characterSubordinate.variants ?
+          characterSubordinate.variants.strikes ?
+            characterSubordinate.variants.strikes
+          : null
+        : null,
+      magic:
+        mode === "Subordinates" && characterSubordinate.variants ?
+          characterSubordinate.variants.magic ?
+            characterSubordinate.variants.magic
+          : null
+        : null,
+      strategy:
+        mode === "Subordinates" && characterSubordinate.variants ?
+          characterSubordinate.variants.strategy ?
+            characterSubordinate.variants.strategy
+          : null
+        : null,
+      sca:
+        mode === "Subordinates" && characterSubordinate.variants ?
+          characterSubordinate.variants.sca ?
+            characterSubordinate.variants.sca
+          : null
+        : null,
+    },
+  };
 
   /* ---------------- Recruitment Conditions ---------------- */
+
+  //  This will have to be changed later when I change how modes work
+  //  some enemies are going to be recruitable, so modes will have to be
+  //  an array of roles
 
   const conditions =
     mode === "Harem" && haremCharacter.recruitmentOverride ?
@@ -200,46 +281,120 @@ export default function CharacterDetail({ characterId, onClose }) {
             {/* Commander Stats */}
             {mode != "Harem" && (
               <div className="character-stats">
-                <Stat label="Unit Size" value={characterSubordinate.unitSize} />
                 <Stat
-                  label="Deploy Cost"
-                  value={characterSubordinate.deployCost}
+                  label="Unit Size"
+                  value={
+                    stats.variants.unitSize ?
+                      <>
+                        {stats.unitSize} → {stats.variants.unitSize}
+                      </>
+                    : stats.unitSize
+                  }
                 />
-                <Stat label="HP" value={characterSubordinate.hp} />
-                <Stat label="Strikes" value={characterSubordinate.strikes} />
+                <Stat label="Deploy Cost" value={stats.deployCost} />
+                <Stat
+                  label="HP"
+                  value={
+                    stats.variants.hp ?
+                      <>
+                        {stats.hp} → {stats.variants.hp}
+                      </>
+                    : stats.hp
+                  }
+                />
+                <Stat
+                  label="Strikes"
+                  value={
+                    stats.variants.strikes ?
+                      <>
+                        {stats.strikes} → {stats.variants.strikes}
+                      </>
+                    : stats.strikes
+                  }
+                />
                 <Stat
                   label="ATK"
                   value={
-                    characterSubordinate.variants ?
-                      characterSubordinate.variants.atk ?
-                        `${characterSubordinate.atk}→${characterSubordinate.variants.atk}`
-                      : characterSubordinate.atk
-                    : characterSubordinate.atk
+                    stats.variants.atk ?
+                      <>
+                        {stats.atk} → {stats.variants.atk}
+                      </>
+                    : stats.atk
                   }
                 />
-                <Stat label="DEF" value={characterSubordinate.def} />
-                <Stat label="MAG" value={characterSubordinate.magic} />
-                <Stat label="Strategy" value={characterSubordinate.strategy} />
+                <Stat label="DEF" value={stats.def} />
+                <Stat
+                  label="MAG"
+                  value={
+                    stats.variants.magic ?
+                      <>
+                        {stats.magic} → {stats.variants.magic}
+                      </>
+                    : stats.magic
+                  }
+                />
+                <Stat
+                  label="Strategy"
+                  value={
+                    stats.variants.strategy ?
+                      <>
+                        {stats.strategy} → {stats.variants.strategy}
+                      </>
+                    : stats.magic
+                  }
+                />
                 <Stat
                   label="Replenish Rate"
-                  value={characterSubordinate.replenishRate}
+                  value={
+                    stats.replenishRate !== undefined ?
+                      stats.replenishRate
+                    : "N/A"
+                  }
                 />
-                {characterSubordinate.specialName && (
-                  <div className="wide">
-                    <strong>Special:</strong> {characterSubordinate.specialName}
-                    {characterSubordinate.specialType &&
-                      ` (${characterSubordinate.specialType})`}
-                  </div>
-                )}
-                {Array.isArray(characterSubordinate.sca) && (
-                  <div className="wide">
-                    <strong>SCA:</strong>
-                    <div>Offense: {characterSubordinate.sca[0]}</div>
-                    <div>Defense: {characterSubordinate.sca[1]}</div>
-                    <div>Dungeons: {characterSubordinate.sca[2]}</div>
-                  </div>
-                )}
-                {characterSubordinate.surge && (
+                <Stat label="Omni ATK" value={stats.omniAtk} />
+                <Stat label="Omni DEF" value={stats.omniDef} />
+
+                {mode === "Subordinates" &&
+                  characterSubordinate.specialName && (
+                    <div className="wide">
+                      <strong>Special:</strong>{" "}
+                      {characterSubordinate.specialName}
+                      {characterSubordinate.specialType &&
+                        ` (${characterSubordinate.specialType})`}
+                    </div>
+                  )}
+
+                {mode === "Subordinates" &&
+                  Array.isArray(characterSubordinate.sca) && (
+                    <div className="wide">
+                      <strong>SCA:</strong>
+                      <div>
+                        Offense:{" "}
+                        {stats.variants.sca ?
+                          <>
+                            {stats.sca[0]} → {stats.variants.sca[0]}
+                          </>
+                        : characterSubordinate.sca[0]}
+                      </div>
+                      <div>
+                        Defense:{" "}
+                        {stats.variants.sca ?
+                          <>
+                            {stats.sca[1]} → {stats.variants.sca[1]}
+                          </>
+                        : characterSubordinate.sca[1]}
+                      </div>
+                      <div>
+                        Dungeons:{" "}
+                        {stats.variants.sca ?
+                          <>
+                            {stats.sca[2]} → {stats.variants.sca[2]}
+                          </>
+                        : characterSubordinate.sca[2]}
+                      </div>
+                    </div>
+                  )}
+                {mode === "Subordinates" && characterSubordinate.surge && (
                   <div>
                     <strong>Surge:</strong>{" "}
                     <span
@@ -254,7 +409,7 @@ export default function CharacterDetail({ characterId, onClose }) {
                     </span>
                   </div>
                 )}
-                {characterSubordinate.variants && (
+                {mode === "Subordinates" && characterSubordinate.variants && (
                   <div className="wide">
                     Stats change: {characterSubordinate.variants.label}
                   </div>
@@ -271,10 +426,10 @@ export default function CharacterDetail({ characterId, onClose }) {
                     <Stat
                       label="ATK"
                       value={
-                        characterSubordinate.variants ?
-                          characterSubordinate.variants.troopAtk ?
-                            `${troop.atk}→${characterSubordinate.variants.troopAtk}`
-                          : troop.atk
+                        stats.variants.troopAtk !== null ?
+                          <>
+                            {troop.atk} → {stats.variants.troopAtk}
+                          </>
                         : troop.atk
                       }
                     />
@@ -292,24 +447,29 @@ export default function CharacterDetail({ characterId, onClose }) {
             <div className="character-recruitment">
               <h2>Recruitment Conditions</h2>
 
-              {conditions.length > 0 ?
-                <div className="character-detail-condition-box">
-                  <div className="character-condition-step">
-                    {conditions.map((c, i) => (
-                      <div key={i}>
-                        • <ConditionText text={c} />
-                      </div>
-                    ))}
+              {mode !== "Enemies" &&
+                (conditions.length > 0 ?
+                  <div className="character-detail-condition-box">
+                    <div className="character-condition-step">
+                      {conditions.map((c, i) => (
+                        <div key={i}>
+                          • <ConditionText text={c} />
+                        </div>
+                      ))}
+                    </div>
                   </div>
+                : <div className="character-condition-step">
+                    • Recruited automatically
+                  </div>)}
+              {mode === "Enemies" && (
+                <div className="character-condition-step">
+                  • Enemies are not recruitable
                 </div>
-              : <div className="character-condition-step">
-                  • Recruited automatically
-                </div>
-              }
+              )}
             </div>
 
             {/* Troop Sprites */}
-            {/* CHANGE THIS TO THE THREE SPRITES EACH UNIT HAS */}
+
             {mode != "Harem" && (
               <div className="character-troop-sprites">
                 {currentTroopSprite ?
