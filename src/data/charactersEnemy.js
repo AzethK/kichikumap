@@ -61,11 +61,7 @@ export const enemies = {
     hp: 4,
     strategy: 10,
     magic: 7,
-    battleSprite: [
-      "e_template.png",
-      "e_templateFull.png",
-      "e_templateSolo.png",
-    ],
+    battleSprite: ["e_lmages.png", "e_melfeisFull.png", "e_melfeisSolo.png"],
   },
   dodge: {
     unitType: "leazas_soldiers",
@@ -79,7 +75,11 @@ export const enemies = {
     hp: 6,
     strategy: 0,
     magic: 0,
-    battleSprite: ["e_template.png", "e_template.png", "e_template.png"],
+    battleSprite: [
+      "e_lblacksoldiers.png",
+      "e_dodgeFull.png",
+      "e_dodgeSolo.png",
+    ],
   },
   sakanaku: {
     unitType: "leazas_soldiers",
@@ -94,9 +94,9 @@ export const enemies = {
     strategy: 4,
     magic: 0,
     battleSprite: [
-      "e_template.png",
-      "e_templateFull.png",
-      "e_templateSolo.png",
+      "e_lblacksoldiers.png",
+      "e_sakanakuFull.png",
+      "e_sakanakuSolo.png",
     ],
   },
   jibul: {
@@ -112,9 +112,9 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: [
-      "e_template.png",
-      "e_templateFull.png",
-      "e_templateSolo.png",
+      "e_lblacksoldiers.png",
+      "e_jibulFull.png",
+      "e_jibulSolo.png",
     ],
   },
   gengorou: {
@@ -130,14 +130,14 @@ export const enemies = {
     strategy: 100,
     magic: 0,
     battleSprite: [
-      "e_template.png",
-      "e_templateFull.png",
-      "e_templateSolo.png",
+      "e_civilians.png",
+      "e_gengorouFull.png",
+      "e_gengorouSolo.png",
     ],
   },
-  hannah_hero: {
+  freecity_general: {
     unitType: "civilians",
-    unitSize: 1500,
+    unitSize: [1500, 1100, 2000, 1200, 1200, 1200, 1200, 1200, 1200],
     replenishRate: 100,
     omniAtk: 0,
     omniDef: 0,
@@ -148,9 +148,9 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: [
-      "e_template.png",
-      "e_templateFull.png",
-      "e_templateSolo.png",
+      "e_civilians.png",
+      "e_freegeneralFull.png",
+      "e_freegeneralSolo.png",
     ],
   },
   sayori: {

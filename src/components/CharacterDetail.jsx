@@ -14,6 +14,8 @@ import ConditionText from "../util/ConditionText";
 import { useAppContext } from "../App";
 
 export default function CharacterDetail({ characterId, onClose }) {
+  const [variantIndex, setVariantIndex] = useState(0);
+
   const { setSelectedCharacterId, mode, setMode } = useAppContext();
 
   const getCharacterRole = (characterId) => {
@@ -81,9 +83,14 @@ export default function CharacterDetail({ characterId, onClose }) {
     : mode === "Subordinates" ? getCharacterSprite(sprites[spriteIndex])
     : getTroopSprite(troopSprites[2]);
 
+  const rawUnitSize =
+    mode === "Subordinates" ? characterSubordinate.unitSize : enemy.unitSize;
+
+  const unitSize =
+    Array.isArray(rawUnitSize) ? rawUnitSize[variantIndex] : rawUnitSize;
+
   const stats = {
-    unitSize:
-      mode === "Subordinates" ? characterSubordinate.unitSize : enemy.unitSize,
+    unitSize,
     deployCost:
       mode === "Subordinates" ?
         characterSubordinate.deployCost
@@ -192,7 +199,35 @@ export default function CharacterDetail({ characterId, onClose }) {
           {/* ================= HEADER ================= */}
           <div className="character-header">
             <div className="character-detail-name">
-              <h2>{character.name}</h2>
+              <h2>
+                {Array.isArray(character.name) ?
+                  character.name[variantIndex]
+                : character.name}
+              </h2>
+              {Array.isArray(character.name) && (
+                <div className="variant-nav">
+                  <span>Variant</span>
+                  <button
+                    onClick={() => setVariantIndex((i) => Math.max(0, i - 1))}
+                    disabled={variantIndex === 0}
+                  >
+                    ◀
+                  </button>
+                  <span>
+                    {variantIndex + 1} / {character.name.length}
+                  </span>
+                  <button
+                    onClick={() =>
+                      setVariantIndex((i) =>
+                        Math.min(character.name.length - 1, i + 1),
+                      )
+                    }
+                    disabled={variantIndex === character.name.length - 1}
+                  >
+                    ▶
+                  </button>
+                </div>
+              )}
             </div>
 
             {mode != "Harem" && (

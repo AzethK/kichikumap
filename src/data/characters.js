@@ -1,4 +1,5 @@
 export const characters = {
+  //#region SUBORDINATES
   rance: {
     id: "rance",
     name: "Rance",
@@ -476,6 +477,10 @@ export const characters = {
     sprite: "cecil.png",
     recruitCondition: ["Hire Mercenary B from Pluepet"],
   },
+  //#endregion
+
+  //#region HAREM
+
   lia: {
     id: "lia",
     name: "Lia Parapara Leazas",
@@ -720,6 +725,54 @@ export const characters = {
       "Conquer area_leazas_baranchi",
     ],
   },
+  //#endregion
+
+  //#region ENEMIES
+  pegasus: {
+    id: "pegasus",
+    name: "Pegasus Fort",
+    portrait: "pegasus.png",
+    sprite: "pegasus.png",
+    recruitCondition: [],
+  },
+  dodge: {
+    id: "dodge",
+    name: "Dodge Evans",
+    portrait: "dodge.png",
+    sprite: "dodge.png",
+    recruitCondition: [],
+  },
+  sakanaku: {
+    id: "sakanaku",
+    name: "Sakanaku Tenka",
+    portrait: "sakanaku.png",
+    sprite: "sakanaku.png",
+    recruitCondition: [],
+  },
+  jibul: {
+    id: "jibul",
+    name: "Jibul Makutomi",
+    portrait: "jibul.png",
+    sprite: "jibul.png",
+    recruitCondition: [],
+  },
+  freecity_general: {
+    id: "freecity_general",
+    name: [
+      "Hanna Hero",
+      "M Land Hero",
+      "The O Hero",
+      "Portugal Hero",
+      "Red Hero",
+      "L Zile Hero",
+      "Ice Hero",
+      "Rockearth Hero",
+      "Diphtheria Hero",
+    ],
+    portrait: "freecity_general.png",
+    sprite: "freecity_general.png",
+    recruitCondition: [],
+  },
   alefgard: {
     id: "alefgard",
     name: "Alefgard",
@@ -905,13 +958,7 @@ export const characters = {
     sprite: "housesnurse.png",
     recruitCondition: [],
   },
-  jibul: {
-    id: "jibul",
-    name: "Jibul Makutomi",
-    portrait: "jibul.png",
-    sprite: "jibul.png",
-    recruitCondition: [],
-  },
+
   kabachahn: {
     id: "kabachahn",
     name: "Kabachahn The Lightning",
@@ -1094,13 +1141,7 @@ export const characters = {
     sprite: "pastel.png",
     recruitCondition: [],
   },
-  pegasus: {
-    id: "pegasus",
-    name: "Pegasus Fort",
-    portrait: "pegasus.png",
-    sprite: "pegasus.png",
-    recruitCondition: [],
-  },
+
   pg_7: {
     id: "pg_7",
     name: "PG-7",
@@ -1164,13 +1205,7 @@ export const characters = {
     sprite: "rottenmeier.png",
     recruitCondition: [],
   },
-  sakanaku: {
-    id: "sakanaku",
-    name: "Sakanaku Tenka",
-    portrait: "sakanaku.png",
-    sprite: "sakanaku.png",
-    recruitCondition: [],
-  },
+
   salbenaot: {
     id: "salbenaot",
     name: "Salbenaot",

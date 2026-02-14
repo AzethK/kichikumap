@@ -639,3 +639,32 @@ body {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
 }
+
+/* Character variant nav */
+
+/* Variant Nav (Unit Versions) */
+
+.variant-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 4px;
+}
+
+.variant-nav button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.variant-nav button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.variant-nav button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
