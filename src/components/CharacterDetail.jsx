@@ -45,10 +45,13 @@ export default function CharacterDetail({ characterId, onClose }) {
   if (!character) return null;
 
   if (mode != "Harem") {
+    const rawTroop =
+      mode === "Subordinates" ? characterSubordinate.unitType : enemy.unitType;
+
     troop =
-      troops[
-        mode === "Subordinates" ? characterSubordinate.unitType : enemy.unitType
-      ];
+      Array.isArray(rawTroop) ?
+        troops[rawTroop[variantIndex]]
+      : troops[rawTroop];
 
     troopSprites =
       mode === "Subordinates" ?
@@ -81,7 +84,7 @@ export default function CharacterDetail({ characterId, onClose }) {
   const currentSprite =
     mode === "Harem" ? getHaremSprite(sprites[spriteIndex])
     : mode === "Subordinates" ? getCharacterSprite(sprites[spriteIndex])
-    : getTroopSprite(troopSprites[2]);
+    : getTroopSprite(troopSprites[2] ? troopSprites[2] : troopSprites[0]);
 
   const rawUnitSize =
     mode === "Subordinates" ? characterSubordinate.unitSize : enemy.unitSize;
@@ -89,27 +92,56 @@ export default function CharacterDetail({ characterId, onClose }) {
   const unitSize =
     Array.isArray(rawUnitSize) ? rawUnitSize[variantIndex] : rawUnitSize;
 
+  const rawReplenishRate =
+    mode === "Subordinates" ?
+      characterSubordinate.replenishRate
+    : enemy.replenishRate;
+
+  const replenishRate =
+    Array.isArray(rawReplenishRate) ?
+      rawReplenishRate[variantIndex]
+    : rawReplenishRate;
+
+  const rawAtk = mode === "Subordinates" ? characterSubordinate.atk : enemy.atk;
+
+  const atk = Array.isArray(rawAtk) ? rawAtk[variantIndex] : rawAtk;
+
+  const rawDef = mode === "Subordinates" ? characterSubordinate.def : enemy.def;
+
+  const def = Array.isArray(rawDef) ? rawDef[variantIndex] : rawDef;
+
+  const rawStrikes =
+    mode === "Subordinates" ? characterSubordinate.strikes : enemy.strikes;
+
+  const strikes =
+    Array.isArray(rawStrikes) ? rawStrikes[variantIndex] : rawStrikes;
+
+  const rawHp = mode === "Subordinates" ? characterSubordinate.hp : enemy.hp;
+
+  const hp = Array.isArray(rawHp) ? rawHp[variantIndex] : rawHp;
+
+  const rawStrategy =
+    mode === "Subordinates" ? characterSubordinate.strategy : enemy.strategy;
+
+  const strategy =
+    Array.isArray(rawStrategy) ? rawStrategy[variantIndex] : rawStrategy;
+
   const stats = {
     unitSize,
     deployCost:
       mode === "Subordinates" ?
         characterSubordinate.deployCost
       : enemy.deployCost,
-    replenishRate:
-      mode === "Subordinates" ?
-        characterSubordinate.replenishRate
-      : enemy.replenishRate,
+    replenishRate,
     omniAtk:
       mode === "Subordinates" ? characterSubordinate.omniAtk : enemy.omniAtk,
     omniDef:
       mode === "Subordinates" ? characterSubordinate.omniDef : enemy.omniDef,
-    atk: mode === "Subordinates" ? characterSubordinate.atk : enemy.atk,
-    def: mode === "Subordinates" ? characterSubordinate.def : enemy.def,
-    strikes:
-      mode === "Subordinates" ? characterSubordinate.strikes : enemy.strikes,
-    hp: mode === "Subordinates" ? characterSubordinate.hp : enemy.hp,
-    strategy:
-      mode === "Subordinates" ? characterSubordinate.strategy : enemy.strategy,
+    atk,
+    def,
+    strikes,
+    hp,
+    strategy,
     magic: mode === "Subordinates" ? characterSubordinate.magic : enemy.magic,
     sca: mode === "Subordinates" ? characterSubordinate.sca : enemy.sca,
 
@@ -238,7 +270,14 @@ export default function CharacterDetail({ characterId, onClose }) {
 
             {mode != "Harem" && (
               <div className="character-troop-name">
-                <h2>Troops: {troop ? troop.name : "None"}</h2>
+                <h2>
+                  Troops:{" "}
+                  {troop ?
+                    Array.isArray(troop) ?
+                      troop[variantIndex].name
+                    : troop.name
+                  : "None"}
+                </h2>
               </div>
             )}
           </div>
@@ -375,7 +414,7 @@ export default function CharacterDetail({ characterId, onClose }) {
                       <>
                         {stats.strategy} → {stats.variants.strategy}
                       </>
-                    : stats.magic
+                    : stats.strategy
                   }
                 />
                 <Stat
