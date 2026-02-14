@@ -672,6 +672,11 @@ export const enemies = {
     hp: 10,
     strategy: 0,
     magic: 2,
+    battleSprite: [
+      "e_monsters4.png",
+      "e_mgeneralFull.png",
+      "e_mgeneralSolo.png",
+    ],
   },
   monster_general_mage: {
     unitType: "monsters",
@@ -685,8 +690,13 @@ export const enemies = {
     hp: 4,
     strategy: 0,
     magic: 5,
+    battleSprite: [
+      "e_monstermages.png",
+      "e_mgeneralmageFull.png",
+      "e_mgeneralmageSolo.png",
+    ],
   },
-  la_seizel: {
+  la_saizel: {
     unitType: "false_angels",
     unitSize: 600,
     replenishRate: 30,
@@ -698,6 +708,7 @@ export const enemies = {
     hp: 12,
     strategy: 0,
     magic: 7,
+    battleSprite: ["e_falseangels.png", "e_saizelFull.png", "e_saizelSolo.png"],
   },
   camilla: {
     unitType: "dragon_girls",
@@ -711,6 +722,11 @@ export const enemies = {
     hp: 18,
     strategy: 0,
     magic: 8,
+    battleSprite: [
+      "e_dragongirls.png",
+      "e_camillaFull.png",
+      "e_camillaSolo.png",
+    ],
   },
   lei: {
     omniAtk: 0,
@@ -721,6 +737,7 @@ export const enemies = {
     hp: 13,
     strategy: 0,
     magic: 5,
+    battleSprite: ["e_leiSolo.png"],
   },
   sieg: {
     unitType: "maneshitas",
@@ -734,6 +751,13 @@ export const enemies = {
     hp: 18,
     strategy: 0,
     magic: 0,
+    battleSprite: [
+      "e_maneshitas.png",
+      "e_siegFull.png",
+      "e_siegSolo.png",
+      "e_siegFull2.png",
+      "e_siegSolo2.png",
+    ],
   },
   wall: {
     unitType: "walls",
@@ -747,6 +771,7 @@ export const enemies = {
     hp: 13,
     strategy: 0,
     magic: 0,
+    battleSprite: ["e_walls.png", "e_wallFull.png", "e_wallSolo.png"],
   },
   mage_leader: {
     unitType: "zeth_mages",
@@ -760,6 +785,7 @@ export const enemies = {
     hp: 3,
     strategy: 0,
     magic: 4,
+    battleSprite: ["e_zethmages.png", "e_mleaderFull.png", "e_mleaderSolo.png"],
   },
   xacalite: {
     omniAtk: 0,
@@ -770,6 +796,7 @@ export const enemies = {
     hp: 16,
     strategy: 0,
     magic: 0,
+    battleSprite: ["e_xacaliteSolo.png"],
   },
   la_vaswald: {
     omniAtk: 0,
@@ -780,6 +807,7 @@ export const enemies = {
     hp: 40,
     strategy: 0,
     magic: 10,
+    battleSprite: ["e_vaswaldSolo.png"],
   },
   chizuko: {
     unitType: "zeth_mages",
