@@ -901,7 +901,11 @@ export const characters = {
   },
   mage_leader: {
     id: "mage_leader",
-    name: "Mage Leader",
+    name: [
+      "Mage Leader",
+      "Noplans / Casmint / Nei / Reshie / Starlighter / Kyouko / Sanneri",
+      "Renko / Jessica / Am / Mayumi / Hiroko / Suppli / Rue",
+    ],
     portrait: "mage_leader.png",
     sprite: "mage_leader.png",
     recruitCondition: [],
@@ -911,6 +915,40 @@ export const characters = {
     name: "La Vaswald",
     portrait: "la_vaswald.png",
     sprite: "la_vaswald.png",
+    recruitCondition: [],
+  },
+  slave_general: {
+    id: "slave_general",
+    name: [
+      "Nagabuchi / Poporos / Takeo / Conportant / Maskloader / Dabinch / The Bomber",
+      "Dan Cero / Dancelove",
+      "Minamin",
+      "Haseras / Shitareriha",
+      "Zamoor / Urias / Backslock / Beethoven / Lawson / Mustard / Kenichi / Takeege",
+    ],
+    portrait: "slave_general.png",
+    sprite: "slave_general.png",
+    recruitCondition: [],
+  },
+  ragarl: {
+    id: "ragarl",
+    name: "Chenezali de Ragarl",
+    portrait: "ragarl.png",
+    sprite: "ragarl.png",
+    recruitCondition: [],
+  },
+  pg_x2: {
+    id: "pg_x2",
+    name: "Pg-X mk2",
+    portrait: "pg_x2.png",
+    sprite: "pg_x2.png",
+    recruitCondition: [],
+  },
+  temple_knight: {
+    id: "temple_knight",
+    name: "Temple Knight",
+    portrait: "gurwin.png",
+    sprite: "temple_knight.png",
     recruitCondition: [],
   },
   alefgard: {

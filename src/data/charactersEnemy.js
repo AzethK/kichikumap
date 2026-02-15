@@ -775,8 +775,8 @@ export const enemies = {
   },
   mage_leader: {
     unitType: "zeth_mages",
-    unitSize: 80,
-    replenishRate: 10,
+    unitSize: [80, 180, 300],
+    replenishRate: [10, 10, 30],
     omniAtk: 0,
     omniDef: 0,
     atk: 3,
@@ -821,6 +821,21 @@ export const enemies = {
     hp: 4,
     strategy: 5,
     magic: 7,
+    battleSprite: ["e_zethmages.png", "e_chizukoFull.png", "e_chizukoSolo.png"],
+  },
+  slave_general: {
+    unitType: "Male Slaves",
+    unitSize: [2500, 2500, 2500, 2500, 2000],
+    replenishRate: 100,
+    omniAtk: [0, 0, 0, 2, 0],
+    omniDef: [0, 1, 0, 0, 0],
+    atk: 6,
+    def: 5,
+    strikes: [1, 1, 3, 1, 1],
+    hp: 6,
+    strategy: 0,
+    magic: 0,
+    battleSprite: ["e_zethmages.png", "e_chizukoFull.png", "e_chizukoSolo.png"],
   },
   papaya: {
     unitType: "zeth_mages",
@@ -834,31 +849,8 @@ export const enemies = {
     hp: 4,
     strategy: 5,
     magic: 6,
+    battleSprite: ["e_zethmages.png", "e_papayaFull.png", "e_papayaSolo.png"],
   },
-  // poporos,
-  // takeo,
-  // nagabuchi,
-  // conportant,
-  // maskloader,
-  // dabinch,
-  // dan_cero,
-  // minamin,
-  // the_bomber,
-  // dancelove,
-  // haseras,
-  // shitareriha: {
-  //   unitType: "Male Slaves",
-  //   unitSize: 2500,
-  //   replenishRate: 100,
-  //   omniAtk: 0,
-  //   omniDef: 0,
-  //   atk: 6,
-  //   def: 5,
-  //   strikes: 1,
-  //   hp: 6,
-  //   strategy: 0,
-  //   magic: 0,
-  // },
   nagi: {
     unitType: "zeth_mages",
     unitSize: 500,
@@ -871,6 +863,7 @@ export const enemies = {
     hp: 5,
     strategy: 0,
     magic: 9,
+    battleSprite: ["e_zethmages.png", "e_nagiFull.png", "e_nagiSolo.png"],
   },
   ragarl: {
     unitType: "zeth_mages",
@@ -884,6 +877,7 @@ export const enemies = {
     hp: 3,
     strategy: 0,
     magic: 3,
+    battleSprite: ["e_zethmages.png", "e_ragarlFull.png", "e_ragarlSolo.png"],
   },
   magic: {
     unitType: "zeth_mages",
@@ -897,6 +891,7 @@ export const enemies = {
     hp: 4,
     strategy: 5,
     magic: 8,
+    battleSprite: ["e_zethmages.png", "e_magicFull.png", "e_magicSolo.png"],
   },
   saias: {
     unitType: "zeth_mages",
@@ -910,26 +905,8 @@ export const enemies = {
     hp: 4,
     strategy: 20,
     magic: 6,
+    battleSprite: ["e_zethmages.png", "e_saiasFull.png", "e_saiasSolo.png"],
   },
-  // reshie,
-  // starlighter,
-  // nei,
-  // casmint,
-  // noplans,
-  // kyouko,
-  // sanneri: {
-  //   unitType: "zeth_mages",
-  //   unitSize: 180,
-  //   replenishRate: 10,
-  //   omniAtk: 0,
-  //   omniDef: 0,
-  //   atk: 3,
-  //   def: 2,
-  //   strikes: 5,
-  //   hp: 3,
-  //   strategy: 0,
-  //   magic: 4,
-  // },
   uspira: {
     unitType: "zeth_mages",
     unitSize: 1000,
@@ -942,6 +919,7 @@ export const enemies = {
     hp: 4,
     strategy: 25,
     magic: 6,
+    battleSprite: ["e_zethmages.png", "e_uspiraFull.png", "e_uspiraSolo.png"],
   },
   kabachahn: {
     unitType: "zeth_mages",
@@ -955,6 +933,11 @@ export const enemies = {
     hp: 4,
     strategy: 15,
     magic: 6,
+    battleSprite: [
+      "e_zethmages.png",
+      "e_kabachahnFull.png",
+      "e_kabachahnSolo.png",
+    ],
   },
   alex: {
     unitType: "zeth_mages",
@@ -968,6 +951,7 @@ export const enemies = {
     hp: 4,
     strategy: 15,
     magic: 7,
+    battleSprite: ["e_zethmages.png", "e_alexFull.png", "e_alexSolo.png"],
   },
   babolat: {
     omniAtk: 0,
@@ -978,6 +962,7 @@ export const enemies = {
     hp: 399,
     strategy: 0,
     magic: 0,
+    battleSprite: ["e_babolatSolo.png"],
   },
   redeye: {
     unitType: "monsters",
@@ -991,6 +976,11 @@ export const enemies = {
     hp: 29,
     strategy: 0,
     magic: 15,
+    battleSprite: [
+      "e_monstermages.png",
+      "e_redeyeFull.png",
+      "e_redeyeSolo.png",
+    ],
   },
   galtia: {
     unitType: "food",
@@ -1004,6 +994,7 @@ export const enemies = {
     hp: 12,
     strategy: 0,
     magic: 0,
+    battleSprite: ["e_food.png", "e_galtiaFull.png", "e_galtiaSolo.png"],
   },
   kaito: {
     unitType: "kaito_clones",
@@ -1017,6 +1008,7 @@ export const enemies = {
     hp: 30,
     strategy: 0,
     magic: 5,
+    battleSprite: ["e_kaitoclones.png", "e_kaitoFull.png", "e_kaitoSolo.png"],
   },
   kesselring: {
     unitType: "lovers",
@@ -1030,6 +1022,11 @@ export const enemies = {
     hp: 10,
     strategy: 0,
     magic: 9,
+    battleSprite: [
+      "e_lovers.png",
+      "e_kesselringFull.png",
+      "e_kesselringSolo.png",
+    ],
   },
   medusa: {
     unitType: "snake_sans",
@@ -1043,6 +1040,7 @@ export const enemies = {
     hp: 10,
     strategy: 0,
     magic: 5,
+    battleSprite: ["e_snakesans.png", "e_medusaFull.png", "e_medusaSolo.png"],
   },
   kayblis: {
     omniAtk: 0,
@@ -1053,6 +1051,7 @@ export const enemies = {
     hp: 40,
     strategy: 0,
     magic: 0,
+    battleSprite: ["e_kayblisSolo.png"],
   },
   pg_7: {
     unitType: "pg_x",
@@ -1066,6 +1065,7 @@ export const enemies = {
     hp: 15,
     strategy: 0,
     magic: 3,
+    battleSprite: ["e_pgx.png", "e_pg7Full.png", "e_pg7Solo.png"],
   },
   pg_9: {
     unitType: "pg_x",
@@ -1079,6 +1079,7 @@ export const enemies = {
     hp: 18,
     strategy: 0,
     magic: 4,
+    battleSprite: ["e_pgx.png", "e_pg9Full.png", "e_pg9Solo.png"],
   },
   pg_x2: {
     unitType: "pg_x",
@@ -1092,6 +1093,7 @@ export const enemies = {
     hp: 9,
     strategy: 0,
     magic: 0,
+    battleSprite: ["e_pgx.png", "e_pgx2Full.png", "e_pgx2Solo.png"],
   },
   temple_knight: {
     unitType: "temple_knights",
@@ -1105,6 +1107,11 @@ export const enemies = {
     hp: 7,
     strategy: 0,
     magic: 0,
+    battleSprite: [
+      "e_templeknight.png",
+      "e_templeknightFull.png",
+      "e_templeknightSolo.png",
+    ],
   },
   carfeknight: {
     unitType: "carfeknights",

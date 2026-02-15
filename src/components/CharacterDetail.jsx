@@ -126,6 +126,18 @@ export default function CharacterDetail({ characterId, onClose }) {
   const strategy =
     Array.isArray(rawStrategy) ? rawStrategy[variantIndex] : rawStrategy;
 
+  const rawOmniAtk =
+    mode === "Subordinates" ? characterSubordinate.omniAtk : enemy.omniAtk;
+
+  const omniAtk =
+    Array.isArray(rawOmniAtk) ? rawOmniAtk[variantIndex] : rawOmniAtk;
+
+  const rawOmniDef =
+    mode === "Subordinates" ? characterSubordinate.omniDef : enemy.omniDef;
+
+  const omniDef =
+    Array.isArray(rawOmniDef) ? rawOmniDef[variantIndex] : rawOmniDef;
+
   const stats = {
     unitSize,
     deployCost:
@@ -133,10 +145,8 @@ export default function CharacterDetail({ characterId, onClose }) {
         characterSubordinate.deployCost
       : enemy.deployCost,
     replenishRate,
-    omniAtk:
-      mode === "Subordinates" ? characterSubordinate.omniAtk : enemy.omniAtk,
-    omniDef:
-      mode === "Subordinates" ? characterSubordinate.omniDef : enemy.omniDef,
+    omniAtk,
+    omniDef,
     atk,
     def,
     strikes,
