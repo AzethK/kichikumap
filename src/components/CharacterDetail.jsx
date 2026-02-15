@@ -110,6 +110,11 @@ export default function CharacterDetail({ characterId, onClose }) {
 
   const def = Array.isArray(rawDef) ? rawDef[variantIndex] : rawDef;
 
+  const rawMagic =
+    mode === "Subordinates" ? characterSubordinate.magic : enemy.magic;
+
+  const magic = Array.isArray(rawMagic) ? rawMagic[variantIndex] : rawMagic;
+
   const rawStrikes =
     mode === "Subordinates" ? characterSubordinate.strikes : enemy.strikes;
 
@@ -152,7 +157,7 @@ export default function CharacterDetail({ characterId, onClose }) {
     strikes,
     hp,
     strategy,
-    magic: mode === "Subordinates" ? characterSubordinate.magic : enemy.magic,
+    magic,
     sca: mode === "Subordinates" ? characterSubordinate.sca : enemy.sca,
 
     variants: {
