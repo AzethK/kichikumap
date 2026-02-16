@@ -844,6 +844,28 @@ export const characters = {
     sprite: "helman_guard.png",
     recruitCondition: [],
   },
+  olhound: {
+    id: "olhound",
+    name: "Olhound Dockdog",
+    portrait: "olhound.png",
+    sprite: "olhound.png",
+    recruitCondition: [],
+  },
+  sanakia: {
+    id: "sanakia",
+    name: "Sanakia Drelshkaf",
+    portrait: "sanakia.png",
+    sprite: "sanakia.png",
+    recruitCondition: [],
+  },
+  nobunaga: {
+    id: "nobunaga",
+    name: "Nobunaga Oda",
+    portrait: "nobunaga.png",
+    sprite: "nobunaga.png",
+    recruitCondition: [],
+  },
+
   samurai_general: {
     id: "samurai_general",
     name: [
@@ -855,6 +877,13 @@ export const characters = {
     ],
     portrait: "samurai_general.png",
     sprite: "samurai_general.png",
+    recruitCondition: [],
+  },
+  katsuie: {
+    id: "katsuie",
+    name: "Katsuie Shibata",
+    portrait: "katsuie.png",
+    sprite: "katsuie.png",
     recruitCondition: [],
   },
   bow_general: {
@@ -906,6 +935,27 @@ export const characters = {
     sprite: "la_saizel.png",
     recruitCondition: [],
   },
+  camilla: {
+    id: "camilla",
+    name: "Camilla",
+    portrait: "camilla.png",
+    sprite: "camilla.png",
+    recruitCondition: [],
+  },
+  lei: {
+    id: "lei",
+    name: "Lei",
+    portrait: "lei.png",
+    sprite: "lei.png",
+    recruitCondition: [],
+  },
+  sieg: {
+    id: "sieg",
+    name: "Sieg",
+    portrait: ["sieg.png", "sieg2.png"],
+    sprite: "sieg.png",
+    recruitCondition: [],
+  },
   wall: {
     id: "wall",
     name: "Wall",
@@ -922,6 +972,13 @@ export const characters = {
     ],
     portrait: "mage_leader.png",
     sprite: "mage_leader.png",
+    recruitCondition: [],
+  },
+  xacalite: {
+    id: "xacalite",
+    name: "Xacalite",
+    portrait: "xacalite.png",
+    sprite: "xacalite.png",
     recruitCondition: [],
   },
   la_vaswald: {
@@ -951,6 +1008,90 @@ export const characters = {
     sprite: "ragarl.png",
     recruitCondition: [],
   },
+  saias: {
+    id: "saias",
+    name: "Saias Crown",
+    portrait: "saias.png",
+    sprite: "saias.png",
+    recruitCondition: [],
+  },
+  uspira: {
+    id: "uspira",
+    name: "Uspira Shintou",
+    portrait: "uspira.png",
+    sprite: "uspira.png",
+    recruitCondition: [],
+  },
+  kabachahn: {
+    id: "kabachahn",
+    name: "Kabachahn The Lightning",
+    portrait: "kabachahn.png",
+    sprite: "kabachahn.png",
+    recruitCondition: [],
+  },
+  alex: {
+    id: "alex",
+    name: "Alex Valse",
+    portrait: "alex.png",
+    sprite: "alex.png",
+    recruitCondition: [],
+  },
+  babolat: {
+    id: "babolat",
+    name: "Babolat",
+    portrait: "babolat.png",
+    sprite: "babolat.png",
+    recruitCondition: [],
+  },
+  redeye: {
+    id: "redeye",
+    name: "Redeye",
+    portrait: "redeye.png",
+    sprite: "redeye.png",
+    recruitCondition: [],
+  },
+  kaito: {
+    id: "kaito",
+    name: "Kaito",
+    portrait: "kaito.png",
+    sprite: "kaito.png",
+    recruitCondition: [],
+  },
+  kesselring: {
+    id: "kesselring",
+    name: "Kesselring",
+    portrait: "kesselring.png",
+    sprite: "kesselring.png",
+    recruitCondition: [],
+  },
+  medusa: {
+    id: "medusa",
+    name: "Medusa",
+    portrait: "medusa.png",
+    sprite: "medusa.png",
+    recruitCondition: [],
+  },
+  kayblis: {
+    id: "kayblis",
+    name: "Kayblis",
+    portrait: ["kayblis.png", "kaybis2.png"],
+    sprite: "kayblis.png",
+    recruitCondition: [],
+  },
+  pg_7: {
+    id: "pg_7",
+    name: "PG-7",
+    portrait: "pg_7.png",
+    sprite: "pg_7.png",
+    recruitCondition: [],
+  },
+  pg_9: {
+    id: "pg_9",
+    name: "PG-9",
+    portrait: "pg_9.png",
+    sprite: "pg_9.png",
+    recruitCondition: [],
+  },
   pg_x2: {
     id: "pg_x2",
     name: "Pg-X mk2",
@@ -977,6 +1118,28 @@ export const characters = {
     name: "Angel Knight",
     portrait: "angel_knight.png",
     sprite: "angel_knight.png",
+    recruitCondition: [],
+  },
+  silky: {
+    id: "silky",
+    name: "Silky",
+    portrait: "silky.png",
+    sprite: "silky.png",
+    recruitCondition: [],
+  },
+
+  kaybwan: {
+    id: "kaybwan",
+    name: "Kaybwan",
+    portrait: "kaybwan.png",
+    sprite: "kaybwan.png",
+    recruitCondition: [],
+  },
+  kaybnyan: {
+    id: "kaybnyan",
+    name: "Kaybnyan",
+    portrait: "kaybnyan.png",
+    sprite: "kaybnyan.png",
     recruitCondition: [],
   },
   kaiju_gaga: {
@@ -1014,13 +1177,7 @@ export const characters = {
     sprite: "alefgard.png",
     recruitCondition: [],
   },
-  alex: {
-    id: "alex",
-    name: "Alex Valse",
-    portrait: "alex.png",
-    sprite: "alex.png",
-    recruitCondition: [],
-  },
+
   arcy: {
     id: "arcy",
     name: "Arcy Julietta",
@@ -1048,26 +1205,14 @@ export const characters = {
     portrait: "aya.png",
     recruitCondition: [],
   },
-  babolat: {
-    id: "babolat",
-    name: "Babolat",
-    portrait: "babolat.png",
-    sprite: "babolat.png",
-    recruitCondition: [],
-  },
+
   british: {
     id: "british",
     name: "British",
     portrait: "british.png",
     recruitCondition: [],
   },
-  camilla: {
-    id: "camilla",
-    name: "Camilla",
-    portrait: "camilla.png",
-    sprite: "camilla.png",
-    recruitCondition: [],
-  },
+
   carolie: {
     id: "carolie",
     name: "Carolie Mate",
@@ -1085,13 +1230,6 @@ export const characters = {
     id: "chaos",
     name: "Chaos",
     portrait: "chaos.png",
-    recruitCondition: [],
-  },
-  chenezali: {
-    id: "chenezali",
-    name: "Chenezali de Ragarl",
-    portrait: "chenezali.png",
-    sprite: "chenezali.png",
     recruitCondition: [],
   },
   code: {
@@ -1187,13 +1325,6 @@ export const characters = {
     recruitCondition: [],
   },
 
-  kabachahn: {
-    id: "kabachahn",
-    name: "Kabachahn The Lightning",
-    portrait: "kabachahn.png",
-    sprite: "kabachahn.png",
-    recruitCondition: [],
-  },
   kaiju_princess: {
     id: "kaiju_princess",
     name: "Kaiju Princess",
@@ -1201,13 +1332,7 @@ export const characters = {
     sprite: "kaiju_princess.png",
     recruitCondition: [],
   },
-  kaito: {
-    id: "kaito",
-    name: "Kaito",
-    portrait: "kaito.png",
-    sprite: "kaito.png",
-    recruitCondition: [],
-  },
+
   kapala: {
     id: "kapala",
     name: "Kapala Lodz",
@@ -1215,34 +1340,7 @@ export const characters = {
     sprite: "kapala.png",
     recruitCondition: [],
   },
-  katsuie: {
-    id: "katsuie",
-    name: "Katsuie Shibata",
-    portrait: "katsuie.png",
-    sprite: "katsuie.png",
-    recruitCondition: [],
-  },
-  kayblis: {
-    id: "kayblis",
-    name: "Kayblis",
-    portrait: ["kayblis.png", "kaybis2.png"],
-    sprite: "kayblis.png",
-    recruitCondition: [],
-  },
-  kaybnyan: {
-    id: "kaybnyan",
-    name: "Kaybnyan",
-    portrait: "kaybnyan.png",
-    sprite: "kaybnyan.png",
-    recruitCondition: [],
-  },
-  kaybwan: {
-    id: "kaybwan",
-    name: "Kaybwan",
-    portrait: "kaybwan.png",
-    sprite: "kaybwan.png",
-    recruitCondition: [],
-  },
+
   kd: {
     id: "kd",
     name: "KD",
@@ -1250,20 +1348,7 @@ export const characters = {
     sprite: "kd.png",
     recruitCondition: [],
   },
-  kesselring: {
-    id: "kesselring",
-    name: "Kesselring",
-    portrait: "kesselring.png",
-    sprite: "kesselring.png",
-    recruitCondition: [],
-  },
-  lei: {
-    id: "lei",
-    name: "Lei",
-    portrait: "lei.png",
-    sprite: "lei.png",
-    recruitCondition: [],
-  },
+
   library_ghost: {
     id: "library_ghost",
     name: "Library Ghost",
@@ -1286,13 +1371,7 @@ export const characters = {
     sprite: "mary.png",
     recruitCondition: [],
   },
-  medusa: {
-    id: "medusa",
-    name: "Medusa",
-    portrait: "medusa.png",
-    sprite: "medusa.png",
-    recruitCondition: [],
-  },
+
   mulalaloux: {
     id: "mulalaloux",
     name: "Mulalaloux",
@@ -1308,20 +1387,7 @@ export const characters = {
     sprite: "nikkou.png",
     recruitCondition: [],
   },
-  nobunaga: {
-    id: "nobunaga",
-    name: "Nobunaga Oda",
-    portrait: "nobunaga.png",
-    sprite: "nobunaga.png",
-    recruitCondition: [],
-  },
-  olhound: {
-    id: "olhound",
-    name: "Olhound Dockdog",
-    portrait: "olhound.png",
-    sprite: "olhound.png",
-    recruitCondition: [],
-  },
+
   pamela: {
     id: "pamela",
     name: "Pamela Helman",
@@ -1351,20 +1417,6 @@ export const characters = {
     recruitCondition: [],
   },
 
-  pg_7: {
-    id: "pg_7",
-    name: "PG-7",
-    portrait: "pg_7.png",
-    sprite: "pg_7.png",
-    recruitCondition: [],
-  },
-  pg_9: {
-    id: "pg_9",
-    name: "PG-9",
-    portrait: "pg_9.png",
-    sprite: "pg_9.png",
-    recruitCondition: [],
-  },
   piar: {
     id: "piar",
     name: "Piar",
@@ -1379,13 +1431,7 @@ export const characters = {
     sprite: "pluepet.png",
     recruitCondition: [],
   },
-  redeye: {
-    id: "redeye",
-    name: "Redeye",
-    portrait: "redeye.png",
-    sprite: "redeye.png",
-    recruitCondition: [],
-  },
+
   reincock: {
     id: "reincock",
     name: "Reincock",
@@ -1422,13 +1468,7 @@ export const characters = {
     sprite: "salbenaot.png",
     recruitCondition: [],
   },
-  sanakia: {
-    id: "sanakia",
-    name: "Sanakia Drelshkaf",
-    portrait: "sanakia.png",
-    sprite: "sanakia.png",
-    recruitCondition: [],
-  },
+
   seconaot: {
     id: "seconaot",
     name: "Seconaot",
@@ -1443,27 +1483,7 @@ export const characters = {
     sprite: "shinobu.png",
     recruitCondition: [],
   },
-  sieg: {
-    id: "sieg",
-    name: "Sieg",
-    portrait: ["sieg.png", "sieg2.png"],
-    sprite: "sieg.png",
-    recruitCondition: [],
-  },
-  saias: {
-    id: "saias",
-    name: "Saias Crown",
-    portrait: "saias.png",
-    sprite: "saias.png",
-    recruitCondition: [],
-  },
-  silky: {
-    id: "silky",
-    name: "Silky",
-    portrait: "silky.png",
-    sprite: "silky.png",
-    recruitCondition: [],
-  },
+
   stessel: {
     id: "stessel",
     name: "Stessel Romanov",
@@ -1471,13 +1491,7 @@ export const characters = {
     sprite: "stessel.png",
     recruitCondition: [],
   },
-  uspira: {
-    id: "uspira",
-    name: "Uspira Shintou",
-    portrait: "uspira.png",
-    sprite: "uspira.png",
-    recruitCondition: [],
-  },
+
   vaswald: {
     id: "vaswald",
     name: "La Vaswald",
@@ -1499,13 +1513,7 @@ export const characters = {
     sprite: "wenlina.png",
     recruitCondition: [],
   },
-  xacalite: {
-    id: "xacalite",
-    name: "Xacalite",
-    portrait: "xacalite.png",
-    sprite: "xacalite.png",
-    recruitCondition: [],
-  },
+
   youko: {
     id: "youko",
     name: "Youko",
