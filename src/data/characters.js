@@ -1170,6 +1170,50 @@ export const characters = {
     sprite: "kaiju_bobo.png",
     recruitCondition: [],
   },
+  okayu: {
+    id: "okayu",
+    name: "Okayu Fever",
+    portrait: "okayu.png",
+    sprite: "okayu.png",
+    recruitCondition: [],
+  },
+  orochi: {
+    id: "orochi",
+    name: "Orochi",
+    portrait: "orochi.png",
+    sprite: "orochi.png",
+    recruitCondition: [],
+  },
+  shimojoe: {
+    id: "shimojoe",
+    name: "SHIMO-JOE",
+    portrait: "shimojoe.png",
+    sprite: "shimojoe.png",
+    recruitCondition: [],
+  },
+  vevetar: {
+    id: "vevetar",
+    name: "Vevetar",
+    portrait: "vevetar.png",
+    sprite: "vevetar.png",
+    recruitCondition: [],
+  },
+  ggcaterpillar: {
+    id: "ggcaterpillar",
+    name: "GG Caterpillar",
+    portrait: "ggcaterpillar.png",
+    sprite: "ggcaterpillar.png",
+    recruitCondition: [],
+  },
+  stoneguardian: {
+    id: "stoneguardian",
+    name: "Stone Guardian",
+    portrait: "stoneguardian.png",
+    sprite: "stoneguardian.png",
+    recruitCondition: [],
+  },
+  //#endregion
+  //#region OTHER
   alefgard: {
     id: "alefgard",
     name: "Alefgard",
@@ -1528,4 +1572,5 @@ export const characters = {
   //   sprite: "template.png",
   //   recruitCondition: [],
   // },
+  //#endregion
 };
