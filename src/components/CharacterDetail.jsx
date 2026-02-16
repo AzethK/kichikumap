@@ -488,11 +488,12 @@ export default function CharacterDetail({ characterId, onClose }) {
                     <strong>Surge:</strong>{" "}
                     <span
                       className="character-link"
-                      onClick={() =>
+                      onClick={() => {
+                        currentTroopSprite = 0;
                         setSelectedCharacterId(
                           characters[characterSubordinate.surge].id,
-                        )
-                      }
+                        );
+                      }}
                     >
                       {characters[characterSubordinate.surge].name}
                     </span>
