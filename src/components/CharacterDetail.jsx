@@ -489,7 +489,7 @@ export default function CharacterDetail({ characterId, onClose }) {
                     <span
                       className="character-link"
                       onClick={() => {
-                        currentTroopSprite = 0;
+                        setTroopSpriteIndex(0);
                         setSelectedCharacterId(
                           characters[characterSubordinate.surge].id,
                         );
