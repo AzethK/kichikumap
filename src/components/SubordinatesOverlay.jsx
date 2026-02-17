@@ -98,7 +98,10 @@ export default function SubordinatesOverlay({ onClose }) {
                 alt={character.id}
                 className="subordinate-portrait"
                 onClick={() =>
-                  getCharacterRole(character.id) === "Harem" ?
+                  (
+                    getCharacterRole(character.id) === "Harem" ||
+                    mode === "Harem"
+                  ) ?
                     (setMode("Harem"), setSelectedCharacterId(character.id))
                   : mode === "Enemies" ? setSelectedCharacterId(character.id)
                   : (setMode("Subordinates"),
