@@ -1,5 +1,7 @@
 import { characters } from "../data/characters";
+import { charactersSubordinate } from "../data/charactersSubordinate";
 import { harem } from "../data/charactersHarem";
+import { enemies } from "../data/charactersEnemy";
 import { areas } from "../data/areas";
 import { useAppContext } from "../App";
 
@@ -20,7 +22,9 @@ export default function ConditionText({ text }) {
     if (part.startsWith("character_")) {
       const id = part.replace("character_", "");
 
+      const inSubordinate = Boolean(charactersSubordinate[id]);
       const inHarem = Boolean(harem[id]);
+      const inEnemy = Boolean(enemies[id]);
 
       return (
         <span
@@ -28,9 +32,12 @@ export default function ConditionText({ text }) {
           className="character-link"
           onClick={() => {
             if (selectedItemId != null) setSelectedItemId(null);
-            inHarem ?
-              (setMode("Harem"), setSelectedCharacterId(id))
-            : setSelectedCharacterId(id);
+            (inSubordinate ?
+              (setMode("Subordinates"), setSelectedCharacterId(id))
+            : inEnemy ? (setMode("Enemies"), setSelectedCharacterId(id))
+            : inHarem ? (setMode("Harem"), setSelectedCharacterId(id))
+            : setMode("Subordinates"),
+              setSelectedCharacterId(id));
           }}
         >
           {characters[id]?.name.split(" ")[0] ?? id}

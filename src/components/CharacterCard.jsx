@@ -4,6 +4,7 @@ import { harem } from "../data/charactersHarem";
 import { charactersSubordinate } from "../data/charactersSubordinate";
 import { enemies } from "../data/charactersEnemy";
 import { useAppContext } from "../App";
+import ConditionText from "../util/ConditionText";
 
 export default function CharacterCard({ character }) {
   //Support multiple portraits per character
@@ -64,7 +65,9 @@ export default function CharacterCard({ character }) {
         <>
           <div className="condition-box">
             {hasConditions ?
-              <div className="condition-step">{conditions[step]}</div>
+              <div className="condition-step">
+                {<ConditionText text={conditions[step]} />}
+              </div>
             : <p className="condition-step">Recruited automatically</p>}
           </div>
 

@@ -41,7 +41,9 @@ export default function CharacterDetail({
               <img src={sprite} alt="" />
             </div>
             <div className="item-effect">
-              <span>{item.effect}</span>
+              <span>
+                <ConditionText text={item.effect} />
+              </span>
             </div>
           </div>
 

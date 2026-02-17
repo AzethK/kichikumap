@@ -78,7 +78,7 @@ export const items = {
     consumable: true,
     effect:
       "After calling character_wendy to the harem once, if the item is owned there'll be a beginning of turn event where it is consumed",
-    acquisition: ["Monster's Cave 14F"],
+    acquisition: ["area_dungeon_monsters_cave 14F"],
     sprite: "demon_pot.png",
   },
   safety: {
@@ -94,8 +94,8 @@ export const items = {
     name: "Snow Charm",
     consumable: false,
     effect:
-      "Protects all units from snow in area_helman_snow_dungeon, area_helman_giant_battleship, area_helman_ho_ragas_tower",
-    acquisition: ["area_helman_snow_dungeon 12F"],
+      "Protects all units from snow in area_dungeon_snow_dungeon, area_dungeon_giant_battleship, area_dungeon_ho_ragas_tower",
+    acquisition: ["area_dungeon_snow_dungeon 12F"],
     sprite: "snow_charm.png",
   },
   barrier_blade: {
@@ -106,7 +106,7 @@ export const items = {
       "Commander Attack +2, breaks barried around the four towers in Zeth",
     acquisition: [
       "character_ragnarokarc must not be in the army, The Flash must have been deployed",
-      "There are two options: visit area_helman_ho_ragas_tower or produce it at the Magic Research Institute",
+      "There are two options: visit area_dungeon_ho_ragas_tower or produce it at the Magic Research Institute",
     ],
     sprite: "barrier_blade.png",
   },
@@ -128,7 +128,7 @@ export const items = {
       "Attack area_zeth_magics_tower and fail once",
       "Conquer area_zeth_magics_tower after character_xacalite is summoned",
       "Visit Magic's Room in the tower once then leave",
-      "Visit Ho Raga or Arcy to receive Absolute Foreclosure Charm",
+      "Visit character_ho_raga or character_arcy to receive Absolute Foreclosure Charm",
     ],
     sprite: "absolute_foreclosure.png",
   },
@@ -139,8 +139,8 @@ export const items = {
     effect: "Can be placed at God's Door in area_helman_ancient_ruins",
     acquisition: [
       "Obtain Chaos",
-      "Visit area_helman_ho_ragas_tower with character_rance/character_kentarou and ask about the past",
-      "Visit character_british at area_leazas_thieves_dungeon",
+      "Visit area_dungeon_ho_ragas_tower with character_rance/character_kentarou and ask about the past",
+      "Visit character_british at area_dungeon_thieves_dungeon",
     ],
     sprite: "gourd_statue.png",
   },
@@ -152,7 +152,7 @@ export const items = {
     acquisition: [
       "Obtain item_gourd_statue",
       "Visit Lady's Caravan in Helman, talk to Lady, repeat this 3 times or take the statue by force",
-      "If talked to Lady select area_freecities_uncurse_dungeon",
+      "If talked to Lady select area_dungeon_uncurse_dungeon",
     ],
     sprite: "monkey_statue.png",
   },
@@ -163,7 +163,7 @@ export const items = {
     effect: "Can be placed at God's Door in area_helman_ancient_ruins",
     acquisition: [
       "Obtain item_gourd_statue",
-      "Visit area_zeth_rising_dragon_mountain 30F with character_rance and pass the quiz",
+      "Visit area_dungeon_rising_dragon_mountain 30F with character_rance and pass the quiz",
     ],
     sprite: "sunflower_statue.png",
   },
@@ -171,13 +171,13 @@ export const items = {
     id: "bonsai_statue",
     name: "Bonsai-Shaped Gold Statue",
     consumable: true,
-    effect: "Can be placed at God's Door in area_helman_ancient_ruins",
+    effect: "Can be placed at God's Door in area_dungeon_ancient_ruins",
     acquisition: [
       "Obtain item_gourd_statue",
       "Call character_kouhime in the Harem four times",
       "See the beginning of turn event about character_kouhime",
       "Conquer area_hornet_demon_lords_castle while having conquered every other city (area_freecities_shangrila is optional",
-      "Visit area_helman_ho_ragas_tower with character_rance and demand the statue",
+      "Visit area_dungeon_ho_ragas_tower with character_rance and demand the statue",
     ],
     sprite: "bonsai_statue.png",
   },
@@ -200,7 +200,7 @@ export const items = {
     consumable: false,
     effect: "Troop Attack +2",
     acquisition: [
-      "Conquer area_helman_micrograd without visiting area_helman_kalar_forest",
+      "Conquer area_helman_micrograd without visiting area_dungeon_kalar_forest",
       "Conquer area_helman_lang_bau and then levy",
     ],
     sprite: "crystal_sword.png",
@@ -210,7 +210,7 @@ export const items = {
     name: "Crystal Ring",
     consumable: false,
     effect: "Commander Magic Attack/Defense +2",
-    acquisition: ["area_hornet_dungeon_of_lies 25F"],
+    acquisition: ["area_dungeon_dungeon_of_lies 25F"],
     sprite: "crystal_ring.png",
   },
   orgasmic_men: {
@@ -218,7 +218,7 @@ export const items = {
     name: "Orgasmic Men",
     consumable: true,
     effect: "Call character_milli in harem for CG",
-    acquisition: ["area_japan_orochis_pit 20F"],
+    acquisition: ["area_dungeon_orochis_pit 20F"],
     sprite: "orgasmic_men.png",
   },
   wisdom_ring: {
@@ -226,7 +226,7 @@ export const items = {
     name: "Wisdom Ring",
     consumable: false,
     effect: "Commander Strategy +20%",
-    acquisition: ["area_freecities_hyper_building 201F"],
+    acquisition: ["area_dungeon_hyper_building 201F"],
     sprite: "wisdom_ring.png",
   },
   ultimate_sweet: {
@@ -234,7 +234,7 @@ export const items = {
     name: "Ultimate Sweet",
     consumable: true,
     effect:
-      "Allows asking a question to character_arcy in area_leazas_isolated_shrine_island",
+      "Allows asking a question to character_arcy in area_dungeon_isolated_shrine_island",
     acquisition: ["Random chance of levying from any city"],
     sprite: "ultimate_sweet.png",
   },
@@ -243,7 +243,7 @@ export const items = {
     name: "Supreme Sweet",
     consumable: true,
     effect:
-      "Allows asking a question to character_arcy in area_leazas_isolated_shrine_island",
+      "Allows asking a question to character_arcy in area_dungeon_isolated_shrine_island",
     acquisition: ["Random chance of levying from any city"],
     sprite: "supreme_sweet.png",
   },
@@ -253,7 +253,7 @@ export const items = {
     consumable: false,
     effect:
       "Can be activated in battle to summon Jagi Jagi to fight for the unit",
-    acquisition: ['area_helman_giant_battleship 20F, choose "Push Button D'],
+    acquisition: ['area_dungeon_giant_battleship 20F, choose "Push Button D"'],
     sprite: "kaiju_a.png",
   },
   kaiju_b: {
@@ -261,7 +261,7 @@ export const items = {
     name: "Capsule Kaiju B",
     consumable: false,
     effect: "Can be activated in battle to summon Amoeba to fight for the unit",
-    acquisition: ['area_helman_giant_battleship 20F, choose "Push Button E'],
+    acquisition: ['area_dungeon_giant_battleship 20F, choose "Push Button E"'],
     sprite: "kaiju_b.png",
   },
   fog_card: {
@@ -269,7 +269,7 @@ export const items = {
     name: "Fog Card",
     consumable: true,
     effect: "Can be activated to end battle immediately",
-    acquisition: ["area_freecities_dangerous_hole 10F"],
+    acquisition: ["area_dungeon_dangerous_hole 10F"],
     sprite: "fog_card.png",
   },
   happiness_ring: {
@@ -277,7 +277,7 @@ export const items = {
     name: "Happiness Ring",
     consumable: false,
     effect: "Doubles EXP gain",
-    acquisition: ["area_freecities_dangerous_hole 50F"],
+    acquisition: ["area_dungeon_dangerous_hole 50F"],
     sprite: "happiness_ring.png",
   },
   space_shell: {
@@ -285,7 +285,7 @@ export const items = {
     name: "Space Shell",
     consumable: false,
     effect: "None",
-    acquisition: ["area_freecities_titi_lake 8F"],
+    acquisition: ["area_dungeon_titi_lake 8F"],
     sprite: "space_shell.png",
   },
   super_aurora_shell: {
@@ -309,7 +309,7 @@ export const items = {
     name: "Evil Statue of Strength",
     consumable: false,
     effect: "Troop Attack +2",
-    acquisition: ["area_helman_stone_cutter_dungeon 27F"],
+    acquisition: ["area_dungeon_stone_cutter_dungeon 27F"],
     sprite: "evil_statue.png",
   },
   tange_dog: {
@@ -317,7 +317,7 @@ export const items = {
     name: "Tange Dog",
     consumable: false,
     effect: "Unit can act again after turn ends",
-    acquisition: ["area_zeth_holy_gals_dungeon 76F"],
+    acquisition: ["area_dungeon_holy_gals_dungeon 76F"],
     sprite: "tange_dog.png",
   },
   magic_barrier: {
@@ -349,7 +349,7 @@ export const items = {
     name: "Vevetar Mutant",
     consumable: false,
     effect: "None",
-    acquisition: ["area_kayblis_mos_dungeon 5F"],
+    acquisition: ["area_dungeon_mos_dungeon 5F"],
     sprite: "vevetar.png",
   },
   jugon: {
@@ -357,7 +357,7 @@ export const items = {
     name: "Jugon",
     consumable: false,
     effect: "None",
-    acquisition: ["area_kayblis_maid_graveyard 16F"],
+    acquisition: ["area_dungeon_maid_graveyard 16F"],
     sprite: "jugon.png",
   },
   marimo: {
@@ -373,7 +373,7 @@ export const items = {
     name: "Hawaiian Sword",
     consumable: false,
     effect: "Commander Attack +1",
-    acquisition: ["area_helman_natural_foes_dungeon 25F"],
+    acquisition: ["area_dungeon_natural_foes_dungeon 25F"],
     sprite: "hawaiian_sword.png",
   },
   aztec_armor: {
@@ -381,7 +381,7 @@ export const items = {
     name: "Aztec Armor",
     consumable: false,
     effect: "Commander Defense +1",
-    acquisition: ["area_helman_summits_mouth 20F"],
+    acquisition: ["area_dungeon_summits_mouth 20F"],
     sprite: "aztec_armor.png",
   },
   hirami_lemon: {
@@ -391,7 +391,7 @@ export const items = {
     effect:
       "Every three months character_miki needs to be equipped with it to not turn into Little Princess",
     acquisition: [
-      "Recruit Miki, once it's used up it can either be purchased for 50,000K GOLD or obtained in area_helman_mt_salen",
+      "Recruit Miki, once it's used up it can either be purchased for 50,000K GOLD or obtained in area_dungeon_mt_salen",
     ],
     sprite: "hirami_lemon.png",
   },
@@ -412,16 +412,16 @@ export const items = {
     id: "battleship_key",
     name: "Giant Battleship Key",
     consumable: false,
-    effect: "Allows access to area_helman_giant_battleship",
+    effect: "Allows access to area_dungeon_giant_battleship",
     acquisition: ["Levy area_helman_path"],
     sprite: "battleship_key.png",
   },
-  Aluminum_axe: {
+  aluminum_axe: {
     id: "aluminum_axe",
     name: "Aluminum Axe",
     consumable: false,
     effect:
-      "Commander Attack +0, used to either obtain item_golden_axe or access to Haniwa Temple (area_freecities_titi_lake)",
+      "Commander Attack +0, used to either obtain item_golden_axe or access to Haniwa Temple (area_dungeon_titi_lake)",
     acquisition: ["Levy area_freecities_l_zile"],
     sprite: "aluminum_axe.png",
   },
@@ -431,7 +431,7 @@ export const items = {
     consumable: false,
     effect: "Commander Attack +1",
     acquisition: [
-      "Visit area_freecities_titi_lake with a unit equipped with item_aluminum_axe and choose the Golden Axe",
+      "Visit area_dungeon_titi_lake with a unit equipped with item_aluminum_axe and choose the Golden Axe",
     ],
     sprite: "golden_axe.png",
   },
@@ -449,7 +449,7 @@ export const items = {
     name: "Charge Horn",
     consumable: false,
     effect: "Troop Attack +1",
-    acquisition: ["Visit area_freecities_peach_blossom_spring"],
+    acquisition: ["Visit area_dungeon_peach_blossom_spring"],
     sprite: "charge_horn.png",
   },
   exclusive_nurse: {
@@ -458,7 +458,7 @@ export const items = {
     consumable: false,
     effect:
       "At the start of turn, recover between an additional 0 and 10% max units as troops",
-    acquisition: ["Visit area_freecities_peach_blossom_spring"],
+    acquisition: ["Visit area_dungeon_peach_blossom_spring"],
     sprite: "exclusive_nurse.png",
   },
 };
