@@ -2,11 +2,14 @@
 
 Work in progress interactive map for Kichikuou Rance
 
+# LATEST COMPLETED FEATURES
+
+- Clean up AreaPanel (DONE)
+
 # PLANS FOR UPCOMING FEATURES:
 
 - **(ONGOING)** Finish the enemy page in CharacterDetail
 - Fix up all enemy entries, find a way to deal with the ones without portraits
-- Clean up AreaPanel
 - Add area defenses, economy, enemy commanders for all locations
 - Search feature
 - Map icon filter
