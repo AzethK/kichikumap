@@ -1001,6 +1001,13 @@ export const characters = {
     sprite: "slave_general.png",
     recruitCondition: [],
   },
+  papaya: {
+    id: "papaya",
+    name: "Papaya Server",
+    portrait: "papaya.png",
+    sprite: "papaya.png",
+    recruitCondition: [],
+  },
   ragarl: {
     id: "ragarl",
     name: "Chenezali de Ragarl",
@@ -1439,13 +1446,7 @@ export const characters = {
     sprite: "pamela.png",
     recruitCondition: [],
   },
-  papaya: {
-    id: "papaya",
-    name: "Papaya Server",
-    portrait: "papaya.png",
-    sprite: "papaya.png",
-    recruitCondition: [],
-  },
+
   paruot: {
     id: "paruot",
     name: "Paruot",
@@ -1533,14 +1534,6 @@ export const characters = {
     name: "Stessel Romanov",
     portrait: "stessel.png",
     sprite: "stessel.png",
-    recruitCondition: [],
-  },
-
-  vaswald: {
-    id: "vaswald",
-    name: "La Vaswald",
-    portrait: "vaswald.png",
-    sprite: "vaswald.png",
     recruitCondition: [],
   },
   vecdran: {
