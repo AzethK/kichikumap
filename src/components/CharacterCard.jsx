@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { getCharacterPortrait } from "../data/imageGetter";
+import { harem } from "../data/charactersHarem";
+import { charactersSubordinate } from "../data/charactersSubordinate";
+import { enemies } from "../data/charactersEnemy";
+import { useAppContext } from "../App";
 
-export default function CharacterCard({ character, setChar }) {
+export default function CharacterCard({ character }) {
   //Support multiple portraits per character
   const portraits =
     Array.isArray(character.portrait) ?
@@ -9,7 +13,26 @@ export default function CharacterCard({ character, setChar }) {
     : [character.portrait];
 
   const currentPortrait = getCharacterPortrait(portraits[0]);
+  const { setMode, setSelectedCharacterId } = useAppContext();
   //
+
+  const getCharacterRole = (characterId) => {
+    const inHarem = Boolean(harem[characterId]);
+    const inSubordinate = Boolean(charactersSubordinate[characterId]);
+    const inEnemy = Boolean(enemies[characterId]);
+
+    if (inHarem && inSubordinate) {
+      setMode("Subordinates");
+    } else if (inSubordinate) {
+      setMode("Subordinates");
+    } else if (inEnemy) {
+      setMode("Enemies");
+    } else {
+      setMode("Harem");
+    }
+
+    return null;
+  };
 
   const conditions = character.recruitCondition ?? [];
   const [step, setStep] = useState(0);
@@ -22,7 +45,14 @@ export default function CharacterCard({ character, setChar }) {
   return (
     <div className="character-card">
       <div className="subordinate-portrait">
-        <img src={currentPortrait} alt={character.name} onClick={setChar} />
+        <img
+          src={currentPortrait}
+          alt={character.name}
+          onClick={() => {
+            getCharacterRole(character.id);
+            setSelectedCharacterId(character.id);
+          }}
+        />
       </div>
 
       <div>

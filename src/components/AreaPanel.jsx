@@ -2,11 +2,9 @@ import { areas } from "../data/areas";
 import { characters } from "../data/characters";
 import { regionIcons } from "../data/regionIcons";
 import { regionStyles } from "../data/regionStyles";
-import { useAppContext } from "../App.jsx";
 import CharacterCard from "./CharacterCard";
 
 export default function AreaPanel({ areaId, onClose }) {
-  const { setSelectedCharacterId } = useAppContext();
   if (!areaId) return null;
 
   const area = areas.find((a) => a.id === areaId);
@@ -48,11 +46,7 @@ export default function AreaPanel({ areaId, onClose }) {
         )}
 
         {recruits.map((character) => (
-          <CharacterCard
-            key={character.id}
-            character={character}
-            setChar={() => setSelectedCharacterId(character.id)}
-          />
+          <CharacterCard key={character.id} character={character} />
         ))}
       </section>
     </div>
