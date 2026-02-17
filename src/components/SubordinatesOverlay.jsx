@@ -107,7 +107,7 @@ export default function SubordinatesOverlay({ onClose }) {
                     getCharacterRole(character.id) === "Enemy" ||
                     mode === "Enemies"
                   ) ?
-                    setSelectedCharacterId(character.id)
+                    (setMode("Enemies"), setSelectedCharacterId(character.id))
                   : (setMode("Subordinates"),
                     setSelectedCharacterId(character.id))
                 }
