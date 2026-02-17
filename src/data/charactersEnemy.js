@@ -856,7 +856,11 @@ export const enemies = {
     hp: 6,
     strategy: 0,
     magic: 0,
-    battleSprite: ["e_zethmages.png", "e_chizukoFull.png", "e_chizukoSolo.png"],
+    battleSprite: [
+      "e_maleslaves.png",
+      "e_slavegeneralFull.png",
+      "e_slavegeneralSolo.png",
+    ],
   },
   papaya: {
     unitType: "zeth_mages",
