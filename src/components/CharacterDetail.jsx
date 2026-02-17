@@ -87,58 +87,89 @@ export default function CharacterDetail({ characterId, onClose }) {
     : getTroopSprite(troopSprites[2] ? troopSprites[2] : troopSprites[0]);
 
   const rawUnitSize =
-    mode === "Subordinates" ? characterSubordinate.unitSize : enemy.unitSize;
+    mode != "Harem" ?
+      mode === "Subordinates" ?
+        characterSubordinate.unitSize
+      : enemy.unitSize
+    : null;
 
   const unitSize =
     Array.isArray(rawUnitSize) ? rawUnitSize[variantIndex] : rawUnitSize;
 
   const rawReplenishRate =
-    mode === "Subordinates" ?
-      characterSubordinate.replenishRate
-    : enemy.replenishRate;
+    mode != "Harem" ?
+      mode === "Subordinates" ?
+        characterSubordinate.replenishRate
+      : enemy.replenishRate
+    : null;
 
   const replenishRate =
     Array.isArray(rawReplenishRate) ?
       rawReplenishRate[variantIndex]
     : rawReplenishRate;
 
-  const rawAtk = mode === "Subordinates" ? characterSubordinate.atk : enemy.atk;
+  const rawAtk =
+    mode != "Harem" ?
+      mode === "Subordinates" ?
+        characterSubordinate.atk
+      : enemy.atk
+    : null;
 
   const atk = Array.isArray(rawAtk) ? rawAtk[variantIndex] : rawAtk;
 
-  const rawDef = mode === "Subordinates" ? characterSubordinate.def : enemy.def;
+  const rawDef =
+    mode != "Harem" ?
+      mode === "Subordinates" ?
+        characterSubordinate.def
+      : enemy.def
+    : null;
 
   const def = Array.isArray(rawDef) ? rawDef[variantIndex] : rawDef;
 
   const rawMagic =
-    mode === "Subordinates" ? characterSubordinate.magic : enemy.magic;
+    mode != "Harem" ?
+      mode === "Subordinates" ?
+        characterSubordinate.magic
+      : enemy.magic
+    : null;
 
   const magic = Array.isArray(rawMagic) ? rawMagic[variantIndex] : rawMagic;
 
   const rawStrikes =
-    mode === "Subordinates" ? characterSubordinate.strikes : enemy.strikes;
+    mode != "Harem" ?
+      mode === "Subordinates" ?
+        characterSubordinate.strikes
+      : enemy.strikes
+    : null;
 
   const strikes =
     Array.isArray(rawStrikes) ? rawStrikes[variantIndex] : rawStrikes;
 
-  const rawHp = mode === "Subordinates" ? characterSubordinate.hp : enemy.hp;
+  const rawHp =
+    mode != "Harem" ?
+      mode === "Subordinates" ?
+        characterSubordinate.hp
+      : enemy.hp
+    : null;
 
   const hp = Array.isArray(rawHp) ? rawHp[variantIndex] : rawHp;
 
   const rawStrategy =
-    mode === "Subordinates" ? characterSubordinate.strategy : enemy.strategy;
+    mode != "Harem" ?
+      mode === "Subordinates" ?
+        characterSubordinate.strategy
+      : enemy.strategy
+    : null;
 
   const strategy =
     Array.isArray(rawStrategy) ? rawStrategy[variantIndex] : rawStrategy;
 
-  const rawOmniAtk =
-    mode === "Subordinates" ? characterSubordinate.omniAtk : enemy.omniAtk;
+  const rawOmniAtk = mode != "Enemies" ? null : enemy.omniAtk;
 
   const omniAtk =
     Array.isArray(rawOmniAtk) ? rawOmniAtk[variantIndex] : rawOmniAtk;
 
-  const rawOmniDef =
-    mode === "Subordinates" ? characterSubordinate.omniDef : enemy.omniDef;
+  const rawOmniDef = mode != "Enemies" ? null : enemy.omniDef;
 
   const omniDef =
     Array.isArray(rawOmniDef) ? rawOmniDef[variantIndex] : rawOmniDef;
@@ -146,9 +177,11 @@ export default function CharacterDetail({ characterId, onClose }) {
   const stats = {
     unitSize,
     deployCost:
-      mode === "Subordinates" ?
-        characterSubordinate.deployCost
-      : enemy.deployCost,
+      mode != "Harem" ?
+        mode === "Subordinates" ?
+          characterSubordinate.deployCost
+        : enemy.deployCost
+      : null,
     replenishRate,
     omniAtk,
     omniDef,
@@ -158,7 +191,12 @@ export default function CharacterDetail({ characterId, onClose }) {
     hp,
     strategy,
     magic,
-    sca: mode === "Subordinates" ? characterSubordinate.sca : enemy.sca,
+    sca:
+      mode != "Harem" ?
+        mode === "Subordinates" ?
+          characterSubordinate.sca
+        : enemy.sca
+      : null,
 
     variants: {
       unitSize:
