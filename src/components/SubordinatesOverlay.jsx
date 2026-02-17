@@ -103,7 +103,11 @@ export default function SubordinatesOverlay({ onClose }) {
                     mode === "Harem"
                   ) ?
                     (setMode("Harem"), setSelectedCharacterId(character.id))
-                  : mode === "Enemies" ? setSelectedCharacterId(character.id)
+                  : (
+                    getCharacterRole(character.id) === "Enemy" ||
+                    mode === "Enemies"
+                  ) ?
+                    setSelectedCharacterId(character.id)
                   : (setMode("Subordinates"),
                     setSelectedCharacterId(character.id))
                 }
