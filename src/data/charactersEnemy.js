@@ -845,7 +845,7 @@ export const enemies = {
     battleSprite: ["e_zethmages.png", "e_chizukoFull.png", "e_chizukoSolo.png"],
   },
   slave_general: {
-    unitType: "Male Slaves",
+    unitType: "male_slaves",
     unitSize: [2500, 2500, 2500, 2500, 2000],
     replenishRate: 100,
     omniAtk: [0, 0, 0, 2, 0],
