@@ -82,9 +82,9 @@ export default function CharacterDetail({ characterId, onClose }) {
 
   const currentPortrait = getCharacterPortrait(portraits[portraitIndex]);
   const currentSprite =
-    mode === "Harem" ? getHaremSprite(sprites[spriteIndex])
-    : mode === "Subordinates" ? getCharacterSprite(sprites[spriteIndex])
-    : getTroopSprite(troopSprites[2] ? troopSprites[2] : troopSprites[0]);
+    mode === "Harem" ?
+      getHaremSprite(sprites[spriteIndex])
+    : getCharacterSprite(sprites[spriteIndex]);
 
   const rawUnitSize =
     mode != "Harem" ?

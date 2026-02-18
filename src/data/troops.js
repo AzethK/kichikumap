@@ -441,4 +441,32 @@ export const troops = {
     def: 9,
     sprite: "dragonflies.png",
   },
+  weakhannies: {
+    id: "weakhannies",
+    name: "Weak Hannies",
+    attackType: "Direct",
+    atk: 8,
+    def: 5,
+  },
+  normalhannies: {
+    id: "normalhannies",
+    name: "Normal Hannies",
+    attackType: "Direct",
+    atk: 10,
+    def: 8,
+  },
+  stronghannies: {
+    id: "stronghannies",
+    name: "Strong Hannies",
+    attackType: "Direct",
+    atk: 12,
+    def: 8,
+  },
+  hannies2: {
+    id: "hannies",
+    name: "Hannies",
+    attackType: "Direct",
+    atk: 5,
+    def: 5,
+  },
 };
