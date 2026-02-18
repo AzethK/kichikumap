@@ -6,6 +6,8 @@
   overflow: hidden;
   background: #000;
   cursor: grab;
+
+  touch-action: none;
 }
 
 .map-viewport:active {

@@ -21,9 +21,13 @@ export default function MarkerLayer({ onAreaClick }) {
               left: area.x,
               top: area.y,
             }}
-            onClick={(e) => {
+            onPointerUp={(e) => {
               e.stopPropagation();
-              onAreaClick(area.id);
+
+              // Only trigger if NOT dragging
+              if (e.pointerType === "mouse" || e.pointerType === "touch") {
+                onAreaClick(area.id);
+              }
             }}
           >
             <img

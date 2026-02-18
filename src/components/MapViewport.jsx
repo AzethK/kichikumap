@@ -93,17 +93,25 @@ export default function MapViewport({ onAreaClick }) {
 
   /* -------------------- Drag logic -------------------- */
 
-  const handleMouseDown = (e) => {
+  const handlePointerDown = (e) => {
+    // If clicking a marker, do NOT start dragging
+    if (e.target.closest(".map-marker")) {
+      return;
+    }
+
     e.preventDefault();
+
     isDragging.current = true;
 
     dragStart.current = {
       x: e.clientX - position.x,
       y: e.clientY - position.y,
     };
+
+    e.currentTarget.setPointerCapture(e.pointerId);
   };
 
-  const handleMouseMove = (e) => {
+  const handlePointerMove = (e) => {
     if (!isDragging.current) return;
 
     const newX = e.clientX - dragStart.current.x;
@@ -113,25 +121,29 @@ export default function MapViewport({ onAreaClick }) {
     setPosition(clamped);
   };
 
-  const handleMouseUp = () => {
+  const handlePointerUp = (e) => {
     isDragging.current = false;
+
+    try {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    } catch {}
   };
 
-  const handleMapClick = (e) => {
-    if (!editorMode) return;
+  // const handleMapClick = (e) => {
+  //   if (!editorMode) return;
 
-    const rect = containerRef.current.getBoundingClientRect();
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
+  //   const rect = containerRef.current.getBoundingClientRect();
+  //   const mouseX = e.clientX - rect.left;
+  //   const mouseY = e.clientY - rect.top;
 
-    const worldX = Math.round((mouseX - position.x) / scale);
-    const worldY = Math.round((mouseY - position.y) / scale);
-    setTempMarker({ x: worldX, y: worldY });
+  //   const worldX = Math.round((mouseX - position.x) / scale);
+  //   const worldY = Math.round((mouseY - position.y) / scale);
+  //   setTempMarker({ x: worldX, y: worldY });
 
-    console.log(
-      `{ id: "new_area_id", name: "New Area", x: ${worldX}, y: ${worldY}, type: "city" },`,
-    );
-  };
+  //   console.log(
+  //     `{ id: "new_area_id", name: "New Area", x: ${worldX}, y: ${worldY}, type: "city" },`,
+  //   );
+  // };
 
   /* -------------------- Zoom logic -------------------- */
 
@@ -165,14 +177,14 @@ export default function MapViewport({ onAreaClick }) {
     <div
       ref={containerRef}
       className="map-viewport"
-      onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={handlePointerUp}
+      onPointerLeave={handlePointerUp}
     >
       <div
         className="map-layer"
-        onClick={handleMapClick}
+        // onClick={handleMapClick}
         style={{
           width: MAP_WIDTH,
           height: MAP_HEIGHT,
@@ -198,12 +210,6 @@ export default function MapViewport({ onAreaClick }) {
 
         <MapImage />
         <MarkerLayer onAreaClick={onAreaClick} />
-
-        {/*
-          Future layers go here:
-          <MarkerLayer />
-          <RegionLayer />
-        */}
       </div>
     </div>
   );
