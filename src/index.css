@@ -607,6 +607,17 @@ body {
   box-shadow: inset 0 -2px 0 #000;
 }
 
+.tab-btn.disabled {
+  background: #2a2a2a;
+  color: #777;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.tab-btn.disabled:hover {
+  background: #2a2a2a;
+}
+
 /* Item Detail */
 
 .item-overlay {

@@ -1,3 +1,8 @@
+const ROLE_CONFIG = [
+  { value: "Subordinates", label: "Subordinate" },
+  { value: "Harem", label: "Harem" },
+  { value: "Enemies", label: "Enemy" },
+];
 import { useState } from "react";
 import {
   getCharacterPortrait,
@@ -19,16 +24,13 @@ export default function CharacterDetail({ characterId, onClose }) {
   const { setSelectedCharacterId, mode, setMode } = useAppContext();
 
   const getCharacterRole = (characterId) => {
-    const inHarem = Boolean(harem[characterId]);
-    const inSubordinate = Boolean(charactersSubordinate[characterId]);
-    const inEnemy = Boolean(enemies[characterId]);
+    const roles = [];
 
-    if (inHarem && inSubordinate) return "Both";
-    if (inSubordinate) return "Subordinate";
-    if (inEnemy) return "Enemy";
-    if (inHarem) return "Harem";
+    if (charactersSubordinate[characterId]) roles.push("Subordinates");
+    if (harem[characterId]) roles.push("Harem");
+    if (enemies[characterId]) roles.push("Enemies");
 
-    return null;
+    return roles;
   };
 
   const role = getCharacterRole(characterId);
@@ -334,18 +336,28 @@ export default function CharacterDetail({ characterId, onClose }) {
               </div>
             )}
           </div>
-          {role === "Both" && (
-            <div className="character-tabs">
-              <button
-                className={`tab-btn`}
-                onClick={() => {
-                  mode === "Harem" ? setMode("Subordinates") : setMode("Harem");
-                }}
-              >
-                {mode === "Harem" ? "Subordinate" : "Harem"}
-              </button>
-            </div>
-          )}
+
+          <div className="character-tabs">
+            {ROLE_CONFIG.map(({ value, label }) => {
+              const hasRole = role.includes(value);
+              const isActive = mode === value;
+
+              let variant = "disabled";
+              if (hasRole && !isActive) variant = "available";
+              if (isActive) variant = "active";
+
+              return (
+                <button
+                  key={value}
+                  className={`tab-btn ${variant}`}
+                  disabled={!hasRole || isActive}
+                  onClick={() => setMode(value)}
+                >
+                  {label}
+                </button>
+              );
+            })}
+          </div>
 
           {/* ================= TOP GRID ================= */}
           <div className="character-main">
@@ -575,7 +587,9 @@ export default function CharacterDetail({ characterId, onClose }) {
             <div className="character-recruitment">
               <h2>Recruitment Conditions</h2>
 
-              {mode !== "Enemies" &&
+              {(mode !== "Enemies" ||
+                role.includes("Harem") ||
+                role.includes("Subordinates")) &&
                 (conditions.length > 0 ?
                   <div className="character-detail-condition-box">
                     <div className="character-condition-step">
@@ -589,9 +603,9 @@ export default function CharacterDetail({ characterId, onClose }) {
                 : <div className="character-condition-step">
                     • Recruited automatically
                   </div>)}
-              {mode === "Enemies" && (
+              {!role.includes("Harem") && !role.includes("Subordinates") && (
                 <div className="character-condition-step">
-                  • Enemies are not recruitable
+                  • Character is not recruitable
                 </div>
               )}
             </div>
