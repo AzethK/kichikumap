@@ -10,6 +10,7 @@ Work in progress interactive map for Kichikuou Rance
 - Add area defenses, economy and field size for all locations (DONE)
 
 # PLANS FOR UPCOMING FEATURES:
+- Add attack type to all units, make a filter for Direct, Bow and Magic attack types. Also make a filter for only units that can use special attacks. (ONGOING)
 - Search feature
 - Map icon filter
 - Set recruited characters (maybe add a tag to them? a filter in subordinateOverlay for recruited characters could work)
