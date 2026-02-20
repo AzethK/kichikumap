@@ -7,7 +7,7 @@ Work in progress interactive map for Kichikuou Rance
 - Clean up AreaPanel (DONE)
 - Finish the enemy page in CharacterDetail (DONE)
 - Fix up all enemy entries, find a way to deal with the ones without portraits (DONE)
-- - Add area defenses, economy and field size for all locations (DONE)
+- Add area defenses, economy and field size for all locations (DONE)
 
 # PLANS FOR UPCOMING FEATURES:
 - Search feature
