@@ -35,7 +35,12 @@ export default function AreaPanel({ areaId, onClose }) {
             alt={region}
             className="area-panel-region-icon"
           />
-        )}
+        )}{" "}
+        <div className="area-panel-stats">
+          <span>Economy: {area.economy}</span>
+          <span>Defense: {area.defense}</span>
+          <span>Field Size: {area.fieldSize}</span>
+        </div>
       </div>
 
       <section>

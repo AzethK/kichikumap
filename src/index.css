@@ -92,12 +92,25 @@ body {
   padding-left: 16px;
   overflow: hidden;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 2.2rem;
 
   background-color: #111;
 
   border-left: 4px solid var(--region-color);
 
   gap: 20px;
+}
+
+.area-panel-stats {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.85rem;
+  padding: 0.3rem 0;
 }
 
 .area-panel-title {
