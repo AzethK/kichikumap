@@ -551,7 +551,12 @@ export default function CharacterDetail({ characterId, onClose }) {
                 )}
                 {mode === "Subordinates" && characterSubordinate.variants && (
                   <div className="wide">
-                    Stats change: {characterSubordinate.variants.label}
+                    Stats change:{" "}
+                    {
+                      <ConditionText
+                        text={characterSubordinate.variants.label}
+                      />
+                    }
                   </div>
                 )}
               </div>

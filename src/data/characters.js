@@ -28,7 +28,7 @@ export const characters = {
       "character_soul must be called in the Harem at least two times after being rescued",
       "Talk to character_soul to cause her to receive a letter from Bound",
       "After completing the Library Ghost sidequest, visit it to trigger an event with character_soul and character_maria",
-      "Visit the area_helman_thieves_hideout",
+      "Visit the area_dungeon_thieves_hideout",
     ],
   },
   soul: {
@@ -229,7 +229,9 @@ export const characters = {
     name: "Cream Ganoblade",
     portrait: "cream.png",
     sprite: "cream.png",
-    recruitCondition: ["Defeat her within 3 encounters or killing Nero Chapet"],
+    recruitCondition: [
+      "Defeat her within 3 encounters or killing character_nero",
+    ],
   },
   satella: {
     id: "satella",
@@ -364,7 +366,7 @@ export const characters = {
     portrait: "galtia.png",
     sprite: "galtia.png",
     recruitCondition: [
-      "Have sex with character_martina",
+      "Have sex with Martina",
       "Allow Galtia to conquer two cities",
       "Allow Galtia to conquer two poisoned cities",
       "Allow Galtia to conquer one more city",
@@ -378,7 +380,7 @@ export const characters = {
     recruitCondition: [
       "Conquer area_kayblis_castle",
       "Visit the dungeon in area_kayblis_castle",
-      "Visit area_helman_summits_mouth 30F with character_rance",
+      "Visit area_dungeon_summits_mouth 30F with character_rance",
     ],
   },
   aristoles: {
@@ -409,7 +411,7 @@ export const characters = {
     recruitCondition: [
       "Obtain item_gourd_statue",
       "Visit Lady's Caravan in Helman, talk to Lady, repeat this 3 times",
-      "Select the area_freecities_uncurse_dungeon",
+      "Select the area_dungeon_uncurse_dungeon",
     ],
   },
   manironeh: {
@@ -424,7 +426,7 @@ export const characters = {
     name: "Somita Kalar",
     portrait: ["somita.png", "somita2.png", "somita3.png"],
     sprite: "somita.png",
-    recruitCondition: ["Visit the area_helman_kalar_forest"],
+    recruitCondition: ["Visit the area_dungeon_kalar_forest"],
   },
   rolex: {
     id: "rolex",
@@ -444,9 +446,9 @@ export const characters = {
     sprite: "hannyking.png",
     recruitCondition: [
       "Collect a levy in area_freecities_l_zile",
-      "Visit area_freecities_titi_lake with a unit equipped with Aluminum Axe, then choose Aluminum Axe",
-      "Visit Hanny King at area_freecities_titi_lake 66F with character_julia",
-      "Ask for character_julia Special, then visit area_freecities_titi_lake 66f again with Rance",
+      "Visit area_dungeon_titi_lake with a unit equipped with Aluminum Axe, then choose Aluminum Axe",
+      "Visit Hanny King at area_dungeon_titi_lake 66F with character_julia",
+      "Ask for character_julia Special, then visit area_dungeon_titi_lake 66f again with Rance",
       'Select "Join me" then "Give character_julia"',
       "Will join as a beginning of turn event",
     ],
@@ -478,7 +480,6 @@ export const characters = {
     recruitCondition: ["Hire Mercenary B from Pluepet"],
   },
   //#endregion
-
   //#region HAREM
 
   lia: {
@@ -594,7 +595,7 @@ export const characters = {
     sprite: "amiran.png",
     recruitCondition: [
       "After conquering area_helman_log_b there will be an event in area_helman_archgrad, do not interrupt it",
-      "After defeating and imprisoning character_leyukov, levy area_helman_archgrad",
+      "After defeating and imprisoning character_lelyukov, levy area_helman_archgrad",
     ],
   },
   katyusha: {
@@ -726,7 +727,6 @@ export const characters = {
     ],
   },
   //#endregion
-
   //#region ENEMIES
   pegasus: {
     id: "pegasus",
