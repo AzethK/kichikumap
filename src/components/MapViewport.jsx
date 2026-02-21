@@ -8,6 +8,7 @@ const MAP_HEIGHT = 2050;
 const MAX_SCALE = 3;
 
 export default function MapViewport({ onAreaClick }) {
+  const isPinching = useRef(false);
   const [editorMode, setEditorMode] = useState(false); // TEMP
   const [tempMarker, setTempMarker] = useState(null);
 
@@ -102,19 +103,26 @@ export default function MapViewport({ onAreaClick }) {
 
     pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
 
+    // If two fingers → enter pinch mode
     if (pointers.current.size === 2) {
+      isPinching.current = true;
+      isDragging.current = false;
+
       const [p1, p2] = Array.from(pointers.current.values());
 
       pinchStartDistance.current = Math.hypot(p2.x - p1.x, p2.y - p1.y);
 
       pinchStartScale.current = scale;
+
+      return;
     }
 
-    // If single pointer, allow drag
-    if (pointers.current.size === 1) {
+    // Only allow drag if NOT pinching
+    if (!isPinching.current && pointers.current.size === 1) {
       if (e.target.closest(".map-marker")) return;
 
       isDragging.current = true;
+
       dragStart.current = {
         x: e.clientX - position.x,
         y: e.clientY - position.y,
@@ -130,10 +138,13 @@ export default function MapViewport({ onAreaClick }) {
       y: e.clientY,
     });
 
-    // PINCH ZOOM
-    if (pointers.current.size === 2) {
+    // PINCH MODE
+    if (isPinching.current && pointers.current.size === 2) {
+      const rect = containerRef.current.getBoundingClientRect();
+
       const [p1, p2] = Array.from(pointers.current.values());
 
+      // Distance between fingers
       const newDistance = Math.hypot(p2.x - p1.x, p2.y - p1.y);
 
       const distanceRatio = newDistance / pinchStartDistance.current;
@@ -142,12 +153,25 @@ export default function MapViewport({ onAreaClick }) {
       const minScale = getMinScale();
       const newScale = Math.min(MAX_SCALE, Math.max(minScale, rawScale));
 
+      const scaleRatio = newScale / scale;
+
+      //Midpoint between fingers (screen space)
+      const centerX = (p1.x + p2.x) / 2 - rect.left;
+      const centerY = (p1.y + p2.y) / 2 - rect.top;
+
+      const newX = centerX - scaleRatio * (centerX - position.x);
+      const newY = centerY - scaleRatio * (centerY - position.y);
+
+      const clamped = clampPosition(newX, newY, newScale);
+
       setScale(newScale);
+      setPosition(clamped);
+
       return;
     }
 
-    // DRAG
-    if (isDragging.current && pointers.current.size === 1) {
+    // DRAG MODE
+    if (!isPinching.current && isDragging.current) {
       const newX = e.clientX - dragStart.current.x;
       const newY = e.clientY - dragStart.current.y;
 
@@ -159,10 +183,13 @@ export default function MapViewport({ onAreaClick }) {
   const handlePointerUp = (e) => {
     pointers.current.delete(e.pointerId);
 
+    // If fewer than 2 fingers → stop pinch
     if (pointers.current.size < 2) {
+      isPinching.current = false;
       pinchStartDistance.current = null;
     }
 
+    // If no fingers → stop drag
     if (pointers.current.size === 0) {
       isDragging.current = false;
     }
