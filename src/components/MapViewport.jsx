@@ -145,6 +145,9 @@ export default function MapViewport({ onAreaClick }) {
 
       const [p1, p2] = Array.from(pointers.current.values());
 
+      const centerX = (p1.x + p2.x) / 2 - rect.left;
+      const centerY = (p1.y + p2.y) / 2 - rect.top;
+
       const newDistance = Math.hypot(p2.x - p1.x, p2.y - p1.y);
 
       const distanceRatio = newDistance / pinchStartDistance.current;
@@ -154,9 +157,6 @@ export default function MapViewport({ onAreaClick }) {
       const newScale = Math.min(MAX_SCALE, Math.max(minScale, rawScale));
 
       const scaleRatio = newScale / scale;
-
-      const centerX = (p1.x + p2.x) / 2 - rect.left;
-      const centerY = (p1.y + p2.y) / 2 - rect.top;
 
       const newX = centerX - scaleRatio * (centerX - position.x);
       const newY = centerY - scaleRatio * (centerY - position.y);
