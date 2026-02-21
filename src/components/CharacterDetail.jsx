@@ -254,10 +254,6 @@ export default function CharacterDetail({ characterId, onClose }) {
 
   /* ---------------- Recruitment Conditions ---------------- */
 
-  //  This will have to be changed later when I change how modes work
-  //  some enemies are going to be recruitable, so modes will have to be
-  //  an array of roles
-
   const conditions =
     mode === "Harem" && haremCharacter.recruitmentOverride ?
       (haremCharacter.recruitmentOverride ?? [])
@@ -351,7 +347,9 @@ export default function CharacterDetail({ characterId, onClose }) {
                   key={value}
                   className={`tab-btn ${variant}`}
                   disabled={!hasRole || isActive}
-                  onClick={() => setMode(value)}
+                  onClick={() => {
+                    (setTroopSpriteIndex(0), setMode(value));
+                  }}
                 >
                   {label}
                 </button>
