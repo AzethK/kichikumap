@@ -99,8 +99,6 @@ export default function MapViewport({ onAreaClick }) {
   /* -------------------- Drag logic -------------------- */
 
   const handlePointerDown = (e) => {
-    e.currentTarget.setPointerCapture(e.pointerId);
-
     pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
 
     // If two fingers → enter pinch mode
@@ -127,6 +125,8 @@ export default function MapViewport({ onAreaClick }) {
         x: e.clientX - position.x,
         y: e.clientY - position.y,
       };
+
+      e.currentTarget.setPointerCapture(e.pointerId);
     }
   };
 
@@ -180,6 +180,11 @@ export default function MapViewport({ onAreaClick }) {
   };
 
   const handlePointerUp = (e) => {
+    if (isDragging.current) {
+      try {
+        e.currentTarget.releasePointerCapture(e.pointerId);
+      } catch {}
+    }
     pointers.current.delete(e.pointerId);
 
     // If fewer than 2 fingers → stop pinch
