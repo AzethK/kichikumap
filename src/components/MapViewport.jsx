@@ -11,6 +11,10 @@ export default function MapViewport({ onAreaClick }) {
   const [editorMode, setEditorMode] = useState(false); // TEMP
   const [tempMarker, setTempMarker] = useState(null);
 
+  const pointers = useRef(new Map());
+  const pinchStartDistance = useRef(null);
+  const pinchStartScale = useRef(1);
+
   // Calculate the minimum scale to fit the map within the viewport
   const getMinScale = () => {
     const viewport = containerRef.current;
@@ -94,35 +98,74 @@ export default function MapViewport({ onAreaClick }) {
   /* -------------------- Drag logic -------------------- */
 
   const handlePointerDown = (e) => {
-    // If clicking a marker, do NOT start dragging
-    if (e.target.closest(".map-marker")) {
-      return;
+    e.currentTarget.setPointerCapture(e.pointerId);
+
+    pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
+    if (pointers.current.size === 2) {
+      const [p1, p2] = Array.from(pointers.current.values());
+
+      pinchStartDistance.current = Math.hypot(p2.x - p1.x, p2.y - p1.y);
+
+      pinchStartScale.current = scale;
     }
 
-    e.preventDefault();
+    // If single pointer, allow drag
+    if (pointers.current.size === 1) {
+      if (e.target.closest(".map-marker")) return;
 
-    isDragging.current = true;
-
-    dragStart.current = {
-      x: e.clientX - position.x,
-      y: e.clientY - position.y,
-    };
-
-    e.currentTarget.setPointerCapture(e.pointerId);
+      isDragging.current = true;
+      dragStart.current = {
+        x: e.clientX - position.x,
+        y: e.clientY - position.y,
+      };
+    }
   };
 
   const handlePointerMove = (e) => {
-    if (!isDragging.current) return;
+    if (!pointers.current.has(e.pointerId)) return;
 
-    const newX = e.clientX - dragStart.current.x;
-    const newY = e.clientY - dragStart.current.y;
+    pointers.current.set(e.pointerId, {
+      x: e.clientX,
+      y: e.clientY,
+    });
 
-    const clamped = clampPosition(newX, newY, scale);
-    setPosition(clamped);
+    // PINCH ZOOM
+    if (pointers.current.size === 2) {
+      const [p1, p2] = Array.from(pointers.current.values());
+
+      const newDistance = Math.hypot(p2.x - p1.x, p2.y - p1.y);
+
+      const distanceRatio = newDistance / pinchStartDistance.current;
+
+      const rawScale = pinchStartScale.current * distanceRatio;
+      const minScale = getMinScale();
+      const newScale = Math.min(MAX_SCALE, Math.max(minScale, rawScale));
+
+      setScale(newScale);
+      return;
+    }
+
+    // DRAG
+    if (isDragging.current && pointers.current.size === 1) {
+      const newX = e.clientX - dragStart.current.x;
+      const newY = e.clientY - dragStart.current.y;
+
+      const clamped = clampPosition(newX, newY, scale);
+      setPosition(clamped);
+    }
   };
 
   const handlePointerUp = (e) => {
-    isDragging.current = false;
+    pointers.current.delete(e.pointerId);
+
+    if (pointers.current.size < 2) {
+      pinchStartDistance.current = null;
+    }
+
+    if (pointers.current.size === 0) {
+      isDragging.current = false;
+    }
 
     try {
       e.currentTarget.releasePointerCapture(e.pointerId);
