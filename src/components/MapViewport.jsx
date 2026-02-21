@@ -140,11 +140,11 @@ export default function MapViewport({ onAreaClick }) {
 
     // PINCH MODE
     if (isPinching.current && pointers.current.size === 2) {
-      const rect = containerRef.current.getBoundingClientRect();
+      const viewport = containerRef.current;
+      const rect = viewport.getBoundingClientRect();
 
       const [p1, p2] = Array.from(pointers.current.values());
 
-      // Distance between fingers
       const newDistance = Math.hypot(p2.x - p1.x, p2.y - p1.y);
 
       const distanceRatio = newDistance / pinchStartDistance.current;
@@ -155,7 +155,6 @@ export default function MapViewport({ onAreaClick }) {
 
       const scaleRatio = newScale / scale;
 
-      //Midpoint between fingers (screen space)
       const centerX = (p1.x + p2.x) / 2 - rect.left;
       const centerY = (p1.y + p2.y) / 2 - rect.top;
 
