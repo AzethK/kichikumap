@@ -3,7 +3,7 @@ const ROLE_CONFIG = [
   { value: "Harem", label: "Harem" },
   { value: "Enemies", label: "Enemy" },
 ];
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   getCharacterPortrait,
   getCharacterSprite,
@@ -19,6 +19,26 @@ import ConditionText from "../util/ConditionText";
 import { useAppContext } from "../App";
 
 export default function CharacterDetail({ characterId, onClose }) {
+  const BASE_WIDTH = 1300;
+  const BASE_HEIGHT = 800;
+
+  const [fitScale, setFitScale] = useState(1);
+
+  useEffect(() => {
+    const updateScale = () => {
+      const widthScale = (window.innerWidth * 0.9) / BASE_WIDTH;
+      const heightScale = (window.innerHeight * 0.9) / BASE_HEIGHT;
+
+      const scale = Math.min(1, widthScale, heightScale);
+
+      setFitScale(scale);
+    };
+
+    updateScale();
+    window.addEventListener("resize", updateScale);
+    return () => window.removeEventListener("resize", updateScale);
+  }, []);
+
   const [variantIndex, setVariantIndex] = useState(0);
 
   const { setSelectedCharacterId, mode, setMode } = useAppContext();
@@ -273,7 +293,13 @@ export default function CharacterDetail({ characterId, onClose }) {
 
   return (
     <div className="overlay-backdrop">
-      <div className="subordinates-overlay">
+      <div
+        className="subordinates-overlay"
+        style={{
+          transform: `scale(${fitScale})`,
+          transformOrigin: "center",
+        }}
+      >
         <button className="overlay-close" onClick={onClose}>
           ✕
         </button>
