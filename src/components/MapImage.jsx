@@ -1,5 +1,5 @@
 import { useState } from "react";
-import continent from "../assets/continent.svg";
+import continent from "../assets/continent.png";
 
 export default function MapImage() {
   const [loaded, setLoaded] = useState(false);

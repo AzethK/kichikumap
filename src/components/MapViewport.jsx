@@ -47,7 +47,7 @@ export default function MapViewport({ onAreaClick }) {
   // Clamp function to restrict position within bounds
   const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 
-  // Test function
+  // Center function
   const centerOnArea = (area, targetScale = scale) => {
     const viewport = containerRef.current;
     if (!viewport) return;
@@ -87,13 +87,31 @@ export default function MapViewport({ onAreaClick }) {
     };
   };
 
+  // Starts centered
+  useEffect(() => {
+    const viewport = containerRef.current;
+    if (!viewport) return;
+
+    const minScale = getMinScale();
+    const initialScale = minScale;
+    const viewportWidth = viewport.clientWidth;
+    const viewportHeight = viewport.clientHeight;
+
+    const initialX = (viewportWidth - MAP_WIDTH * initialScale) / 2;
+    const initialY = (viewportHeight - MAP_HEIGHT * initialScale) / 2;
+
+    setScale(initialScale);
+    setPosition({ x: initialX, y: initialY });
+  }, []);
+
+  // useEffect for centering on areas
   useEffect(() => {
     if (!selectedAreaId) return;
 
     const area = areas.find((a) => a.id === selectedAreaId);
     if (!area) return;
 
-    centerOnArea(area);
+    centerOnArea(area, 2);
   }, [selectedAreaId]);
 
   // Effect to handle wheel zooming
