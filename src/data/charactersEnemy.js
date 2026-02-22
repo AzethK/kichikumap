@@ -12,6 +12,7 @@ export const enemies = {
     strategy: 60,
     magic: 0,
     battleSprite: ["e_lwhiteknights.png", "e_exFull.png", "e_exSolo.png"],
+    attackType: "Direct",
   },
   haurein: {
     unitType: "leazas_soldiers",
@@ -30,6 +31,7 @@ export const enemies = {
       "e_haureinFull.png",
       "e_haureinSolo.png",
     ],
+    attackType: "Direct",
   },
   pegasus: {
     unitType: "leazas_soldiers",
@@ -48,6 +50,7 @@ export const enemies = {
       "e_pegasusFull.png",
       "e_pegasusSolo.png",
     ],
+    attackType: "Direct",
   },
   melfeis: {
     unitType: "leazas_mages",
@@ -62,6 +65,7 @@ export const enemies = {
     strategy: 10,
     magic: 7,
     battleSprite: ["e_lmages.png", "e_melfeisFull.png", "e_melfeisSolo.png"],
+    attackType: "Magic",
   },
   dodge: {
     unitType: "leazas_soldiers",
@@ -80,6 +84,7 @@ export const enemies = {
       "e_dodgeFull.png",
       "e_dodgeSolo.png",
     ],
+    attackType: "Direct",
   },
   sakanaku: {
     unitType: "leazas_soldiers",
@@ -98,6 +103,7 @@ export const enemies = {
       "e_sakanakuFull.png",
       "e_sakanakuSolo.png",
     ],
+    attackType: "Direct",
   },
   jibul: {
     unitType: "leazas_soldiers",
@@ -116,6 +122,7 @@ export const enemies = {
       "e_jibulFull.png",
       "e_jibulSolo.png",
     ],
+    attackType: "Direct",
   },
   gengorou: {
     unitType: "civilians",
@@ -134,6 +141,7 @@ export const enemies = {
       "e_gengorouFull.png",
       "e_gengorouSolo.png",
     ],
+    attackType: "Direct",
   },
   freecity_general: {
     unitType: "civilians",
@@ -152,6 +160,7 @@ export const enemies = {
       "e_freegeneralFull.png",
       "e_freegeneralSolo.png",
     ],
+    attackType: "Direct",
   },
   sayori: {
     unitType: "civilians",
@@ -166,6 +175,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_civilians.png", "e_sayoriFull.png", "e_sayoriSolo.png"],
+    attackType: "Direct",
   },
   desert_guide: {
     unitType: "sand_guards",
@@ -180,6 +190,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_sandguards.png", "e_guideFull.png", "e_guideSolo.png"],
+    attackType: "Direct",
   },
   alladin: {
     omniAtk: 0,
@@ -191,6 +202,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_alladinSolo.png"],
+    attackType: "Direct",
   },
   lelyukov: {
     unitType: "helman_knights",
@@ -209,6 +221,7 @@ export const enemies = {
       "e_lelyukovFull.png",
       "e_lelyukovSolo.png",
     ],
+    attackType: "Direct",
   },
   helman_knight: {
     unitType: [
@@ -273,6 +286,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_guards.png", "e_ruberanFull.png", "e_ruberanSolo.png"],
+    attackType: "Direct",
   },
   aristoles: {
     unitType: "helman_knights",
@@ -291,6 +305,7 @@ export const enemies = {
       "e_aristolesFull.png",
       "e_aristolesSolo.png",
     ],
+    attackType: "Direct",
   },
   convert: {
     unitType: "helman_soldiers",
@@ -309,6 +324,7 @@ export const enemies = {
       "e_convertFull.png",
       "e_convertSolo.png",
     ],
+    attackType: "Direct",
   },
   mineva: {
     unitType: "helman_knights",
@@ -327,6 +343,7 @@ export const enemies = {
       "e_minevaFull.png",
       "e_minevaSolo.png",
     ],
+    attackType: "Direct",
   },
   tami: {
     unitType: "helman_soldiers",
@@ -341,6 +358,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_helmanknights.png", "e_tamiFull.png", "e_tamiSolo.png"],
+    attackType: "Direct",
   },
   maha: {
     unitType: "helman_soldiers",
@@ -355,6 +373,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_helmanknights.png", "e_mahaFull.png", "e_mahaSolo.png"],
+    attackType: "Direct",
   },
   nero: {
     unitType: "helman_knights",
@@ -369,6 +388,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_helmanknights.png", "e_neroFull.png", "e_neroSolo.png"],
+    attackType: "Direct",
   },
   cream: {
     unitType: "helman_soldiers",
@@ -387,6 +407,7 @@ export const enemies = {
       "e_creamFull.png",
       "e_creamSolo.png",
     ],
+    attackType: "Direct",
   },
   rolex: {
     unitType: "helman_knights",
@@ -401,6 +422,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_helmanknights.png", "e_rolexFull.png", "e_rolexSolo.png"],
+    attackType: "Direct",
   },
   katyusha: {
     unitType: "helman_soldiers",
@@ -419,6 +441,7 @@ export const enemies = {
       "e_katyushaFull.png",
       "e_katyushaSolo.png",
     ],
+    attackType: "Direct",
   },
   saulnia: {
     unitType: "helman_soldiers",
@@ -437,6 +460,7 @@ export const enemies = {
       "e_saulniaFull.png",
       "e_saulniaSolo.png",
     ],
+    attackType: "Direct",
   },
   patton: {
     unitType: "brawlers",
@@ -451,6 +475,7 @@ export const enemies = {
     strategy: 0,
     magic: 2,
     battleSprite: ["e_brawlers.png", "e_pattonFull.png", "e_pattonSolo.png"],
+    attackType: "Direct",
   },
   hubert: {
     unitType: "helman_knights",
@@ -469,6 +494,7 @@ export const enemies = {
       "e_hubertFull.png",
       "e_hubertSolo.png",
     ],
+    attackType: "Direct",
   },
   freak: {
     unitType: "freak_robots",
@@ -483,6 +509,7 @@ export const enemies = {
     strategy: 10,
     magic: 6,
     battleSprite: ["e_freakrobots.png", "e_freakFull.png", "e_freakSolo.png"],
+    attackType: "Magic",
   },
   hunty: {
     unitType: "freak_robots",
@@ -497,6 +524,7 @@ export const enemies = {
     strategy: 6,
     magic: 13,
     battleSprite: ["e_freakrobots2.png", "e_huntyFull.png", "e_huntySolo.png"],
+    attackType: "Magic",
   },
   helman_guard: {
     unitType: "civilians",
@@ -529,6 +557,7 @@ export const enemies = {
       "e_olhoundFull.png",
       "e_olhoundSolo.png",
     ],
+    attackType: "Direct",
   },
   sanakia: {
     unitType: "civilians",
@@ -543,6 +572,7 @@ export const enemies = {
     strategy: 5,
     magic: 0,
     battleSprite: ["e_civilians.png", "e_sanakiaFull.png", "e_sanakiaSolo.png"],
+    attackType: "Direct",
   },
   mars: {
     unitType: "civilians",
@@ -557,6 +587,7 @@ export const enemies = {
     strategy: 0,
     magic: 1,
     battleSprite: ["e_civilians.png", "e_marsFull.png", "e_marsSolo.png"],
+    attackType: "Direct",
   },
   nobunaga: {
     unitType: "warriors",
@@ -575,6 +606,7 @@ export const enemies = {
       "e_nobunagaFull.png",
       "e_nobunagaSolo.png",
     ],
+    attackType: "Demon Assault",
   },
   samurai_general: {
     unitType: "foot_soldiers",
@@ -593,6 +625,7 @@ export const enemies = {
       "e_sgeneralFull.png",
       "e_sgeneralSolo.png",
     ],
+    attackType: "Direct",
   },
   katsuie: {
     unitType: "warriors",
@@ -607,6 +640,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_warriors2.png", "e_katsuieFull.png", "e_katsuieSolo.png"],
+    attackType: "Direct",
   },
   bow_general: {
     unitType: "archers",
@@ -621,6 +655,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_archers.png", "e_bgeneralFull.png", "e_bgeneralSolo.png"],
+    attackType: "Bow",
   },
   isoroku: {
     unitType: "japan_archers",
@@ -635,6 +670,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_archers.png", "e_isorokuFull.png", "e_isorokuSolo.png"],
+    attackType: "Bow",
   },
   hannies: {
     unitType: "monsters",
@@ -659,6 +695,7 @@ export const enemies = {
       "e_colhannyFull.png",
       "e_colhannySolo.png",
     ],
+    attackType: "Direct",
   },
   monster_general: {
     unitType: [
@@ -698,6 +735,7 @@ export const enemies = {
       "e_kitties.png",
       "e_mgeneralFull3.png",
     ],
+    attackType: "Direct",
   },
   monster_general_mage: {
     unitType: "monsters",
@@ -716,6 +754,7 @@ export const enemies = {
       "e_mgeneralmageFull.png",
       "e_mgeneralmageSolo.png",
     ],
+    attackType: "Magic",
   },
   la_saizel: {
     unitType: "false_angels",
@@ -730,6 +769,7 @@ export const enemies = {
     strategy: 0,
     magic: 7,
     battleSprite: ["e_falseangels.png", "e_saizelFull.png", "e_saizelSolo.png"],
+    attackType: "Demon Magic",
   },
   camilla: {
     unitType: "dragon_girls",
@@ -748,6 +788,7 @@ export const enemies = {
       "e_camillaFull.png",
       "e_camillaSolo.png",
     ],
+    attackType: "Demon Assault",
   },
   lei: {
     omniAtk: 0,
@@ -759,6 +800,7 @@ export const enemies = {
     strategy: 0,
     magic: 5,
     battleSprite: ["e_leiSolo.png"],
+    attackType: "Demon Assault",
   },
   sieg: {
     unitType: "maneshitas",
@@ -779,6 +821,7 @@ export const enemies = {
       "e_siegFull2.png",
       "e_siegSolo2.png",
     ],
+    attackType: "Demon Assault",
   },
   wall: {
     unitType: "walls",
@@ -793,6 +836,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_walls.png", "e_wallFull.png", "e_wallSolo.png"],
+    attackType: "N/A",
   },
   mage_leader: {
     unitType: "zeth_mages",
@@ -807,6 +851,7 @@ export const enemies = {
     strategy: 0,
     magic: 4,
     battleSprite: ["e_zethmages.png", "e_mleaderFull.png", "e_mleaderSolo.png"],
+    attackType: "Magic",
   },
   xacalite: {
     omniAtk: 0,
@@ -818,6 +863,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_xacaliteSolo.png"],
+    attackType: "Direct",
   },
   la_vaswald: {
     omniAtk: 0,
@@ -829,6 +875,7 @@ export const enemies = {
     strategy: 0,
     magic: 10,
     battleSprite: ["e_vaswaldSolo.png"],
+    attackType: "Demon Magic",
   },
   chizuko: {
     unitType: "zeth_mages",
@@ -843,6 +890,7 @@ export const enemies = {
     strategy: 5,
     magic: 7,
     battleSprite: ["e_zethmages.png", "e_chizukoFull.png", "e_chizukoSolo.png"],
+    attackType: "Magic",
   },
   slave_general: {
     unitType: "male_slaves",
@@ -861,6 +909,7 @@ export const enemies = {
       "e_slavegeneralFull.png",
       "e_slavegeneralSolo.png",
     ],
+    attackType: "Direct",
   },
   papaya: {
     unitType: "zeth_mages",
@@ -875,6 +924,7 @@ export const enemies = {
     strategy: 5,
     magic: 6,
     battleSprite: ["e_zethmages.png", "e_papayaFull.png", "e_papayaSolo.png"],
+    attackType: "Magic",
   },
   nagi: {
     unitType: "zeth_mages",
@@ -889,6 +939,7 @@ export const enemies = {
     strategy: 0,
     magic: 9,
     battleSprite: ["e_zethmages.png", "e_nagiFull.png", "e_nagiSolo.png"],
+    attackType: "Magic",
   },
   ragarl: {
     unitType: "zeth_mages",
@@ -903,6 +954,7 @@ export const enemies = {
     strategy: 0,
     magic: 3,
     battleSprite: ["e_zethmages.png", "e_ragarlFull.png", "e_ragarlSolo.png"],
+    attackType: "Magic",
   },
   magic: {
     unitType: "zeth_mages",
@@ -917,6 +969,7 @@ export const enemies = {
     strategy: 5,
     magic: 8,
     battleSprite: ["e_zethmages.png", "e_magicFull.png", "e_magicSolo.png"],
+    attackType: "Magic",
   },
   saias: {
     unitType: "zeth_mages",
@@ -931,6 +984,7 @@ export const enemies = {
     strategy: 20,
     magic: 6,
     battleSprite: ["e_zethmages.png", "e_saiasFull.png", "e_saiasSolo.png"],
+    attackType: "Magic",
   },
   uspira: {
     unitType: "zeth_mages",
@@ -945,6 +999,7 @@ export const enemies = {
     strategy: 25,
     magic: 6,
     battleSprite: ["e_zethmages.png", "e_uspiraFull.png", "e_uspiraSolo.png"],
+    attackType: "Magic",
   },
   kabachahn: {
     unitType: "zeth_mages",
@@ -963,6 +1018,7 @@ export const enemies = {
       "e_kabachahnFull.png",
       "e_kabachahnSolo.png",
     ],
+    attackType: "Magic",
   },
   alex: {
     unitType: "zeth_mages",
@@ -977,6 +1033,7 @@ export const enemies = {
     strategy: 15,
     magic: 7,
     battleSprite: ["e_zethmages.png", "e_alexFull.png", "e_alexSolo.png"],
+    attackType: "Magic",
   },
   babolat: {
     omniAtk: 0,
@@ -988,6 +1045,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_babolatSolo.png"],
+    attackType: "Demon Assault",
   },
   redeye: {
     unitType: "monsters",
@@ -1006,6 +1064,7 @@ export const enemies = {
       "e_redeyeFull.png",
       "e_redeyeSolo.png",
     ],
+    attackType: "Demon Magic",
   },
   galtia: {
     unitType: "food",
@@ -1020,6 +1079,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_food.png", "e_galtiaFull.png", "e_galtiaSolo.png"],
+    attackType: "Demon Assault",
   },
   kaito: {
     unitType: "kaito_clones",
@@ -1034,6 +1094,7 @@ export const enemies = {
     strategy: 0,
     magic: 5,
     battleSprite: ["e_kaitoclones.png", "e_kaitoFull.png", "e_kaitoSolo.png"],
+    attackType: "Demon Assault",
   },
   kesselring: {
     unitType: "lovers",
@@ -1052,6 +1113,7 @@ export const enemies = {
       "e_kesselringFull.png",
       "e_kesselringSolo.png",
     ],
+    attackType: "Demon Assaut",
   },
   medusa: {
     unitType: "snake_sans",
@@ -1066,6 +1128,7 @@ export const enemies = {
     strategy: 0,
     magic: 5,
     battleSprite: ["e_snakesans.png", "e_medusaFull.png", "e_medusaSolo.png"],
+    attackType: "Demon Assault",
   },
   kayblis: {
     omniAtk: 0,
@@ -1077,6 +1140,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_kayblisSolo.png"],
+    attackType: "Demon Assault",
   },
   pg_7: {
     unitType: "pg_x",
@@ -1091,6 +1155,7 @@ export const enemies = {
     strategy: 0,
     magic: 3,
     battleSprite: ["e_pgx.png", "e_pg7Full.png", "e_pg7Solo.png"],
+    attackType: "Direct",
   },
   pg_9: {
     unitType: "pg_x",
@@ -1105,6 +1170,7 @@ export const enemies = {
     strategy: 0,
     magic: 4,
     battleSprite: ["e_pgx.png", "e_pg9Full.png", "e_pg9Solo.png"],
+    attackType: "Direct",
   },
   pg_x2: {
     unitType: "pg_x",
@@ -1119,6 +1185,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_pgx.png", "e_pgx2Full.png", "e_pgx2Solo.png"],
+    attackType: "Direct",
   },
   temple_knight: {
     unitType: "temple_knights",
@@ -1137,6 +1204,7 @@ export const enemies = {
       "e_templeknightFull.png",
       "e_templeknightSolo.png",
     ],
+    attackType: "Direct",
   },
   carfeknight: {
     unitType: "carfeknights",
@@ -1155,6 +1223,7 @@ export const enemies = {
       "e_carfeknightFull.png",
       "e_carfeknightSolo.png",
     ],
+    attackType: "Direct",
   },
   angel_knight: {
     unitType: "angel_knights",
@@ -1173,6 +1242,7 @@ export const enemies = {
       "e_angelknightFull.png",
       "e_angelknightSolo.png",
     ],
+    attackType: "Direct",
   },
   silky: {
     unitType: "chimeras",
@@ -1187,6 +1257,7 @@ export const enemies = {
     strategy: 0,
     magic: 4,
     battleSprite: ["e_silkySolo.png"],
+    attackType: "Demon Assault",
   },
   satella: {
     unitType: "guardians",
@@ -1201,6 +1272,7 @@ export const enemies = {
     strategy: 0,
     magic: 6,
     battleSprite: ["e_guardians.png", "e_satellaFull.png", "e_satellaSolo.png"],
+    attackType: "Demon Assault",
   },
   meglass: {
     unitType: "horuses",
@@ -1215,6 +1287,7 @@ export const enemies = {
     strategy: 0,
     magic: 6,
     battleSprite: ["e_horuses.png", "e_meglassFull.png", "e_meglassSolo.png"],
+    attackType: "Demon Assault",
   },
   kaybwan: {
     unitType: "doggies",
@@ -1229,6 +1302,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_doggies.png", "e_kaybwanFull.png", "e_kaybwanSolo.png"],
+    attackType: "Direct",
   },
   kaybnyan: {
     unitType: "kitties",
@@ -1243,6 +1317,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_kitties.png", "e_kaybnyanFull.png", "e_kaybnyanSolo.png"],
+    attackType: "Direct",
   },
   annis: {
     unitType: "zeth_mages",
@@ -1257,6 +1332,7 @@ export const enemies = {
     strategy: 0,
     magic: 10,
     battleSprite: ["e_zethmages.png", "e_annisFull.png", "e_annisSolo.png"],
+    attackType: "Magic",
   },
   kaiju_gaga: {
     unitType: "dragonflies",
@@ -1271,6 +1347,7 @@ export const enemies = {
     strategy: 0,
     magic: 13,
     battleSprite: ["e_kaijugagaSolo.png"],
+    attackType: "Direct",
   },
   kaiju_zeze: {
     unitType: "dragonflies",
@@ -1285,6 +1362,7 @@ export const enemies = {
     strategy: 0,
     magic: 13,
     battleSprite: ["e_kaijuzezeSolo.png"],
+    attackType: "Direct",
   },
   kaiju_dada: {
     unitType: "dragonflies",
@@ -1299,6 +1377,7 @@ export const enemies = {
     strategy: 0,
     magic: 13,
     battleSprite: ["e_kaijudadaSolo.png"],
+    attackType: "Direct",
   },
   kaiju_bobo: {
     unitType: "dragonflies",
@@ -1313,6 +1392,7 @@ export const enemies = {
     strategy: 0,
     magic: 13,
     battleSprite: ["e_kaijuboboSolo.png"],
+    attackType: "Direct",
   },
   okayu: {
     omniAtk: 0,
@@ -1324,6 +1404,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_okayu.png"],
+    attackType: "Direct",
   },
   orochi: {
     omniAtk: 0,
@@ -1335,6 +1416,7 @@ export const enemies = {
     strategy: 0,
     magic: 4,
     battleSprite: ["e_orochi.png"],
+    attackType: "Direct",
   },
   shimojoe: {
     omniAtk: 0,
@@ -1346,6 +1428,7 @@ export const enemies = {
     strategy: 0,
     magic: 4,
     battleSprite: ["e_shimojoe.png"],
+    attackType: "Direct",
   },
   vevetar: {
     omniAtk: 0,
@@ -1357,6 +1440,7 @@ export const enemies = {
     strategy: 0,
     magic: 15,
     battleSprite: ["e_vevetar.png"],
+    attackType: "Bow",
   },
   ggcaterpillar: {
     omniAtk: 0,
@@ -1368,6 +1452,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_ggcaterpillar.png"],
+    attackType: "Direct",
   },
   stoneguardian: {
     omniAtk: 0,
@@ -1379,6 +1464,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_stoneguardian.png"],
+    attackType: "Direct",
   },
   marder: {
     omniAtk: 0,
@@ -1390,6 +1476,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_marder.png"],
+    attackType: "Magic",
   },
   hawkyu: {
     omniAtk: 0,
@@ -1401,6 +1488,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_hawkyu.png"],
+    attackType: "Direct",
   },
   musashibou: {
     omniAtk: 0,
@@ -1412,6 +1500,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_musashibou.png"],
+    attackType: "Direct",
   },
   japanesesoldier: {
     omniAtk: 0,
@@ -1423,6 +1512,7 @@ export const enemies = {
     strategy: 80,
     magic: 0,
     battleSprite: ["e_japanesesoldier.png"],
+    attackType: "Direct",
   },
   gunagan: {
     omniAtk: 0,
@@ -1434,6 +1524,7 @@ export const enemies = {
     strategy: 0,
     magic: 4,
     battleSprite: ["e_gunagan.png"],
+    attackType: "Direct",
   },
   yellowdragon: {
     omniAtk: 0,
@@ -1445,6 +1536,7 @@ export const enemies = {
     strategy: 0,
     magic: 6,
     battleSprite: ["e_yellowdragon.png"],
+    attackType: "Direct",
   },
   reddragon: {
     omniAtk: 0,
@@ -1456,6 +1548,7 @@ export const enemies = {
     strategy: 0,
     magic: 13,
     battleSprite: ["e_reddragon.png"],
+    attackType: "Direct",
   },
   greendragon: {
     omniAtk: 0,
@@ -1467,6 +1560,7 @@ export const enemies = {
     strategy: 0,
     magic: 5,
     battleSprite: ["e_greendragon.png"],
+    attackType: "Direct",
   },
   bluedragon: {
     omniAtk: 0,
@@ -1478,6 +1572,7 @@ export const enemies = {
     strategy: 0,
     magic: 6,
     battleSprite: ["e_bluedragon.png"],
+    attackType: "Direct",
   },
   blackdragon: {
     omniAtk: 0,
@@ -1489,6 +1584,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_blackdragon.png"],
+    attackType: "Direct",
   },
   redhanny: {
     unitType: "weakhannies",
@@ -1507,6 +1603,7 @@ export const enemies = {
       "e_redhannyFull.png",
       "e_redhannySolo.png",
     ],
+    attackType: "Direct",
   },
   superhanny: {
     unitType: "normalhannies",
@@ -1525,6 +1622,7 @@ export const enemies = {
       "e_superhannyFull.png",
       "e_superhannySolo.png",
     ],
+    attackType: "Direct",
   },
   hannyknight: {
     unitType: "stronghannies",
@@ -1543,6 +1641,7 @@ export const enemies = {
       "e_hannyknightFull.png",
       "e_hannyknightSolo.png",
     ],
+    attackType: "Direct",
   },
   hannyking: {
     unitType: "hannies2",
@@ -1561,5 +1660,6 @@ export const enemies = {
       "e_hannykingFull.png",
       "e_hannykingSolo.png",
     ],
+    attackType: "Direct",
   },
 };

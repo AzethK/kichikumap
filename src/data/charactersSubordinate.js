@@ -22,6 +22,7 @@ export const charactersSubordinate = {
       "ranceFull2.png",
       "ranceSpecial.png",
     ],
+    attackType: "Direct",
   },
   sill: {
     unitType: "leazas_mages",
@@ -37,6 +38,7 @@ export const charactersSubordinate = {
     sca: ["0/+1", "0/+1", "0/+1"],
     surge: "rance",
     battleSprite: ["lmages.png", "sillFull.png", "sillSolo.png"],
+    attackType: "Magic",
   },
   bound: {
     unitType: "thieves",
@@ -52,6 +54,7 @@ export const charactersSubordinate = {
     sca: ["0/0", "0/0", "0/0"],
     surge: "soul",
     battleSprite: ["thieves.png", "boundFull.png", "boundSolo.png"],
+    attackType: "Direct",
   },
   soul: {
     unitType: "thieves",
@@ -67,6 +70,7 @@ export const charactersSubordinate = {
     sca: ["0/0", "0/0", "+1/+1"],
     surge: "bound",
     battleSprite: ["thieves.png", "soulFull.png", "soulSolo.png"],
+    attackType: "Direct",
   },
   leila: {
     unitType: "royal_guards",
@@ -82,6 +86,7 @@ export const charactersSubordinate = {
     sca: ["+1/+1", "+1/+1", "+1/+1"],
     surge: "rick",
     battleSprite: ["royalguard.png", "leilaFull.png", "leilaSolo.png"],
+    attackType: "Direct",
   },
   barres: {
     unitType: "leazas_knights",
@@ -97,6 +102,7 @@ export const charactersSubordinate = {
     sca: ["+2/+1", "+2/+1", "-1/0"],
     surge: "haurein",
     battleSprite: ["lknightsblack.png", "barresFull.png", "barresSolo.png"],
+    attackType: "Direct",
   },
   rick: {
     unitType: "leazas_knights",
@@ -118,6 +124,7 @@ export const charactersSubordinate = {
       "rickSolo.png",
       "rickSpecial.png",
     ],
+    attackType: "Direct",
   },
   cordoba: {
     unitType: "leazas_knights",
@@ -132,6 +139,7 @@ export const charactersSubordinate = {
     strategy: 0,
     sca: ["-1/-1", "0/+2", "-2/-2"],
     battleSprite: ["lknightsblue.png", "cordobaFull.png", "cordobaSolo.png"],
+    attackType: "Direct",
   },
   kinkaid: {
     unitType: "leazas_soldiers",
@@ -146,6 +154,7 @@ export const charactersSubordinate = {
     strategy: 2,
     sca: ["0/0", "0/0", "0/-2"],
     battleSprite: ["lsoldiersblue.png", "kinkaidFull.png", "kinkaidSolo.png"],
+    attackType: "Direct",
   },
   menad: {
     unitType: "leazas_soldiers",
@@ -160,6 +169,7 @@ export const charactersSubordinate = {
     strategy: 8,
     sca: ["0/0", "0/0", "-2/0"],
     battleSprite: ["lsoldiersred.png", "menadFull.png", "menadSolo.png"],
+    attackType: "Direct",
   },
   asuka: {
     unitType: "leazas_mages",
@@ -181,6 +191,7 @@ export const charactersSubordinate = {
       "asukaSolo.png",
       "asukaSpecial.png",
     ],
+    attackType: "Magic",
   },
   haurein: {
     unitType: "leazas_soldiers",
@@ -195,6 +206,7 @@ export const charactersSubordinate = {
     strategy: 5,
     sca: ["0/0", "+1/0", "0/0"],
     battleSprite: ["lsoldierswhite.png", "haureinFull.png", "haureinSolo.png"],
+    attackType: "Magic",
   },
   melfeis: {
     unitType: "leazas_mages",
@@ -217,6 +229,7 @@ export const charactersSubordinate = {
       strikes: 1,
       magic: 6,
     },
+    attackType: "Magic",
   },
   ex: {
     unitType: "leazas_knights",
@@ -231,6 +244,7 @@ export const charactersSubordinate = {
     strategy: 60,
     sca: ["+1/+1", "0/0", "-3/-3"],
     battleSprite: ["lknightswhite.png", "exFull.png", "exSolo.png"],
+    attackType: "Direct",
   },
   gengorou: {
     unitType: "leazas_soldiers",
@@ -249,6 +263,7 @@ export const charactersSubordinate = {
       "gengorouFull.png",
       "gengorouSolo.png",
     ],
+    attackType: "Direct",
   },
   maria: {
     unitType: "marias_pupils",
@@ -270,6 +285,7 @@ export const charactersSubordinate = {
       atk: 14,
       troopAtk: 14,
     },
+    attackType: "Bow",
   },
   shizuka: {
     unitType: "leazas_mages",
@@ -291,6 +307,7 @@ export const charactersSubordinate = {
       "shizukaSolo.png",
       "shizukaSpecial.png",
     ],
+    attackType: "Magic",
   },
   patton: {
     unitType: "brawlers",
@@ -313,6 +330,7 @@ export const charactersSubordinate = {
       "pattonSpecial.png",
     ],
     surge: "hunty",
+    attackType: "Direct",
   },
   hunty: {
     unitType: "freak_robots",
@@ -328,6 +346,7 @@ export const charactersSubordinate = {
     sca: ["0/0", "0/0", "0/0"],
     battleSprite: ["freakrobots.png", "huntyFull.png", "huntySolo.png"],
     surge: "patton",
+    attackType: "Magic",
   },
   freak: {
     unitType: "freak_robots",
@@ -343,6 +362,7 @@ export const charactersSubordinate = {
     sca: ["0/0", "0/0", "0/0"],
     battleSprite: ["freakrobots2.png", "freakFull.png", "freakSolo.png"],
     surge: "patton",
+    attackType: "Magic",
   },
   hubert: {
     unitType: "helman_knights",
@@ -358,6 +378,7 @@ export const charactersSubordinate = {
     sca: ["0/0", "0/0", "-2/-2"],
     battleSprite: ["helmanknights.png", "hubertFull.png", "hubertSolo.png"],
     surge: "patton",
+    attackType: "Direct",
   },
   lelyukov: {
     unitType: "helman_knights",
@@ -376,6 +397,7 @@ export const charactersSubordinate = {
       "lelyukovFull.png",
       "lelyukovSolo.png",
     ],
+    attackType: "Direct",
   },
   elenoa: {
     unitType: "magic_warriors",
@@ -390,6 +412,7 @@ export const charactersSubordinate = {
     strategy: 6,
     sca: ["0/0", "0/0", "0/0"],
     battleSprite: ["magicwarriors.png", "elenoaFull.png", "elenoaSolo.png"],
+    attackType: "Mixed",
   },
   milli: {
     unitType: "leazas_soldiers",
@@ -405,6 +428,7 @@ export const charactersSubordinate = {
     sca: ["0/0", "0/0", "0/0"],
     battleSprite: ["lsoldiersred.png", "milliFull.png", "milliSolo.png"],
     surge: "mill",
+    attackType: "Direct",
   },
   mill: {
     unitType: "phantom_beasts",
@@ -434,6 +458,7 @@ export const charactersSubordinate = {
       unitSize: 258,
       strikes: 11,
     },
+    attackType: "Bow",
   },
   mars: {
     unitType: "leazas_soldiers",
@@ -448,6 +473,7 @@ export const charactersSubordinate = {
     strategy: 0,
     sca: ["0/0", "0/0", "+1/+2"],
     battleSprite: ["lsoldiersblack.png", "marsFull.png", "marsSolo.png"],
+    attackType: "Direct",
   },
   isoroku: {
     unitType: "japan_archers",
@@ -469,6 +495,7 @@ export const charactersSubordinate = {
       "isorokuSolo.png",
       "isorokuSpecial.png",
     ],
+    attackType: "Bow",
   },
   cream: {
     unitType: "leazas_soldiers",
@@ -483,6 +510,7 @@ export const charactersSubordinate = {
     strategy: 77,
     sca: ["+1/+1", "0/+1", "+1/+1"],
     battleSprite: ["lsoldierswhite.png", "creamFull.png", "creamSolo.png"],
+    attackType: "Direct",
   },
   satella: {
     unitType: "guardians",
@@ -497,6 +525,7 @@ export const charactersSubordinate = {
     strategy: 0,
     sca: ["0/0", "0/0", "0/0"],
     battleSprite: ["guardians.png", "satellaFull.png", "satellaSolo.png"],
+    attackType: "Demon Magic",
   },
   meglass: {
     unitType: "horuses",
@@ -518,6 +547,7 @@ export const charactersSubordinate = {
       "meglassSolo.png",
       "meglassSpecial.png",
     ],
+    attackType: "Demon Assault",
   },
   kentarou: {
     unitType: "leazas_soldiers",
@@ -540,6 +570,7 @@ export const charactersSubordinate = {
       "kentarouSpecial.png",
     ],
     surge: "miki",
+    attackType: "Direct",
   },
   miki: {
     unitType: "leazas_mages",
@@ -562,6 +593,7 @@ export const charactersSubordinate = {
       "mikiSpecial.png",
     ],
     surge: "kentarou",
+    attackType: "Demon Magic",
   },
   julia: {
     unitType: "royal_guards",
@@ -576,6 +608,7 @@ export const charactersSubordinate = {
     strategy: 0,
     sca: ["-1/-1", "-1/-2", "-2/-2"],
     battleSprite: ["royalguard.png", "juliaFull.png", "juliaSolo.png"],
+    attackType: "Direct",
   },
   rafalia: {
     unitType: "leazas_soldiers",
@@ -590,6 +623,7 @@ export const charactersSubordinate = {
     strategy: 20,
     sca: ["+2/0", "+1/0", "+1/0"],
     battleSprite: ["lsoldiersgreen.png", "rafaliaFull.png", "rafaliaSolo.png"],
+    attackType: "Direct",
   },
   arlcoate: {
     unitType: "leazas_soldiers",
@@ -616,6 +650,7 @@ export const charactersSubordinate = {
       strategy: 80,
       sca: ["-1/-1", "-1/-2", "-1/-1"],
     },
+    attackType: "Direct",
   },
   aviator: {
     unitType: "royal_guards",
@@ -630,6 +665,7 @@ export const charactersSubordinate = {
     strategy: 13,
     sca: ["+1/0", "0/+1", "+1/+2"],
     battleSprite: ["royalguard.png", "aviatorFull.png", "aviatorSolo.png"],
+    attackType: "Direct",
   },
   ragnarokarc: {
     unitType: "magic_warriors",
@@ -651,6 +687,7 @@ export const charactersSubordinate = {
       "gandhiSolo.png",
       "gandhiSpecial.png",
     ],
+    attackType: "Mixed",
   },
   chizuko: {
     unitType: "leazas_mages",
@@ -673,6 +710,7 @@ export const charactersSubordinate = {
       "chizukoSpecial.png",
     ],
     surge: "ragnarokarc",
+    attackType: "Magic",
   },
   magic: {
     unitType: "leazas_mages",
@@ -694,6 +732,7 @@ export const charactersSubordinate = {
       "magicSolo.png",
       "magicSpecial.png",
     ],
+    attackType: "Magic",
   },
   nagi: {
     unitType: "leazas_mages",
@@ -715,6 +754,7 @@ export const charactersSubordinate = {
       "nagiSolo.png",
       "nagiSpecial.png",
     ],
+    attackType: "Magic",
   },
   galtia: {
     deployCost: 0,
@@ -726,6 +766,7 @@ export const charactersSubordinate = {
     replenishRate: 0,
     strategy: 0,
     battleSprite: ["galtiaSolo.png"],
+    attackType: "Demon Assault",
   },
   saizel_hawzel: {
     unitType: "false_angels",
@@ -740,6 +781,7 @@ export const charactersSubordinate = {
     strategy: 0,
     sca: ["0/0", "0/0", "0/0"],
     battleSprite: ["falseangels.png", "sistersFull.png", "sistersSolo.png"],
+    attackType: "Demon Magic",
   },
   aristoles: {
     unitType: "helman_knights",
@@ -758,6 +800,7 @@ export const charactersSubordinate = {
       "aristolesFull.png",
       "aristolesSolo.png",
     ],
+    attackType: "Direct",
   },
   gurwin: {
     unitType: "temple_knights",
@@ -772,6 +815,7 @@ export const charactersSubordinate = {
     strategy: 0,
     sca: ["0/0", "0/0", "0/0"],
     battleSprite: ["templeknights.png", "gurwinFull.png", "gurwinSolo.png"],
+    attackType: "Direct",
   },
   cafe: {
     unitType: "carfeknights",
@@ -786,6 +830,7 @@ export const charactersSubordinate = {
     strategy: 0,
     sca: ["0/+2", "0/+1", "0/0"],
     battleSprite: ["carfeknights.png", "cafeFull.png", "cafeSolo.png"],
+    attackType: "Magic",
   },
   manironeh: {
     unitType: "carfeknights",
@@ -818,6 +863,7 @@ export const charactersSubordinate = {
     strategy: 0,
     sca: ["-1/0", "-1/0", "0/0"],
     battleSprite: ["kalars.png", "somitaFull.png", "somitaSolo.png"],
+    attackType: "Mixed",
   },
   rolex: {
     unitType: "helman_knights",
@@ -839,6 +885,7 @@ export const charactersSubordinate = {
       "rolexSolo.png",
       "rolexSpecial.png",
     ],
+    attackType: "Direct",
   },
   hannyking: {
     unitType: "hannies",
@@ -853,6 +900,7 @@ export const charactersSubordinate = {
     strategy: 0,
     sca: ["0/0", "0/0", "0/0"],
     battleSprite: ["hannies.png", "hannykingFull.png", "hannykingSolo.png"],
+    attackType: "Mixed",
   },
   kaijuprince: {
     unitType: "kaiju_warriors",
@@ -871,6 +919,7 @@ export const charactersSubordinate = {
       "kaijuprinceFull.png",
       "kaijuprinceSolo.png",
     ],
+    attackType: "Direct",
   },
   louis: {
     unitType: "mercenaries",
@@ -885,6 +934,7 @@ export const charactersSubordinate = {
     strategy: 0,
     sca: ["+2/0", "0/0", "+2/+1"],
     battleSprite: ["mercenaries.png", "louisFull.png", "louisSolo.png"],
+    attackType: "Direct",
   },
   cecil: {
     unitType: "mercenaries",
@@ -899,5 +949,6 @@ export const charactersSubordinate = {
     strategy: 0,
     sca: ["+1/+1", "0/0", "+2/0"],
     battleSprite: ["mercenaries.png", "cecilFull.png", "cecilSolo.png"],
+    attackType: "Direct",
   },
 };

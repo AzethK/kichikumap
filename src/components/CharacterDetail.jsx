@@ -197,6 +197,12 @@ export default function CharacterDetail({ characterId, onClose }) {
     Array.isArray(rawOmniDef) ? rawOmniDef[variantIndex] : rawOmniDef;
 
   const stats = {
+    attackType:
+      mode != "Harem" ?
+        mode === "Subordinates" ?
+          characterSubordinate.attackType
+        : enemy.attackType
+      : null,
     unitSize,
     deployCost:
       mode != "Harem" ?
@@ -444,6 +450,7 @@ export default function CharacterDetail({ characterId, onClose }) {
             {/* Commander Stats */}
             {mode != "Harem" && (
               <div className="character-stats">
+                <Stat label="Attack Type" value={stats.attackType} />
                 <Stat
                   label="Unit Size"
                   value={
@@ -591,7 +598,6 @@ export default function CharacterDetail({ characterId, onClose }) {
               <div className="character-troop-stats">
                 {troop ?
                   <>
-                    <Stat label="Attack Type" value={troop.attackType} />
                     <Stat
                       label="ATK"
                       value={
