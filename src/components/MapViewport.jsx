@@ -1,6 +1,8 @@
 import { useRef, useState, useEffect } from "react";
+import { areas } from "../data/areas";
 import MapImage from "./MapImage";
 import MarkerLayer from "./MarkerLayer";
+import { useAppContext } from "../App";
 
 const MAP_WIDTH = 4920;
 const MAP_HEIGHT = 2050;
@@ -8,6 +10,7 @@ const MAP_HEIGHT = 2050;
 const MAX_SCALE = 3;
 
 export default function MapViewport({ onAreaClick }) {
+  const { selectedAreaId } = useAppContext();
   const isPinching = useRef(false);
   const [editorMode, setEditorMode] = useState(false); // TEMP
   const [tempMarker, setTempMarker] = useState(null);
@@ -44,6 +47,26 @@ export default function MapViewport({ onAreaClick }) {
   // Clamp function to restrict position within bounds
   const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 
+  // Test function
+  const centerOnArea = (area, targetScale = scale) => {
+    const viewport = containerRef.current;
+    if (!viewport) return;
+
+    const minScale = getMinScale();
+    const newScale = Math.min(MAX_SCALE, Math.max(minScale, targetScale));
+
+    const viewportWidth = viewport.clientWidth;
+    const viewportHeight = viewport.clientHeight;
+
+    const newX = viewportWidth / 2 - area.x * newScale;
+    const newY = viewportHeight / 2 - area.y * newScale;
+
+    const clamped = clampPosition(newX, newY, newScale);
+
+    setScale(newScale);
+    setPosition(clamped);
+  };
+
   // Function to clamp position based on current scale
   const clampPosition = (x, y, scale) => {
     const viewport = containerRef.current;
@@ -63,6 +86,15 @@ export default function MapViewport({ onAreaClick }) {
       y: clamp(y, minY, 0),
     };
   };
+
+  useEffect(() => {
+    if (!selectedAreaId) return;
+
+    const area = areas.find((a) => a.id === selectedAreaId);
+    if (!area) return;
+
+    centerOnArea(area);
+  }, [selectedAreaId]);
 
   // Effect to handle wheel zooming
   useEffect(() => {
@@ -283,7 +315,7 @@ export default function MapViewport({ onAreaClick }) {
         )}
 
         <MapImage />
-        <MarkerLayer onAreaClick={onAreaClick} />
+        <MarkerLayer onAreaClick={onAreaClick} centerOnArea={centerOnArea} />
       </div>
     </div>
   );

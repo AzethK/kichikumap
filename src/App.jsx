@@ -22,10 +22,14 @@ export default function App() {
     <>
       <AppContext.Provider
         value={{
+          selectedAreaId,
+          setSelectedAreaId,
           selectedItemId,
           setSelectedItemId,
           selectedCharacterId,
           setSelectedCharacterId,
+          activeOverlay,
+          setActiveOverlay,
           mode,
           setMode,
         }}

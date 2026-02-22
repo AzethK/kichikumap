@@ -13,8 +13,14 @@ const areaMap = areas.reduce((map, area) => {
 }, {});
 
 export default function ConditionText({ text }) {
-  const { selectedItemId, setSelectedItemId, setSelectedCharacterId, setMode } =
-    useAppContext();
+  const {
+    selectedItemId,
+    setSelectedItemId,
+    setSelectedCharacterId,
+    setMode,
+    setSelectedAreaId,
+    setActiveOverlay,
+  } = useAppContext();
 
   const parts = text.split(TOKEN_REGEX);
 
@@ -50,7 +56,16 @@ export default function ConditionText({ text }) {
       const area = areaMap[areaId];
 
       return (
-        <span key={i} className="character-link">
+        <span
+          key={i}
+          className="character-link"
+          onClick={() => {
+            setSelectedAreaId(areaId);
+            setSelectedCharacterId(null);
+            setSelectedItemId(null);
+            setActiveOverlay(null);
+          }}
+        >
           {area ? area.name : areaId}
         </span>
       );
