@@ -393,7 +393,7 @@ export default function CharacterDetail({ characterId, onClose }) {
           <div className="character-main">
             {/* Portrait */}
             <div className="character-portrait">
-              <img src={currentPortrait} alt={character.name} />
+              <img src={currentPortrait} alt={character.name} loading="lazy" />
 
               {portraits.length > 1 && (
                 <div className="portrait-nav">
@@ -422,7 +422,7 @@ export default function CharacterDetail({ characterId, onClose }) {
 
             {/* Character Sprite */}
             <div className="character-sprite">
-              <img src={currentSprite} alt="" />
+              <img src={currentSprite} alt="" loading="lazy" />
 
               {sprites.length > 1 && (
                 <div className="sprite-nav">
@@ -651,7 +651,7 @@ export default function CharacterDetail({ characterId, onClose }) {
               <div className="character-troop-sprites">
                 {currentTroopSprite ?
                   <>
-                    <img src={currentTroopSprite} alt="" />
+                    <img src={currentTroopSprite} alt="" loading="lazy" />
 
                     {troopSprites.length > 1 && (
                       <div className="sprite-nav">

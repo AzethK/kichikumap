@@ -38,7 +38,7 @@ export default function CharacterDetail({
           <div className="item-main">
             {/* Character Sprite */}
             <div className="character-sprite">
-              <img src={sprite} alt="" />
+              <img src={sprite} alt="" loading="lazy" />
             </div>
             <div className="item-effect">
               <span>
