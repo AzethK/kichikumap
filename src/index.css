@@ -168,7 +168,7 @@ body {
 
 .portrait-nav {
   position: absolute;
-  bottom: 4px;
+  bottom: -10px;
   display: flex;
   gap: 8px;
   align-items: center;

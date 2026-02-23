@@ -425,7 +425,7 @@ export default function CharacterDetail({ characterId, onClose }) {
               <img src={currentSprite} alt="" loading="lazy" />
 
               {sprites.length > 1 && (
-                <div className="sprite-nav">
+                <div className="portrait-nav">
                   <button
                     onClick={() => setSpriteIndex((i) => Math.max(0, i - 1))}
                     disabled={spriteIndex === 0}

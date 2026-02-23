@@ -366,7 +366,7 @@ export const characters = {
     portrait: "galtia.png",
     sprite: "galtia.png",
     recruitCondition: [
-      "Have sex with Martina",
+      "Have seen Martina's event",
       "Allow Galtia to conquer two cities",
       "Allow Galtia to conquer two poisoned cities",
       "Allow Galtia to conquer one more city",
@@ -375,7 +375,7 @@ export const characters = {
   saizel_hawzel: {
     id: "saizel_hawzel",
     name: "Saizel & Hawzel",
-    portrait: ["saizel_hawzel.png", "saizel_hawzel2.png"],
+    portrait: ["saizel_sisters.png", "la_saizel.png", "la_hawzel.png"],
     sprite: ["saizel_hawzel.png"],
     recruitCondition: [
       "Conquer area_kayblis_castle",

@@ -16,12 +16,15 @@ export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [selectedItemId, setSelectedItemId] = useState(null);
   const [selectedCharacterId, setSelectedCharacterId] = useState(null);
+  const [censoredMode, setCensoredMode] = useState(true);
   const [mode, setMode] = useState("characters");
 
   return (
     <>
       <AppContext.Provider
         value={{
+          censoredMode,
+          setCensoredMode,
           selectedAreaId,
           setSelectedAreaId,
           selectedItemId,

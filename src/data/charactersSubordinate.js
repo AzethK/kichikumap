@@ -646,7 +646,7 @@ export const charactersSubordinate = {
 
     variants: {
       label:
-        "Talking to her raises her Strategy, up to 80%. If raped her Strategy will become 0% and her SCA will be reduced",
+        "Talking to her raises her Strategy, up to 80%. If called to harem her Strategy will become 0% and her SCA will be reduced",
       strategy: 80,
       sca: ["-1/-1", "-1/-2", "-1/-1"],
     },
