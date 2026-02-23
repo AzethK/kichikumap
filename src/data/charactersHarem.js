@@ -11,6 +11,7 @@ export const harem = {
   melfeis: {},
   soul: {},
   anasel: {},
+  royal_guard: {},
   maria: {},
   shizuka: {},
   elenoa: {},

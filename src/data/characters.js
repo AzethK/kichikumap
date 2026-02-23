@@ -531,6 +531,13 @@ export const characters = {
       "If she was obtained during the prologue she can be obtained again by levying area_helman_golak after building the S&M Tower",
     ],
   },
+  royal_guard: {
+    id: "royal_guard",
+    name: "Royal Guard",
+    portrait: "royal_guard.png",
+    sprite: "royal_guard.png",
+    recruitCondition: ["Call character_leila in the Harem for the first time"],
+  },
   mokomoko: {
     id: "mokomoko",
     name: "Mokomoko Takenaka",
