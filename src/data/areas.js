@@ -428,7 +428,7 @@ export const areas = [
     economy: 6,
     defense: 1,
     fieldSize: 300,
-    recruitableCharacters: ["isoroku"],
+    enemies: ["katsuie", "samurai_general", "bow_general"],
   },
   {
     id: "japan_osaka",
@@ -440,6 +440,13 @@ export const areas = [
     defense: 10,
     fieldSize: 400,
     recruitableCharacters: ["isoroku"],
+    enemies: [
+      "nobunaga",
+      "samurai_general",
+      "bow_general",
+      "katsuie",
+      "isoroku",
+    ],
   },
   {
     id: "japan_sado",
@@ -450,6 +457,13 @@ export const areas = [
     economy: 30,
     defense: 6,
     fieldSize: 180,
+    enemies: [
+      "nobunaga",
+      "samurai_general",
+      "bow_general",
+      "katsuie",
+      "isoroku",
+    ],
   },
   {
     id: "dungeon_orochis_pit",
@@ -535,6 +549,7 @@ export const areas = [
     economy: 1,
     defense: 7,
     fieldSize: 320,
+    enemies: ["ruberan"],
   },
   {
     id: "helman_archgrad",
@@ -546,6 +561,7 @@ export const areas = [
     defense: 1,
     fieldSize: 1000,
     recruitableCharacters: ["lelyukov"],
+    enemies: ["lelyukov", "helman_knight", "monster_tamer"],
   },
   {
     id: "helman_cossack",
@@ -609,7 +625,8 @@ export const areas = [
     economy: 4,
     defense: 3,
     fieldSize: 580,
-    recruitableCharacters: ["rolex"],
+    recruitableCharacters: ["rolex", "saulnia", "katyusha"],
+    enemies: ["helman_knight", "rolex", "saulnia", "katyusha"],
   },
   {
     id: "helman_path",
