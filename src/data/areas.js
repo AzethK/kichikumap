@@ -241,6 +241,7 @@ export const areas = [
     economy: 10,
     defense: 4,
     fieldSize: 320,
+    enemies: ["freecity_general"],
   },
   {
     id: "freecities_ice",
@@ -251,6 +252,7 @@ export const areas = [
     economy: 11,
     defense: 3,
     fieldSize: 410,
+    enemies: ["freecity_general"],
   },
   {
     id: "freecities_diphtheria",
@@ -261,6 +263,7 @@ export const areas = [
     economy: 15,
     defense: 1,
     fieldSize: 130,
+    enemies: ["freecity_general"],
   },
   {
     id: "freecities_l_zile",
@@ -271,6 +274,7 @@ export const areas = [
     economy: 9,
     defense: 4,
     fieldSize: 250,
+    enemies: ["freecity_general"],
   },
   {
     id: "freecities_custom",
@@ -292,6 +296,8 @@ export const areas = [
     economy: 8,
     defense: 4,
     fieldSize: 250,
+    recruitableCharacters: ["mars"],
+    enemies: ["mars"],
   },
   {
     id: "freecities_red",
@@ -302,6 +308,7 @@ export const areas = [
     economy: 10,
     defense: 2,
     fieldSize: 350,
+    enemies: ["freecity_general"],
   },
   {
     id: "freecities_the_o",
@@ -312,6 +319,7 @@ export const areas = [
     economy: 15,
     defense: 2,
     fieldSize: 400,
+    enemies: ["freecity_general"],
   },
 
   {
@@ -323,6 +331,8 @@ export const areas = [
     economy: 7,
     defense: 1,
     fieldSize: 300,
+    recruitableCharacters: ["sayori"],
+    enemies: ["sayori", "freecity_general"],
   },
   {
     id: "freecities_hanna",
@@ -334,6 +344,7 @@ export const areas = [
     defense: 3,
     fieldSize: 220,
     recruitableCharacters: ["gengorou"],
+    enemies: ["freecity_general", "gengorou"],
   },
   {
     id: "freecities_toushin_city",
@@ -354,6 +365,7 @@ export const areas = [
     economy: 13,
     defense: 6,
     fieldSize: 220,
+    enemies: ["freecity_general"],
   },
   {
     id: "freecities_shangrila",
@@ -365,6 +377,7 @@ export const areas = [
     defense: 3,
     fieldSize: 420,
     recruitableCharacters: ["kaijuprince"],
+    enemies: ["desert_guide"],
   },
   {
     id: "dungeon_titi_lake",

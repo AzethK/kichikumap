@@ -71,7 +71,11 @@ export default function CharacterCard({ character }) {
       <div>
         <div className="character-name">
           {" "}
-          <strong>{character.name}</strong>
+          <strong>
+            {Array.isArray(character.name) ?
+              character.genericName
+            : character.name}
+          </strong>
         </div>
         {(role.includes("Harem") || role.includes("Subordinates")) && (
           <>
