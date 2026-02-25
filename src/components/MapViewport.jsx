@@ -111,7 +111,7 @@ export default function MapViewport({ onAreaClick }) {
     const area = areas.find((a) => a.id === selectedAreaId);
     if (!area) return;
 
-    centerOnArea(area, 2);
+    centerOnArea(area, 1.2);
   }, [selectedAreaId]);
 
   // Effect to handle wheel zooming

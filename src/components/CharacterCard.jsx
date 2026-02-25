@@ -35,6 +35,18 @@ export default function CharacterCard({ character }) {
     return null;
   };
 
+  const getRole = (characterId) => {
+    const roles = [];
+
+    if (charactersSubordinate[characterId]) roles.push("Subordinates");
+    if (harem[characterId]) roles.push("Harem");
+    if (enemies[characterId]) roles.push("Enemies");
+
+    return roles;
+  };
+
+  const role = getRole(character.id);
+
   const conditions = character.recruitCondition ?? [];
   const [step, setStep] = useState(0);
 
@@ -61,32 +73,36 @@ export default function CharacterCard({ character }) {
           {" "}
           <strong>{character.name}</strong>
         </div>
-
-        <>
-          <div className="condition-box">
-            {hasConditions ?
-              <div className="condition-step">
-                {<ConditionText text={conditions[step]} />}
-              </div>
-            : <p className="condition-step">Recruited automatically</p>}
-          </div>
-
-          {conditions.length > 1 && (
-            <div className="condition-nav">
-              <button onClick={prev} disabled={step === 0}>
-                ◀
-              </button>
-
-              <span>
-                {step + 1} / {conditions.length}
-              </span>
-
-              <button onClick={next} disabled={step === conditions.length - 1}>
-                ▶
-              </button>
+        {(role.includes("Harem") || role.includes("Subordinates")) && (
+          <>
+            <div className="condition-box">
+              {hasConditions ?
+                <div className="condition-step">
+                  {<ConditionText text={conditions[step]} />}
+                </div>
+              : <p className="condition-step">Recruited automatically</p>}
             </div>
-          )}
-        </>
+
+            {conditions.length > 1 && (
+              <div className="condition-nav">
+                <button onClick={prev} disabled={step === 0}>
+                  ◀
+                </button>
+
+                <span>
+                  {step + 1} / {conditions.length}
+                </span>
+
+                <button
+                  onClick={next}
+                  disabled={step === conditions.length - 1}
+                >
+                  ▶
+                </button>
+              </div>
+            )}
+          </>
+        )}
       </div>
     </div>
   );

@@ -13,6 +13,9 @@ export default function AreaPanel({ areaId, onClose }) {
   const recruitIds = area.recruitableCharacters ?? [];
   const recruits = recruitIds.map((id) => characters[id]);
 
+  const enemyIds = area.enemies ?? [];
+  const enemies = enemyIds.map((id) => characters[id]);
+
   const region = area.id.split("_")[0];
   const regionIcon = regionIcons[region];
   const regionStyle = regionStyles[region];
@@ -51,6 +54,16 @@ export default function AreaPanel({ areaId, onClose }) {
         )}
 
         {recruits.map((character) => (
+          <CharacterCard key={character.id} character={character} />
+        ))}
+      </section>
+
+      <section>
+        <h3>Enemies</h3>
+
+        {enemies.length === 0 && <p className="empty">No enemies.</p>}
+
+        {enemies.map((character) => (
           <CharacterCard key={character.id} character={character} />
         ))}
       </section>

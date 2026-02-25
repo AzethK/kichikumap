@@ -48,7 +48,8 @@ export const areas = [
     economy: 6,
     defense: 5,
     fieldSize: 220,
-    recruitableCharacters: ["haurein", "melfeis"],
+    recruitableCharacters: ["melfeis"],
+    enemies: ["pegasus", "dodge", "melfeis"],
   },
   {
     id: "leazas_south",
@@ -59,7 +60,8 @@ export const areas = [
     economy: 13,
     defense: 8,
     fieldSize: 250,
-    recruitableCharacters: ["haurein", "melfeis"],
+    recruitableCharacters: ["melfeis"],
+    enemies: ["pegasus", "dodge", "melfeis"],
   },
   {
     id: "leazas_ys",
@@ -71,6 +73,15 @@ export const areas = [
     defense: 2,
     fieldSize: 300,
     recruitableCharacters: ["haurein", "melfeis"],
+    enemies: [
+      "ex",
+      "haurein",
+      "pegasus",
+      "sakanaku",
+      "melfeis",
+      "dodge",
+      "jibul",
+    ],
   },
   {
     id: "leazas_oaks",
@@ -82,6 +93,15 @@ export const areas = [
     defense: 4,
     fieldSize: 232,
     recruitableCharacters: ["haurein", "melfeis"],
+    enemies: [
+      "ex",
+      "haurein",
+      "pegasus",
+      "sakanaku",
+      "melfeis",
+      "dodge",
+      "jibul",
+    ],
   },
   {
     id: "leazas_baranchi",
@@ -92,7 +112,8 @@ export const areas = [
     economy: 18,
     defense: 2,
     fieldSize: 400,
-    recruitableCharacters: ["haurein", "melfeis"],
+    recruitableCharacters: ["haurein"],
+    enemies: ["ex", "haurein", "sakanaku", "jibul"],
   },
   {
     id: "leazas_wes",
