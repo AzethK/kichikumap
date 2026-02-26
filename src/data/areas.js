@@ -499,6 +499,7 @@ export const areas = [
     defense: 3,
     fieldSize: 420,
     recruitableCharacters: ["sill", "soul"],
+    enemies: ["lelyukov", "helman_knight", "monster_tamer"],
   },
   {
     id: "helman_log_b",
@@ -509,6 +510,7 @@ export const areas = [
     economy: 4,
     defense: 5,
     fieldSize: 620,
+    enemies: ["lelyukov", "helman_knight", "monster_tamer"],
   },
   {
     id: "helman_log_a",
@@ -519,6 +521,7 @@ export const areas = [
     economy: 2,
     defense: 6,
     fieldSize: 320,
+    enemies: ["lelyukov", "helman_knight", "monster_tamer"],
   },
   {
     id: "helman_vladivostok",
@@ -539,6 +542,7 @@ export const areas = [
     economy: 4,
     defense: 3,
     fieldSize: 660,
+    enemies: ["lelyukov", "helman_knight", "monster_tamer"],
   },
   {
     id: "helman_ancient_ruins",
@@ -573,6 +577,7 @@ export const areas = [
     defense: 0,
     fieldSize: 420,
     recruitableCharacters: ["cream"],
+    enemies: ["monster_tamer", "helman_knight", "nero", "cream"],
   },
   {
     id: "helman_siberia",
@@ -583,6 +588,7 @@ export const areas = [
     economy: 1,
     defense: 5,
     fieldSize: 420,
+    enemies: ["lelyukov", "helman_knight", "monster_tamer"],
   },
   {
     id: "helman_rosesgrad",
@@ -593,6 +599,7 @@ export const areas = [
     economy: 4,
     defense: 6,
     fieldSize: 520,
+    enemies: ["lelyukov", "helman_knight", "monster_tamer"],
   },
   {
     id: "helman_pawn",
@@ -604,6 +611,7 @@ export const areas = [
     defense: 3,
     fieldSize: 200,
     recruitableCharacters: ["cream"],
+    enemies: ["monster_tamer", "helman_knight", "nero", "cream"],
   },
   {
     id: "helman_sudori_13",
@@ -615,6 +623,7 @@ export const areas = [
     defense: 5,
     fieldSize: 420,
     recruitableCharacters: ["cream"],
+    enemies: ["monster_tamer", "helman_knight", "nero", "cream"],
   },
   {
     id: "helman_sudori_10",
@@ -647,6 +656,7 @@ export const areas = [
     economy: 5,
     defense: 5,
     fieldSize: 820,
+    enemies: ["helman_knight", "mineva", "tami", "maha"],
   },
   {
     id: "helman_lang_bau",
@@ -658,6 +668,7 @@ export const areas = [
     defense: 3,
     fieldSize: 1000,
     recruitableCharacters: ["aristoles"],
+    enemies: ["helman_knight", "mineva", "tami", "maha", "helman_guard"],
   },
   {
     id: "helman_sudori_17",
@@ -669,6 +680,7 @@ export const areas = [
     defense: 3,
     fieldSize: 420,
     recruitableCharacters: ["patton", "hunty", "freak", "hubert"],
+    enemies: ["helman_knight", "monster_tamer", "aristoles", "convert"],
   },
   {
     id: "helman_parnas",
@@ -679,6 +691,7 @@ export const areas = [
     economy: 4,
     defense: 3,
     fieldSize: 420,
+    enemies: ["helman_knight", "monster_tamer", "aristoles", "convert"],
   },
   {
     id: "helman_laurengrad",
@@ -689,6 +702,7 @@ export const areas = [
     economy: 5,
     defense: 3,
     fieldSize: 1420,
+    enemies: ["helman_knight", "monster_tamer", "aristoles", "convert"],
   },
   {
     id: "helman_great_wall_a",
