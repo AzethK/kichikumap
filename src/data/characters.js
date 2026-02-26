@@ -985,7 +985,7 @@ export const characters = {
       "Noplans / Casmint / Nei / Reshie / Starlighter / Kyouko / Sanneri",
       "Renko / Jessica / Am / Mayumi / Hiroko / Suppli / Rue",
     ],
-    genericName: "Mage Leader",
+    genericName: "Mage General",
     portrait: "mage_leader.png",
     sprite: "mage_leader.png",
     recruitCondition: [],

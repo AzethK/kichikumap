@@ -486,6 +486,7 @@ export const areas = [
     defense: 6,
     fieldSize: 200,
     recruitableCharacters: ["gurwin"],
+    enemies: ["temple_knight"],
   },
   //#endregion AL
 
@@ -853,6 +854,7 @@ export const areas = [
     economy: 8,
     defense: 15,
     fieldSize: 110,
+    enemies: ["slave_general", "wall", "mage_leader", "saias"],
   },
   {
     id: "zeth_sabasaba",
@@ -863,6 +865,7 @@ export const areas = [
     economy: 13,
     defense: 10,
     fieldSize: 400,
+    enemies: ["wall", "mage_leader"],
   },
   {
     id: "zeth_italia",
@@ -873,6 +876,7 @@ export const areas = [
     economy: 13,
     defense: 4,
     fieldSize: 500,
+    enemies: ["wall", "mage_leader"],
   },
   {
     id: "zeth_tape",
@@ -883,6 +887,7 @@ export const areas = [
     economy: 14,
     defense: 9,
     fieldSize: 800,
+    enemies: ["slave_general", "mage_leader", "uspira"],
   },
   {
     id: "zeth_nagarmaule",
@@ -893,6 +898,7 @@ export const areas = [
     economy: 4,
     defense: 3,
     fieldSize: 1000,
+    enemies: ["wall", "mage_leader"],
   },
   {
     id: "zeth_old",
@@ -903,6 +909,7 @@ export const areas = [
     economy: 7,
     defense: 4,
     fieldSize: 980,
+    enemies: ["slave_general", "mage_leader", "alex"],
   },
   {
     id: "zeth_bath",
@@ -913,6 +920,7 @@ export const areas = [
     economy: 11,
     defense: 6,
     fieldSize: 700,
+    enemies: ["wall", "mage_leader"],
   },
   {
     id: "zeth_amber_castle",
@@ -923,6 +931,7 @@ export const areas = [
     economy: 3,
     defense: 10,
     fieldSize: 200,
+    enemies: ["slave_general", "mage_leader", "kabachahn"],
   },
   {
     id: "zeth_magics_tower",
@@ -934,6 +943,7 @@ export const areas = [
     defense: 6,
     fieldSize: 270,
     recruitableCharacters: ["magic"],
+    enemies: ["slave_general", "mage_leader", "alex"],
   },
   {
     id: "zeth_nagis_tower",
@@ -945,6 +955,7 @@ export const areas = [
     defense: 11,
     fieldSize: 200,
     recruitableCharacters: ["nagi"],
+    enemies: ["slave_general", "ragarl", "nagi"],
   },
   {
     id: "zeth_chizukos_tower",
@@ -956,6 +967,7 @@ export const areas = [
     defense: 11,
     fieldSize: 200,
     recruitableCharacters: ["chizuko"],
+    enemies: ["mage_leader", "slave_general", "chizuko"],
   },
   {
     id: "zeth_palace",
@@ -966,6 +978,7 @@ export const areas = [
     economy: 13,
     defense: 11,
     fieldSize: 200,
+    enemies: ["wall", "mage_leader"],
   },
   {
     id: "zeth_papayas_tower",
@@ -976,6 +989,7 @@ export const areas = [
     economy: 3,
     defense: 11,
     fieldSize: 200,
+    enemies: ["mage_leader", "slave_general", "papaya"],
   },
   {
     id: "zeth_parityoran",
@@ -986,6 +1000,7 @@ export const areas = [
     economy: 9,
     defense: 6,
     fieldSize: 600,
+    enemies: ["wall", "mage_leader"],
   },
   {
     id: "zeth_maginot_line_a",
@@ -996,6 +1011,7 @@ export const areas = [
     economy: 1,
     defense: 14,
     fieldSize: 300,
+    enemies: ["wall", "mage_leader"],
   },
   {
     id: "zeth_maginot_line_b",
@@ -1006,6 +1022,7 @@ export const areas = [
     economy: 1,
     defense: 14,
     fieldSize: 300,
+    enemies: ["wall", "mage_leader"],
   },
   {
     id: "zeth_ardennes",
@@ -1016,6 +1033,7 @@ export const areas = [
     economy: 8,
     defense: 1,
     fieldSize: 400,
+    enemies: ["wall", "mage_leader"],
   },
   {
     id: "zeth_marc",
@@ -1026,6 +1044,7 @@ export const areas = [
     economy: 10,
     defense: 3,
     fieldSize: 400,
+    enemies: ["wall", "mage_leader"],
   },
   {
     id: "dungeon_holy_gals_dungeon",
