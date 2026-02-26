@@ -355,6 +355,7 @@ export const areas = [
     economy: 11,
     defense: 3,
     fieldSize: 320,
+    enemies: ["sanakia"],
   },
   {
     id: "freecities_portugal",
@@ -532,6 +533,7 @@ export const areas = [
     economy: 1,
     defense: 4,
     fieldSize: 1220,
+    enemies: ["helman_guard"],
   },
   {
     id: "helman_golak",
@@ -646,6 +648,7 @@ export const areas = [
     economy: 3,
     defense: 3,
     fieldSize: 420,
+    enemies: ["helman_guard"],
   },
   {
     id: "helman_micrograd",
@@ -713,6 +716,7 @@ export const areas = [
     economy: 1,
     defense: 10,
     fieldSize: 300,
+    enemies: ["helman_guard"],
   },
   {
     id: "helman_great_wall_b",
@@ -723,6 +727,7 @@ export const areas = [
     economy: 1,
     defense: 10,
     fieldSize: 300,
+    enemies: ["helman_guard"],
   },
   {
     id: "helman_great_wall_c",
@@ -733,6 +738,7 @@ export const areas = [
     economy: 1,
     defense: 10,
     fieldSize: 300,
+    enemies: ["helman_guard"],
   },
   {
     id: "helman_laborie",
@@ -743,6 +749,7 @@ export const areas = [
     economy: 3,
     defense: 3,
     fieldSize: 420,
+    enemies: ["helman_guard"],
   },
   {
     id: "helman_icoma",
@@ -753,6 +760,7 @@ export const areas = [
     economy: 4,
     defense: 0,
     fieldSize: 500,
+    enemies: ["helman_guard"],
   },
   {
     id: "helman_walkland",
@@ -763,6 +771,7 @@ export const areas = [
     economy: 6,
     defense: 5,
     fieldSize: 300,
+    enemies: ["helman_guard"],
   },
 
   {
