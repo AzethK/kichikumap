@@ -1079,6 +1079,7 @@ export const areas = [
     economy: 0,
     defense: 6,
     fieldSize: 300,
+    enemies: ["medusa", "monster_general", "monster_general_mage"],
   },
   {
     id: "kayblis_red_house",
@@ -1089,6 +1090,7 @@ export const areas = [
     economy: 0,
     defense: 0,
     fieldSize: 900,
+    enemies: ["monster_general", "kaybnyan"],
   },
   {
     id: "kayblis_blue_house",
@@ -1099,6 +1101,7 @@ export const areas = [
     economy: 0,
     defense: 0,
     fieldSize: 900,
+    enemies: ["monster_general", "kaybwan"],
   },
   {
     id: "kayblis_kesselrings_castle",
@@ -1109,6 +1112,7 @@ export const areas = [
     economy: 0,
     defense: 6,
     fieldSize: 500,
+    enemies: ["kesselring", "monster_general", "monster_general_mage"],
   },
   {
     id: "kayblis_camillas_castle",
@@ -1119,6 +1123,7 @@ export const areas = [
     economy: 0,
     defense: 6,
     fieldSize: 500,
+    enemies: ["camilla", "monster_general_mage"],
   },
   {
     id: "kayblis_bone_forest",
@@ -1129,6 +1134,7 @@ export const areas = [
     economy: 0,
     defense: 0,
     fieldSize: 700,
+    enemies: ["monster_general", "monster_general_mage"],
   },
   {
     id: "kayblis_tearing_forest",
@@ -1139,6 +1145,7 @@ export const areas = [
     economy: 0,
     defense: 0,
     fieldSize: 700,
+    enemies: ["monster_general", "monster_general_mage"],
   },
   {
     id: "dungeon_maid_graveyard",
@@ -1180,6 +1187,7 @@ export const areas = [
     economy: 0,
     defense: 10,
     fieldSize: 150,
+    enemies: ["monster_general", "monster_general_mage"],
   },
   {
     id: "hornet_demon_lords_castle",
@@ -1190,6 +1198,7 @@ export const areas = [
     economy: 0,
     defense: 6,
     fieldSize: 500,
+    enemies: ["monster_general", "kayblis"],
   },
   {
     id: "hornet_sulfur_forest",
@@ -1200,6 +1209,7 @@ export const areas = [
     economy: 0,
     defense: 0,
     fieldSize: 800,
+    enemies: ["monster_general", "monster_general_mage"],
   },
   {
     id: "hornet_silkys_castle",
@@ -1210,6 +1220,7 @@ export const areas = [
     economy: 0,
     defense: 8,
     fieldSize: 200,
+    enemies: ["monster_general", "monster_general_mage"],
   },
   {
     id: "hornet_land_of_death",
@@ -1220,6 +1231,7 @@ export const areas = [
     economy: 0,
     defense: 0,
     fieldSize: 800,
+    enemies: ["monster_general", "monster_general_mage"],
   },
   {
     id: "hornet_cascade_bau",
@@ -1230,6 +1242,7 @@ export const areas = [
     economy: 0,
     defense: 0,
     fieldSize: 1000,
+    enemies: ["monster_general", "monster_general_mage"],
   },
   {
     id: "hornet_grief_valley",
@@ -1240,6 +1253,7 @@ export const areas = [
     economy: 0,
     defense: 0,
     fieldSize: 700,
+    enemies: ["monster_general", "monster_general_mage"],
   },
 
   {
