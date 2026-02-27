@@ -1066,6 +1066,7 @@ export const characters = {
     portrait: "babolat.png",
     sprite: "babolat.png",
     recruitCondition: [],
+    monsterArmy: true,
   },
   redeye: {
     id: "redeye",
@@ -1073,6 +1074,7 @@ export const characters = {
     portrait: "redeye.png",
     sprite: "redeye.png",
     recruitCondition: [],
+    monsterArmy: true,
   },
   kaito: {
     id: "kaito",
@@ -1080,6 +1082,7 @@ export const characters = {
     portrait: "kaito.png",
     sprite: "kaito.png",
     recruitCondition: [],
+    monsterArmy: true,
   },
   kesselring: {
     id: "kesselring",
@@ -1087,6 +1090,7 @@ export const characters = {
     portrait: "kesselring.png",
     sprite: "kesselring.png",
     recruitCondition: [],
+    monsterArmy: true,
   },
   medusa: {
     id: "medusa",
@@ -1094,6 +1098,7 @@ export const characters = {
     portrait: "medusa.png",
     sprite: "medusa.png",
     recruitCondition: [],
+    monsterArmy: true,
   },
   kayblis: {
     id: "kayblis",
@@ -1101,6 +1106,7 @@ export const characters = {
     portrait: ["kayblis.png", "kaybis2.png"],
     sprite: "kayblis.png",
     recruitCondition: [],
+    monsterArmy: true,
   },
   pg_7: {
     id: "pg_7",
@@ -1108,6 +1114,7 @@ export const characters = {
     portrait: "pg_7.png",
     sprite: "pg_7.png",
     recruitCondition: [],
+    monsterArmy: true,
   },
   pg_9: {
     id: "pg_9",
@@ -1115,6 +1122,7 @@ export const characters = {
     portrait: "pg_9.png",
     sprite: "pg_9.png",
     recruitCondition: [],
+    monsterArmy: true,
   },
   pg_x2: {
     id: "pg_x2",
@@ -1122,6 +1130,7 @@ export const characters = {
     portrait: "pg_x2.png",
     sprite: "pg_x2.png",
     recruitCondition: [],
+    monsterArmy: true,
   },
   temple_knight: {
     id: "temple_knight",

@@ -20,6 +20,11 @@ export default function AreaPanel({ areaId, onClose }) {
   const regionIcon = regionIcons[region];
   const regionStyle = regionStyles[region];
 
+  const monsterArmy = enemies.filter((character) => character?.monsterArmy);
+  const regularEnemies = enemies.filter(
+    (character) => !character?.monsterArmy == true,
+  );
+
   return (
     <div className="area-panel">
       <div
@@ -59,14 +64,24 @@ export default function AreaPanel({ areaId, onClose }) {
       </section>
 
       <section>
-        <h3>Enemies</h3>
+        <h3>Regular Enemies</h3>
 
-        {enemies.length === 0 && <p className="empty">No enemies.</p>}
+        {regularEnemies.length === 0 && (
+          <p className="empty">No regular enemies.</p>
+        )}
 
-        {enemies.map((character) => (
+        {regularEnemies.map((character) => (
           <CharacterCard key={character.id} character={character} />
         ))}
       </section>
+      {monsterArmy.length > 0 && (
+        <section>
+          <h3>Monster Army</h3>
+          {monsterArmy.map((character) => (
+            <CharacterCard key={character.id} character={character} />
+          ))}
+        </section>
+      )}
     </div>
   );
 }

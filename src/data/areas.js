@@ -28,6 +28,7 @@ export const areas = [
       "louis",
       "cecil",
     ],
+    enemies: ["xacalite", "kesselring", "babolat"],
   },
   {
     id: "leazas_north",
@@ -38,6 +39,7 @@ export const areas = [
     economy: 10,
     defense: 5,
     fieldSize: 220,
+    enemies: ["babolat"],
   },
   {
     id: "leazas_oc",
@@ -61,7 +63,7 @@ export const areas = [
     defense: 8,
     fieldSize: 250,
     recruitableCharacters: ["melfeis"],
-    enemies: ["pegasus", "dodge", "melfeis"],
+    enemies: ["pegasus", "dodge", "melfeis", "kesselring"],
   },
   {
     id: "leazas_ys",
@@ -164,6 +166,7 @@ export const areas = [
     economy: 6,
     defense: 9,
     fieldSize: 210,
+    enemies: ["babolat"],
   },
 
   {
@@ -263,7 +266,7 @@ export const areas = [
     economy: 15,
     defense: 1,
     fieldSize: 130,
-    enemies: ["freecity_general"],
+    enemies: ["freecity_general", "kesselring"],
   },
   {
     id: "freecities_l_zile",
@@ -308,7 +311,7 @@ export const areas = [
     economy: 10,
     defense: 2,
     fieldSize: 350,
-    enemies: ["freecity_general"],
+    enemies: ["freecity_general", "kesselring"],
   },
   {
     id: "freecities_the_o",
@@ -523,7 +526,7 @@ export const areas = [
     economy: 2,
     defense: 6,
     fieldSize: 320,
-    enemies: ["lelyukov", "helman_knight", "monster_tamer"],
+    enemies: ["lelyukov", "helman_knight", "monster_tamer", "babolat"],
   },
   {
     id: "helman_vladivostok",
@@ -545,7 +548,7 @@ export const areas = [
     economy: 4,
     defense: 3,
     fieldSize: 660,
-    enemies: ["lelyukov", "helman_knight", "monster_tamer"],
+    enemies: ["lelyukov", "helman_knight", "monster_tamer", "babolat"],
   },
   {
     id: "helman_ancient_ruins",
@@ -591,7 +594,7 @@ export const areas = [
     economy: 1,
     defense: 5,
     fieldSize: 420,
-    enemies: ["lelyukov", "helman_knight", "monster_tamer"],
+    enemies: ["lelyukov", "helman_knight", "monster_tamer", "babolat"],
   },
   {
     id: "helman_rosesgrad",
@@ -602,7 +605,7 @@ export const areas = [
     economy: 4,
     defense: 6,
     fieldSize: 520,
-    enemies: ["lelyukov", "helman_knight", "monster_tamer"],
+    enemies: ["lelyukov", "helman_knight", "monster_tamer", "babolat"],
   },
   {
     id: "helman_pawn",
@@ -638,7 +641,7 @@ export const areas = [
     defense: 3,
     fieldSize: 580,
     recruitableCharacters: ["rolex", "saulnia", "katyusha"],
-    enemies: ["helman_knight", "rolex", "saulnia", "katyusha"],
+    enemies: ["helman_knight", "rolex", "saulnia", "katyusha", "babolat"],
   },
   {
     id: "helman_path",
@@ -660,7 +663,7 @@ export const areas = [
     economy: 5,
     defense: 5,
     fieldSize: 820,
-    enemies: ["helman_knight", "mineva", "tami", "maha"],
+    enemies: ["helman_knight", "mineva", "tami", "maha", "babolat"],
   },
   {
     id: "helman_lang_bau",
@@ -672,7 +675,14 @@ export const areas = [
     defense: 3,
     fieldSize: 1000,
     recruitableCharacters: ["aristoles"],
-    enemies: ["helman_knight", "mineva", "tami", "maha", "helman_guard"],
+    enemies: [
+      "helman_knight",
+      "mineva",
+      "tami",
+      "maha",
+      "helman_guard",
+      "babolat",
+    ],
   },
   {
     id: "helman_sudori_17",
@@ -706,7 +716,13 @@ export const areas = [
     economy: 5,
     defense: 3,
     fieldSize: 1420,
-    enemies: ["helman_knight", "monster_tamer", "aristoles", "convert"],
+    enemies: [
+      "helman_knight",
+      "monster_tamer",
+      "aristoles",
+      "convert",
+      "babolat",
+    ],
   },
   {
     id: "helman_great_wall_a",
@@ -717,7 +733,7 @@ export const areas = [
     economy: 1,
     defense: 10,
     fieldSize: 300,
-    enemies: ["helman_guard"],
+    enemies: ["helman_guard", "babolat"],
   },
   {
     id: "helman_great_wall_b",
@@ -761,7 +777,7 @@ export const areas = [
     economy: 4,
     defense: 0,
     fieldSize: 500,
-    enemies: ["helman_guard"],
+    enemies: ["helman_guard", "babolat"],
   },
   {
     id: "helman_walkland",
@@ -887,7 +903,7 @@ export const areas = [
     economy: 14,
     defense: 9,
     fieldSize: 800,
-    enemies: ["slave_general", "mage_leader", "uspira"],
+    enemies: ["slave_general", "mage_leader", "uspira", "kesselring"],
   },
   {
     id: "zeth_nagarmaule",
@@ -989,7 +1005,7 @@ export const areas = [
     economy: 3,
     defense: 11,
     fieldSize: 200,
-    enemies: ["mage_leader", "slave_general", "papaya"],
+    enemies: ["mage_leader", "slave_general", "papaya", "kesselring"],
   },
   {
     id: "zeth_parityoran",
