@@ -371,6 +371,7 @@ export const characters = {
       "Allow Galtia to conquer two poisoned cities",
       "Allow Galtia to conquer one more city",
     ],
+    monsterArmy: true,
   },
   saizel_hawzel: {
     id: "saizel_hawzel",
@@ -933,6 +934,7 @@ export const characters = {
     genericName: "Monster General",
     portrait: "monster_general.png",
     sprite: "monster_general.png",
+    monsterArmy: true,
     recruitCondition: [],
   },
   monster_general_mage: {
@@ -941,6 +943,7 @@ export const characters = {
     genericName: "Monster General Mage",
     portrait: "monster_general_mage.png",
     sprite: "monster_general_mage.png",
+    monsterArmy: true,
     recruitCondition: [],
   },
   la_saizel: {
@@ -948,6 +951,7 @@ export const characters = {
     name: "La Saizel",
     portrait: "saizel_hawzel.png",
     sprite: "la_saizel.png",
+    monsterArmy: true,
     recruitCondition: [],
   },
   camilla: {
@@ -955,6 +959,7 @@ export const characters = {
     name: "Camilla",
     portrait: "camilla.png",
     sprite: "camilla.png",
+    monsterArmy: true,
     recruitCondition: [],
   },
   lei: {
@@ -962,6 +967,7 @@ export const characters = {
     name: "Lei",
     portrait: "lei.png",
     sprite: "lei.png",
+    monsterArmy: true,
     recruitCondition: [],
   },
   sieg: {
@@ -969,6 +975,7 @@ export const characters = {
     name: "Sieg",
     portrait: ["sieg.png", "sieg2.png"],
     sprite: "sieg.png",
+    monsterArmy: true,
     recruitCondition: [],
   },
   wall: {
@@ -1103,7 +1110,7 @@ export const characters = {
   kayblis: {
     id: "kayblis",
     name: "Kayblis",
-    portrait: ["kayblis.png", "kaybis2.png"],
+    portrait: ["kayblis.png", "kayblis2.png"],
     sprite: "kayblis.png",
     recruitCondition: [],
     monsterArmy: true,
@@ -1159,6 +1166,7 @@ export const characters = {
     portrait: "silky.png",
     sprite: "silky.png",
     recruitCondition: [],
+    monsterArmy: true,
   },
 
   kaybwan: {
@@ -1167,6 +1175,7 @@ export const characters = {
     portrait: "kaybwan.png",
     sprite: "kaybwan.png",
     recruitCondition: [],
+    monsterArmy: true,
   },
   kaybnyan: {
     id: "kaybnyan",
@@ -1174,6 +1183,7 @@ export const characters = {
     portrait: "kaybnyan.png",
     sprite: "kaybnyan.png",
     recruitCondition: [],
+    monsterArmy: true,
   },
   kaiju_gaga: {
     id: "kaiju_gaga",

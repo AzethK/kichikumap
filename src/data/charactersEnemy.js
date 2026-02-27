@@ -1139,7 +1139,7 @@ export const enemies = {
     hp: 40,
     strategy: 0,
     magic: 0,
-    battleSprite: ["e_kayblisSolo.png"],
+    battleSprite: ["e_kayblisSolo.png", "e_kayblisSolo2.png"],
     attackType: "Demon Assault",
   },
   pg_7: {
