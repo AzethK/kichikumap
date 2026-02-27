@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { getItemSprite } from "../data/imageGetter";
 import { items } from "../data/items";
 import { characters } from "../data/characters";
@@ -11,6 +11,25 @@ export default function CharacterDetail({
   setSelectedCharacterId,
   setMode,
 }) {
+  const BASE_WIDTH = 850;
+  const BASE_HEIGHT = 800;
+
+  const [fitScale, setFitScale] = useState(1);
+
+  useEffect(() => {
+    const updateScale = () => {
+      const widthScale = (window.innerWidth * 0.9) / BASE_WIDTH;
+      const heightScale = (window.innerHeight * 0.9) / BASE_HEIGHT;
+
+      const scale = Math.min(1, widthScale, heightScale);
+
+      setFitScale(scale);
+    };
+
+    updateScale();
+    window.addEventListener("resize", updateScale);
+    return () => window.removeEventListener("resize", updateScale);
+  }, []);
   const item = items[itemId];
   if (!item) return null;
   const sprite = getItemSprite(item.sprite);
@@ -21,14 +40,21 @@ export default function CharacterDetail({
 
   return (
     <div className="overlay-backdrop">
-      <div className="item-overlay">
+      <div
+        className="item-overlay"
+        style={{
+          transform: `scale(${fitScale})`,
+          transformOrigin: "center",
+        }}
+        onClic
+      >
         <button className="overlay-close" onClick={onClose}>
           ✕
         </button>
 
         <div className="character-detail-layout">
           {/* ================= HEADER ================= */}
-          <div className="character-header">
+          <div className="item-header">
             <div className="character-detail-name">
               <h2>{item.name}</h2>
             </div>
@@ -48,7 +74,7 @@ export default function CharacterDetail({
           </div>
 
           {/* ================= BOTTOM GRID ================= */}
-          <div className="character-bottom">
+          <div className="item-bottom">
             {/* Recruitment */}
             <div className="character-recruitment">
               <h2>Acquisition Conditions</h2>

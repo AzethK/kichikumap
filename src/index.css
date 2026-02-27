@@ -649,8 +649,6 @@ body {
   position: relative;
   width: 850px;
   height: 800px;
-  max-width: 95vw;
-  max-height: 95vh;
 
   background: #111;
   padding: 24px;
@@ -660,14 +658,16 @@ body {
   flex-direction: column;
 }
 
+.item-header {
+  padding-top: 30px;
+}
+
 .item-main {
   display: grid;
   grid-template-columns:
     409px
-    420px;
+    1fr;
   gap: 16px;
-  width: 100%;
-  overflow: hidden;
 }
 
 .item-effect {
@@ -676,6 +676,11 @@ body {
   padding: 8px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
+}
+
+.item-bottom {
+  margin-top: 16px;
+  flex: 1;
 }
 
 /* Character variant nav */

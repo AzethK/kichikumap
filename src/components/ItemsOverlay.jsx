@@ -1,8 +1,29 @@
 import { items } from "../data/items";
 import { useAppContext } from "../App.jsx";
 import { getItemSprite } from "../data/imageGetter.js";
+import { useEffect, useState } from "react";
 
 export default function ItemsOverlay({ onClose }) {
+  const BASE_WIDTH = 1300;
+  const BASE_HEIGHT = 800;
+
+  const [fitScale, setFitScale] = useState(1);
+
+  useEffect(() => {
+    const updateScale = () => {
+      const widthScale = (window.innerWidth * 0.9) / BASE_WIDTH;
+      const heightScale = (window.innerHeight * 0.9) / BASE_HEIGHT;
+
+      const scale = Math.min(1, widthScale, heightScale);
+
+      setFitScale(scale);
+    };
+
+    updateScale();
+    window.addEventListener("resize", updateScale);
+    return () => window.removeEventListener("resize", updateScale);
+  }, []);
+
   const activeItems = Object.values(items);
   const { setSelectedItemId } = useAppContext();
 
@@ -10,6 +31,10 @@ export default function ItemsOverlay({ onClose }) {
     <div className="overlay-backdrop" onClick={onClose}>
       <div
         className="subordinates-overlay"
+        style={{
+          transform: `scale(${fitScale})`,
+          transformOrigin: "center",
+        }}
         onClick={(e) => e.stopPropagation()}
       >
         <button className="overlay-close" onClick={onClose}>
