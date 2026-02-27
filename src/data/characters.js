@@ -949,7 +949,7 @@ export const characters = {
   la_saizel: {
     id: "la_saizel",
     name: "La Saizel",
-    portrait: "saizel_hawzel.png",
+    portrait: "la_saizel.png",
     sprite: "la_saizel.png",
     monsterArmy: true,
     recruitCondition: [],
