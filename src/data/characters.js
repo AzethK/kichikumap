@@ -50,7 +50,7 @@ export const characters = {
   },
   barres: {
     id: "barres",
-    name: "Barres Province",
+    name: "Barres Provence",
     portrait: "barres.png",
     sprite: "barres.png",
     recruitCondition: [],
@@ -92,7 +92,7 @@ export const characters = {
   },
   haurein: {
     id: "haurein",
-    name: "Haurein Province",
+    name: "Haurein Provence",
     portrait: "haurein.png",
     sprite: "haurein.png",
     recruitCondition: ["Defeat while fighting the Leazas Rebel Army"],

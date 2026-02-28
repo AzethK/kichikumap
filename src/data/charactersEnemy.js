@@ -606,7 +606,7 @@ export const enemies = {
       "e_nobunagaFull.png",
       "e_nobunagaSolo.png",
     ],
-    attackType: "Demon Assault",
+    attackType: "Fiend Assault",
   },
   samurai_general: {
     unitType: "foot_soldiers",
@@ -769,7 +769,7 @@ export const enemies = {
     strategy: 0,
     magic: 7,
     battleSprite: ["e_falseangels.png", "e_saizelFull.png", "e_saizelSolo.png"],
-    attackType: "Demon Magic",
+    attackType: "Fiend Magic",
   },
   camilla: {
     unitType: "dragon_girls",
@@ -788,7 +788,7 @@ export const enemies = {
       "e_camillaFull.png",
       "e_camillaSolo.png",
     ],
-    attackType: "Demon Assault",
+    attackType: "Fiend Assault",
   },
   lei: {
     omniAtk: 0,
@@ -800,7 +800,7 @@ export const enemies = {
     strategy: 0,
     magic: 5,
     battleSprite: ["e_leiSolo.png"],
-    attackType: "Demon Assault",
+    attackType: "Fiend Assault",
   },
   sieg: {
     unitType: "maneshitas",
@@ -821,7 +821,7 @@ export const enemies = {
       "e_siegFull2.png",
       "e_siegSolo2.png",
     ],
-    attackType: "Demon Assault",
+    attackType: "Fiend Assault",
   },
   wall: {
     unitType: "walls",
@@ -875,7 +875,7 @@ export const enemies = {
     strategy: 0,
     magic: 10,
     battleSprite: ["e_vaswaldSolo.png"],
-    attackType: "Demon Magic",
+    attackType: "Fiend Magic",
   },
   chizuko: {
     unitType: "zeth_mages",
@@ -1045,7 +1045,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_babolatSolo.png"],
-    attackType: "Demon Assault",
+    attackType: "Fiend Assault",
   },
   redeye: {
     unitType: "monsters",
@@ -1064,7 +1064,7 @@ export const enemies = {
       "e_redeyeFull.png",
       "e_redeyeSolo.png",
     ],
-    attackType: "Demon Magic",
+    attackType: "Fiend Magic",
   },
   galtia: {
     unitType: "food",
@@ -1079,7 +1079,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_food.png", "e_galtiaFull.png", "e_galtiaSolo.png"],
-    attackType: "Demon Assault",
+    attackType: "Fiend Assault",
   },
   kaito: {
     unitType: "kaito_clones",
@@ -1094,7 +1094,7 @@ export const enemies = {
     strategy: 0,
     magic: 5,
     battleSprite: ["e_kaitoclones.png", "e_kaitoFull.png", "e_kaitoSolo.png"],
-    attackType: "Demon Assault",
+    attackType: "Fiend Assault",
   },
   kesselring: {
     unitType: "lovers",
@@ -1128,7 +1128,7 @@ export const enemies = {
     strategy: 0,
     magic: 5,
     battleSprite: ["e_snakesans.png", "e_medusaFull.png", "e_medusaSolo.png"],
-    attackType: "Demon Assault",
+    attackType: "Fiend Assault",
   },
   kayblis: {
     omniAtk: 0,
@@ -1140,7 +1140,7 @@ export const enemies = {
     strategy: 0,
     magic: 0,
     battleSprite: ["e_kayblisSolo.png", "e_kayblisSolo2.png"],
-    attackType: "Demon Assault",
+    attackType: "Fiend Assault",
   },
   pg_7: {
     unitType: "pg_x",
@@ -1257,7 +1257,7 @@ export const enemies = {
     strategy: 0,
     magic: 4,
     battleSprite: ["e_silkySolo.png"],
-    attackType: "Demon Assault",
+    attackType: "Fiend Assault",
   },
   satella: {
     unitType: "guardians",
@@ -1272,7 +1272,7 @@ export const enemies = {
     strategy: 0,
     magic: 6,
     battleSprite: ["e_guardians.png", "e_satellaFull.png", "e_satellaSolo.png"],
-    attackType: "Demon Assault",
+    attackType: "Fiend Assault",
   },
   meglass: {
     unitType: "horuses",
@@ -1287,7 +1287,7 @@ export const enemies = {
     strategy: 0,
     magic: 6,
     battleSprite: ["e_horuses.png", "e_meglassFull.png", "e_meglassSolo.png"],
-    attackType: "Demon Assault",
+    attackType: "Fiend Assault",
   },
   kaybwan: {
     unitType: "doggies",

@@ -525,7 +525,7 @@ export const charactersSubordinate = {
     strategy: 0,
     sca: ["0/0", "0/0", "0/0"],
     battleSprite: ["guardians.png", "satellaFull.png", "satellaSolo.png"],
-    attackType: "Demon Magic",
+    attackType: "Fiend Magic",
   },
   meglass: {
     unitType: "horuses",
@@ -547,7 +547,7 @@ export const charactersSubordinate = {
       "meglassSolo.png",
       "meglassSpecial.png",
     ],
-    attackType: "Demon Assault",
+    attackType: "Fiend Assault",
   },
   kentarou: {
     unitType: "leazas_soldiers",
@@ -593,7 +593,7 @@ export const charactersSubordinate = {
       "mikiSpecial.png",
     ],
     surge: "kentarou",
-    attackType: "Demon Magic",
+    attackType: "Fiend Magic",
   },
   julia: {
     unitType: "royal_guards",
@@ -766,7 +766,7 @@ export const charactersSubordinate = {
     replenishRate: 0,
     strategy: 0,
     battleSprite: ["galtiaSolo.png"],
-    attackType: "Demon Assault",
+    attackType: "Fiend Assault",
   },
   saizel_hawzel: {
     unitType: "false_angels",
@@ -781,7 +781,7 @@ export const charactersSubordinate = {
     strategy: 0,
     sca: ["0/0", "0/0", "0/0"],
     battleSprite: ["falseangels.png", "sistersFull.png", "sistersSolo.png"],
-    attackType: "Demon Magic",
+    attackType: "Fiend Magic",
   },
   aristoles: {
     unitType: "helman_knights",
