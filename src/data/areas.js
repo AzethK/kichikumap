@@ -382,7 +382,7 @@ export const areas = [
   },
   {
     id: "freecities_toushin_city",
-    name: "Toushin City",
+    name: "Wargod City",
     x: 4049,
     y: 1779,
     type: "city",
@@ -512,7 +512,7 @@ export const areas = [
   //#region AL
   {
     id: "al_temple_al_hq",
-    name: "Temple AL HQ",
+    name: "Alicist Church HQ",
     x: 3200,
     y: 1722,
     type: "city",
@@ -1401,7 +1401,7 @@ export const areas = [
   },
   {
     id: "hornet_demon_lords_castle",
-    name: "Demon Lord's Castle",
+    name: "Archfiend's Castle",
     x: 1029,
     y: 442,
     type: "city",

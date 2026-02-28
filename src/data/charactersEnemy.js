@@ -1113,7 +1113,7 @@ export const enemies = {
       "e_kesselringFull.png",
       "e_kesselringSolo.png",
     ],
-    attackType: "Demon Assaut",
+    attackType: "Fiend Assault",
   },
   medusa: {
     unitType: "snake_sans",

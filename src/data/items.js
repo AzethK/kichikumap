@@ -1,9 +1,9 @@
 export const items = {
   chaos: {
     id: "chaos",
-    name: "Chaos, The Corrupt Sword",
+    name: "Chaos, The Darksword",
     consumable: false,
-    effect: "Commander Attack +10, allows attacks to damage demons",
+    effect: "Commander Attack +10, allows attacks to damage fiends",
     acquisition: [
       "Fight character_lei once, levy area_leazas_rich",
       "Visit Mary's House in area_leazas_rich, select any option except the fourth",
@@ -15,9 +15,9 @@ export const items = {
   },
   nikkou: {
     id: "nikkou",
-    name: "Nikkou, The Holy Katana",
+    name: "Nikkou, The Lightblade",
     consumable: false,
-    effect: "Commander Attack +10, allows attacks to damage demons",
+    effect: "Commander Attack +10, allows attacks to damage fiends",
     acquisition: [
       `Select "Observe for now" when character_miki and character_kentarou come to area_leazas_castle`,
     ],
@@ -58,7 +58,7 @@ export const items = {
   },
   by_lord: {
     id: "by_lord",
-    name: "By Lord",
+    name: "By Road",
     consumable: false,
     effect: "Commander Attack +2",
     acquisition: [],
@@ -114,7 +114,7 @@ export const items = {
     id: "love_potion",
     name: "Love Potion",
     consumable: true,
-    effect: "Visit Demon Lord's Room in area_leazas_castle to get a CG",
+    effect: "Visit Archfiend's Room in area_leazas_castle to get a CG",
     acquisition: ["Produce at Magic Research Institute"],
     sprite: "love_potion.png",
   },

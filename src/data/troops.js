@@ -105,7 +105,7 @@ export const troops = {
   },
   temple_knights: {
     id: "temple_knights",
-    name: "Temple Knights",
+    name: "Templars",
     atk: 11,
     def: 7,
     upgrade: "30300K/25",

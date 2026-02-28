@@ -468,7 +468,7 @@ export const characters = {
   },
   louis: {
     id: "louis",
-    name: "Louis Quitowack",
+    name: " Luis Kittwac",
     portrait: "louis.png",
     sprite: "louis.png",
     recruitCondition: ["Hire Mercenary A from Pluepet"],
@@ -706,7 +706,7 @@ export const characters = {
   },
   annis: {
     id: "annis",
-    name: "Annis Sawatari",
+    name: "Anise Sawatari",
     portrait: "annis.png",
     sprite: "annis.png",
     recruitCondition: [
@@ -1069,7 +1069,7 @@ export const characters = {
   },
   babolat: {
     id: "babolat",
-    name: "Babolat",
+    name: "Babora",
     portrait: "babolat.png",
     sprite: "babolat.png",
     recruitCondition: [],
@@ -1141,7 +1141,7 @@ export const characters = {
   },
   temple_knight: {
     id: "temple_knight",
-    name: "Temple Knight",
+    name: "Templar",
     portrait: "gurwin.png",
     sprite: "temple_knight.png",
     recruitCondition: [],
@@ -1627,7 +1627,7 @@ export const characters = {
   // },
   // rottenmeier: {
   //   id: "rottenmeier",
-  //   name: "Rottenmeier Gorch",
+  //   name: "Rottenmeier Golcchi",
   //   portrait: "rottenmeier.png",
   //   sprite: "rottenmeier.png",
   //   recruitCondition: [],
