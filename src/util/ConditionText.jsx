@@ -12,7 +12,7 @@ const areaMap = areas.reduce((map, area) => {
   return map;
 }, {});
 
-export default function ConditionText({ text }) {
+export default function ConditionText({ text, onCharacterClick }) {
   const {
     selectedItemId,
     setSelectedItemId,
@@ -44,6 +44,10 @@ export default function ConditionText({ text }) {
             : inHarem ? (setMode("Harem"), setSelectedCharacterId(id))
             : setMode("Subordinates"),
               setSelectedCharacterId(id));
+
+            if (onCharacterClick) {
+              onCharacterClick();
+            }
           }}
         >
           {characters[id]?.name.split(" ")[0] ?? id}

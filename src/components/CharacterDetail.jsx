@@ -630,7 +630,13 @@ export default function CharacterDetail({ characterId, onClose }) {
                     <div className="character-condition-step">
                       {conditions.map((c, i) => (
                         <div key={i}>
-                          • <ConditionText text={c} />
+                          •{" "}
+                          <ConditionText
+                            text={c}
+                            onCharacterClick={() => {
+                              setTroopSpriteIndex(0);
+                            }}
+                          />
                         </div>
                       ))}
                     </div>

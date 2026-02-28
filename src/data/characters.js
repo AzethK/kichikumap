@@ -323,7 +323,7 @@ export const characters = {
     sprite: "ragnarokarc.png",
     recruitCondition: [
       "Collect a levy in area_freecities_the_o, area_freecities_red and then area_freecities_l_zile",
-      "Wait for a rebellion to occur in Poor and suppress it",
+      "Wait for a rebellion to occur in area_leazas_poor and suppress it",
     ],
   },
   chizuko: {
