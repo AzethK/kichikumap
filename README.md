@@ -8,7 +8,7 @@ Work in progress interactive map for Kichikuou Rance
 - Finish the enemy page in CharacterDetail (DONE)
 - Fix up all enemy entries, find a way to deal with the ones without portraits (DONE)
 - Add area defenses, economy and field size for all locations (DONE)
-- Add attack type to all units, make a filter for Direct, Bow and Magic attack types. (DONE)
+- Add attack type to all units (DONE)
 
 # PLANS FOR UPCOMING FEATURES:
 - Add all enemies to map...will have to take a good look at the game code for this one (ONGOING)
