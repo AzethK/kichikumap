@@ -250,6 +250,7 @@ export const areas = [
     x: 3748,
     y: 1181,
     type: "dungeon",
+    enemies: ["sergeant_hanny", "marder"],
   },
   {
     id: "dungeon_isolated_shrine_island",
@@ -257,6 +258,7 @@ export const areas = [
     x: 4077,
     y: 425,
     type: "dungeon",
+    enemies: ["lieutenant_hanny"],
   },
   //#endregion Leazas
 
@@ -421,6 +423,7 @@ export const areas = [
     y: 1384,
     type: "dungeon",
     recruitableCharacters: ["hannyking"],
+    enemies: ["redhanny", "superhanny", "hannyknight", "hannyking"],
   },
   {
     id: "dungeon_dangerous_hole",
@@ -428,6 +431,7 @@ export const areas = [
     x: 3864,
     y: 1696,
     type: "dungeon",
+    enemies: ["lieutenant_hanny"],
   },
   {
     id: "dungeon_uncurse_dungeon",
@@ -436,6 +440,7 @@ export const areas = [
     y: 1548,
     type: "dungeon",
     recruitableCharacters: ["cafe"],
+    enemies: ["sergeant_hanny", "hawkyu"],
   },
   {
     id: "dungeon_peach_blossom_spring",
@@ -450,6 +455,7 @@ export const areas = [
     x: 3821,
     y: 1549,
     type: "dungeon",
+    enemies: ["sergeant_hanny"],
   },
   //#endregion Free Cities
 
@@ -506,6 +512,7 @@ export const areas = [
     x: 4400,
     y: 1906,
     type: "dungeon",
+    enemies: ["sergeant_hanny", "musashibou", "orochi"],
   },
   //#endregion JAPAN
 
@@ -598,7 +605,14 @@ export const areas = [
     economy: 1,
     defense: 7,
     fieldSize: 320,
-    enemies: ["ruberan"],
+    enemies: [
+      "ruberan",
+      "sergeant_hanny",
+      "lieutenant_hanny",
+      "colonel_hanny",
+      "gunagan",
+      "japanesesoldier",
+    ],
   },
   {
     id: "helman_archgrad",
@@ -926,6 +940,7 @@ export const areas = [
     x: 1882,
     y: 96,
     type: "dungeon",
+    enemies: ["sergeant_hanny"],
   },
   {
     id: "dungeon_mt_salen",
@@ -940,6 +955,7 @@ export const areas = [
     x: 2816,
     y: 278,
     type: "dungeon",
+    enemies: ["sergeant_hanny"],
   },
   {
     id: "dungeon_ho_ragas_tower",
@@ -962,6 +978,7 @@ export const areas = [
     x: 2954,
     y: 848,
     type: "dungeon",
+    enemies: ["lieutenant_hanny", "okayu"],
   },
   {
     id: "dungeon_summits_mouth",
@@ -970,6 +987,7 @@ export const areas = [
     y: 752,
     type: "dungeon",
     recruitableCharacters: ["saizel_hawzel"],
+    enemies: ["colonel_hanny", "stoneguardian"],
   },
   {
     id: "dungeon_kalar_forest",
@@ -1262,6 +1280,7 @@ export const areas = [
     x: 3025,
     y: 1365,
     type: "dungeon",
+    enemies: ["colonel_hanny"],
   },
   {
     id: "dungeon_rising_dragon_mountain",
@@ -1269,6 +1288,14 @@ export const areas = [
     x: 2084,
     y: 1124,
     type: "dungeon",
+    enemies: [
+      "sergeant_hanny",
+      "yellowdragon",
+      "reddragon",
+      "greendragon",
+      "bluedragon",
+      "blackdragon",
+    ],
   },
   {
     id: "dungeon_green_village",
@@ -1363,6 +1390,7 @@ export const areas = [
     x: 1082,
     y: 1547,
     type: "dungeon",
+    enemies: ["colonel_hanny", "vevetar"],
   },
   {
     id: "dungeon_mos_dungeon",
@@ -1370,6 +1398,7 @@ export const areas = [
     x: 751,
     y: 1210,
     type: "dungeon",
+    enemies: ["sergeant_hanny", "shimojoe"],
   },
   {
     id: "dungeon_rex_dungeon",
@@ -1377,6 +1406,7 @@ export const areas = [
     x: 465,
     y: 1927,
     type: "dungeon",
+    enemies: ["sergeant_hanny", "ggcaterpillar"],
   },
   {
     id: "dungeon_piar_ship",
@@ -1472,6 +1502,7 @@ export const areas = [
     x: 635,
     y: 264,
     type: "dungeon",
+    enemies: ["sergeant_hanny"],
   },
   //#endregion Hornet
 ];

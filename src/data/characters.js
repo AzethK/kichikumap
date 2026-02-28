@@ -453,6 +453,7 @@ export const characters = {
       'Select "Join me" then "Give character_julia"',
       "Will join as a beginning of turn event",
     ],
+    dungeonEnemy: true,
   },
   kaijuprince: {
     id: "kaijuprince",
@@ -906,13 +907,29 @@ export const characters = {
     sprite: "bow_general.png",
     recruitCondition: [],
   },
-  hannies: {
-    id: "hannies",
-    name: ["Sergeant Hanny", "Lieutenant Hanny", "Colonel Hanny"],
-    genericName: "Hannies",
-    portrait: "hannies.png",
-    sprite: "hannies.png",
+  sergeant_hanny: {
+    id: "sergeant_hanny",
+    name: "Sergeant Hanny",
+    portrait: "sergeant_hanny.png",
+    sprite: "sergeant_hanny.png",
     recruitCondition: [],
+    dungeonEnemy: true,
+  },
+  lieutenant_hanny: {
+    id: "lieutenant_hanny",
+    name: "Lieutenant Hanny",
+    portrait: "lieutenant_hanny.png",
+    sprite: "lieutenant_hanny.png",
+    recruitCondition: [],
+    dungeonEnemy: true,
+  },
+  colonel_hanny: {
+    id: "colonel_hanny",
+    name: "Colonel Hanny",
+    portrait: "colonel_hanny.png",
+    sprite: "colonel_hanny.png",
+    recruitCondition: [],
+    dungeonEnemy: true,
   },
   monster_general: {
     id: "monster_general",
@@ -1191,6 +1208,7 @@ export const characters = {
     portrait: "kaiju_gaga.png",
     sprite: "kaiju_gaga.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   kaiju_zeze: {
     id: "kaiju_zeze",
@@ -1198,6 +1216,7 @@ export const characters = {
     portrait: "kaiju_zeze.png",
     sprite: "kaiju_zeze.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   kaiju_dada: {
     id: "kaiju_dada",
@@ -1205,6 +1224,7 @@ export const characters = {
     portrait: "kaiju_dada.png",
     sprite: "kaiju_dada.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   kaiju_bobo: {
     id: "kaiju_bobo",
@@ -1212,6 +1232,7 @@ export const characters = {
     portrait: "kaiju_bobo.png",
     sprite: "kaiju_bobo.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   okayu: {
     id: "okayu",
@@ -1219,6 +1240,7 @@ export const characters = {
     portrait: "okayu.png",
     sprite: "okayu.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   orochi: {
     id: "orochi",
@@ -1226,6 +1248,7 @@ export const characters = {
     portrait: "orochi.png",
     sprite: "orochi.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   shimojoe: {
     id: "shimojoe",
@@ -1233,6 +1256,7 @@ export const characters = {
     portrait: "shimojoe.png",
     sprite: "shimojoe.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   vevetar: {
     id: "vevetar",
@@ -1240,6 +1264,7 @@ export const characters = {
     portrait: "vevetar.png",
     sprite: "vevetar.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   ggcaterpillar: {
     id: "ggcaterpillar",
@@ -1247,6 +1272,7 @@ export const characters = {
     portrait: "ggcaterpillar.png",
     sprite: "ggcaterpillar.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   stoneguardian: {
     id: "stoneguardian",
@@ -1254,6 +1280,7 @@ export const characters = {
     portrait: "stoneguardian.png",
     sprite: "stoneguardian.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   marder: {
     id: "marder",
@@ -1261,6 +1288,7 @@ export const characters = {
     portrait: "marder.png",
     sprite: "marder.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   hawkyu: {
     id: "hawkyu",
@@ -1268,6 +1296,7 @@ export const characters = {
     portrait: "hawkyu.png",
     sprite: "hawkyu.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   musashibou: {
     id: "musashibou",
@@ -1275,6 +1304,7 @@ export const characters = {
     portrait: "musashibou.png",
     sprite: "musashibou.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   japanesesoldier: {
     id: "japanesesoldier",
@@ -1282,6 +1312,7 @@ export const characters = {
     portrait: "japanesesoldier.png",
     sprite: "japanesesoldier.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   gunagan: {
     id: "gunagan",
@@ -1289,6 +1320,7 @@ export const characters = {
     portrait: "gunagan.png",
     sprite: "gunagan.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   yellowdragon: {
     id: "yellowdragon",
@@ -1296,6 +1328,7 @@ export const characters = {
     portrait: "yellowdragon.png",
     sprite: "yellowdragon.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   reddragon: {
     id: "reddragon",
@@ -1303,6 +1336,7 @@ export const characters = {
     portrait: "reddragon.png",
     sprite: "reddragon.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   greendragon: {
     id: "greendragon",
@@ -1310,6 +1344,7 @@ export const characters = {
     portrait: "greendragon.png",
     sprite: "greendragon.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   bluedragon: {
     id: "bluedragon",
@@ -1317,6 +1352,7 @@ export const characters = {
     portrait: "bluedragon.png",
     sprite: "bluedragon.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   blackdragon: {
     id: "blackdragon",
@@ -1324,6 +1360,7 @@ export const characters = {
     portrait: "blackdragon.png",
     sprite: "blackdragon.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   redhanny: {
     id: "redhanny",
@@ -1331,6 +1368,7 @@ export const characters = {
     portrait: "redhanny.png",
     sprite: "redhanny.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   superhanny: {
     id: "superhanny",
@@ -1338,6 +1376,7 @@ export const characters = {
     portrait: "superhanny.png",
     sprite: "superhanny.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   hannyknight: {
     id: "hannyknight",
@@ -1345,6 +1384,7 @@ export const characters = {
     portrait: "hannyknight.png",
     sprite: "hannyknight.png",
     recruitCondition: [],
+    dungeonEnemy: true,
   },
   //#endregion
   //#region OTHER

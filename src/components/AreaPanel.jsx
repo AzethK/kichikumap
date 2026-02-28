@@ -21,8 +21,9 @@ export default function AreaPanel({ areaId, onClose }) {
   const regionStyle = regionStyles[region];
 
   const monsterArmy = enemies.filter((character) => character?.monsterArmy);
+  const dungeonEnemies = enemies.filter((character) => character?.dungeonEnemy);
   const regularEnemies = enemies.filter(
-    (character) => !character?.monsterArmy == true,
+    (character) => !character?.monsterArmy && !character?.dungeonEnemy == true,
   );
 
   return (
@@ -63,21 +64,27 @@ export default function AreaPanel({ areaId, onClose }) {
         ))}
       </section>
 
-      <section>
-        <h3>Regular Enemies</h3>
+      {area.type != "dungeon" && regularEnemies.length > 0 && (
+        <section>
+          <h3>Regular Enemies</h3>
+          {regularEnemies.map((character) => (
+            <CharacterCard key={character.id} character={character} />
+          ))}
+        </section>
+      )}
 
-        {regularEnemies.length === 0 && (
-          <p className="empty">No regular enemies.</p>
-        )}
-
-        {regularEnemies.map((character) => (
-          <CharacterCard key={character.id} character={character} />
-        ))}
-      </section>
       {monsterArmy.length > 0 && (
         <section>
           <h3>Monster Army</h3>
           {monsterArmy.map((character) => (
+            <CharacterCard key={character.id} character={character} />
+          ))}
+        </section>
+      )}
+      {dungeonEnemies.length > 0 && (
+        <section>
+          <h3>Dungeon Enemies</h3>
+          {dungeonEnemies.map((character) => (
             <CharacterCard key={character.id} character={character} />
           ))}
         </section>
