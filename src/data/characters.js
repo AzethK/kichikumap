@@ -273,7 +273,7 @@ export const characters = {
   },
   julia: {
     id: "julia",
-    name: "Julia Lindum",
+    name: "Julia Lindam",
     portrait: "julia.png",
     sprite: "julia.png",
     recruitCondition: [
@@ -558,7 +558,7 @@ export const characters = {
   },
   merim: {
     id: "merim",
-    name: "Merim Tser",
+    name: "Merim Zahl",
     portrait: "merim.png",
     sprite: "merim.png",
     recruitCondition: ["Conquer area_freecities_toushin_city"],
@@ -623,7 +623,7 @@ export const characters = {
   },
   ruberan: {
     id: "ruberan",
-    name: "Ruberan Tser",
+    name: "Ruberan Zahl",
     portrait: "ruberan.png",
     sprite: "ruberan.png",
     recruitCondition: [
