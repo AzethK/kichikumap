@@ -1,14 +1,19 @@
 import { areas } from "../data/areas";
+import { items } from "../data/items";
 import { characters } from "../data/characters";
 import { regionIcons } from "../data/regionIcons";
 import { regionStyles } from "../data/regionStyles";
 import CharacterCard from "./CharacterCard";
+import ItemCard from "./ItemCard";
 
 export default function AreaPanel({ areaId, onClose }) {
   if (!areaId) return null;
 
   const area = areas.find((a) => a.id === areaId);
   if (!area) return null;
+
+  const itemIds = area.items ?? [];
+  const obtainableItems = itemIds.map((id) => items[id]);
 
   const recruitIds = area.recruitableCharacters ?? [];
   const recruits = recruitIds.map((id) => characters[id]);
@@ -86,6 +91,15 @@ export default function AreaPanel({ areaId, onClose }) {
           <h3>Dungeon Enemies</h3>
           {dungeonEnemies.map((character) => (
             <CharacterCard key={character.id} character={character} />
+          ))}
+        </section>
+      )}
+
+      {obtainableItems.length > 0 && (
+        <section>
+          <h3>Items</h3>
+          {obtainableItems.map((item) => (
+            <ItemCard key={item.id} item={item} />
           ))}
         </section>
       )}

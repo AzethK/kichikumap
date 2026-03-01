@@ -1,20 +1,16 @@
 import { useEffect, useState } from "react";
 import { getItemSprite } from "../data/imageGetter";
 import { items } from "../data/items";
-import { characters } from "../data/characters";
-import { harem } from "../data/charactersHarem";
 import ConditionText from "../util/ConditionText";
+import { useAppContext } from "../App";
 
-export default function CharacterDetail({
-  itemId,
-  onClose,
-  setSelectedCharacterId,
-  setMode,
-}) {
+export default function ItemDetail({ itemId, onClose }) {
   const BASE_WIDTH = 850;
   const BASE_HEIGHT = 800;
 
   const [fitScale, setFitScale] = useState(1);
+
+  const { setSelectedItemId } = useAppContext();
 
   useEffect(() => {
     const updateScale = () => {
@@ -39,14 +35,19 @@ export default function CharacterDetail({
   /* ---------------- Render ---------------- */
 
   return (
-    <div className="overlay-backdrop">
+    <div
+      className="overlay-backdrop"
+      onClick={() => {
+        setSelectedItemId(null);
+      }}
+    >
       <div
         className="item-overlay"
         style={{
           transform: `scale(${fitScale})`,
           transformOrigin: "center",
         }}
-        onClic
+        onClick={(e) => e.stopPropagation()}
       >
         <button className="overlay-close" onClick={onClose}>
           ✕
@@ -67,6 +68,7 @@ export default function CharacterDetail({
               <img src={sprite} alt="" loading="lazy" />
             </div>
             <div className="item-effect">
+              <h3>Item Effect</h3>
               <span>
                 <ConditionText text={item.effect} />
               </span>

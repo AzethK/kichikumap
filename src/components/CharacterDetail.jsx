@@ -298,9 +298,15 @@ export default function CharacterDetail({ characterId, onClose }) {
   /* ---------------- Render ---------------- */
 
   return (
-    <div className="overlay-backdrop">
+    <div
+      className="overlay-backdrop"
+      onClick={() => {
+        setSelectedCharacterId(null);
+      }}
+    >
       <div
         className="subordinates-overlay"
+        onClick={(e) => e.stopPropagation()}
         style={{
           transform: `scale(${fitScale})`,
           transformOrigin: "center",

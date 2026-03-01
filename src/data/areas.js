@@ -38,6 +38,21 @@ export const areas = [
       "redeye",
       "kayblis",
     ],
+    items: [
+      "leazas_sword",
+      "by_lord",
+      "popularity",
+      "napoleon",
+      "shingen",
+      "substitute",
+      "safety",
+      "clothes",
+      "hirami_lemon",
+      "ninja_birdlime",
+      "nikkou",
+      "barrier_blade",
+      "love_potion",
+    ],
   },
   {
     id: "leazas_north",
@@ -172,6 +187,7 @@ export const areas = [
     economy: 14,
     defense: 7,
     fieldSize: 200,
+    items: ["arkanoid_shell"],
   },
   {
     id: "leazas_scale",
@@ -243,6 +259,7 @@ export const areas = [
     x: 4106,
     y: 1128,
     type: "dungeon",
+    items: ["gourd_statue"],
   },
   {
     id: "dungeon_monsters_cave",
@@ -251,6 +268,7 @@ export const areas = [
     y: 1181,
     type: "dungeon",
     enemies: ["sergeant_hanny", "marder"],
+    items: ["demon_pot"],
   },
   {
     id: "dungeon_isolated_shrine_island",
@@ -273,6 +291,7 @@ export const areas = [
     defense: 4,
     fieldSize: 320,
     enemies: ["freecity_general", "kaito", "monster_general_mage"],
+    items: ["clothes"],
   },
   {
     id: "freecities_ice",
@@ -311,6 +330,7 @@ export const areas = [
     defense: 4,
     fieldSize: 250,
     enemies: ["freecity_general"],
+    items: ["aluminum_axe"],
   },
   {
     id: "freecities_custom",
@@ -424,6 +444,7 @@ export const areas = [
     type: "dungeon",
     recruitableCharacters: ["hannyking"],
     enemies: ["redhanny", "superhanny", "hannyknight", "hannyking"],
+    items: ["space_shell", "golden_axe"],
   },
   {
     id: "dungeon_dangerous_hole",
@@ -432,6 +453,7 @@ export const areas = [
     y: 1696,
     type: "dungeon",
     enemies: ["lieutenant_hanny"],
+    items: ["fog_card", "happiness_ring"],
   },
   {
     id: "dungeon_uncurse_dungeon",
@@ -448,6 +470,7 @@ export const areas = [
     x: 4104,
     y: 1898,
     type: "dungeon",
+    items: ["charge_horn", "exclusive_nurse"],
   },
   {
     id: "dungeon_hyper_building",
@@ -456,6 +479,7 @@ export const areas = [
     y: 1549,
     type: "dungeon",
     enemies: ["sergeant_hanny"],
+    items: ["wisdom_ring"],
   },
   //#endregion Free Cities
 
@@ -513,6 +537,7 @@ export const areas = [
     y: 1906,
     type: "dungeon",
     enemies: ["sergeant_hanny", "musashibou", "orochi"],
+    items: ["orgasmic_men"],
   },
   //#endregion JAPAN
 
@@ -613,6 +638,7 @@ export const areas = [
       "gunagan",
       "japanesesoldier",
     ],
+    items: ["doping_drug", "bird_corpse"],
   },
   {
     id: "helman_archgrad",
@@ -718,6 +744,7 @@ export const areas = [
       "redeye",
       "kayblis",
     ],
+    items: ["super_aurora_shell"],
   },
   {
     id: "helman_sudori_10",
@@ -751,6 +778,7 @@ export const areas = [
     defense: 3,
     fieldSize: 420,
     enemies: ["helman_guard"],
+    items: ["battleship_key"],
   },
   {
     id: "helman_micrograd",
@@ -791,6 +819,7 @@ export const areas = [
       "helman_guard",
       "babolat",
     ],
+    items: ["crystal_sword"],
   },
   {
     id: "helman_sudori_17",
@@ -925,6 +954,7 @@ export const areas = [
     defense: 5,
     fieldSize: 300,
     enemies: ["helman_guard"],
+    items: ["marimo"],
   },
 
   {
@@ -933,6 +963,7 @@ export const areas = [
     x: 2270,
     y: 229,
     type: "dungeon",
+    items: ["kaiju_a", "kaiju_b"],
   },
   {
     id: "dungeon_stone_cutter_dungeon",
@@ -941,6 +972,7 @@ export const areas = [
     y: 96,
     type: "dungeon",
     enemies: ["sergeant_hanny"],
+    items: ["evil_statue"],
   },
   {
     id: "dungeon_mt_salen",
@@ -948,6 +980,7 @@ export const areas = [
     x: 1578,
     y: 317,
     type: "dungeon",
+    items: ["hirami_lemon"],
   },
   {
     id: "dungeon_snow_dungeon",
@@ -956,6 +989,7 @@ export const areas = [
     y: 278,
     type: "dungeon",
     enemies: ["sergeant_hanny"],
+    items: ["snow_charm"],
   },
   {
     id: "dungeon_ho_ragas_tower",
@@ -963,6 +997,7 @@ export const areas = [
     x: 3835,
     y: 141,
     type: "dungeon",
+    items: ["barrier_blade", "absolute_foreclosure", "bonsai_statue"],
   },
   {
     id: "dungeon_thieves_hideout",
@@ -979,6 +1014,7 @@ export const areas = [
     y: 848,
     type: "dungeon",
     enemies: ["lieutenant_hanny", "okayu"],
+    items: ["hawaiian_sword"],
   },
   {
     id: "dungeon_summits_mouth",
@@ -988,6 +1024,7 @@ export const areas = [
     type: "dungeon",
     recruitableCharacters: ["saizel_hawzel"],
     enemies: ["colonel_hanny", "stoneguardian"],
+    items: ["aztec_armor"],
   },
   {
     id: "dungeon_kalar_forest",
@@ -1078,6 +1115,7 @@ export const areas = [
     defense: 3,
     fieldSize: 1000,
     enemies: ["wall", "mage_leader", "kaito", "monster_general_mage"],
+    items: ["magic_barrier"],
   },
   {
     id: "zeth_old",
@@ -1281,6 +1319,7 @@ export const areas = [
     y: 1365,
     type: "dungeon",
     enemies: ["colonel_hanny"],
+    items: ["tange_dog"],
   },
   {
     id: "dungeon_rising_dragon_mountain",
@@ -1296,6 +1335,7 @@ export const areas = [
       "bluedragon",
       "blackdragon",
     ],
+    items: ["sunflower_statue"],
   },
   {
     id: "dungeon_green_village",
@@ -1391,6 +1431,7 @@ export const areas = [
     y: 1547,
     type: "dungeon",
     enemies: ["colonel_hanny", "vevetar"],
+    items: ["jugon"],
   },
   {
     id: "dungeon_mos_dungeon",
@@ -1399,6 +1440,7 @@ export const areas = [
     y: 1210,
     type: "dungeon",
     enemies: ["sergeant_hanny", "shimojoe"],
+    items: ["vevetar"],
   },
   {
     id: "dungeon_rex_dungeon",
@@ -1503,6 +1545,7 @@ export const areas = [
     y: 264,
     type: "dungeon",
     enemies: ["sergeant_hanny"],
+    items: ["crystal_ring"],
   },
   //#endregion Hornet
 ];
