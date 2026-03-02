@@ -235,7 +235,7 @@ export const items = {
     consumable: true,
     effect:
       "Allows asking a question to character_arcy in area_dungeon_isolated_shrine_island",
-    acquisition: ["Random chance of levying from any city"],
+    acquisition: ["20% chance of levying from any city"],
     sprite: "ultimate_sweet.png",
   },
   supreme_sweet: {
@@ -244,7 +244,7 @@ export const items = {
     consumable: true,
     effect:
       "Allows asking a question to character_arcy in area_dungeon_isolated_shrine_island",
-    acquisition: ["Random chance of levying from any city"],
+    acquisition: ["20% chance of levying from any city"],
     sprite: "supreme_sweet.png",
   },
   kaiju_a: {

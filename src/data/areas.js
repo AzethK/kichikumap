@@ -52,6 +52,8 @@ export const areas = [
       "nikkou",
       "barrier_blade",
       "love_potion",
+      "ultimate_sweet",
+      "supreme_sweet",
     ],
   },
   {
@@ -71,6 +73,7 @@ export const areas = [
       "redeye",
       "kayblis",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "leazas_oc",
@@ -83,6 +86,7 @@ export const areas = [
     fieldSize: 220,
     recruitableCharacters: ["melfeis"],
     enemies: ["pegasus", "dodge", "melfeis"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "leazas_south",
@@ -95,6 +99,7 @@ export const areas = [
     fieldSize: 250,
     recruitableCharacters: ["melfeis"],
     enemies: ["pegasus", "dodge", "melfeis", "kesselring"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "leazas_ys",
@@ -115,6 +120,7 @@ export const areas = [
       "dodge",
       "jibul",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "leazas_oaks",
@@ -135,6 +141,7 @@ export const areas = [
       "dodge",
       "jibul",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "leazas_baranchi",
@@ -147,6 +154,7 @@ export const areas = [
     fieldSize: 400,
     recruitableCharacters: ["haurein"],
     enemies: ["ex", "haurein", "sakanaku", "jibul"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "leazas_wes",
@@ -157,6 +165,7 @@ export const areas = [
     economy: 20,
     defense: 4,
     fieldSize: 300,
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "leazas_ponara",
@@ -167,6 +176,7 @@ export const areas = [
     economy: 11,
     defense: 2,
     fieldSize: 200,
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "leazas_prettiria",
@@ -177,6 +187,7 @@ export const areas = [
     economy: 15,
     defense: 8,
     fieldSize: 170,
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "leazas_alan",
@@ -187,7 +198,7 @@ export const areas = [
     economy: 14,
     defense: 7,
     fieldSize: 200,
-    items: ["arkanoid_shell"],
+    items: ["arkanoid_shell", "ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "leazas_scale",
@@ -199,6 +210,7 @@ export const areas = [
     defense: 9,
     fieldSize: 210,
     enemies: ["babolat"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
 
   {
@@ -217,6 +229,7 @@ export const areas = [
       "redeye",
       "kayblis",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "leazas_poor",
@@ -229,6 +242,7 @@ export const areas = [
     fieldSize: 430,
     recruitableCharacters: ["ragnarokarc"],
     enemies: ["kaito", "monster_general_mage"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "leazas_rich",
@@ -240,6 +254,7 @@ export const areas = [
     defense: 2,
     fieldSize: 310,
     enemies: ["monster_general", "galtia", "kaito", "monster_general_mage"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
 
   {
@@ -252,6 +267,7 @@ export const areas = [
     defense: 10,
     fieldSize: 100,
     enemies: ["monster_general", "galtia", "kaito", "monster_general_mage"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "dungeon_thieves_dungeon",
@@ -291,7 +307,7 @@ export const areas = [
     defense: 4,
     fieldSize: 320,
     enemies: ["freecity_general", "kaito", "monster_general_mage"],
-    items: ["clothes"],
+    items: ["clothes", "ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "freecities_ice",
@@ -303,6 +319,7 @@ export const areas = [
     defense: 3,
     fieldSize: 410,
     enemies: ["freecity_general", "kaito", "monster_general_mage"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "freecities_diphtheria",
@@ -319,6 +336,7 @@ export const areas = [
       "kaito",
       "monster_general_mage",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "freecities_l_zile",
@@ -330,7 +348,7 @@ export const areas = [
     defense: 4,
     fieldSize: 250,
     enemies: ["freecity_general"],
-    items: ["aluminum_axe"],
+    items: ["aluminum_axe", "ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "freecities_custom",
@@ -342,6 +360,7 @@ export const areas = [
     defense: 9,
     fieldSize: 150,
     recruitableCharacters: ["maria", "shizuka", "elenoa", "milli", "mill"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "freecities_mars",
@@ -354,6 +373,7 @@ export const areas = [
     fieldSize: 250,
     recruitableCharacters: ["mars"],
     enemies: ["mars"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "freecities_red",
@@ -365,6 +385,7 @@ export const areas = [
     defense: 2,
     fieldSize: 350,
     enemies: ["freecity_general", "kesselring"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "freecities_the_o",
@@ -376,6 +397,7 @@ export const areas = [
     defense: 2,
     fieldSize: 400,
     enemies: ["freecity_general"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
 
   {
@@ -389,6 +411,7 @@ export const areas = [
     fieldSize: 300,
     recruitableCharacters: ["sayori"],
     enemies: ["sayori", "freecity_general"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "freecities_hanna",
@@ -401,6 +424,7 @@ export const areas = [
     fieldSize: 220,
     recruitableCharacters: ["gengorou"],
     enemies: ["freecity_general", "gengorou"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "freecities_toushin_city",
@@ -412,6 +436,7 @@ export const areas = [
     defense: 3,
     fieldSize: 320,
     enemies: ["sanakia"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "freecities_portugal",
@@ -423,6 +448,7 @@ export const areas = [
     defense: 6,
     fieldSize: 220,
     enemies: ["freecity_general"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "freecities_shangrila",
@@ -435,6 +461,7 @@ export const areas = [
     fieldSize: 420,
     recruitableCharacters: ["kaijuprince"],
     enemies: ["desert_guide"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "dungeon_titi_lake",
@@ -494,6 +521,7 @@ export const areas = [
     defense: 1,
     fieldSize: 300,
     enemies: ["katsuie", "samurai_general", "bow_general"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "japan_osaka",
@@ -512,6 +540,7 @@ export const areas = [
       "katsuie",
       "isoroku",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "japan_sado",
@@ -529,6 +558,7 @@ export const areas = [
       "katsuie",
       "isoroku",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "dungeon_orochis_pit",
@@ -553,6 +583,7 @@ export const areas = [
     fieldSize: 200,
     recruitableCharacters: ["gurwin"],
     enemies: ["temple_knight"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   //#endregion AL
 
@@ -568,6 +599,7 @@ export const areas = [
     fieldSize: 420,
     recruitableCharacters: ["sill", "soul"],
     enemies: ["lelyukov", "helman_knight", "monster_tamer"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_log_b",
@@ -587,6 +619,7 @@ export const areas = [
       "redeye",
       "kayblis",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_log_a",
@@ -598,6 +631,7 @@ export const areas = [
     defense: 6,
     fieldSize: 320,
     enemies: ["lelyukov", "helman_knight", "monster_tamer", "babolat"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_vladivostok",
@@ -609,6 +643,7 @@ export const areas = [
     defense: 4,
     fieldSize: 1220,
     enemies: ["helman_guard"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_golak",
@@ -620,6 +655,7 @@ export const areas = [
     defense: 3,
     fieldSize: 660,
     enemies: ["lelyukov", "helman_knight", "monster_tamer", "babolat"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_ancient_ruins",
@@ -638,7 +674,7 @@ export const areas = [
       "gunagan",
       "japanesesoldier",
     ],
-    items: ["doping_drug", "bird_corpse"],
+    items: ["doping_drug", "bird_corpse", "ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_archgrad",
@@ -659,6 +695,7 @@ export const areas = [
       "redeye",
       "kayblis",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_cossack",
@@ -671,6 +708,7 @@ export const areas = [
     fieldSize: 420,
     recruitableCharacters: ["cream"],
     enemies: ["monster_tamer", "helman_knight", "nero", "cream"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_siberia",
@@ -682,6 +720,7 @@ export const areas = [
     defense: 5,
     fieldSize: 420,
     enemies: ["lelyukov", "helman_knight", "monster_tamer", "babolat"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_rosesgrad",
@@ -702,6 +741,7 @@ export const areas = [
       "redeye",
       "kayblis",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_pawn",
@@ -723,6 +763,7 @@ export const areas = [
       "redeye",
       "kayblis",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_sudori_13",
@@ -744,7 +785,7 @@ export const areas = [
       "redeye",
       "kayblis",
     ],
-    items: ["super_aurora_shell"],
+    items: ["super_aurora_shell", "ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_sudori_10",
@@ -767,6 +808,7 @@ export const areas = [
       "redeye",
       "kayblis",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_path",
@@ -778,7 +820,7 @@ export const areas = [
     defense: 3,
     fieldSize: 420,
     enemies: ["helman_guard"],
-    items: ["battleship_key"],
+    items: ["battleship_key", "ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_micrograd",
@@ -800,6 +842,7 @@ export const areas = [
       "redeye",
       "kayblis",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_lang_bau",
@@ -819,7 +862,7 @@ export const areas = [
       "helman_guard",
       "babolat",
     ],
-    items: ["crystal_sword"],
+    items: ["crystal_sword", "ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_sudori_17",
@@ -841,6 +884,7 @@ export const areas = [
       "redeye",
       "kayblis",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_parnas",
@@ -861,6 +905,7 @@ export const areas = [
       "redeye",
       "kayblis",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_laurengrad",
@@ -882,6 +927,7 @@ export const areas = [
       "redeye",
       "kayblis",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_great_wall_a",
@@ -893,6 +939,7 @@ export const areas = [
     defense: 10,
     fieldSize: 300,
     enemies: ["helman_guard", "babolat"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_great_wall_b",
@@ -910,6 +957,7 @@ export const areas = [
       "redeye",
       "kayblis",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_great_wall_c",
@@ -921,6 +969,7 @@ export const areas = [
     defense: 10,
     fieldSize: 300,
     enemies: ["helman_guard"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_laborie",
@@ -932,6 +981,7 @@ export const areas = [
     defense: 3,
     fieldSize: 420,
     enemies: ["helman_guard"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_icoma",
@@ -943,6 +993,7 @@ export const areas = [
     defense: 0,
     fieldSize: 500,
     enemies: ["helman_guard", "babolat"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "helman_walkland",
@@ -954,7 +1005,7 @@ export const areas = [
     defense: 5,
     fieldSize: 300,
     enemies: ["helman_guard"],
-    items: ["marimo"],
+    items: ["marimo", "ultimate_sweet", "supreme_sweet"],
   },
 
   {
@@ -1057,6 +1108,7 @@ export const areas = [
       "kaito",
       "monster_general_mage",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "zeth_sabasaba",
@@ -1075,6 +1127,7 @@ export const areas = [
       "kaito",
       "monster_general_mage",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "zeth_italia",
@@ -1086,6 +1139,7 @@ export const areas = [
     defense: 4,
     fieldSize: 500,
     enemies: ["wall", "mage_leader", "monster_general", "galtia"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "zeth_tape",
@@ -1104,6 +1158,7 @@ export const areas = [
       "monster_general",
       "galtia",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "zeth_nagarmaule",
@@ -1115,7 +1170,7 @@ export const areas = [
     defense: 3,
     fieldSize: 1000,
     enemies: ["wall", "mage_leader", "kaito", "monster_general_mage"],
-    items: ["magic_barrier"],
+    items: ["magic_barrier", "ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "zeth_old",
@@ -1133,6 +1188,7 @@ export const areas = [
       "monster_general",
       "galtia",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "zeth_bath",
@@ -1144,6 +1200,7 @@ export const areas = [
     defense: 6,
     fieldSize: 700,
     enemies: ["wall", "mage_leader"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "zeth_amber_castle",
@@ -1163,6 +1220,7 @@ export const areas = [
       "kaito",
       "monster_general_mage",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "zeth_magics_tower",
@@ -1183,6 +1241,7 @@ export const areas = [
       "kaito",
       "monster_general_mage",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "zeth_nagis_tower",
@@ -1201,6 +1260,7 @@ export const areas = [
       "kaito",
       "monster_general_mage",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "zeth_chizukos_tower",
@@ -1213,6 +1273,7 @@ export const areas = [
     fieldSize: 200,
     recruitableCharacters: ["chizuko"],
     enemies: ["mage_leader", "slave_general", "chizuko"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "zeth_palace",
@@ -1224,6 +1285,7 @@ export const areas = [
     defense: 11,
     fieldSize: 200,
     enemies: ["wall", "mage_leader", "kaito", "monster_general_mage"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "zeth_papayas_tower",
@@ -1242,6 +1304,7 @@ export const areas = [
       "kaito",
       "monster_general_mage",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "zeth_parityoran",
@@ -1253,6 +1316,7 @@ export const areas = [
     defense: 6,
     fieldSize: 600,
     enemies: ["wall", "mage_leader"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "zeth_maginot_line_a",
@@ -1264,6 +1328,7 @@ export const areas = [
     defense: 14,
     fieldSize: 300,
     enemies: ["wall", "mage_leader"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "zeth_maginot_line_b",
@@ -1282,6 +1347,7 @@ export const areas = [
       "kaito",
       "monster_general_mage",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "zeth_ardennes",
@@ -1293,6 +1359,7 @@ export const areas = [
     defense: 1,
     fieldSize: 400,
     enemies: ["wall", "mage_leader", "kaito", "monster_general_mage"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "zeth_marc",
@@ -1311,6 +1378,7 @@ export const areas = [
       "kaito",
       "monster_general_mage",
     ],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "dungeon_holy_gals_dungeon",
@@ -1357,6 +1425,7 @@ export const areas = [
     defense: 6,
     fieldSize: 300,
     enemies: ["medusa", "monster_general", "monster_general_mage"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "kayblis_red_house",
@@ -1368,6 +1437,7 @@ export const areas = [
     defense: 0,
     fieldSize: 900,
     enemies: ["monster_general", "kaybnyan"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "kayblis_blue_house",
@@ -1379,6 +1449,7 @@ export const areas = [
     defense: 0,
     fieldSize: 900,
     enemies: ["monster_general", "kaybwan"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "kayblis_kesselrings_castle",
@@ -1390,6 +1461,7 @@ export const areas = [
     defense: 6,
     fieldSize: 500,
     enemies: ["kesselring", "monster_general", "monster_general_mage"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "kayblis_camillas_castle",
@@ -1401,6 +1473,7 @@ export const areas = [
     defense: 6,
     fieldSize: 500,
     enemies: ["camilla", "monster_general_mage"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "kayblis_bone_forest",
@@ -1412,6 +1485,7 @@ export const areas = [
     defense: 0,
     fieldSize: 700,
     enemies: ["monster_general", "monster_general_mage"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "kayblis_tearing_forest",
@@ -1423,6 +1497,7 @@ export const areas = [
     defense: 0,
     fieldSize: 700,
     enemies: ["monster_general", "monster_general_mage"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "dungeon_maid_graveyard",
@@ -1470,6 +1545,7 @@ export const areas = [
     defense: 10,
     fieldSize: 150,
     enemies: ["monster_general", "monster_general_mage"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "hornet_demon_lords_castle",
@@ -1481,6 +1557,7 @@ export const areas = [
     defense: 6,
     fieldSize: 500,
     enemies: ["monster_general", "kayblis"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "hornet_sulfur_forest",
@@ -1492,6 +1569,7 @@ export const areas = [
     defense: 0,
     fieldSize: 800,
     enemies: ["monster_general", "monster_general_mage"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "hornet_silkys_castle",
@@ -1503,6 +1581,7 @@ export const areas = [
     defense: 8,
     fieldSize: 200,
     enemies: ["monster_general", "monster_general_mage"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "hornet_land_of_death",
@@ -1514,6 +1593,7 @@ export const areas = [
     defense: 0,
     fieldSize: 800,
     enemies: ["monster_general", "monster_general_mage"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "hornet_cascade_bau",
@@ -1525,6 +1605,7 @@ export const areas = [
     defense: 0,
     fieldSize: 1000,
     enemies: ["monster_general", "monster_general_mage"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
   {
     id: "hornet_grief_valley",
@@ -1536,6 +1617,7 @@ export const areas = [
     defense: 0,
     fieldSize: 700,
     enemies: ["monster_general", "monster_general_mage", "kayblis"],
+    items: ["ultimate_sweet", "supreme_sweet"],
   },
 
   {
