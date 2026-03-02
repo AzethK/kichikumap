@@ -49,6 +49,7 @@ export default function App() {
         <LeftSidebar
           onOpenSubordinates={() => setActiveOverlay("subordinates")}
           onOpenItems={() => setActiveOverlay("items")}
+          toggleCensor={() => setCensoredMode(!censoredMode)}
           open={sidebarOpen}
         />
 

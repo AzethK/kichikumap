@@ -41,7 +41,8 @@ export default function CharacterDetail({ characterId, onClose }) {
 
   const [variantIndex, setVariantIndex] = useState(0);
 
-  const { setSelectedCharacterId, mode, setMode } = useAppContext();
+  const { setSelectedCharacterId, mode, setMode, censoredMode } =
+    useAppContext();
 
   const getCharacterRole = (characterId) => {
     const roles = [];
@@ -91,9 +92,15 @@ export default function CharacterDetail({ characterId, onClose }) {
 
   /* ---------------- Portraits & Sprites ---------------- */
 
+  const censoredP = character?.censorType?.includes("Portrait") && censoredMode;
+  const censoredH = character?.censorType?.includes("Harem") && censoredMode;
+
   const portraits =
-    Array.isArray(character.portrait) ?
-      character.portrait
+    censoredP ?
+      Array.isArray(character.censoredPortrait) ?
+        character.censoredPortrait
+      : [character.censoredPortrait]
+    : Array.isArray(character.portrait) ? character.portrait
     : [character.portrait];
 
   const sprites =
@@ -105,7 +112,8 @@ export default function CharacterDetail({ characterId, onClose }) {
   const currentPortrait = getCharacterPortrait(portraits[portraitIndex]);
   const currentSprite =
     mode === "Harem" ?
-      getHaremSprite(sprites[spriteIndex])
+      censoredH ? getHaremSprite(character.censoredSprite)
+      : getHaremSprite(sprites[spriteIndex])
     : getCharacterSprite(sprites[spriteIndex]);
 
   const rawUnitSize =

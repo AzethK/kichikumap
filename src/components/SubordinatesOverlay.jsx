@@ -27,7 +27,8 @@ export default function SubordinatesOverlay({ onClose }) {
     return () => window.removeEventListener("resize", updateScale);
   }, []);
 
-  const { setSelectedCharacterId, mode, setMode } = useAppContext();
+  const { setSelectedCharacterId, mode, setMode, censoredMode } =
+    useAppContext();
   const activeCharacters =
     mode === "Harem" ?
       Object.keys(harem)
@@ -111,9 +112,14 @@ export default function SubordinatesOverlay({ onClose }) {
 
         <div className="subordinates-grid">
           {activeCharacters.map((character) => {
+            const censored =
+              character?.censorType?.includes("Portrait") && censoredMode;
             const portraits =
-              Array.isArray(character.portrait) ?
-                character.portrait
+              censored ?
+                Array.isArray(character.censoredPortrait) ?
+                  character.censoredPortrait
+                : [character.censoredPortrait]
+              : Array.isArray(character.portrait) ? character.portrait
               : [character.portrait];
 
             return (

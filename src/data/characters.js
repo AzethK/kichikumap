@@ -199,7 +199,9 @@ export const characters = {
     name: "Milli Yorks",
     portrait: "milli.png",
     sprite: "milli.png",
+    censoredSprite: "milli_censored.png",
     recruitCondition: ["Conquer area_freecities_custom"],
+    censorType: ["Harem"],
   },
   mill: {
     id: "mill",
@@ -537,8 +539,11 @@ export const characters = {
     id: "royal_guard",
     name: "Royal Guard",
     portrait: "royal_guard.png",
+    censoredPortrait: "royal_guard_censored.png",
     sprite: "royal_guard.png",
+    censoredSprite: "royal_guard_censored.png",
     recruitCondition: ["Call character_leila in the Harem for the first time"],
+    censorType: ["Portrait", "Harem"],
   },
   mokomoko: {
     id: "mokomoko",
@@ -574,10 +579,13 @@ export const characters = {
     id: "aoi",
     name: "Aoi",
     portrait: "aoi.png",
+    censoredPortrait: "aoi_censored.png",
     sprite: "aoi.png",
+    censoredSprite: "aoi_censored.png",
     recruitCondition: [
       "Starting from LP 3/8/1, visit DX Assosciation in area_freecities_rockearth",
     ],
+    censorType: ["Portrait", "Harem"],
   },
   shariela: {
     id: "shariela",
@@ -626,10 +634,12 @@ export const characters = {
     name: "Ruberan Zahl",
     portrait: "ruberan.png",
     sprite: "ruberan.png",
+    censoredSprite: "ruberan_censored.png",
     recruitCondition: [
       "Must have character_sill, conquer area_helman_ancient_ruins before area_helman_lang_bau",
       "Visit her cell in the dungeon in area_leazas_castle three times",
     ],
+    censorType: ["Harem"],
   },
   sheila: {
     id: "sheila",
@@ -1025,8 +1035,10 @@ export const characters = {
     id: "la_vaswald",
     name: "La Vaswald",
     portrait: "la_vaswald.png",
+    censoredPortrait: "la_vaswald_censored.png",
     sprite: "la_vaswald.png",
     recruitCondition: [],
+    censorType: ["Portrait"],
   },
   slave_general: {
     id: "slave_general",

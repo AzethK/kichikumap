@@ -760,3 +760,33 @@ body {
   max-height: 256px;
   object-fit: contain;
 }
+
+/* Blur and wrapper*/
+
+.portrait-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.subordinate-portrait.censored {
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(12px);
+
+  /* Hide bottom 30px of the blurred layer */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black calc(100% - 30px),
+    transparent calc(100% - 30px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black calc(100% - 30px),
+    transparent calc(100% - 30px),
+    transparent 100%
+  );
+}
