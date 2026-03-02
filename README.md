@@ -10,9 +10,9 @@ Work in progress interactive map for Kichikuou Rance
 - Add area defenses, economy and field size for all locations (DONE)
 - Add attack type to all units (DONE)
 - Add all enemies to map (DONE, still need to figure out what to do about enemies that can attack any areas on the map like the PGs and Angel Knights)
+- Add items to all areas (DONE)
 
 # PLANS FOR UPCOMING FEATURES:
-- Add items to all areas (ONGOING)
 - Unit filters
 - Search feature
 - Map icon filter
