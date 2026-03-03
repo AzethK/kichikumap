@@ -790,3 +790,28 @@ body {
     transparent 100%
   );
 }
+
+/* Filters */
+
+.filters-panel {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.filters-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-weight: 500;
+}

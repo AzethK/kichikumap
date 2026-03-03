@@ -11,6 +11,10 @@ export default function SubordinatesOverlay({ onClose }) {
   const BASE_HEIGHT = 800;
 
   const [fitScale, setFitScale] = useState(1);
+  const [showFilters, setShowFilters] = useState(false);
+  const [attackTypeFilter, setAttackTypeFilter] = useState(null);
+  const [specialAttackOnly, setSpecialAttackOnly] = useState(false);
+  const [specialTypeFilter, setSpecialTypeFilter] = useState(null);
 
   useEffect(() => {
     const updateScale = () => {
@@ -27,9 +31,47 @@ export default function SubordinatesOverlay({ onClose }) {
     return () => window.removeEventListener("resize", updateScale);
   }, []);
 
+  useEffect(() => {
+    if (!specialAttackOnly) {
+      setSpecialTypeFilter(null);
+    }
+  }, [specialAttackOnly]);
+
   const { setSelectedCharacterId, mode, setMode, censoredMode } =
     useAppContext();
-  const activeCharacters =
+
+  const getCharacterRole = (characterId) => {
+    const roles = [];
+
+    if (charactersSubordinate[characterId]) roles.push("Subordinates");
+    if (harem[characterId]) roles.push("Harem");
+    if (enemies[characterId]) roles.push("Enemies");
+
+    return roles;
+  };
+
+  const handleCharacterClick = (character) => {
+    const role = getCharacterRole(character.id);
+
+    // If in a specific mode, select based on mode
+    if (mode === "Harem" || mode === "Enemies" || mode === "Subordinates") {
+      setSelectedCharacterId(character.id);
+      return;
+    }
+
+    // If mode is "Characters" decide based on role
+    if (role.includes("Subordinates")) {
+      setMode("Subordinates");
+    } else if (role.includes("Harem")) {
+      setMode("Harem");
+    } else if (role.includes("Enemies")) {
+      setMode("Enemies");
+    }
+
+    setSelectedCharacterId(character.id);
+  };
+
+  const baseCharacters =
     mode === "Harem" ?
       Object.keys(harem)
         .map((id) => characters[id])
@@ -44,18 +86,40 @@ export default function SubordinatesOverlay({ onClose }) {
         .filter(Boolean)
     : Object.values(characters);
 
-  const getCharacterRole = (characterId) => {
-    const inHarem = Boolean(harem[characterId]);
-    const inSubordinate = Boolean(charactersSubordinate[characterId]);
-    const inEnemy = Boolean(enemies[characterId]);
+  const activeCharacters = baseCharacters.filter((character) => {
+    const role = getCharacterRole(character.id);
 
-    if (inHarem && inSubordinate) return "Both";
-    if (inSubordinate) return "Subordinate";
-    if (inEnemy) return "Enemy";
-    if (inHarem) return "Harem";
+    // ---------- Special Attack Filter ----------
+    if (specialAttackOnly) {
+      if (!role.includes("Subordinates")) return false;
 
-    return null;
-  };
+      const subordinateData = charactersSubordinate[character.id];
+
+      if (!subordinateData?.specialName) return false;
+
+      // Special Type filter (only applies if selected)
+      if (specialTypeFilter) {
+        if (subordinateData?.specialType !== specialTypeFilter) {
+          return false;
+        }
+      }
+    }
+
+    // ---------- Attack Type Filter ----------
+    if (attackTypeFilter) {
+      if (role.includes("Subordinates")) {
+        const subordinateData = charactersSubordinate[character.id];
+        if (subordinateData?.attackType !== attackTypeFilter) return false;
+      } else if (role.includes("Enemies")) {
+        const enemyData = enemies[character.id];
+        if (enemyData?.attackType !== attackTypeFilter) return false;
+      } else {
+        return false;
+      }
+    }
+
+    return true;
+  });
 
   return (
     <div className="overlay-backdrop" onClick={onClose}>
@@ -108,10 +172,74 @@ export default function SubordinatesOverlay({ onClose }) {
           >
             Enemies
           </button>
+
+          <button
+            className={`tab-btn ${showFilters ? "active" : ""}`}
+            onClick={() => setShowFilters((prev) => !prev)}
+          >
+            Filters
+          </button>
         </div>
+
+        {showFilters && (
+          <div className="filters-panel">
+            <div className="filters-row">
+              <div className="filter-group">
+                <label>Attack Type:</label>
+                <select
+                  value={attackTypeFilter || ""}
+                  onChange={(e) =>
+                    setAttackTypeFilter(
+                      e.target.value === "" ? null : e.target.value,
+                    )
+                  }
+                >
+                  <option value="">All</option>
+                  <option value="Direct">Direct</option>
+                  <option value="Bow">Bow</option>
+                  <option value="Magic">Magic</option>
+                  <option value="Mixed">Mixed</option>
+                  <option value="Fiend Assault">Fiend Assault</option>
+                  <option value="Fiend Magic">Fiend Magic</option>
+                </select>
+              </div>
+
+              <div className="filter-group">
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={specialAttackOnly}
+                    onChange={(e) => setSpecialAttackOnly(e.target.checked)}
+                  />
+                  Special Attack
+                </label>
+              </div>
+              {specialAttackOnly && (
+                <div className="filter-group">
+                  <label>Special Type:</label>
+                  <select
+                    value={specialTypeFilter || ""}
+                    onChange={(e) =>
+                      setSpecialTypeFilter(
+                        e.target.value === "" ? null : e.target.value,
+                      )
+                    }
+                  >
+                    <option value="">All</option>
+                    <option value="Snipe">Snipe</option>
+                    <option value="Bomb">Bomb</option>
+                    <option value="Pseudo Snipe">Pseudo Snipe</option>
+                    <option value="Unique">Unique</option>
+                  </select>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
         <div className="subordinates-grid">
           {activeCharacters.map((character) => {
+            const role = getCharacterRole(character.id);
             const censored =
               character?.censorType?.includes("Portrait") && censoredMode;
             const portraits =
@@ -128,20 +256,7 @@ export default function SubordinatesOverlay({ onClose }) {
                 src={getCharacterPortrait(portraits[0])}
                 alt={character.id}
                 className="subordinate-portrait"
-                onClick={() =>
-                  (
-                    getCharacterRole(character.id) === "Harem" ||
-                    mode === "Harem"
-                  ) ?
-                    (setMode("Harem"), setSelectedCharacterId(character.id))
-                  : (
-                    getCharacterRole(character.id) === "Enemy" ||
-                    mode === "Enemies"
-                  ) ?
-                    (setMode("Enemies"), setSelectedCharacterId(character.id))
-                  : (setMode("Subordinates"),
-                    setSelectedCharacterId(character.id))
-                }
+                onClick={() => handleCharacterClick(character)}
               />
             );
           })}
