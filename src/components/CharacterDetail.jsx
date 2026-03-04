@@ -159,11 +159,11 @@ export default function CharacterDetail({ characterId, onClose }) {
   const rawMagic =
     mode != "Harem" ?
       mode === "Subordinates" ?
-        characterSubordinate.magic
-      : enemy.magic
+        characterSubordinate.mag
+      : enemy.mag
     : null;
 
-  const magic = Array.isArray(rawMagic) ? rawMagic[variantIndex] : rawMagic;
+  const mag = Array.isArray(rawMagic) ? rawMagic[variantIndex] : rawMagic;
 
   const rawStrikes =
     mode != "Harem" ?
@@ -226,7 +226,7 @@ export default function CharacterDetail({ characterId, onClose }) {
     strikes,
     hp,
     strategy,
-    magic,
+    mag,
     sca:
       mode != "Harem" ?
         mode === "Subordinates" ?
@@ -265,10 +265,10 @@ export default function CharacterDetail({ characterId, onClose }) {
             characterSubordinate.variants.strikes
           : null
         : null,
-      magic:
+      mag:
         mode === "Subordinates" && characterSubordinate.variants ?
-          characterSubordinate.variants.magic ?
-            characterSubordinate.variants.magic
+          characterSubordinate.variants.mag ?
+            characterSubordinate.variants.mag
           : null
         : null,
       strategy:
@@ -510,11 +510,11 @@ export default function CharacterDetail({ characterId, onClose }) {
                 <Stat
                   label="MAG"
                   value={
-                    stats.variants.magic ?
+                    stats.variants.mag ?
                       <>
-                        {stats.magic} → {stats.variants.magic}
+                        {stats.mag} → {stats.variants.mag}
                       </>
-                    : stats.magic
+                    : stats.mag
                   }
                 />
                 <Stat

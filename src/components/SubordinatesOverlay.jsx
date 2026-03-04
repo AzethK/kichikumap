@@ -16,6 +16,9 @@ export default function SubordinatesOverlay({ onClose }) {
   const [specialAttackOnly, setSpecialAttackOnly] = useState(false);
   const [specialTypeFilter, setSpecialTypeFilter] = useState(null);
 
+  const [sortField, setSortField] = useState(null);
+  const [sortDirection, setSortDirection] = useState(null);
+
   useEffect(() => {
     const updateScale = () => {
       const widthScale = (window.innerWidth * 0.9) / BASE_WIDTH;
@@ -62,10 +65,10 @@ export default function SubordinatesOverlay({ onClose }) {
     // If mode is "Characters" decide based on role
     if (role.includes("Subordinates")) {
       setMode("Subordinates");
-    } else if (role.includes("Harem")) {
-      setMode("Harem");
     } else if (role.includes("Enemies")) {
       setMode("Enemies");
+    } else if (role.includes("Harem")) {
+      setMode("Harem");
     }
 
     setSelectedCharacterId(character.id);
@@ -86,7 +89,7 @@ export default function SubordinatesOverlay({ onClose }) {
         .filter(Boolean)
     : Object.values(characters);
 
-  const activeCharacters = baseCharacters.filter((character) => {
+  let filteredCharacters = baseCharacters.filter((character) => {
     const role = getCharacterRole(character.id);
 
     // ---------- Special Attack Filter ----------
@@ -94,14 +97,10 @@ export default function SubordinatesOverlay({ onClose }) {
       if (!role.includes("Subordinates")) return false;
 
       const subordinateData = charactersSubordinate[character.id];
-
       if (!subordinateData?.specialName) return false;
 
-      // Special Type filter (only applies if selected)
       if (specialTypeFilter) {
-        if (subordinateData?.specialType !== specialTypeFilter) {
-          return false;
-        }
+        if (subordinateData?.specialType !== specialTypeFilter) return false;
       }
     }
 
@@ -120,6 +119,61 @@ export default function SubordinatesOverlay({ onClose }) {
 
     return true;
   });
+
+  const getStat = (character) => {
+    if (!sortField) return -Infinity;
+
+    const field = sortField.toLowerCase();
+
+    let source = null;
+
+    if (mode === "Subordinates") {
+      source = charactersSubordinate[character.id];
+    } else if (mode === "Enemies") {
+      source = enemies[character.id];
+    } else {
+      // Characters or Harem
+      source =
+        charactersSubordinate[character.id] ?? enemies[character.id] ?? null;
+    }
+
+    if (!source) return -Infinity;
+
+    const rawValue = source[field];
+
+    // ---------- Handle arrays ----------
+    if (Array.isArray(rawValue)) {
+      const numericValues = rawValue
+        .map((v) => Number(v))
+        .filter((v) => !Number.isNaN(v));
+
+      if (numericValues.length === 0) return -Infinity;
+
+      return Math.max(...numericValues);
+    }
+
+    // ---------- Handle single value ----------
+    const numeric = Number(rawValue);
+    return Number.isNaN(numeric) ? -Infinity : numeric;
+  };
+
+  if (sortField) {
+    filteredCharacters = [...filteredCharacters].sort((a, b) => {
+      const roleA = getCharacterRole(a.id);
+      const roleB = getCharacterRole(b.id);
+
+      const valueA = getStat(a, roleA);
+      const valueB = getStat(b, roleB);
+
+      if (sortDirection === "desc") {
+        return valueB - valueA;
+      } else {
+        return valueA - valueB;
+      }
+    });
+  }
+
+  const activeCharacters = filteredCharacters;
 
   return (
     <div className="overlay-backdrop" onClick={onClose}>
@@ -179,6 +233,39 @@ export default function SubordinatesOverlay({ onClose }) {
           >
             Filters
           </button>
+        </div>
+        <div className="character-tabs">
+          {["ATK", "DEF", "MAG", "Strategy"].map((field) => (
+            <button
+              key={field}
+              className={`tab-btn ${sortField === field ? "active" : ""}`}
+              onClick={() => {
+                if (sortField !== field) {
+                  setSortField(field);
+                  setSortDirection("desc");
+                  return;
+                }
+
+                // cycle states
+                if (sortDirection === "desc") {
+                  setSortDirection("asc");
+                } else if (sortDirection === "asc") {
+                  // sorting off
+                  setSortField(null);
+                  setSortDirection(null);
+                } else {
+                  // safety fallback
+                  setSortDirection("desc");
+                }
+              }}
+            >
+              {field}
+              {sortField === field &&
+                (sortDirection === "desc" ? " ↓"
+                : sortDirection === "asc" ? " ↑"
+                : "")}
+            </button>
+          ))}
         </div>
 
         {showFilters && (
