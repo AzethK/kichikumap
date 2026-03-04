@@ -11,9 +11,9 @@ Work in progress interactive map for Kichikuou Rance
 - Add attack type to all units (DONE)
 - Add all enemies to map (DONE, still need to figure out what to do about enemies that can attack any areas on the map like the PGs and Angel Knights)
 - Add items to all areas (DONE)
+- Unit filters (DONE)
 
 # PLANS FOR UPCOMING FEATURES:
-- Unit filters
 - Search feature
 - Map icon filter
 - Set recruited characters (maybe add a tag to them? a filter in subordinateOverlay for recruited characters could work)
