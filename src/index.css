@@ -329,11 +329,11 @@ body {
 .subordinates-overlay {
   position: relative;
 
-  transform: scale(calc(min(95vw / 1350, 95vh / 800)));
+  transform: scale(calc(min(95vw / 1350, 95vh / 850)));
   transform-origin: center;
   width: 1350px;
-  height: 800px;
-  aspect-ratio: 1350 / 800;
+  height: 850px;
+  aspect-ratio: 1350 / 850;
 
   background: #111;
   padding: 24px;
@@ -814,4 +814,24 @@ body {
 
 .filter-group label {
   font-weight: 500;
+}
+
+/* Search Bar */
+
+.character-search {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.character-search input {
+  background: #333;
+  width: 300px;
+  padding: 6px 10px;
+  font-size: 14px;
+  color: #ededed;
+}
+
+.character-search input::placeholder {
+  color: #c5c3c3;
 }

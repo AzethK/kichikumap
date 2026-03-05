@@ -8,13 +8,15 @@ import { useEffect, useState } from "react";
 
 export default function SubordinatesOverlay({ onClose }) {
   const BASE_WIDTH = 1300;
-  const BASE_HEIGHT = 800;
+  const BASE_HEIGHT = 850;
 
   const [fitScale, setFitScale] = useState(1);
   const [showFilters, setShowFilters] = useState(false);
   const [attackTypeFilter, setAttackTypeFilter] = useState(null);
   const [specialAttackOnly, setSpecialAttackOnly] = useState(false);
   const [specialTypeFilter, setSpecialTypeFilter] = useState(null);
+
+  const [searchQuery, setSearchQuery] = useState("");
 
   const [sortField, setSortField] = useState(null);
   const [sortDirection, setSortDirection] = useState(null);
@@ -120,6 +122,25 @@ export default function SubordinatesOverlay({ onClose }) {
     return true;
   });
 
+  if (searchQuery.trim() !== "") {
+    const query = searchQuery.toLowerCase();
+
+    filteredCharacters = filteredCharacters.filter((character) => {
+      if (typeof character.name === "string") {
+        return character.name.toLowerCase().includes(query);
+      }
+
+      // Checks if name field is an array, if it is then search for names within array and also the generic name
+      if (Array.isArray(character.name)) {
+        const names = [...(character.name || []), character.genericName || ""];
+
+        return names.some((n) => n.toLowerCase().includes(query));
+      }
+
+      return false;
+    });
+  }
+
   const getStat = (character) => {
     if (!sortField) return -Infinity;
 
@@ -198,6 +219,15 @@ export default function SubordinatesOverlay({ onClose }) {
             "Enemies"
           : "Characters"}
         </h2>
+
+        <div className="character-search">
+          <input
+            type="text"
+            placeholder="Search characters..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </div>
 
         <div className="character-tabs">
           <button
