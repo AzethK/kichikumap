@@ -12,12 +12,13 @@ Work in progress interactive map for Kichikuou Rance
 - Add all enemies to map (DONE, still need to figure out what to do about enemies that can attack any areas on the map like the PGs and Angel Knights)
 - Add items to all areas (DONE)
 - Unit filters (DONE)
+- Overlay Search Feature (DONE)
 
 # PLANS FOR UPCOMING FEATURES:
-- Search feature
 - Map icon filter
 - Set recruited characters (maybe add a tag to them? a filter in subordinateOverlay for recruited characters could work)
 - Change which areas are claimed by which faction
+- Map Search Feature
 - Some way to save the data, maybe registering? Localstorage would work but it's a bit sketchy, maybe will add a save download and load feature since registering for this seems overkill
 - Mobile support...maybe? No clue how I would go about it, not expecting to actually do this
 - Battle Simulation (only once absolutely everything else is done and I'm happy with how it is. might be too complex for the scope of this project so this is probably not getting done)
