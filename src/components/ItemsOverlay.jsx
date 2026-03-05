@@ -24,7 +24,23 @@ export default function ItemsOverlay({ onClose }) {
     return () => window.removeEventListener("resize", updateScale);
   }, []);
 
-  const activeItems = Object.values(items);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  let filteredItems = Object.values(items);
+
+  if (searchQuery.trim() !== "") {
+    const query = searchQuery.toLowerCase();
+
+    filteredItems = filteredItems.filter((item) => {
+      if (typeof item.name === "string") {
+        return item.name.toLowerCase().includes(query);
+      }
+
+      return false;
+    });
+  }
+
+  const activeItems = filteredItems;
   const { setSelectedItemId } = useAppContext();
 
   return (
@@ -40,8 +56,15 @@ export default function ItemsOverlay({ onClose }) {
         <button className="overlay-close" onClick={onClose}>
           ✕
         </button>
-
         <h2>Items</h2>
+        <div className="character-search">
+          <input
+            type="text"
+            placeholder="Search items..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </div>
 
         <div className="item-grid">
           {activeItems.map((item) => {
