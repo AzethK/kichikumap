@@ -205,6 +205,7 @@ export default function CharacterDetail({ characterId, onClose }) {
     Array.isArray(rawOmniDef) ? rawOmniDef[variantIndex] : rawOmniDef;
 
   const stats = {
+    exp: mode == "Harem" ? haremCharacter.exp : null,
     attackType:
       mode != "Harem" ?
         mode === "Subordinates" ?
@@ -298,7 +299,8 @@ export default function CharacterDetail({ characterId, onClose }) {
   const Stat = ({ label, value }) =>
     value !== undefined && value !== null ?
       <div>
-        <strong>{label}:</strong> {value}
+        <strong>{label}:</strong>{" "}
+        {Array.isArray(value) ? value.join(", ") : value}
         {label === "Strategy" ? "%" : ""}
       </div>
     : null;
@@ -462,7 +464,7 @@ export default function CharacterDetail({ characterId, onClose }) {
             </div>
 
             {/* Commander Stats */}
-            {mode != "Harem" && (
+            {mode != "Harem" ?
               <div className="character-stats">
                 <Stat label="Attack Type" value={stats.attackType} />
                 <Stat
@@ -605,7 +607,10 @@ export default function CharacterDetail({ characterId, onClose }) {
                   </div>
                 )}
               </div>
-            )}
+            : <div className="character-stats">
+                <Stat label="EXP Gain" value={stats.exp} />
+              </div>
+            }
 
             {/* Troop Stats */}
             {mode != "Harem" && (

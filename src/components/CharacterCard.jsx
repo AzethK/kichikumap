@@ -7,14 +7,20 @@ import { useAppContext } from "../App";
 import ConditionText from "../util/ConditionText";
 
 export default function CharacterCard({ character }) {
+  const { setMode, setSelectedCharacterId, censoredMode } = useAppContext();
   //Support multiple portraits per character
+
+  const censored = character?.censorType?.includes("Portrait") && censoredMode;
   const portraits =
-    Array.isArray(character.portrait) ?
-      character.portrait
+    censored ?
+      Array.isArray(character.censoredPortrait) ?
+        character.censoredPortrait
+      : [character.censoredPortrait]
+    : Array.isArray(character.portrait) ? character.portrait
     : [character.portrait];
 
   const currentPortrait = getCharacterPortrait(portraits[0]);
-  const { setMode, setSelectedCharacterId } = useAppContext();
+
   //
 
   const getCharacterRole = (characterId) => {
