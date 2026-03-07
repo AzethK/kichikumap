@@ -343,6 +343,13 @@ export const enemies = {
       "e_minevaFull.png",
       "e_minevaSolo.png",
     ],
+    variants: {
+      label:
+        "Take over area_helman_micrograd before visiting area_dungeon_kalar_forest",
+      troopAtk: 20,
+      troopDef: 10,
+      mag: 7,
+    },
     attackType: "Direct",
   },
   tami: {
@@ -1169,6 +1176,14 @@ export const enemies = {
     mag: 0,
     battleSprite: ["e_kayblisSolo.png", "e_kayblisSolo2.png"],
     attackType: "Fiend Assault",
+    variants: {
+      label: "character_miki is captured by Pi-R",
+      atk: 138,
+      def: 116,
+      strikes: 1000,
+      hp: 60000,
+      mag: 99,
+    },
   },
   pg_7: {
     unitType: "pg_x",

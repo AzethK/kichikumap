@@ -237,52 +237,68 @@ export default function CharacterDetail({ characterId, onClose }) {
 
     variants: {
       unitSize:
-        mode === "Subordinates" && characterSubordinate.variants ?
-          characterSubordinate.variants.unitSize ?
-            characterSubordinate.variants.unitSize
-          : null
+        mode === "Subordinates" && characterSubordinate.variants?.unitSize ?
+          characterSubordinate.variants.unitSize
+        : mode === "Enemies" && enemy.variants?.unitSize ?
+          enemy.variants.unitSize
+        : null,
+
+      replenishRate:
+        (
+          mode === "Subordinates" &&
+          characterSubordinate.variants?.replenishRate
+        ) ?
+          characterSubordinate.variants.replenishRate
+        : mode === "Enemies" && enemy.variants?.replenishRate ?
+          enemy.variants.replenishRate
         : null,
       hp:
-        mode === "Subordinates" && characterSubordinate.variants ?
-          characterSubordinate.variants.hp ?
-            characterSubordinate.variants.hp
-          : null
+        mode === "Subordinates" && characterSubordinate.variants?.hp ?
+          characterSubordinate.variants.hp
+        : mode === "Enemies" && enemy.variants?.hp ? enemy.variants.hp
         : null,
       atk:
-        mode === "Subordinates" && characterSubordinate.variants ?
-          characterSubordinate.variants.atk ?
-            characterSubordinate.variants.atk
-          : null
+        mode === "Subordinates" && characterSubordinate.variants?.atk ?
+          characterSubordinate.variants.atk
+        : mode === "Enemies" && enemy.variants?.atk ? enemy.variants.atk
+        : null,
+      def:
+        mode === "Subordinates" && characterSubordinate.variants?.def ?
+          characterSubordinate.variants.def
+        : mode === "Enemies" && enemy.variants?.def ? enemy.variants.def
         : null,
       troopAtk:
-        mode === "Subordinates" && characterSubordinate.variants ?
-          characterSubordinate.variants.troopAtk ?
-            characterSubordinate.variants.troopAtk
-          : null
+        mode === "Subordinates" && characterSubordinate.variants?.troopAtk ?
+          characterSubordinate.variants.troopAtk
+        : mode === "Enemies" && enemy.variants?.troopAtk ?
+          enemy.variants.troopAtk
+        : null,
+      troopDef:
+        mode === "Subordinates" && characterSubordinate.variants?.troopDef ?
+          characterSubordinate.variants.troopDef
+        : mode === "Enemies" && enemy.variants?.troopDef ?
+          enemy.variants.troopDef
         : null,
       strikes:
-        mode === "Subordinates" && characterSubordinate.variants ?
-          characterSubordinate.variants.strikes ?
-            characterSubordinate.variants.strikes
-          : null
+        mode === "Subordinates" && characterSubordinate.variants?.strikes ?
+          characterSubordinate.variants.strikes
+        : mode === "Enemies" && enemy.variants?.strikes ? enemy.variants.strikes
         : null,
       mag:
-        mode === "Subordinates" && characterSubordinate.variants ?
-          characterSubordinate.variants.mag ?
-            characterSubordinate.variants.mag
-          : null
+        mode === "Subordinates" && characterSubordinate.variants?.mag ?
+          characterSubordinate.variants.mag
+        : mode === "Enemies" && enemy.variants?.mag ? enemy.variants.mag
         : null,
       strategy:
-        mode === "Subordinates" && characterSubordinate.variants ?
-          characterSubordinate.variants.strategy ?
-            characterSubordinate.variants.strategy
-          : null
+        mode === "Subordinates" && characterSubordinate.variants?.strategy ?
+          characterSubordinate.variants.strategy
+        : mode === "Enemies" && enemy.variants?.strategy ?
+          enemy.variants.strategy
         : null,
       sca:
-        mode === "Subordinates" && characterSubordinate.variants ?
-          characterSubordinate.variants.sca ?
-            characterSubordinate.variants.sca
-          : null
+        mode === "Subordinates" && characterSubordinate.variants?.sca ?
+          characterSubordinate.variants.sca
+        : mode === "Enemies" && enemy.variants?.sca ? enemy.variants.sca
         : null,
     },
   };
@@ -508,7 +524,16 @@ export default function CharacterDetail({ characterId, onClose }) {
                     : stats.atk
                   }
                 />
-                <Stat label="DEF" value={stats.def} />
+                <Stat
+                  label="DEF"
+                  value={
+                    stats.variants.def ?
+                      <>
+                        {stats.def} → {stats.variants.def}
+                      </>
+                    : stats.def
+                  }
+                />
                 <Stat
                   label="MAG"
                   value={
@@ -533,7 +558,9 @@ export default function CharacterDetail({ characterId, onClose }) {
                   label="Replenish Rate"
                   value={
                     stats.replenishRate !== undefined ?
-                      stats.replenishRate
+                      <>
+                        {stats.replenishRate} → {stats.variants.replenishRate}
+                      </>
                     : "N/A"
                   }
                 />
@@ -596,14 +623,17 @@ export default function CharacterDetail({ characterId, onClose }) {
                     </span>
                   </div>
                 )}
-                {mode === "Subordinates" && characterSubordinate.variants && (
+                {((mode === "Subordinates" && characterSubordinate.variants) ||
+                  (mode === "Enemies" && enemy.variants)) && (
                   <div className="wide">
                     Stats change:{" "}
-                    {
-                      <ConditionText
-                        text={characterSubordinate.variants.label}
-                      />
-                    }
+                    <ConditionText
+                      text={
+                        mode === "Subordinates" ?
+                          characterSubordinate.variants.label
+                        : enemy.variants.label
+                      }
+                    />
                   </div>
                 )}
               </div>
@@ -627,7 +657,16 @@ export default function CharacterDetail({ characterId, onClose }) {
                         : troop.atk
                       }
                     />
-                    <Stat label="DEF" value={troop.def} />
+                    <Stat
+                      label="DEF"
+                      value={
+                        stats.variants.troopDef !== null ?
+                          <>
+                            {troop.def} → {stats.variants.troopDef}
+                          </>
+                        : troop.def
+                      }
+                    />
                     <Stat label="Upgrade" value={troop.upgrade || "N/A"} />
                   </>
                 : <em>No troop data</em>}

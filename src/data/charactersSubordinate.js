@@ -609,6 +609,17 @@ export const charactersSubordinate = {
     sca: ["-1/-1", "-1/-2", "-2/-2"],
     battleSprite: ["royalguard.png", "juliaFull.png", "juliaSolo.png"],
     attackType: "Direct",
+    variants: {
+      label:
+        "Visit area_dungeon_titi_lake 66F with Julia and accept the Julia Special service",
+      hp: 6,
+      strikes: 80,
+      atk: 22,
+      def: 6,
+      mag: 10,
+      replenishRate: 20,
+      sca: ["-1/-1", "2/2", "2/2"],
+    },
   },
   rafalia: {
     unitType: "leazas_soldiers",
