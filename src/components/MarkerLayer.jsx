@@ -1,11 +1,16 @@
 import { areas } from "../data/areas";
 import { regionIcons } from "../data/regionIcons";
+import { useAppContext } from "../App.jsx";
 
 export default function MarkerLayer({ onAreaClick }) {
+  const { enabledRegions } = useAppContext();
+
   return (
     <>
       {areas.map((area) => {
         const region = area.id.split("_")[0];
+
+        if (!enabledRegions.includes(region)) return null;
         const icon = regionIcons[region];
 
         if (!icon) {
@@ -24,7 +29,6 @@ export default function MarkerLayer({ onAreaClick }) {
             onPointerUp={(e) => {
               e.stopPropagation();
 
-              // Only trigger if NOT dragging
               if (e.pointerType === "mouse" || e.pointerType === "touch") {
                 onAreaClick(area.id);
               }

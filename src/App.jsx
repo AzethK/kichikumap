@@ -18,6 +18,17 @@ export default function App() {
   const [selectedCharacterId, setSelectedCharacterId] = useState(null);
   const [censoredMode, setCensoredMode] = useState(true);
   const [mode, setMode] = useState("characters");
+  const [enabledRegions, setEnabledRegions] = useState([
+    "leazas",
+    "zeth",
+    "helman",
+    "freecities",
+    "al",
+    "japan",
+    "kayblis",
+    "hornet",
+    "dungeon",
+  ]);
 
   return (
     <>
@@ -33,6 +44,8 @@ export default function App() {
           setSelectedCharacterId,
           activeOverlay,
           setActiveOverlay,
+          enabledRegions,
+          setEnabledRegions,
           mode,
           setMode,
         }}

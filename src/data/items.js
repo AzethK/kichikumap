@@ -128,7 +128,7 @@ export const items = {
       "Attack area_zeth_magics_tower and fail once",
       "Conquer area_zeth_magics_tower after character_xacalite is summoned",
       "Visit Magic's Room in the tower once then leave",
-      "Visit character_ho_raga or character_arcy to receive Absolute Foreclosure Charm",
+      "Visit area_dungeon_ho_ragas_tower or character_arcy to receive Absolute Foreclosure Charm",
     ],
     sprite: "absolute_foreclosure.png",
   },
