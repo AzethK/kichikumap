@@ -14,9 +14,9 @@ Work in progress interactive map for Kichikuou Rance
 - Unit filters (DONE)
 - Overlay Search Feature (DONE)
 - Map icon filter (DONE)
+- Map Search Feature (DONE)
 
 # PLANS FOR UPCOMING FEATURES:
-- Map Search Feature
 - Monster Army invasion route lines
 - Mobile support...maybe? No clue how I would go about it, not expecting to actually do this
 
