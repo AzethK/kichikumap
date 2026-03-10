@@ -7,7 +7,8 @@ export default function LeftSidebar({
   onOpenItems,
   toggleCensor,
 }) {
-  const { censoredMode, enabledRegions, setEnabledRegions } = useAppContext();
+  const { censoredMode, enabledRegions, setEnabledRegions, search, setSearch } =
+    useAppContext();
 
   const toggleRegion = (region) => {
     setEnabledRegions((prev) =>
@@ -46,6 +47,17 @@ export default function LeftSidebar({
               </button>
             );
           })}
+        </div>
+      </div>
+      <div className="region-section">
+        <div className="region-header">Search Areas</div>
+        <div className="character-search">
+          <input
+            type="text"
+            placeholder="Area, character, enemy, item..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
         </div>
       </div>
     </aside>

@@ -18,6 +18,7 @@ export default function App() {
   const [selectedCharacterId, setSelectedCharacterId] = useState(null);
   const [censoredMode, setCensoredMode] = useState(true);
   const [mode, setMode] = useState("characters");
+  const [search, setSearch] = useState("");
   const [enabledRegions, setEnabledRegions] = useState([
     "leazas",
     "zeth",
@@ -48,6 +49,8 @@ export default function App() {
           setEnabledRegions,
           mode,
           setMode,
+          search,
+          setSearch,
         }}
       >
         {/* Sidebar toggle button */}
