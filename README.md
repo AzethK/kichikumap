@@ -13,10 +13,11 @@ Work in progress interactive map for Kichikuou Rance
 - Add items to all areas (DONE)
 - Unit filters (DONE)
 - Overlay Search Feature (DONE)
+- Map icon filter (DONE)
 
 # PLANS FOR UPCOMING FEATURES:
-- Map icon filter
 - Map Search Feature
+- Monster Army invasion route lines
 - Mobile support...maybe? No clue how I would go about it, not expecting to actually do this
 
 More will surely be added depending on what I'm feeling up to but this is all I got in my mind right now
