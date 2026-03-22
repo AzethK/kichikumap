@@ -21,8 +21,7 @@ export default function CharacterCard({ character }) {
 
   const currentPortrait = getCharacterPortrait(portraits[0]);
 
-  //
-
+  // Sets mode depending on the roles the character has
   const getCharacterRole = (characterId) => {
     const inHarem = Boolean(harem[characterId]);
     const inSubordinate = Boolean(charactersSubordinate[characterId]);
@@ -41,6 +40,7 @@ export default function CharacterCard({ character }) {
     return null;
   };
 
+  // Gets a role array of the character
   const getRole = (characterId) => {
     const roles = [];
 
@@ -83,6 +83,7 @@ export default function CharacterCard({ character }) {
             : character.name}
           </strong>
         </div>
+        {/* Only displays condition box if character can be recruited */}
         {(role.includes("Harem") || role.includes("Subordinates")) && (
           <>
             <div className="condition-box">

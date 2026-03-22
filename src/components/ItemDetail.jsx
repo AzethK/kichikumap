@@ -63,7 +63,7 @@ export default function ItemDetail({ itemId, onClose }) {
 
           {/* ================= TOP GRID ================= */}
           <div className="item-main">
-            {/* Character Sprite */}
+            {/* Item Sprite */}
             <div className="character-sprite">
               <img src={sprite} alt="" loading="lazy" />
             </div>
@@ -77,7 +77,7 @@ export default function ItemDetail({ itemId, onClose }) {
 
           {/* ================= BOTTOM GRID ================= */}
           <div className="item-bottom">
-            {/* Recruitment */}
+            {/* Acquisition */}
             <div className="character-recruitment">
               <h2>Acquisition Conditions</h2>
 

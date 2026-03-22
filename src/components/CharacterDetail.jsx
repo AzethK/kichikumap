@@ -116,6 +116,7 @@ export default function CharacterDetail({ characterId, onClose }) {
       : getHaremSprite(sprites[spriteIndex])
     : getCharacterSprite(sprites[spriteIndex]);
 
+  /* ---------------- Stats ---------------- */
   const rawUnitSize =
     mode != "Harem" ?
       mode === "Subordinates" ?
@@ -676,7 +677,7 @@ export default function CharacterDetail({ characterId, onClose }) {
 
           {/* ================= BOTTOM GRID ================= */}
           <div className="character-bottom">
-            {/* Recruitment */}
+            {/* Recruitment Conditions*/}
             <div className="character-recruitment">
               <h2>Recruitment Conditions</h2>
 
