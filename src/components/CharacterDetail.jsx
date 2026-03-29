@@ -558,11 +558,11 @@ export default function CharacterDetail({ characterId, onClose }) {
                 <Stat
                   label="Replenish Rate"
                   value={
-                    stats.replenishRate !== undefined ?
+                    stats.variants.replenishRate ?
                       <>
                         {stats.replenishRate} → {stats.variants.replenishRate}
                       </>
-                    : "N/A"
+                    : stats.replenishRate
                   }
                 />
                 <Stat label="Omni ATK" value={stats.omniAtk} />
