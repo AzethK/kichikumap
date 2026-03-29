@@ -81,8 +81,8 @@ export default function ItemDetail({ itemId, onClose }) {
             <div className="character-recruitment">
               <h2>Acquisition Conditions</h2>
 
-              {conditions.length > 0 ?
-                <div className="character-detail-condition-box">
+              <div className="character-detail-condition-box">
+                {conditions.length > 0 ?
                   <div className="character-condition-step">
                     {conditions.map((c, i) => (
                       <div key={i}>
@@ -90,11 +90,11 @@ export default function ItemDetail({ itemId, onClose }) {
                       </div>
                     ))}
                   </div>
-                </div>
-              : <div className="character-condition-step">
-                  • Acquired automatically
-                </div>
-              }
+                : <div className="character-condition-step">
+                    • Acquired automatically
+                  </div>
+                }
+              </div>
             </div>
           </div>
         </div>

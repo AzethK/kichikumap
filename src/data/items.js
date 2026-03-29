@@ -128,7 +128,7 @@ export const items = {
       "Attack area_zeth_magics_tower and fail once",
       "Conquer area_zeth_magics_tower after character_xacalite is summoned",
       "Visit Magic's Room in the tower once then leave",
-      "Visit area_dungeon_ho_ragas_tower or character_arcy to receive Absolute Foreclosure Charm",
+      "Visit area_dungeon_ho_ragas_tower or Arcy to receive Absolute Foreclosure Charm",
     ],
     sprite: "absolute_foreclosure.png",
   },
@@ -138,7 +138,7 @@ export const items = {
     consumable: true,
     effect: "Can be placed at God's Door in area_helman_ancient_ruins",
     acquisition: [
-      "Obtain Chaos",
+      "Obtain item_chaos",
       "Visit area_dungeon_ho_ragas_tower with character_rance/character_kentarou and ask about the past",
       "Visit British at area_dungeon_thieves_dungeon",
     ],
@@ -171,7 +171,7 @@ export const items = {
     id: "bonsai_statue",
     name: "Bonsai-Shaped Gold Statue",
     consumable: true,
-    effect: "Can be placed at God's Door in area_dungeon_ancient_ruins",
+    effect: "Can be placed at God's Door in area_helman_ancient_ruins",
     acquisition: [
       "Obtain item_gourd_statue",
       "Call character_kouhime in the Harem four times",
@@ -234,7 +234,7 @@ export const items = {
     name: "Ultimate Sweet",
     consumable: true,
     effect:
-      "Allows asking a question to character_arcy in area_dungeon_isolated_shrine_island",
+      "Allows asking a question to Arcy in area_dungeon_isolated_shrine_island",
     acquisition: ["20% chance of levying from any city"],
     sprite: "ultimate_sweet.png",
   },
@@ -243,7 +243,7 @@ export const items = {
     name: "Supreme Sweet",
     consumable: true,
     effect:
-      "Allows asking a question to character_arcy in area_dungeon_isolated_shrine_island",
+      "Allows asking a question to Arcy in area_dungeon_isolated_shrine_island",
     acquisition: ["20% chance of levying from any city"],
     sprite: "supreme_sweet.png",
   },
@@ -399,8 +399,7 @@ export const items = {
     id: "ninja_birdlime",
     name: "Ninja Birdlime",
     consumable: true,
-    effect:
-      "Levy where character_freya is to get a CG and an option to recruit her",
+    effect: "Levy where Freya is to get a CG and an option to recruit her",
     acquisition: [
       "Attack Helman and wait for the event where she first appears",
       "Every turn afterwards a random city in Leazas will be selected, levy the correct city 3 times",

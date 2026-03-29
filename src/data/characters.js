@@ -260,7 +260,7 @@ export const characters = {
     sprite: "kentarou.png",
     recruitCondition: [
       'Select "Observe for now" when character_miki and Kentarou come to area_leazas_castle',
-      "Obtain Chaos",
+      "Obtain item_chaos",
     ],
   },
   miki: {
@@ -270,7 +270,7 @@ export const characters = {
     sprite: "miki.png",
     recruitCondition: [
       'Select "Observe for now" when Miki and character_kentarou come to area_leazas_castle',
-      "Obtain Chaos",
+      "Obtain item_chaos",
     ],
   },
   julia: {
@@ -347,7 +347,7 @@ export const characters = {
       "Attack area_zeth_magics_tower and fail once",
       "Conquer area_zeth_magics_tower after character_xacalite is summoned",
       "Visit Magic's Room in the tower once then leave",
-      "Visit Ho Raga or Arcy to receive Absolute Foreclosure Charm",
+      "Visit Ho Raga or Arcy to receive item_absolute_foreclosure",
       "Enter Magic's Room again and use the charm, character_ragnarokarc must have been recruited",
     ],
   },
