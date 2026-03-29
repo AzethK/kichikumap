@@ -3,14 +3,17 @@ import { charactersSubordinate } from "../data/charactersSubordinate";
 import { harem } from "../data/charactersHarem";
 import { enemies } from "../data/charactersEnemy";
 import { areas } from "../data/areas";
-import { useAppContext } from "../App";
+import { items } from "../data/items";
 
-const TOKEN_REGEX = /(character_[a-z0-9_]+|area_[a-z0-9_]+)/gi;
+const TOKEN_REGEX =
+  /(character_[a-z0-9_]+|area_[a-z0-9_]+|item_[a-z0-9_]+)+|area_[a-z0-9_]+|item_[a-z0-9_]+/gi;
 
 const areaMap = areas.reduce((map, area) => {
   map[area.id] = area;
   return map;
 }, {});
+
+import { useAppContext } from "../App";
 
 export default function ConditionText({ text, onCharacterClick }) {
   const {
@@ -71,6 +74,23 @@ export default function ConditionText({ text, onCharacterClick }) {
           }}
         >
           {area ? area.name : areaId}
+        </span>
+      );
+    }
+
+    if (part.startsWith("item_")) {
+      const itemId = part.replace("item_", "");
+      const item = items[itemId];
+
+      return (
+        <span
+          key={i}
+          className="character-link"
+          onClick={() => {
+            setSelectedItemId(itemId);
+          }}
+        >
+          {item ? item.name : itemId}
         </span>
       );
     }

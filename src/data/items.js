@@ -140,7 +140,7 @@ export const items = {
     acquisition: [
       "Obtain Chaos",
       "Visit area_dungeon_ho_ragas_tower with character_rance/character_kentarou and ask about the past",
-      "Visit character_british at area_dungeon_thieves_dungeon",
+      "Visit British at area_dungeon_thieves_dungeon",
     ],
     sprite: "gourd_statue.png",
   },
